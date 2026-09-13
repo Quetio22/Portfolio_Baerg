@@ -1,0 +1,24 @@
+{
+  "name": "baerg-design",
+  "version": "1.0.0",
+  "private": true,
+  "type": "module",
+  "engines": {
+    "node": ">=22.9.0"
+  },
+  "scripts": {
+    "dev": "node --env-file-if-exists=.env --watch server.js",
+    "build": "node --env-file-if-exists=.env scripts/build.js",
+    "start": "node --env-file-if-exists=.env server.js",
+    "test": "node --test tests/*.test.js",
+    "test:browser": "playwright test",
+    "assets:share": "node scripts/generate-share-image.js",
+    "format": "prettier --write .",
+    "format:check": "prettier --check ."
+  },
+  "devDependencies": {
+    "@axe-core/playwright": "^4.10.2",
+    "@playwright/test": "^1.51.1",
+    "prettier": "^3.9.6"
+  }
+}
