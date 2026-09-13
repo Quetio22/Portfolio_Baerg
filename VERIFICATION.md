@@ -4,7 +4,7 @@
 
 - Build des sept pages HTML, page 404 statique, ressources, robots et sitemap.
 - 13 tests Node : champs, antispam, expiration du quota, réponses fournisseur simulées, idempotence, absence de configuration, origine, méthode, type JSON, taille de requête, erreurs, limite de tentatives, faux en-têtes proxy, pages et sécurité HTTP. Le passage en mode public, les URLs canoniques, le sitemap et les métadonnées de partage sont vérifiés avec une configuration de test en mémoire. La revalidation du cache et la réponse `304` sont également vérifiées.
-- 14 tests Chromium : sept pages aux largeurs 320, 390, 600, 768, 1 024 et 1 440 px ; aucun débordement horizontal détecté. Un test supplémentaire conserve réellement les anciens styles beiges dans le cache, puis vérifie que la nouvelle page affiche la palette charbon et blanc sans vidage manuel du cache ni interception réseau.
+- 14 tests Chromium : sept pages aux largeurs 320, 390, 600, 768, 1 024 et 1 440 px ; aucun débordement horizontal détecté. Un test supplémentaire conserve réellement les anciens styles beiges dans le cache, puis vérifie que la nouvelle page affiche la palette actuelle sans vidage manuel du cache ni interception réseau.
 - Axe WCAG 2 A/AA et 2.1 AA sur les sept pages à 390 et 1 440 px : aucune violation détectée.
 - Menu mobile au clavier : ouverture Entrée, Tabulation, Escape, retour du focus, lien actif, navigation effective.
 - Tous les liens internes vérifiés, titres et descriptions uniques, ressources chargées, aucune exception JavaScript, erreur de console inattendue ni requête vers une ressource tierce pendant les parcours.
@@ -13,16 +13,18 @@
 - Inspection visuelle des captures de l’accueil mobile/ordinateur et du contact ordinateur.
 - Polices et licences présentes localement ; image de partage générée à 1 200 × 630 px.
 
-## Mise à jour de la palette charbon et blanc
+## Direction atelier éditorial : encre, bleu et abricot
 
-- Palette centralisée dans `public/styles.css` : navigation et accueil blancs, alternance blanc/gris très clair, pied de page charbon. Suppression des variables et surfaces de marque vertes, ombres et dégradés teintés compris.
-- Maquettes de marque d’accueil et illustration À propos recolorées dans leur code source ; favicon SVG modifié et image de partage PNG régénérée depuis sa source. Pinyon Script, les autres polices, les contenus et les fonctionnalités sont préservés. Aucun projet client publié actuellement, aucun filtre ajouté aux images de projets.
-- Paragraphes courants vérifiés à 16–17 px sur les sept pages, sans transparence. Les compositions typographiques et miniatures conservent leurs tailles propres. Correction du débordement de la grille de valeurs à 200 % de texte.
-- Contrastes calculés : charbon/blanc **15,49:1**, paragraphes/blanc **9,09:1**, paragraphes/gris très clair **8,27:1**, texte secondaire/pied de page **11,33:1**, bordures de champs et menu/blanc **3,66:1**, texte désactivé **6,65:1**.
-- Build réussi ; **13 tests Node et 14 tests Chromium réussis**. Sept pages vérifiées à 320, 390, 600, 768, 1 024 et 1 440 px ; aucune violation Axe sur les sept pages à 390 et 1 440 px.
-- Contrôles supplémentaires : menu mobile ouvert et focus clavier visibles, survol du bouton principal, champs à 16 px, bouton désactivé, messages d’erreur et de succès simulés. Aucune violation Axe dans le menu ouvert ni sur les messages simulés. Aucun e-mail réellement envoyé.
-- Captures inspectées : accueil ordinateur/mobile, À propos ordinateur, contact mobile, menu ouvert et image de partage. Le site ne possède ni navigation sticky ni mode sombre distinct ; sa palette claire reste lisible avec une préférence système sombre.
-- `npm run format:check` et `git diff --check` réussis.
+- Base blanche et encre `#292A30`, paragraphes `#50515A`, accents bleus `#4059D8` pour les actions et quelques repères. Abricot `#F0B89A` réservé aux annotations. Grandes sections neutres et pied de page encre conservés.
+- Arche d’accueil remplacée par un concept d’interface de réservation, explicitement non commandé : cours, date et inscription regroupés, avec une annotation expliquant ce choix. Composition réalisée dans le code, signature Pinyon blanche sur feuille bleue. Aucun projet client inventé ni image de projet filtrée.
+- Illustration À propos remplacée par une note de travail « Comprendre, Dessiner, Développer ». Présentation du duo plus concrète dans l’accueil ; logo, grands titres éditoriaux et fonctionnalités conservés. Titres de services en DM Sans 500, repères et légendes principaux agrandis, italiques réduits sur certains titres.
+- Favicon bleu ; image de partage régénérée depuis la même fonction `studioArt()` et les styles du site.
+- Contrastes calculés : blanc/bleu **5,77:1**, encre/abricot **8,19:1**, paragraphes/blanc **7,88:1**.
+- **13 tests Node et 14 tests Chromium réussis**. Sept pages vérifiées à 320, 390, 600, 768, 1 024 et 1 440 px ; aucun débordement horizontal, y compris avec texte doublé à 768 px. Aucune violation Axe sur les sept pages à 390 et 1 440 px.
+- Menu mobile ouvert, focus bleu, survol plus sombre, champs à 16 px, bouton désactivé et retours d’erreur/succès simulés contrôlés. Aucune violation Axe sur le menu ouvert et les messages simulés. Aucun e-mail réellement envoyé.
+- Captures inspectées sur ordinateur, tablette et mobile ; cadrage du concept ajusté pour préserver la signature et l’action du prototype. Image de partage et note À propos inspectées.
+- Aucun mode sombre distinct ni navigation sticky existants. Aucune photo réelle du duo disponible dans le projet : aucun portrait fictif ajouté.
+- Build, formatage et contrôle des différences validés.
 
 ## Limites
 

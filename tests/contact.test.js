@@ -237,5 +237,5 @@ test('les ressources sont revalidées et une version inchangée renvoie 304', as
   assert.equal(await unchanged.text(), '');
   const stale = await fetch(url + '/styles.css', { headers: { 'If-None-Match': '"old-palette"' } });
   assert.equal(stale.status, 200);
-  assert.match(await stale.text(), /--brand: #242426/);
+  assert.match(await stale.text(), /--brand: #292a30/);
 });
