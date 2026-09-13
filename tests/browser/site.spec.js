@@ -1,5 +1,52 @@
 import { test, expect } from '@playwright/test';
 import AxeBuilder from '@axe-core/playwright';
+import { createServer } from 'node:http';
+import { once } from 'node:events';
+import { createApp } from '../../server.js';
+
+test('les nouveaux styles remplacent le CSS beige encore présent dans le cache navigateur', async ({
+  browser,
+}) => {
+  const app = createApp();
+  let legacyStylesheetRequests = 0;
+  const server = createServer((req, res) => {
+    if (req.url === '/ancienne-version/') {
+      res.writeHead(200, { 'Content-Type': 'text/html', 'Cache-Control': 'no-store' });
+      return res.end(
+        '<!doctype html><html><head><link rel="stylesheet" href="/styles.css"></head><body><a href="/">Ouvrir le site</a></body></html>',
+      );
+    }
+    if (req.url === '/styles.css') {
+      legacyStylesheetRequests++;
+      res.writeHead(200, { 'Content-Type': 'text/css', 'Cache-Control': 'public, max-age=3600' });
+      return res.end('body, .hero-band { background: #f7f3ec; }');
+    }
+    app.emit('request', req, res);
+  });
+  const context = await browser.newContext();
+  try {
+    server.listen(0, '127.0.0.1');
+    await once(server, 'listening');
+    const page = await context.newPage();
+    await page.goto(`http://127.0.0.1:${server.address().port}/ancienne-version/`);
+    await expect(page.locator('body')).toHaveCSS('background-color', 'rgb(247, 243, 236)');
+    // No request interception: Chromium really stores and reuses the old response.
+    await page.evaluate(() => fetch('/styles.css').then((response) => response.text()));
+    expect(legacyStylesheetRequests).toBe(1);
+    await page.getByRole('link', { name: 'Ouvrir le site' }).click();
+    await expect(page.locator('.hero-band')).toHaveCSS('background-color', 'rgb(23, 61, 50)');
+    await expect(page.locator('.site-header')).toHaveCSS('background-color', 'rgb(23, 61, 50)');
+    await expect(page.locator('link[rel="stylesheet"]')).toHaveAttribute(
+      'href',
+      /\/styles\.css\?v=[a-f0-9]+/,
+    );
+    expect(legacyStylesheetRequests).toBe(1);
+  } finally {
+    await context.close();
+    await new Promise((resolve) => server.close(resolve));
+    app.emit('close');
+  }
+});
 
 const paths = [
   '/',

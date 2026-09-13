@@ -39,7 +39,7 @@ test('configuration publique : domaine, sitemap, métadonnées et activation du 
     assert.match(html, /rel="canonical" href="https:\/\/baerg.test.invalid\/contact\/"/);
     assert.match(
       html,
-      /property="og:image" content="https:\/\/baerg.test.invalid\/images\/og.png"/,
+      /property="og:image" content="https:\/\/baerg.test.invalid\/images\/og.png\?v=[a-f0-9]+"/,
     );
     assert.match(html, /data-ready="true"/);
     assert.match(html, /name="robots" content="index, follow"/);
@@ -224,4 +224,18 @@ test('domaine configurable et publication bloquée sans informations légales', 
     false,
   );
   assert.match(renderPage('/contact/'), /data-ready="false"/);
+});
+
+test('les ressources sont revalidées et une version inchangée renvoie 304', async (t) => {
+  const url = await app(t);
+  const response = await fetch(url + '/styles.css');
+  assert.equal(response.headers.get('cache-control'), 'public, no-cache');
+  const etag = response.headers.get('etag');
+  assert.ok(etag);
+  const unchanged = await fetch(url + '/styles.css', { headers: { 'If-None-Match': etag } });
+  assert.equal(unchanged.status, 304);
+  assert.equal(await unchanged.text(), '');
+  const stale = await fetch(url + '/styles.css', { headers: { 'If-None-Match': '"old-palette"' } });
+  assert.equal(stale.status, 200);
+  assert.match(await stale.text(), /--forest: #173d32/);
 });

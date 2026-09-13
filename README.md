@@ -29,6 +29,7 @@ Les outils de test et de formatage sont uniquement des dépendances de développ
 - `src/content.js` : identité, navigation, services, méthode, options du formulaire, projets et informations légales.
 - `src/site.js` : composants partagés, contenus propres aux pages et métadonnées.
 - `public/styles.css` : palette, typographie, grille et responsive.
+- `src/assets.js` : URLs des styles, scripts, favicon et image de partage versionnées selon leur contenu, pour éviter l’affichage d’anciennes ressources en cache.
 - `public/app.js` : menu accessible et états du formulaire.
 - `src/contact.js` : validation, limitation et appel au service de messagerie.
 - `server.js` : routes HTTP, ressources, en-têtes de sécurité, robots et sitemap.
@@ -37,6 +38,8 @@ Les outils de test et de formatage sont uniquement des dépendances de développ
 L’accueil affiche une composition de l’identité **du studio**, pas une réalisation client. Les prénoms, portraits, coordonnées, liens professionnels, technologies spécifiques et projets absents du brief n’ont pas été inventés. La présentation collective peut être conservée.
 
 La palette est centralisée dans les variables `:root` de `public/styles.css` : vert sapin `#173D32`, blanc froid `#F5F7F6`, charbon `#202824`, séparateurs `#DCE3DF` et blanc `#FFFFFF`. La classe `forest-surface` adapte les textes, liens, boutons et focus sur les grandes surfaces vertes. Les couleurs d’erreur et de confirmation ont leurs propres variables. Le générateur de l’image de partage lit directement ces mêmes variables ; régénérer l’image avec `npm run assets:share` après une modification. Le favicon et la couleur de thème du navigateur sont également assortis.
+
+Un simple rechargement suffit après une modification : les ressources principales changent d’URL lorsque leur contenu change. Le serveur demande également leur revalidation (`Cache-Control: public, no-cache`) et renvoie une réponse légère `304` lorsqu’elles sont inchangées. Cette protection remplace l’ancienne conservation d’une heure, qui pouvait masquer une nouvelle palette. L’export `dist/` contient aussi les URLs versionnées ; le reconstruire avant de le mettre à jour sur un hébergement statique.
 
 ## Ajouter une réalisation
 

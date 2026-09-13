@@ -1,4 +1,5 @@
 import { createServer } from 'node:http';
+import { createHash } from 'node:crypto';
 import { readFile, stat, realpath } from 'node:fs/promises';
 import { resolve, extname } from 'node:path';
 import { fileURLToPath } from 'node:url';
@@ -150,10 +151,17 @@ export function createApp({
           if (!actual.startsWith(root) || !(await stat(actual)).isFile())
             throw new Error('Not public');
           const content = await readFile(actual);
-          res.writeHead(200, {
+          const etag = `"${createHash('sha256').update(content).digest('hex')}"`;
+          const headers = {
             'Content-Type': types[extname(actual)],
-            'Cache-Control': 'public, max-age=3600',
-          });
+            'Cache-Control': 'public, no-cache',
+            ETag: etag,
+          };
+          if (req.headers['if-none-match']?.split(',').some((value) => value.trim() === etag)) {
+            res.writeHead(304, headers);
+            return res.end();
+          }
+          res.writeHead(200, headers);
           return res.end(req.method === 'HEAD' ? undefined : content);
         } catch {
           /* Ressource absente : vraie réponse 404 ci-dessous. */
