@@ -13,6 +13,13 @@
 - Inspection visuelle des captures de l’accueil mobile/ordinateur et du contact ordinateur.
 - Polices et licences présentes localement ; image de partage générée à 1 200 × 630 px.
 
+## Mise à jour de la palette vert sapin
+
+- Remplacement des anciens tons bordeaux, crème et beige, y compris dans les ombres, la composition d’accueil, le favicon et l’image de partage. Palette centralisée dans les variables CSS.
+- Contrastes calculés : blanc/vert sapin **12:1**, charbon/blanc froid **14,04:1**, textes secondaires sur fond clair **5,47:1**, textes secondaires sur fond vert **9,20:1**. Bordures des champs **3,23:1**, contour du menu **3,84:1**, texte désactivé **5,02:1**, erreur **6,58:1**, confirmation **7,11:1**.
+- Vérification supplémentaire du menu mobile ouvert avec Axe : aucune violation détectée. Le site ne possède pas de navigation sticky ni de mode sombre distinct ; les champs natifs conservent un schéma clair explicite.
+- Inspection rapprochée des logos de navigation et de la composition d’accueil : espacement de « DESIGN » et taille de la signature adaptés aux petits écrans. Lien d’en-tête remplacé par « Discutons de votre projet », toujours vers Contact.
+
 ## Limites
 
 Le site n’a pas été publié. Aucun domaine ni service e-mail réel n’a été configuré, aucun e-mail envoyé et aucune réception vérifiée. Les informations légales définitives dépendent des renseignements listés dans README.

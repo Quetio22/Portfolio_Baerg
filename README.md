@@ -36,6 +36,8 @@ Les outils de test et de formatage sont uniquement des dépendances de développ
 
 L’accueil affiche une composition de l’identité **du studio**, pas une réalisation client. Les prénoms, portraits, coordonnées, liens professionnels, technologies spécifiques et projets absents du brief n’ont pas été inventés. La présentation collective peut être conservée.
 
+La palette est centralisée dans les variables `:root` de `public/styles.css` : vert sapin `#173D32`, blanc froid `#F5F7F6`, charbon `#202824`, séparateurs `#DCE3DF` et blanc `#FFFFFF`. La classe `forest-surface` adapte les textes, liens, boutons et focus sur les grandes surfaces vertes. Les couleurs d’erreur et de confirmation ont leurs propres variables. Le générateur de l’image de partage lit directement ces mêmes variables ; régénérer l’image avec `npm run assets:share` après une modification. Le favicon et la couleur de thème du navigateur sont également assortis.
+
 ## Ajouter une réalisation
 
 Ajouter un objet dans `projects` dans `src/content.js`. Tous les champs de l’exemple ci-dessous sont des indications de saisie, **pas un projet à publier tel quel** :
