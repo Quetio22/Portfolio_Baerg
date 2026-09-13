@@ -28,32 +28,34 @@
 }
 :root {
   color-scheme: light;
-  --forest: #173d32;
-  --surface: #f5f7f6;
-  --ink: #202824;
-  --border: #dce3df;
+  --brand: #242426;
+  --surface: #ffffff;
+  --ink: var(--brand);
+  --border: #dcdce0;
   --line: var(--border);
   --white: #ffffff;
-  --forest-hover: #102e25;
-  --surface-muted: #edf2ef;
-  --text-muted: #59685f;
+  --brand-hover: #18181a;
+  --surface-muted: #f4f4f5;
+  --text-muted: #48484d;
   --muted: var(--text-muted);
-  --on-forest-muted: #dce3df;
-  --line-on-forest: #78998b;
-  --field-border: #7b8e83;
-  --disabled-background: #dce3df;
-  --disabled-text: #526158;
-  --art-background: #dce6e0;
-  --art-mid: #809e8d;
-  --art-light: #c5d6cc;
-  --art-grid: #173d3210;
-  --shadow: #102e2524;
-  --shadow-soft: #102e2514;
+  --on-dark-muted: #dcdce0;
+  --line-on-dark: #85858c;
+  --field-border: #85858c;
+  --disabled-background: #dcdce0;
+  --disabled-text: #48484d;
+  --art-background: var(--surface-muted);
+  --art-mid: #9c9ca3;
+  --art-light: #dcdce0;
+  --art-grid: #24242610;
+  --shadow: #24242624;
+  --shadow-soft: #24242614;
   --error: #a02d28;
   --error-background: #fff1f0;
   --success: #245c3f;
   --success-background: #edf6ef;
-  --focus: var(--forest);
+  --focus: var(--brand);
+  --body-size: 1rem;
+  --body-lead-size: 1.0625rem;
   --serif: 'Cormorant Garamond', Georgia, serif;
   --sans: 'DM Sans', Arial, sans-serif;
 }
@@ -71,12 +73,13 @@ body {
   background: var(--surface);
   color: var(--ink);
   font-family: var(--sans);
-  font-size: 15px;
+  font-size: var(--body-size);
+  font-weight: 400;
   line-height: 1.7;
   -webkit-font-smoothing: antialiased;
 }
 ::selection {
-  background: var(--forest);
+  background: var(--brand);
   color: var(--white);
 }
 a {
@@ -127,6 +130,8 @@ button:disabled {
   cursor: not-allowed;
 }
 p {
+  color: var(--muted);
+  overflow-wrap: anywhere;
   margin: 0 0 1.2em;
 }
 h1,
@@ -153,7 +158,7 @@ h1 em,
 h2 em,
 h3 em {
   font-weight: 400;
-  color: var(--forest);
+  color: var(--brand);
 }
 svg {
   display: block;
@@ -187,10 +192,10 @@ img {
   font-size: 19px;
   font-weight: 400;
   line-height: 1;
-  color: var(--forest);
+  color: var(--brand);
 }
 .section-number {
-  color: var(--forest);
+  color: var(--brand);
   margin-right: 6px;
 }
 .button {
@@ -198,8 +203,8 @@ img {
   align-items: center;
   justify-content: center;
   gap: 26px;
-  background: var(--forest);
-  border: 1px solid var(--forest);
+  background: var(--brand);
+  border: 1px solid var(--brand);
   color: var(--white);
   padding: 16px 23px;
   font-size: 12px;
@@ -208,8 +213,8 @@ img {
   min-height: 52px;
 }
 .button:hover {
-  background: var(--forest-hover);
-  border-color: var(--forest-hover);
+  background: var(--brand-hover);
+  border-color: var(--brand-hover);
 }
 .button:hover svg,
 .text-link:hover svg,
@@ -224,6 +229,7 @@ img {
   transition: transform 0.2s;
 }
 .text-link {
+  color: var(--brand);
   display: inline-flex;
   gap: 20px;
   align-items: center;
@@ -234,8 +240,8 @@ img {
   line-height: 1.5;
 }
 .text-link:hover {
-  color: var(--forest);
-  border-color: var(--forest);
+  color: var(--brand);
+  border-color: var(--brand);
 }
 .skip-link {
   position: fixed;
@@ -250,6 +256,8 @@ img {
   top: 12px;
 }
 .site-header {
+  background: var(--surface);
+  color: var(--ink);
   border-bottom: 1px solid var(--line);
 }
 .header-inner {
@@ -266,7 +274,7 @@ img {
   width: 105px;
   flex-shrink: 0;
   line-height: 1;
-  color: var(--forest);
+  color: var(--brand);
 }
 .logo-script {
   font-family: 'Pinyon Script', cursive;
@@ -310,7 +318,7 @@ img {
   transform: scaleX(1);
 }
 .site-header nav a[aria-current='page'] {
-  color: var(--white);
+  color: var(--ink);
 }
 .header-cta {
   display: flex;
@@ -335,6 +343,10 @@ img {
   padding-bottom: 58px;
   align-items: center;
 }
+.hero-band {
+  background: var(--surface);
+  color: var(--ink);
+}
 .hero-copy {
   padding-block: 16px 7px;
 }
@@ -346,7 +358,7 @@ img {
   max-width: 365px;
   line-height: 1.85;
   margin: 26px 0 28px;
-  font-size: 14px;
+  font-size: var(--body-size);
 }
 .hero-actions {
   display: flex;
@@ -372,7 +384,7 @@ img {
 }
 .dual-dot i {
   display: block;
-  border: 1px solid var(--forest);
+  border: 1px solid var(--brand);
   border-radius: 50%;
   width: 16px;
   height: 16px;
@@ -416,7 +428,7 @@ img {
   height: 350px;
   right: 2%;
   top: 24px;
-  background: var(--forest);
+  background: var(--brand);
   color: var(--white);
   transform: rotate(8deg);
   box-shadow: 4px 12px 22px var(--shadow);
@@ -516,7 +528,7 @@ img {
   margin-bottom: 10px;
 }
 .mini-content p em {
-  color: var(--forest);
+  color: var(--brand);
 }
 .mini-content > div > span {
   font-size: 4px;
@@ -524,7 +536,7 @@ img {
   display: block;
 }
 .mini-content .mini-button {
-  background: var(--forest);
+  background: var(--brand);
   color: var(--white);
   padding: 6px 8px;
   width: fit-content;
@@ -539,7 +551,7 @@ img {
   overflow: hidden;
 }
 .arch {
-  border: 1px solid var(--forest);
+  border: 1px solid var(--brand);
   border-radius: 70px 70px 0 0;
   position: absolute;
   width: 74px;
@@ -549,7 +561,7 @@ img {
   transform: translateX(-50%);
 }
 .arch-one {
-  background: var(--forest);
+  background: var(--brand);
 }
 .arch-two {
   width: 50px;
@@ -590,7 +602,7 @@ img {
 .art-swatch span {
   width: 17px;
   height: 17px;
-  background: var(--forest);
+  background: var(--brand);
   border: 1px solid var(--line);
 }
 .art-swatch span:nth-child(2) {
@@ -673,19 +685,19 @@ img {
 .needs p,
 .split-section > div > p {
   color: var(--muted);
-  font-size: 14px;
+  font-size: var(--body-size);
 }
 .needs .section-intro,
 .section-intro {
-  font-size: 17px !important;
-  color: var(--ink) !important;
+  font-size: var(--body-lead-size);
+  color: var(--muted);
   line-height: 1.8;
 }
 .needs .text-link {
   margin-top: 8px;
 }
 .services-section {
-  background: var(--surface);
+  background: var(--surface-muted);
   border-block: 1px solid var(--line);
 }
 .section-heading {
@@ -696,7 +708,7 @@ img {
   margin-bottom: 45px;
 }
 .section-heading > p {
-  font-size: 13px;
+  font-size: var(--body-size);
   color: var(--muted);
   margin-bottom: 4px;
 }
@@ -729,7 +741,7 @@ img {
 .service-icon {
   width: 31px;
   height: 31px;
-  color: var(--forest);
+  color: var(--brand);
 }
 .service-top > span {
   font-size: 10px;
@@ -741,7 +753,7 @@ img {
   margin-bottom: 17px;
 }
 .service > p {
-  font-size: 13px;
+  font-size: var(--body-size);
   color: var(--muted);
   margin-bottom: 27px;
   max-width: 300px;
@@ -749,7 +761,7 @@ img {
 .service-tags {
   font-size: 8px;
   letter-spacing: 0.14em;
-  color: var(--forest);
+  color: var(--brand);
   margin-top: auto;
 }
 .projects-empty {
@@ -763,7 +775,7 @@ img {
   min-height: 250px;
 }
 .empty-symbol {
-  color: var(--forest);
+  color: var(--brand);
 }
 .empty-symbol svg {
   width: 64px;
@@ -778,7 +790,7 @@ img {
   margin-bottom: 12px;
 }
 .projects-empty p {
-  font-size: 13px;
+  font-size: var(--body-size);
   color: var(--muted);
   max-width: 470px;
   margin-bottom: 0;
@@ -790,6 +802,7 @@ img {
   line-height: 1.6;
 }
 .method-section {
+  background: var(--surface-muted);
   border-top: 1px solid var(--line);
 }
 .method-grid {
@@ -801,7 +814,7 @@ img {
   gap: 34px;
 }
 .step-number {
-  color: var(--forest);
+  color: var(--brand);
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -824,14 +837,14 @@ img {
   margin-bottom: 14px;
 }
 .method-grid p {
-  font-size: 12px;
+  font-size: var(--body-size);
   color: var(--muted);
   line-height: 1.85;
   margin: 0;
 }
 .final-cta {
-  background: var(--forest);
-  color: var(--white);
+  background: var(--surface);
+  color: var(--ink);
 }
 .cta-inner {
   display: flex;
@@ -845,7 +858,7 @@ img {
   margin-bottom: 18px;
 }
 .final-cta .tiny-cross {
-  color: var(--white);
+  color: var(--brand);
 }
 .final-cta h2 {
   font-size: 45px;
@@ -856,22 +869,12 @@ img {
   color: inherit;
 }
 .final-cta p {
-  font-size: 12px;
+  font-size: var(--body-size);
   margin: 20px 0 0;
-  color: var(--on-forest-muted);
+  color: var(--muted);
 }
-.button-light {
-  background: var(--surface);
-  border-color: var(--white);
-  color: var(--forest);
+.final-cta .button {
   flex-shrink: 0;
-}
-.button-light:hover {
-  background: var(--line);
-  border-color: var(--line);
-}
-.final-cta a:focus-visible {
-  outline-color: var(--white);
 }
 .site-footer {
   padding-top: 46px;
@@ -884,7 +887,7 @@ img {
   gap: 25px;
 }
 .footer-top > p {
-  font-size: 11px;
+  font-size: var(--body-size);
   line-height: 1.8;
   color: var(--muted);
   margin: 0 auto 0 60px;
@@ -963,14 +966,14 @@ img {
 .two-shapes > div {
   height: 85%;
   width: 50%;
-  background: var(--forest);
+  background: var(--brand);
   border-radius: 160px 160px 0 0;
   transform: rotate(-12deg);
-  border: 1px solid var(--forest);
+  border: 1px solid var(--brand);
 }
 .two-shapes > div + div {
   background: var(--surface-muted);
-  border: 1px solid var(--forest);
+  border: 1px solid var(--brand);
   transform: rotate(12deg);
   margin-left: -28px;
   margin-top: 45px;
@@ -981,11 +984,11 @@ img {
 }
 .about-copy p {
   color: var(--muted);
-  font-size: 14px;
+  font-size: var(--body-size);
 }
 .values-grid {
   display: grid;
-  grid-template-columns: repeat(3, 1fr);
+  grid-template-columns: repeat(3, minmax(0, 1fr));
   gap: 40px;
 }
 .values-grid article {
@@ -993,7 +996,7 @@ img {
   padding-top: 24px;
 }
 .values-grid .eyebrow {
-  color: var(--forest);
+  color: var(--brand);
   font-size: 9px;
 }
 .values-grid h3 {
@@ -1003,10 +1006,10 @@ img {
 }
 .values-grid p {
   color: var(--muted);
-  font-size: 13px;
+  font-size: var(--body-size);
 }
 .skills-section {
-  background: var(--surface);
+  background: var(--surface-muted);
   border-top: 1px solid var(--line);
 }
 .work-section {
@@ -1036,10 +1039,10 @@ img {
   max-width: 650px;
 }
 .work-note > span {
-  color: var(--forest);
+  color: var(--brand);
 }
 .work-note p {
-  font-size: 12px;
+  font-size: var(--body-size);
   color: var(--muted);
   margin: 0;
 }
@@ -1063,14 +1066,14 @@ img {
 }
 .project-nature {
   font-size: 10px;
-  color: var(--forest);
+  color: var(--brand);
 }
 .project p {
-  font-size: 13px;
+  font-size: var(--body-size);
   color: var(--muted);
 }
 .project .project-tech {
-  font-size: 11px;
+  font-size: var(--body-size);
 }
 .contact-intro {
   padding-bottom: 58px;
@@ -1087,7 +1090,7 @@ img {
 }
 .contact-aside > p,
 .contact-details p {
-  font-size: 13px;
+  font-size: var(--body-size);
   color: var(--muted);
   max-width: 320px;
 }
@@ -1101,7 +1104,7 @@ img {
   margin-bottom: 12px;
 }
 .contact-mark {
-  color: var(--forest);
+  color: var(--brand);
   margin-top: 43px;
 }
 .contact-mark svg {
@@ -1111,10 +1114,10 @@ img {
 .form-notice {
   padding: 18px 21px;
   border: 1px solid var(--field-border);
-  border-left: 3px solid var(--forest);
+  border-left: 3px solid var(--brand);
   background: var(--surface-muted);
   font-size: 12px;
-  color: var(--forest);
+  color: var(--brand);
   margin-bottom: 29px;
   line-height: 1.7;
 }
@@ -1122,10 +1125,11 @@ img {
   font-weight: 600;
 }
 .form-notice p {
+  font-size: var(--body-size);
   margin: 5px 0 0;
 }
 .form-required {
-  font-size: 10px;
+  font-size: var(--body-size);
   color: var(--muted);
   margin-bottom: 25px;
 }
@@ -1161,7 +1165,7 @@ img {
   border: 1px solid var(--field-border);
   border-radius: 0;
   padding: 12px 13px;
-  font-size: 12px;
+  font-size: var(--body-size);
   color: var(--ink);
   min-height: 47px;
 }
@@ -1180,14 +1184,14 @@ img {
 .field input:hover,
 .field textarea:hover,
 .field select:hover {
-  border-color: var(--forest);
+  border-color: var(--brand);
 }
 .field-hint {
   font-size: 10px;
   color: var(--muted);
 }
 .privacy-note {
-  font-size: 10px;
+  font-size: var(--body-size);
   color: var(--muted);
   margin-top: 24px;
   line-height: 1.8;
@@ -1225,8 +1229,8 @@ img {
 #form-feedback:not(:empty) {
   margin-top: 22px;
   padding: 15px;
-  border: 1px solid var(--forest);
-  font-size: 13px;
+  border: 1px solid var(--brand);
+  font-size: var(--body-size);
 }
 #form-feedback[data-state='success'] {
   border-color: var(--success);
@@ -1246,7 +1250,7 @@ img {
 }
 .legal-page p,
 .legal-page dl {
-  font-size: 14px;
+  font-size: var(--body-size);
   color: var(--muted);
 }
 .legal-page dt {
@@ -1268,7 +1272,7 @@ img {
   font-family: var(--serif);
   font-size: 140px;
   line-height: 1;
-  color: var(--forest);
+  color: var(--brand);
 }
 .not-found h1 {
   font-size: 62px;
@@ -1279,57 +1283,21 @@ img {
   margin-bottom: 30px;
 }
 
-/* Shared dark surfaces: header, opening screen, closing CTA and footer. */
-.forest-surface {
-  --muted: var(--on-forest-muted);
-  --line: var(--line-on-forest);
-  --focus: var(--white);
-  background: var(--forest);
-  color: var(--white);
-}
-.forest-surface ::selection {
-  background: var(--white);
-  color: var(--forest);
-}
-.forest-surface .logo,
-.forest-surface h1 em,
-.forest-surface .tiny-cross,
-.forest-surface .text-link {
-  color: var(--white);
-}
-.forest-surface .text-link:hover,
-.forest-surface .header-cta:hover {
-  color: var(--white);
-  border-color: var(--white);
-}
-.forest-surface .button {
-  background: var(--white);
-  border-color: var(--white);
-  color: var(--forest);
-}
-.forest-surface .button:hover {
-  background: var(--surface);
-  border-color: var(--surface);
-}
-.forest-surface .button:disabled {
-  background: var(--disabled-background);
-  border-color: var(--disabled-background);
-  color: var(--disabled-text);
-}
-.forest-surface .dual-dot i {
-  border-color: var(--white);
-}
-.forest-surface .dual-dot i + i {
-  background: var(--forest);
-}
+/* Only the footer uses an inverse surface; brand artwork owns its colors. */
 .site-footer {
+  --muted: var(--on-dark-muted);
+  --line: var(--line-on-dark);
+  --focus: var(--white);
+  background: var(--brand);
+  color: var(--white);
   border-top: 1px solid var(--line);
 }
-/* The light miniature retains its own readable palette inside the dark hero. */
-.art-scene {
-  --muted: var(--text-muted);
-  --line: var(--border);
-  color: var(--ink);
+.site-footer ::selection {
+  background: var(--white);
+  color: var(--brand);
+}
+.site-footer .logo {
+  color: var(--white);
 }
 #form-feedback[data-state='error'] {
   color: var(--error);
@@ -1503,7 +1471,7 @@ img {
     gap: 8px;
   }
   .hero-description {
-    font-size: 12px;
+    font-size: var(--body-size);
     margin-block: 20px 22px;
   }
   .hero-actions {
@@ -1610,14 +1578,14 @@ img {
   }
   .needs .section-intro,
   .section-intro {
-    font-size: 15px !important;
+    font-size: var(--body-lead-size);
   }
   .needs p,
   .split-section > div > p {
-    font-size: 12px;
+    font-size: var(--body-size);
   }
   .section-heading > p {
-    font-size: 11px;
+    font-size: var(--body-size);
   }
   .section-heading h2 {
     font-size: 43px;
@@ -1632,7 +1600,7 @@ img {
     font-size: 25px;
   }
   .service > p {
-    font-size: 12px;
+    font-size: var(--body-size);
   }
   .service-tags {
     font-size: 7px;
@@ -1645,7 +1613,7 @@ img {
     display: none;
   }
   .method-grid p {
-    font-size: 13px;
+    font-size: var(--body-size);
   }
   .cta-inner {
     padding-block: 50px;
@@ -1673,7 +1641,7 @@ img {
     padding-block: 55px;
   }
   .page-intro-grid > p {
-    font-size: 13px;
+    font-size: var(--body-size);
   }
   .about-story {
     gap: 6%;
@@ -1694,7 +1662,7 @@ img {
     font-size: 37px;
   }
   .about-copy p {
-    font-size: 12px;
+    font-size: var(--body-size);
   }
   .values-grid {
     gap: 25px;
@@ -1703,7 +1671,7 @@ img {
     font-size: 28px;
   }
   .values-grid p {
-    font-size: 12px;
+    font-size: var(--body-size);
   }
   .contact-layout {
     grid-template-columns: 1fr 1.4fr;
@@ -1722,7 +1690,7 @@ img {
   }
   .contact-aside > p,
   .contact-details p {
-    font-size: 12px;
+    font-size: var(--body-size);
   }
   .form-notice {
     padding: 14px;
@@ -1751,7 +1719,7 @@ img {
     display: flex;
     background: transparent;
     color: inherit;
-    border: 1px solid var(--line);
+    border: 1px solid var(--field-border);
     padding: 9px 12px;
     font-size: 11px;
     align-items: center;
@@ -1811,7 +1779,8 @@ img {
     top: 84px;
     left: -20px;
     right: -20px;
-    background: var(--forest);
+    background: var(--surface);
+    color: var(--ink);
     z-index: 10;
     border-bottom: 1px solid var(--line);
     padding: 17px 24px 24px;
@@ -1844,7 +1813,7 @@ img {
     letter-spacing: -0.045em;
   }
   .hero-description {
-    font-size: 14px;
+    font-size: var(--body-size);
     max-width: 340px;
     line-height: 1.8;
     margin: 22px 0 24px;
@@ -1969,11 +1938,11 @@ img {
   }
   .needs p,
   .split-section > div > p {
-    font-size: 14px;
+    font-size: var(--body-size);
   }
   .needs .section-intro,
   .section-intro {
-    font-size: 16px !important;
+    font-size: var(--body-lead-size);
   }
   .section-heading {
     display: block;
@@ -1983,7 +1952,7 @@ img {
     font-size: 43px;
   }
   .section-heading > p {
-    font-size: 12px;
+    font-size: var(--body-size);
     margin-top: 20px;
   }
   .section-heading > .text-link {
@@ -2010,7 +1979,7 @@ img {
     font-size: 30px;
   }
   .service > p {
-    font-size: 13px;
+    font-size: var(--body-size);
     max-width: 100%;
     margin-bottom: 20px;
   }
@@ -2034,7 +2003,7 @@ img {
     font-size: 42px;
   }
   .projects-empty p {
-    font-size: 12px;
+    font-size: var(--body-size);
   }
   .method-grid {
     gap: 28px 24px;
@@ -2043,7 +2012,7 @@ img {
     font-size: 26px;
   }
   .method-grid p {
-    font-size: 12px;
+    font-size: var(--body-size);
   }
   .step-number {
     font-size: 31px;
@@ -2061,7 +2030,7 @@ img {
     font-size: 40px;
   }
   .final-cta p {
-    font-size: 12px;
+    font-size: var(--body-size);
   }
   .footer-top {
     flex-wrap: wrap;
@@ -2069,7 +2038,7 @@ img {
     padding-bottom: 30px;
   }
   .footer-top > p {
-    font-size: 10px;
+    font-size: var(--body-size);
     margin-left: auto;
   }
   .footer-top nav {
@@ -2098,7 +2067,7 @@ img {
     gap: 25px;
   }
   .page-intro-grid > p {
-    font-size: 14px;
+    font-size: var(--body-size);
     margin: 0;
     max-width: 100%;
   }
@@ -2122,7 +2091,7 @@ img {
     font-size: 43px;
   }
   .about-copy p {
-    font-size: 14px;
+    font-size: var(--body-size);
   }
   .values-grid {
     grid-template-columns: 1fr;
@@ -2132,7 +2101,7 @@ img {
     font-size: 31px;
   }
   .values-grid p {
-    font-size: 14px;
+    font-size: var(--body-size);
   }
   .values-grid .eyebrow {
     margin-bottom: 17px;
@@ -2144,7 +2113,7 @@ img {
     min-height: 330px;
   }
   .work-note p {
-    font-size: 11px;
+    font-size: var(--body-size);
   }
   .project-grid {
     grid-template-columns: 1fr;
@@ -2159,7 +2128,7 @@ img {
   }
   .contact-aside > p,
   .contact-details p {
-    font-size: 13px;
+    font-size: var(--body-size);
     max-width: none;
   }
   .contact-details {
@@ -2196,7 +2165,7 @@ img {
     font-size: 18px;
   }
   .privacy-note {
-    font-size: 11px;
+    font-size: var(--body-size);
   }
   .legal-page {
     padding-block: 43px 65px;

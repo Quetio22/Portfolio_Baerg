@@ -4,7 +4,7 @@ import { createServer } from 'node:http';
 import { once } from 'node:events';
 import { createApp } from '../../server.js';
 
-test('les nouveaux styles remplacent le CSS beige encore présent dans le cache navigateur', async ({
+test('les nouveaux styles remplacent l’ancien CSS encore présent dans le cache navigateur', async ({
   browser,
 }) => {
   const app = createApp();
@@ -34,8 +34,8 @@ test('les nouveaux styles remplacent le CSS beige encore présent dans le cache 
     await page.evaluate(() => fetch('/styles.css').then((response) => response.text()));
     expect(legacyStylesheetRequests).toBe(1);
     await page.getByRole('link', { name: 'Ouvrir le site' }).click();
-    await expect(page.locator('.hero-band')).toHaveCSS('background-color', 'rgb(23, 61, 50)');
-    await expect(page.locator('.site-header')).toHaveCSS('background-color', 'rgb(23, 61, 50)');
+    await expect(page.locator('.hero-band')).toHaveCSS('background-color', 'rgb(255, 255, 255)');
+    await expect(page.locator('.site-header')).toHaveCSS('background-color', 'rgb(255, 255, 255)');
     await expect(page.locator('link[rel="stylesheet"]')).toHaveAttribute(
       'href',
       /\/styles\.css\?v=[a-f0-9]+/,

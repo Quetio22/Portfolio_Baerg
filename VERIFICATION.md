@@ -4,7 +4,7 @@
 
 - Build des sept pages HTML, page 404 statique, ressources, robots et sitemap.
 - 13 tests Node : champs, antispam, expiration du quota, réponses fournisseur simulées, idempotence, absence de configuration, origine, méthode, type JSON, taille de requête, erreurs, limite de tentatives, faux en-têtes proxy, pages et sécurité HTTP. Le passage en mode public, les URLs canoniques, le sitemap et les métadonnées de partage sont vérifiés avec une configuration de test en mémoire. La revalidation du cache et la réponse `304` sont également vérifiées.
-- 14 tests Chromium : sept pages aux largeurs 320, 390, 600, 768, 1 024 et 1 440 px ; aucun débordement horizontal détecté. Un test supplémentaire conserve réellement les anciens styles beiges dans le cache, puis vérifie que la nouvelle page affiche le vert sapin sans vidage manuel du cache ni interception réseau.
+- 14 tests Chromium : sept pages aux largeurs 320, 390, 600, 768, 1 024 et 1 440 px ; aucun débordement horizontal détecté. Un test supplémentaire conserve réellement les anciens styles beiges dans le cache, puis vérifie que la nouvelle page affiche la palette charbon et blanc sans vidage manuel du cache ni interception réseau.
 - Axe WCAG 2 A/AA et 2.1 AA sur les sept pages à 390 et 1 440 px : aucune violation détectée.
 - Menu mobile au clavier : ouverture Entrée, Tabulation, Escape, retour du focus, lien actif, navigation effective.
 - Tous les liens internes vérifiés, titres et descriptions uniques, ressources chargées, aucune exception JavaScript, erreur de console inattendue ni requête vers une ressource tierce pendant les parcours.
@@ -13,12 +13,16 @@
 - Inspection visuelle des captures de l’accueil mobile/ordinateur et du contact ordinateur.
 - Polices et licences présentes localement ; image de partage générée à 1 200 × 630 px.
 
-## Mise à jour de la palette vert sapin
+## Mise à jour de la palette charbon et blanc
 
-- Remplacement des anciens tons bordeaux, crème et beige, y compris dans les ombres, la composition d’accueil, le favicon et l’image de partage. Palette centralisée dans les variables CSS.
-- Contrastes calculés : blanc/vert sapin **12:1**, charbon/blanc froid **14,04:1**, textes secondaires sur fond clair **5,47:1**, textes secondaires sur fond vert **9,20:1**. Bordures des champs **3,23:1**, contour du menu **3,84:1**, texte désactivé **5,02:1**, erreur **6,58:1**, confirmation **7,11:1**.
-- Vérification supplémentaire du menu mobile ouvert avec Axe : aucune violation détectée. Le site ne possède pas de navigation sticky ni de mode sombre distinct ; les champs natifs conservent un schéma clair explicite.
-- Inspection rapprochée des logos de navigation et de la composition d’accueil : espacement de « DESIGN » et taille de la signature adaptés aux petits écrans. Lien d’en-tête remplacé par « Discutons de votre projet », toujours vers Contact.
+- Palette centralisée dans `public/styles.css` : navigation et accueil blancs, alternance blanc/gris très clair, pied de page charbon. Suppression des variables et surfaces de marque vertes, ombres et dégradés teintés compris.
+- Maquettes de marque d’accueil et illustration À propos recolorées dans leur code source ; favicon SVG modifié et image de partage PNG régénérée depuis sa source. Pinyon Script, les autres polices, les contenus et les fonctionnalités sont préservés. Aucun projet client publié actuellement, aucun filtre ajouté aux images de projets.
+- Paragraphes courants vérifiés à 16–17 px sur les sept pages, sans transparence. Les compositions typographiques et miniatures conservent leurs tailles propres. Correction du débordement de la grille de valeurs à 200 % de texte.
+- Contrastes calculés : charbon/blanc **15,49:1**, paragraphes/blanc **9,09:1**, paragraphes/gris très clair **8,27:1**, texte secondaire/pied de page **11,33:1**, bordures de champs et menu/blanc **3,66:1**, texte désactivé **6,65:1**.
+- Build réussi ; **13 tests Node et 14 tests Chromium réussis**. Sept pages vérifiées à 320, 390, 600, 768, 1 024 et 1 440 px ; aucune violation Axe sur les sept pages à 390 et 1 440 px.
+- Contrôles supplémentaires : menu mobile ouvert et focus clavier visibles, survol du bouton principal, champs à 16 px, bouton désactivé, messages d’erreur et de succès simulés. Aucune violation Axe dans le menu ouvert ni sur les messages simulés. Aucun e-mail réellement envoyé.
+- Captures inspectées : accueil ordinateur/mobile, À propos ordinateur, contact mobile, menu ouvert et image de partage. Le site ne possède ni navigation sticky ni mode sombre distinct ; sa palette claire reste lisible avec une préférence système sombre.
+- `npm run format:check` et `git diff --check` réussis.
 
 ## Limites
 
