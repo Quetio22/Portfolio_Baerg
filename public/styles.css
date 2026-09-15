@@ -980,11 +980,22 @@ img {
   max-width: 640px;
   margin: 20px 0 0;
 }
-.page-intro.contact-layout {
+.page-intro.compact-intro {
+  padding-block: clamp(28px, 4vw, 48px);
+}
+.contact-layout {
   display: grid;
   grid-template-columns: 0.8fr 1.2fr;
-  gap: 13%;
-  padding-block: 32px 64px;
+  gap: 8%;
+  align-items: start;
+  padding-block: 48px 96px;
+}
+.contact-aside h1 {
+  font-size: clamp(44px, 4.5vw, 64px);
+  margin-bottom: 24px;
+}
+.contact-layout > * {
+  min-width: 0;
 }
 .contact-aside > p,
 .contact-details p {
@@ -1768,7 +1779,7 @@ img {
   .contact-layout {
     grid-template-columns: 1fr;
     gap: 35px;
-    padding-block: 24px 48px;
+    padding-block: 32px 64px;
   }
   .contact-aside > p,
   .contact-details p {
