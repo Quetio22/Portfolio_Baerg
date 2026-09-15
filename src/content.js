@@ -30,21 +30,21 @@ export const services = [
   {
     number: '01',
     name: 'Création de sites web',
-    text: 'Votre activité mérite sa place en ligne. Nous imaginons un site clair, soigné et adapté à vos besoins.',
+    text: 'Nous concevons les pages pour présenter votre activité, vos services et les moyens de vous contacter.',
     tags: 'SITE VITRINE · SUR MESURE',
     icon: 'window',
   },
   {
     number: '02',
     name: 'Refonte de sites',
-    text: 'Votre site ne vous ressemble plus ? Repensons son design, son contenu et son utilisation, ensemble.',
-    tags: 'NOUVEAU REGARD · NOUVEL ÉLAN',
+    text: 'Nous revoyons la structure, les contenus et le design de votre site pour rendre les informations plus faciles à trouver.',
+    tags: 'STRUCTURE · CONTENUS · DESIGN',
     icon: 'refresh',
   },
   {
     number: '03',
     name: 'Une présence qui s’adapte',
-    text: 'Du grand écran au téléphone, nous pensons chaque page pour que vos visiteurs trouvent leur chemin.',
+    text: 'Nous adaptons la navigation, les textes et les formulaires aux téléphones, tablettes et ordinateurs.',
     tags: 'RESPONSIVE · CLARTÉ',
     icon: 'devices',
   },
@@ -61,11 +61,11 @@ export const method = [
   },
   {
     name: 'Développement',
-    text: 'Nous donnons vie aux pages et vérifions leur fonctionnement sur les différents écrans.',
+    text: 'Nous développons les pages et vérifions les liens, les formulaires et leur affichage sur les différents écrans.',
   },
   {
     name: 'Mise en ligne',
-    text: 'Après les derniers ajustements, votre site prend sa place sur le web. Nous vous en expliquons les clés.',
+    text: 'Après les derniers ajustements, nous publions votre site et vous expliquons son fonctionnement.',
   },
 ];
 
