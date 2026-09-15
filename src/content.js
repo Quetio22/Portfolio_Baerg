@@ -28,21 +28,18 @@ export const navigation = [
 
 export const services = [
   {
-    number: '01',
     name: 'Création de sites web',
     text: 'Nous concevons les pages pour présenter votre activité, vos services et les moyens de vous contacter.',
     tags: 'SITE VITRINE · SUR MESURE',
     icon: 'window',
   },
   {
-    number: '02',
     name: 'Refonte de sites',
     text: 'Nous revoyons la structure, les contenus et le design de votre site pour rendre les informations plus faciles à trouver.',
     tags: 'STRUCTURE · CONTENUS · DESIGN',
     icon: 'refresh',
   },
   {
-    number: '03',
     name: 'Une présence qui s’adapte',
     text: 'Nous adaptons la navigation, les textes et les formulaires aux téléphones, tablettes et ordinateurs.',
     tags: 'RESPONSIVE · CLARTÉ',
