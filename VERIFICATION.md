@@ -1,5 +1,11 @@
 # Vérifications
 
+## Correctifs thème et page À propos — 20 septembre 2026
+
+- Le bouton lune/soleil applique réellement le mode clair ou le fond charbon `#1C1D22` sur toutes les pages. Le logo, le menu, les textes, les champs et les états fonctionnels restent lisibles dans les deux thèmes ; le bleu et l’abricot du visuel d’accueil sont conservés.
+- Page À propos remise en forme : portraits en grille sur ordinateur et empilés sur téléphone, ratio 4:5, légendes superposées et textes raccourcis. Les mentions « Prénom à renseigner » ont été retirées jusqu’à l’ajout des vrais prénoms.
+- Contrôle responsive sur 14 formats de 320 à 1 440 px, texte normal et doublé, Chromium et WebKit : 34 tests réussis. Contrôle du thème, de sa mémorisation, des contrastes et du menu sombre : 16 tests réussis. Navigation, cache, accessibilité, liens et formulaires : 28 tests réussis. Les 13 tests Node, le build et le formatage passent également.
+
 ## Contrôle responsive — 19 septembre 2026
 
 - **62 tests navigateur réussis** : 31 dans Chromium et 31 dans WebKit. Les 13 tests Node, le build des sept pages, le formatage et `git diff --check` passent également.

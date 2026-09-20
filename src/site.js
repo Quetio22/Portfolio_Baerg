@@ -107,13 +107,16 @@ function teamProfiles() {
     <div class="team-grid">
       ${visibleFounders
         .map(
-          (founder, index) => `<article class="founder" aria-labelledby="${e(founder.id)}-name">
+          (
+            founder,
+            index,
+          ) => `<article class="founder" aria-label="${e(founder.name || founder.role)}">
         <div class="founder-photo">
           <img src="${e(assetUrl(founder.image))}" alt="${e(founder.imageAlt)}" width="${Number(founder.width)}" height="${Number(founder.height)}" loading="${index === 0 ? 'eager' : 'lazy'}" decoding="async">
-          ${founder.isPlaceholder ? '<span class="portrait-label">Portrait provisoire</span>' : ''}
+          ${founder.isPlaceholder ? '<span class="portrait-label">Photo temporaire</span>' : ''}
         </div>
         <div class="founder-caption">
-          <h2 id="${e(founder.id)}-name">${e(founder.name || 'Prénom à renseigner')}</h2>
+          ${founder.name ? `<h2>${e(founder.name)}</h2>` : ''}
           <p class="founder-role">${e(founder.role)}</p>
           ${founder.biography ? `<p class="founder-biography">${e(founder.biography)}</p>` : ''}
           ${founder.profileUrl ? `<a class="text-link" href="${e(founder.profileUrl)}" rel="noopener noreferrer">Profil professionnel${arrow}</a>` : ''}
@@ -122,11 +125,11 @@ function teamProfiles() {
         )
         .join('')}
     </div>
-    ${visibleFounders.some((founder) => founder.isPlaceholder) ? '<p class="team-preview-note">Ces portraits générés servent à prévisualiser la page. Ils ne représentent pas les fondateurs et seront remplacés par leurs vraies photos.</p>' : ''}
+    ${visibleFounders.some((founder) => founder.isPlaceholder) ? '<p class="team-preview-note">Photos temporaires pour prévisualiser la mise en page. Elles seront remplacées par nos portraits.</p>' : ''}
   </section>`;
 }
 function about() {
-  return `<section class="about-intro"><div class="container page-intro">${eyebrow('LE STUDIO')}<div class="page-intro-grid"><h1>Derrière Baerg,<br><em>nous deux.</em></h1><p>Nous sommes deux apprentis développeurs full-stack. Nous avons créé Baerg Design pour concevoir et développer des sites ensemble.</p></div></div></section>${teamProfiles()}<section class="container section split-section team-story"><div>${eyebrow('NOTRE HISTOIRE')}<h2>Deux apprentis.<br>Un projet <em>commun.</em></h2></div><div><p class="section-intro">Baerg Design, c’est un studio que nous construisons à deux, en parallèle de notre formation.</p><p>Nous proposons la création et la refonte de sites web aux entreprises, aux indépendants et aux particuliers. Nous travaillons ensemble sur les pages, les contenus et leur fonctionnement sur ordinateur et mobile.</p><p>Quand vous nous confiez un projet, vous échangez directement avec nous. Nous prenons le temps de comprendre votre activité, nous vous expliquons nos choix et nous ajustons le site avec vos retours.</p></div></section><section class="skills-section"><div class="container split-section section"><div>${eyebrow('CE QUE NOUS APPRENONS')}<h2>Du design<br>au développement.</h2></div><div><p class="section-intro">Notre formation full-stack nous amène à travailler sur les interfaces et sur leur fonctionnement côté serveur.</p><p>Pour votre site, nous réunissons conception des pages, développement et adaptation aux différents écrans. Les choix techniques se définissent selon les besoins du projet.</p><p>Nous continuons à apprendre. Si une demande dépasse notre expérience, nous vous le disons.</p></div></div></section>${finalCta()}`;
+  return `<section class="about-intro"><div class="container page-intro">${eyebrow('LE STUDIO')}<div class="page-intro-grid"><h1>Derrière Baerg,<br><em>nous deux.</em></h1><p>Deux apprentis développeurs full-stack, réunis pour concevoir des sites clairs et soignés.</p></div></div></section>${teamProfiles()}<section class="container section split-section team-story"><div>${eyebrow('NOTRE HISTOIRE')}<h2>Deux apprentis.<br>Un projet <em>commun.</em></h2></div><div><p class="section-intro">Nous construisons Baerg Design à deux, en parallèle de notre formation.</p><p>Nous créons et modernisons des sites web. Vous échangez directement avec nous, du premier besoin jusqu’aux derniers ajustements.</p></div></section><section class="skills-section"><div class="container split-section section"><div>${eyebrow('NOS COMPÉTENCES')}<h2>Du design<br>au développement.</h2></div><div><p class="section-intro">Nous travaillons autant sur l’interface que sur son fonctionnement.</p><p>Structure des pages, développement et adaptation mobile sont réunis dans un même projet, avec des choix expliqués simplement.</p></div></div></section>${finalCta()}`;
 }
 function work() {
   const count = projects.filter((project) => project.published).length;
