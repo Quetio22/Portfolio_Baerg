@@ -76,4 +76,21 @@ export const budgets = [
 ];
 
 // Voir README pour le schéma. Les projets non publiés ne sont jamais affichés.
-export const projects = [];
+export const projects = [
+  {
+    published: true,
+    name: 'Atelier Traverse',
+    nature: 'Concept non commandé',
+    image: '/images/atelier-traverse-preview.jpg',
+    imageAlt:
+      'Aperçu du site conceptuel Atelier Traverse : typographie affirmée, accent brique et inspiration de rangement en bois.',
+    width: 1440,
+    height: 1080,
+    problem:
+      'Imaginer le site d’une menuiserie fictive autour de Bulle pour présenter ses aménagements aux particuliers.',
+    solution:
+      'Un premier aperçu responsive avec une identité dédiée, des images d’inspiration et un schéma explicatif du rangement. Le concept est en cours de construction.',
+    url: '/concepts/atelier-traverse/',
+    linkLabel: 'Voir la maquette',
+  },
+];

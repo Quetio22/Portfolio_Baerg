@@ -6,6 +6,7 @@ import { fileURLToPath } from 'node:url';
 import { isIP } from 'node:net';
 import { pages, renderPage, siteUrl, publicationReady, contactReady } from './src/site.js';
 import { createRateLimiter, validateContact, sendContact } from './src/contact.js';
+import { conceptPages } from './src/concepts/index.js';
 
 const root = fileURLToPath(new URL('./public/', import.meta.url));
 const types = {
@@ -18,6 +19,7 @@ const types = {
   '.jpg': 'image/jpeg',
   '.jpeg': 'image/jpeg',
   '.woff2': 'font/woff2',
+  '.ttf': 'font/ttf',
   '.txt': 'text/plain; charset=utf-8',
 };
 export function robots(env = process.env) {
@@ -137,6 +139,14 @@ export function createApp({
       if (path === '/robots.txt') return respond(200, robots(env), 'text/plain; charset=utf-8');
       if (path === '/sitemap.xml')
         return respond(200, sitemap(env), 'application/xml; charset=utf-8');
+      if (conceptPages[path]) {
+        res.setHeader('X-Robots-Tag', 'noindex, nofollow');
+        return respond(200, conceptPages[path]());
+      }
+      if (conceptPages[path + '/']) {
+        res.writeHead(308, { Location: path + '/' });
+        return res.end();
+      }
       if (pages[path] && path !== '/404/') return respond(200, renderPage(path));
       if (pages[path + '/']) {
         res.writeHead(308, { Location: path + '/' });
