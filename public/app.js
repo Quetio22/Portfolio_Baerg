@@ -1,5 +1,28 @@
 document.documentElement.classList.add('js');
 
+const themeToggle = document.querySelector('.theme-toggle');
+function applyTheme(theme) {
+  const dark = theme === 'dark';
+  document.documentElement.dataset.theme = dark ? 'dark' : 'light';
+  themeToggle.setAttribute('aria-pressed', String(dark));
+  themeToggle.title = dark ? 'Passer en mode clair' : 'Passer en mode sombre';
+  document.querySelector('meta[name="theme-color"]').content = dark ? '#1C1D22' : '#FFFFFF';
+}
+applyTheme(document.documentElement.dataset.theme);
+themeToggle.hidden = false;
+themeToggle.addEventListener('click', () => {
+  const theme = document.documentElement.dataset.theme === 'dark' ? 'light' : 'dark';
+  applyTheme(theme);
+  try {
+    localStorage.setItem('baerg-theme', theme);
+  } catch {
+    // Keep the current page usable even if storage is blocked.
+  }
+});
+window.addEventListener('storage', (event) => {
+  if (event.key === 'baerg-theme' || event.key === null) applyTheme(event.newValue);
+});
+
 const menuToggle = document.querySelector('.menu-toggle');
 const navigation = document.querySelector('#main-navigation');
 function closeMenu(returnFocus = false) {
@@ -22,7 +45,7 @@ document.addEventListener('click', (event) => {
 document.addEventListener('focusin', (event) => {
   if (!navigation.contains(event.target) && !menuToggle.contains(event.target)) closeMenu();
 });
-matchMedia('(min-width: 601px)').addEventListener('change', () => closeMenu());
+matchMedia('(min-width: 801px)').addEventListener('change', () => closeMenu());
 
 const form = document.querySelector('#contact-form');
 if (form) {

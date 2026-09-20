@@ -17,7 +17,7 @@ Ouvrir **http://127.0.0.1:3000**. Les modifications des modules redémarrent le 
 ```sh
 npm run build          # Export HTML dans dist/
 npm test               # Validation et serveur ; messagerie simulée
-npx playwright install chromium
+npx playwright install chromium webkit
 npm run test:browser   # Navigation, responsive, accessibilité et formulaire
 npm run format:check
 ```
@@ -31,15 +31,28 @@ Les outils de test et de formatage sont uniquement des dépendances de développ
 - `public/styles.css` : palette, typographie, grille et responsive.
 - `src/assets.js` : URLs des styles, scripts, favicon et image de partage versionnées selon leur contenu, pour éviter l’affichage d’anciennes ressources en cache.
 - `public/app.js` : menu accessible et états du formulaire.
+- `public/theme.js` : restauration du thème avant l’affichage de la page.
 - `src/contact.js` : validation, limitation et appel au service de messagerie.
 - `server.js` : routes HTTP, ressources, en-têtes de sécurité, robots et sitemap.
 - `scripts/build.js` : export des pages et contrôle des projets publiés.
 
-L’accueil affiche une composition de l’identité **du studio**, pas une réalisation client. Les prénoms, portraits, coordonnées, liens professionnels, technologies spécifiques et projets absents du brief n’ont pas été inventés. La présentation collective peut être conservée.
+L’accueil affiche une composition de l’identité **du studio**, pas une réalisation client. Les prénoms, coordonnées, liens professionnels, technologies spécifiques et projets absents du brief n’ont pas été inventés. À la demande du studio, la page À propos contient deux portraits générés de démonstration, explicitement marqués « Portrait provisoire » en prévisualisation et masqués en mode publication.
+
+## Présenter les deux fondateurs
+
+Les profils sont centralisés dans `founders`, dans `src/content.js`. Pour chaque personne, renseigner son prénom dans `name`, ajouter sa vraie photo dans `public/images/`, mettre à jour `image`, `imageAlt`, `width` et `height`, puis passer `isPlaceholder` à `false`. Une courte présentation personnelle (`biography`) et un lien professionnel réel (`profileUrl`) sont facultatifs. Les portraits sont présentés au format 4:5 et s’adaptent au mobile.
+
+Les images provisoires sont `public/images/portrait-demo-a.jpg` et `public/images/portrait-demo-b.jpg`, en 800 × 1 000 px. Les [prompts et détails de génération](docs/portraits-provisoires.md) sont conservés dans le projet. Aucun nom ou parcours individuel n’est inventé. En mode publication, un profil provisoire ou dépourvu de prénom ou de photo est masqué ; la présentation collective reste visible.
 
 La palette est centralisée dans les variables `:root` de `public/styles.css` : blanc `#FFFFFF`, encre `#292A30`, paragraphes `#50515A`, accent bleu `#4059D8` et annotation abricot `#F0B89A`. Le bleu est réservé aux actions et repères choisis, ainsi qu’à la feuille de marque ; les grandes surfaces restent neutres. Le pied de page utilise l’encre. Le visuel d’accueil est un concept d’interface de réservation non commandé, composé en HTML/CSS, avec une légende explicite. Le logo Pinyon Script et les grands titres Cormorant sont conservés ; les titres de services utilisent DM Sans. Les paragraphes restent à 16–17 px, les repères principaux et la légende du concept à 12 px. Les couleurs fonctionnelles ont leurs propres variables. Le générateur de l’image de partage réutilise la composition `studioArt()` et les styles du site ; la régénérer avec `npm run assets:share` après modification. Le favicon SVG est bleu.
 
 Un simple rechargement suffit après une modification : les ressources principales changent d’URL lorsque leur contenu change. Le serveur demande également leur revalidation (`Cache-Control: public, no-cache`) et renvoie une réponse légère `304` lorsqu’elles sont inchangées. Cette protection remplace l’ancienne conservation d’une heure, qui pouvait masquer une nouvelle palette. L’export `dist/` contient aussi les URLs versionnées ; le reconstruire avant de le mettre à jour sur un hébergement statique.
+
+## Mode sombre
+
+Le bouton lune/soleil à côté du logo permet de basculer entre les deux thèmes sur toutes les pages, y compris sur téléphone. Le mode clair reste le choix initial. Le mode sombre utilise un fond charbon `#1C1D22`, des sections `#25262D` et des textes clairs. Les boutons bleus, les annotations abricot et les couleurs du concept d’accueil sont conservés ; les petits repères bleus et les couleurs fonctionnelles sont adaptés pour rester lisibles.
+
+La palette sombre est centralisée dans `:root[data-theme='dark']` dans `public/styles.css`. Le choix `light` ou `dark` est conservé localement sous la clé `baerg-theme`, restauré par `public/theme.js` avant l’affichage du contenu et synchronisé entre les onglets. Ce petit script s’exécute après la feuille de style, dans l’en-tête du document, pour assurer le bon rendu des champs natifs dans WebKit. Si le stockage est bloqué, le bouton fonctionne pour la page en cours. Sans JavaScript, il est masqué et le thème clair reste utilisable.
 
 ## Ajouter une réalisation
 
@@ -103,7 +116,7 @@ Les quatre fichiers WOFF2 sont hébergés localement : Pinyon Script pour le log
 
 Sources des licences : [Pinyon Script](https://github.com/google/fonts/tree/main/ofl/pinyonscript), [Cormorant Garamond](https://github.com/google/fonts/tree/main/ofl/cormorantgaramond), [DM Sans](https://github.com/google/fonts/tree/main/ofl/dmsans).
 
-Les compositions du studio sont dessinées en CSS et SVG, sans photographie ni image de client. `public/images/og.png` est l’image de partage de 1 200 × 630 px. Pour la régénérer après une modification de l’identité : `npm run assets:share` (Chromium installé).
+Les compositions du studio sont dessinées en CSS et SVG, sans image de client. Les deux portraits temporaires de la page À propos sont des personnages fictifs générés avec l’outil intégré `image_gen`, puis optimisés localement en JPEG. `public/images/og.png` est l’image de partage de 1 200 × 630 px. Pour la régénérer après une modification de l’identité : `npm run assets:share` (Chromium installé).
 
 ## Vérifications réalisées
 

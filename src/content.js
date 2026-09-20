@@ -26,6 +26,35 @@ export const navigation = [
   { href: '/contact/', label: 'Contact' },
 ];
 
+// Les portraits de démonstration restent limités à la prévisualisation.
+// Remplacer les images, renseigner les prénoms puis passer isPlaceholder à false.
+export const founders = [
+  {
+    id: 'founder-a',
+    name: '',
+    role: 'Cofondateur · Apprenti développeur full-stack',
+    biography: '',
+    image: '/images/portrait-demo-a.jpg',
+    imageAlt: 'Portrait généré de démonstration, à remplacer par celui du cofondateur.',
+    width: 800,
+    height: 1000,
+    isPlaceholder: true,
+    profileUrl: '',
+  },
+  {
+    id: 'founder-b',
+    name: '',
+    role: 'Cofondateur · Apprenti développeur full-stack',
+    biography: '',
+    image: '/images/portrait-demo-b.jpg',
+    imageAlt: 'Portrait généré de démonstration, à remplacer par celui du cofondateur.',
+    width: 800,
+    height: 1000,
+    isPlaceholder: true,
+    profileUrl: '',
+  },
+];
+
 export const services = [
   {
     name: 'Création de sites web',
@@ -47,24 +76,17 @@ export const services = [
   },
 ];
 
-export const method = [
-  {
-    name: 'Échange',
-    text: 'Nous parlons de votre activité, de vos envies et de ce que votre site doit accomplir.',
-  },
-  {
-    name: 'Conception',
-    text: 'Nous organisons les contenus et dessinons une direction visuelle, à valider avec vous.',
-  },
-  {
-    name: 'Développement',
-    text: 'Nous développons les pages et vérifions les liens, les formulaires et leur affichage sur les différents écrans.',
-  },
-  {
-    name: 'Mise en ligne',
-    text: 'Après les derniers ajustements, nous publions votre site et vous expliquons son fonctionnement.',
-  },
-];
+export const approach = {
+  label: 'TRAVAILLER ENSEMBLE',
+  title: 'On construit votre site',
+  emphasis: 'avec vous.',
+  introduction: 'Vous connaissez votre activité. Nous prenons le temps de la comprendre.',
+  paragraphs: [
+    'Nous parlons de ce que vous faites, des personnes qui viendront sur votre site et de ce qu’elles doivent y trouver. À partir de là, nous vous proposons des pages et une première maquette. Vous nous dites ce qui vous plaît, ce qui manque, ce qui est à revoir.',
+    'Vous échangez directement avec nous deux pendant le développement. Nous ajustons le site avec vos retours, vérifions son fonctionnement sur ordinateur et mobile, puis le mettons en ligne. Avant de vous le confier, nous vous montrons comment l’utiliser.',
+  ],
+  linkLabel: 'Faire connaissance avec le studio',
+};
 
 export const projectTypes = ['À définir', 'Création de site', 'Refonte de site', 'Autre projet'];
 export const budgets = [

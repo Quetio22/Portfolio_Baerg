@@ -1,4 +1,19 @@
-# Vérifications — 13 septembre 2026
+# Vérifications
+
+## Contrôle responsive — 19 septembre 2026
+
+- **62 tests navigateur réussis** : 31 dans Chromium et 31 dans WebKit. Les 13 tests Node, le build des sept pages, le formatage et `git diff --check` passent également.
+- Les sept pages sont contrôlées sur 14 formats : 320 × 568, 360 × 800, 375 × 667, 390 × 844, 430 × 932, 600 × 800, 601 × 800, 768 × 1024, 800 × 600, 801 × 600, 844 × 390, 932 × 430, 1024 × 768 et 1440 × 900. Texte normal et doublé dans chaque moteur : **392 combinaisons sans débordement horizontal de page ou de texte visible**.
+- Corrections : retour à la ligne des titres et textes longs, grilles qui respectent l’espace disponible, logo gardé sur une ligne avec une largeur adaptée, navigation mobile jusqu’à 800 px, menu positionné sous la hauteur réelle de l’en-tête et refermé au passage en paysage large. L’agrandissement automatique du texte lors des changements d’orientation est stabilisé, sans interdire le zoom utilisateur.
+- Les champs du formulaire se répartissent selon leur largeur disponible et passent sur une colonne sur téléphone. La section Contact passe sur une colonne jusqu’à 800 px. Champs à au moins 16 px ; liens de navigation mobile, boutons et actions isolées contrôlés avec une zone tactile d’au moins 44 × 44 px. Les liens du pied de page peuvent revenir à la ligne.
+- Menu vérifié au toucher et au clavier, avec texte doublé, fermeture extérieure, Escape, retour du focus, lien actif et rotation. Formulaire vérifié avec saisie, listes de choix, hauteur réduite, erreurs et confirmation simulées, conservation des valeurs et focus sur le retour. Aucun envoi réel.
+- Portraits : chargement des deux images, ratio 4:5 et absence de chevauchement à 320, 390, 600, 601 et 844 px. Captures inspectées pour l’accueil, le duo, le formulaire, le menu ouvert et le paysage ; identité et contenus conservés.
+- Axe WCAG 2 A/AA et 2.1 AA sur les sept pages à 390 et 1440 px dans les deux moteurs, plus le menu ouvert : aucune violation détectée. Liens, ressources, cache, navigation sans JavaScript et réduction des mouvements vérifiés. Le contrôle de console distingue le message CSP provoqué uniquement par la feuille vide que Playwright injecte pendant les captures WebKit ; la politique de sécurité du site reste inchangée.
+- Tests ajoutés dans `tests/browser/responsive.spec.js`. Pour les reproduire : `npx playwright install chromium webkit`, puis `npm run test:browser`. Captures dans `test-results/`, hors Git.
+
+**Limites :** émulation de tailles et d’interactions tactiles sur ordinateur, sans téléphone physique. WebKit teste le moteur de Safari, pas une version iOS installée sur un iPhone. Le texte doublé est une simulation CSS ; le clavier virtuel est approché par une réduction de hauteur. Les projets publiés étant encore absents, leur contenu devra être revérifié lors de l’ajout. Le site n’a pas été déployé pendant ce contrôle.
+
+## Historique — 13 septembre 2026
 
 ## Résultats
 

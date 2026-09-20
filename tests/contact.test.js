@@ -45,6 +45,15 @@ test('configuration publique : domaine, sitemap, métadonnées et activation du 
     assert.match(html, /name="robots" content="index, follow"/);
     assert.ok(!html.includes('test-only'));
     assert.match(renderPage('/404/'), /name="robots" content="noindex, nofollow"/);
+    const about = renderPage('/a-propos/');
+    assert.ok(
+      !about.includes('portrait-demo-'),
+      'Les portraits de démonstration restent hors publication.',
+    );
+    assert.ok(
+      !about.includes('Prénom à renseigner'),
+      'Les prénoms provisoires restent hors publication.',
+    );
   } finally {
     Object.assign(studio.legal, legal);
     for (const key of [

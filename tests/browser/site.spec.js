@@ -30,8 +30,18 @@ test('les nouveaux styles remplacent l’ancien CSS encore présent dans le cach
     const page = await context.newPage();
     await page.goto(`http://127.0.0.1:${server.address().port}/ancienne-version/`);
     await expect(page.locator('body')).toHaveCSS('background-color', 'rgb(247, 243, 236)');
-    // No request interception: Chromium really stores and reuses the old response.
-    await page.evaluate(() => fetch('/styles.css').then((response) => response.text()));
+    // No request interception: the browser really stores and reuses the old response.
+    await page.evaluate(
+      () =>
+        new Promise((resolve, reject) => {
+          const link = document.createElement('link');
+          link.rel = 'stylesheet';
+          link.href = '/styles.css';
+          link.onload = resolve;
+          link.onerror = reject;
+          document.head.append(link);
+        }),
+    );
     expect(legacyStylesheetRequests).toBe(1);
     await page.getByRole('link', { name: 'Ouvrir le site' }).click();
     await expect(page.locator('.hero-band')).toHaveCSS('background-color', 'rgb(255, 255, 255)');
@@ -58,12 +68,21 @@ const paths = [
   '/introuvable/',
 ];
 for (const width of [320, 390, 600, 768, 1024, 1440]) {
-  test(`pages, ressources et débordements à ${width}px`, async ({ page }) => {
+  test(`pages, ressources et débordements à ${width}px`, async ({ page, browserName }) => {
     await page.setViewportSize({ width, height: 900 });
     const errors = [];
     const failedResources = [];
+    let takingScreenshot = false;
     page.on('pageerror', (error) => errors.push(error.message));
     page.on('console', (message) => {
+      // Playwright injects "body {}" to sync animations during WebKit captures.
+      // Our CSP correctly rejects it; keep checking all errors outside captures.
+      if (
+        takingScreenshot &&
+        browserName === 'webkit' &&
+        message.text().startsWith('Refused to apply a stylesheet because its hash, its nonce')
+      )
+        return;
       if (message.type() === 'error' && !message.text().includes('404 (Not Found)'))
         errors.push(message.text());
     });
@@ -84,17 +103,22 @@ for (const width of [320, 390, 600, 768, 1024, 1440]) {
           .withTags(['wcag2a', 'wcag2aa', 'wcag21aa'])
           .analyze();
         expect(result.violations, `${path} à ${width}px`).toEqual([]);
-        await page.screenshot({
-          path: `test-results/${path === '/' ? 'accueil' : path.replaceAll('/', '')}-${width}.png`,
-          fullPage: true,
-        });
+        takingScreenshot = true;
+        try {
+          await page.screenshot({
+            path: `test-results/${browserName}-${path === '/' ? 'accueil' : path.replaceAll('/', '')}-${width}.png`,
+            fullPage: true,
+          });
+        } finally {
+          takingScreenshot = false;
+        }
       }
     }
     expect(errors).toEqual([]);
     expect(failedResources).toEqual([]);
   });
 }
-test('menu mobile au clavier, fermeture Escape et page active', async ({ page }) => {
+test('menu mobile au clavier, fermeture Escape et page active', async ({ page, browserName }) => {
   await page.setViewportSize({ width: 390, height: 844 });
   await page.goto('/');
   const menu = page.getByRole('button', { name: 'Menu' });
@@ -103,7 +127,8 @@ test('menu mobile au clavier, fermeture Escape et page active', async ({ page })
   await menu.focus();
   await page.keyboard.press('Enter');
   await expect(menu).toHaveAttribute('aria-expanded', 'true');
-  await page.keyboard.press('Tab');
+  // WebKit on macOS uses Option-Tab to include links in keyboard navigation.
+  await page.keyboard.press(browserName === 'webkit' ? 'Alt+Tab' : 'Tab');
   await expect(nav.getByRole('link', { name: 'Accueil', exact: true })).toBeFocused();
   await page.keyboard.press('Escape');
   await expect(menu).toBeFocused();
