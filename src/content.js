@@ -79,6 +79,22 @@ export const budgets = [
 export const projects = [
   {
     published: true,
+    name: 'Midi & Compagnie',
+    nature: 'Concept non commandé',
+    image: '/images/midi-et-compagnie-preview.jpg',
+    imageAlt:
+      'Aperçu de Midi & Compagnie : bistrot fictif du midi, identité aubergine et photographie d’inspiration d’un déjeuner.',
+    width: 1440,
+    height: 1080,
+    problem:
+      'Imaginer le site d’un bistrot fictif à Bulle pour donner envie de déjeuner et trouver facilement la carte, les prix et les horaires.',
+    solution:
+      'Une maquette responsive avec une carte filtrable en CHF, des images d’inspiration et des horaires dédiés au déjeuner. La réservation reste à venir.',
+    url: '/concepts/midi-et-compagnie/',
+    linkLabel: 'Voir la maquette',
+  },
+  {
+    published: true,
     name: 'Atelier Traverse',
     nature: 'Concept non commandé',
     image: '/images/atelier-traverse-preview.jpg',
