@@ -94,8 +94,13 @@ test.describe('mode sombre responsive', () => {
         const toggle = page.locator('.theme-toggle');
         await expect(toggle).toBeInViewport();
         const box = await toggle.boundingBox();
+        const headerBox = await page.locator('.header-inner').boundingBox();
         expect(box.width).toBeGreaterThanOrEqual(44);
         expect(box.height).toBeGreaterThanOrEqual(44);
+        expect(Math.abs(box.x + box.width - (headerBox.x + headerBox.width))).toBeLessThanOrEqual(
+          1,
+        );
+        await expect(toggle).toHaveCSS('border-top-width', '0px');
         const violations = (
           await new AxeBuilder({ page }).withTags(['wcag2a', 'wcag2aa', 'wcag21aa']).analyze()
         ).violations;
@@ -139,6 +144,6 @@ test.describe('mode sombre responsive', () => {
     await page.locator('.theme-toggle').focus();
     await expect(page.locator('.theme-toggle')).toHaveCSS('outline-style', 'solid');
     await page.locator('.theme-toggle').hover();
-    await expect(page.locator('.theme-toggle')).toHaveCSS('background-color', 'rgb(37, 38, 45)');
+    await expect(page.locator('.theme-toggle')).toHaveCSS('background-color', 'rgba(0, 0, 0, 0)');
   });
 });

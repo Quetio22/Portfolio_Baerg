@@ -4,7 +4,8 @@
 
 - L’en-tête reste attaché au haut de la fenêtre, se masque pendant la descente et revient dès le premier mouvement vers le haut, sans seuil minimal.
 - Le retour fonctionne avec la molette ou le trackpad, le geste tactile et les commandes clavier de remontée. Le header reste visible lorsque le menu mobile est ouvert ou qu’un de ses éléments reçoit le focus.
-- Comportement vérifié à 390 et 1 280 px dans Chromium et WebKit. Les 64 tests de navigation et de responsive, les 13 tests Node, le build et le formatage passent.
+- Le changement de thème est placé à l’extrémité droite du header. Seule l’icône lune ou soleil est visible, sans cercle ni fond, avec une zone tactile de 44 × 44 px conservée.
+- Comportement et placement vérifiés de 320 à 1 440 px dans Chromium et WebKit. Les 80 tests de navigation, de thème et de responsive, les 13 tests Node, le build et le formatage passent.
 
 ## Correctifs thème et page À propos — 20 septembre 2026
 
