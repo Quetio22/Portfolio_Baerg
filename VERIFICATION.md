@@ -1,5 +1,11 @@
 # Vérifications
 
+## Header au défilement — 20 septembre 2026
+
+- L’en-tête reste attaché au haut de la fenêtre, se masque pendant la descente et revient dès le premier mouvement vers le haut, sans seuil minimal.
+- Le retour fonctionne avec la molette ou le trackpad, le geste tactile et les commandes clavier de remontée. Le header reste visible lorsque le menu mobile est ouvert ou qu’un de ses éléments reçoit le focus.
+- Comportement vérifié à 390 et 1 280 px dans Chromium et WebKit. Les 64 tests de navigation et de responsive, les 13 tests Node, le build et le formatage passent.
+
 ## Correctifs thème et page À propos — 20 septembre 2026
 
 - Le bouton lune/soleil applique réellement le mode clair ou le fond charbon `#1C1D22` sur toutes les pages. Le logo, le menu, les textes, les champs et les états fonctionnels restent lisibles dans les deux thèmes ; le bleu et l’abricot du visuel d’accueil sont conservés.

@@ -67,6 +67,25 @@ const paths = [
   '/confidentialite/',
   '/introuvable/',
 ];
+test('le header revient dès le premier mouvement de scroll vers le haut', async ({ page }) => {
+  for (const width of [390, 1280]) {
+    await page.setViewportSize({ width, height: 720 });
+    await page.goto('/');
+
+    const header = page.locator('.site-header');
+
+    await page.evaluate(() => {
+      document.documentElement.style.scrollBehavior = 'auto';
+      window.scrollTo(0, 1000);
+    });
+    await expect(header).toHaveClass(/is-hidden/);
+
+    await page.mouse.move(width / 2, 360);
+    await page.mouse.wheel(0, -1);
+    await expect(header).not.toHaveClass(/is-hidden/);
+    await expect.poll(async () => (await header.boundingBox())?.y ?? -1).toBeGreaterThanOrEqual(0);
+  }
+});
 for (const width of [320, 390, 600, 768, 1024, 1440]) {
   test(`pages, ressources et débordements à ${width}px`, async ({ page, browserName }) => {
     await page.setViewportSize({ width, height: 900 });

@@ -282,9 +282,22 @@ img {
   top: 12px;
 }
 .site-header {
+  position: sticky;
+  top: 0;
+  z-index: 20;
   background: var(--surface);
   color: var(--ink);
   border-bottom: 1px solid var(--line);
+  transform: translateY(0);
+  transition: transform 180ms ease-out;
+}
+
+.site-header.is-hidden {
+  transform: translateY(calc(-100% - 1px));
+}
+
+.site-header:focus-within {
+  transform: translateY(0);
 }
 .header-inner {
   min-height: 110px;

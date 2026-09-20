@@ -25,6 +25,81 @@ window.addEventListener('storage', (event) => {
 
 const menuToggle = document.querySelector('.menu-toggle');
 const navigation = document.querySelector('#main-navigation');
+const siteHeader = document.querySelector('.site-header');
+
+let previousScrollY = Math.max(window.scrollY, 0);
+let headerScrollFrame = 0;
+
+function revealHeader() {
+  siteHeader.classList.remove('is-hidden');
+}
+
+function updateHeaderOnScroll() {
+  const currentScrollY = Math.max(window.scrollY, 0);
+  const isMenuOpen = menuToggle.getAttribute('aria-expanded') === 'true';
+  const headerHasFocus = siteHeader.contains(document.activeElement);
+
+  if (currentScrollY === 0 || currentScrollY < previousScrollY || isMenuOpen || headerHasFocus) {
+    revealHeader();
+  } else if (currentScrollY > previousScrollY && currentScrollY > siteHeader.offsetHeight) {
+    siteHeader.classList.add('is-hidden');
+  }
+
+  previousScrollY = currentScrollY;
+  headerScrollFrame = 0;
+}
+
+window.addEventListener(
+  'scroll',
+  () => {
+    if (!headerScrollFrame) {
+      headerScrollFrame = window.requestAnimationFrame(updateHeaderOnScroll);
+    }
+  },
+  { passive: true },
+);
+
+window.addEventListener(
+  'wheel',
+  (event) => {
+    if (event.deltaY < 0) revealHeader();
+  },
+  { passive: true },
+);
+
+let previousTouchY = null;
+window.addEventListener(
+  'touchstart',
+  (event) => {
+    previousTouchY = event.touches[0]?.clientY ?? null;
+  },
+  { passive: true },
+);
+window.addEventListener(
+  'touchmove',
+  (event) => {
+    const currentTouchY = event.touches[0]?.clientY;
+    if (previousTouchY !== null && currentTouchY > previousTouchY) revealHeader();
+    previousTouchY = currentTouchY ?? null;
+  },
+  { passive: true },
+);
+window.addEventListener('touchend', () => {
+  previousTouchY = null;
+});
+
+window.addEventListener('keydown', (event) => {
+  if (
+    event.key === 'ArrowUp' ||
+    event.key === 'PageUp' ||
+    event.key === 'Home' ||
+    (event.key === ' ' && event.shiftKey)
+  )
+    revealHeader();
+});
+
+siteHeader.addEventListener('focusin', revealHeader);
+
 function closeMenu(returnFocus = false) {
   menuToggle.setAttribute('aria-expanded', 'false');
   navigation.classList.remove('is-open');
@@ -32,6 +107,7 @@ function closeMenu(returnFocus = false) {
 }
 menuToggle.addEventListener('click', () => {
   const opening = menuToggle.getAttribute('aria-expanded') !== 'true';
+  if (opening) revealHeader();
   menuToggle.setAttribute('aria-expanded', String(opening));
   navigation.classList.toggle('is-open', opening);
 });
