@@ -1,14 +1,16 @@
 # Atelier Traverse — aperçu
 
-Route : http://127.0.0.1:3011/concepts/atelier-traverse/ (ou le port habituel du serveur).
+Route : `/concepts/atelier-traverse/` sur le port habituel du serveur.
 
-Aperçu limité à la navigation, au premier écran et à deux inspirations d’aménagement. Les volets explicatifs utilisent des éléments HTML `details` et restent utilisables sans JavaScript. La demande de devis est explicitement indisponible. Le concept n’est pas ajouté au portfolio Baerg à ce stade.
+Aperçu limité à la navigation, au premier écran et à deux inspirations d’aménagement. Les volets explicatifs utilisent des éléments HTML `details` et restent utilisables sans JavaScript. La demande de devis est explicitement indisponible, sans collecte ni envoi. Un bandeau permanent indique le caractère fictif et permet de revenir aux réalisations de Baerg.
+
+Fiche, captures et compte rendu de la passe finale : `docs/concepts/fiches-portfolio.md` et `docs/concepts/verification.md` à la racine du projet.
 
 ## Architecture
 
 - Document autonome : `src/concepts/atelier-traverse.js`.
 - Registre de routes : `src/concepts/index.js` ; branche dédiée dans `server.js`.
-- CSS, JavaScript, favicon, polices et images isolés dans ce dossier.
+- CSS, favicon, polices et images isolés dans ce dossier. Navigation directe et volets natifs utilisables sans JavaScript. Le script partagé `/concepts/navigation.js` masque la navigation à la descente et la révèle à la remontée ou au focus clavier.
 - Export inclus dans `dist/concepts/atelier-traverse/index.html` par `npm run build`.
 - Aperçu non indexable et exclu du sitemap. Les pages et styles de Baerg restent inchangés.
 

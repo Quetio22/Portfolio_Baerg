@@ -1,8 +1,8 @@
 # Midi & Compagnie — premier aperçu
 
-Route : `/concepts/midi-et-compagnie/`. Serveur d’aperçu : http://127.0.0.1:3012/concepts/midi-et-compagnie/.
+Route : `/concepts/midi-et-compagnie/` sur le port habituel du serveur.
 
-Document indépendant en HTML rendu par Node, CSS et JavaScript natifs. Seul le registre `src/concepts/index.js` est étendu ; aucun style de Baerg ou de Traverse n’est modifié. Le build exporte automatiquement cet aperçu. Il reste non indexable et hors sitemap. Il n’est pas encore ajouté aux réalisations de Baerg.
+Document indépendant en HTML rendu par Node, CSS et JavaScript natifs. Le build exporte automatiquement cet aperçu. Il reste non indexable et hors sitemap. Un bandeau permanent indique le caractère fictif et permet de revenir aux réalisations de Baerg, y compris sur téléphone.
 
 ## Périmètre
 
@@ -28,4 +28,4 @@ Use case: photorealistic-natural. Original inspiration food photograph for a fic
 
 ## Vérifications
 
-Chromium : rendus à 1440, 768, 390 et 320 px, filtres au clic et au clavier, carte sans JavaScript, images et polices locales, erreurs de console et de chargement, audit automatique axe WCAG A/AA. Captures dans `test-results/midi-*.png`. Pas de test sur iPhone physique ; l’audit automatique ne remplace pas une évaluation complète avec lecteur d’écran.
+Fiche, captures et compte rendu de la passe finale Chromium/WebKit : `docs/concepts/fiches-portfolio.md` et `docs/concepts/verification.md` à la racine du projet. Pas de test sur iPhone physique ; l’audit automatique ne remplace pas une évaluation complète avec lecteur d’écran.

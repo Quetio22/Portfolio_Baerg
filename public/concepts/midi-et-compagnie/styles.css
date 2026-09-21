@@ -20,6 +20,7 @@
   font-display: swap;
 }
 :root {
+  --preview-bar-height: 44px;
   --paper: #fafaf7;
   --plum: #51283f;
   --rose: #f0e3e8;
@@ -37,7 +38,7 @@
 }
 html {
   scroll-behavior: smooth;
-  scroll-padding-top: 110px;
+  scroll-padding-top: calc(var(--preview-bar-height) + 110px);
 }
 body {
   margin: 0;
@@ -123,18 +124,23 @@ h3 {
   top: 10px;
 }
 .concept-strip {
+  position: sticky;
+  top: 0;
+  z-index: 6;
   background: var(--plum);
   color: var(--paper);
   font-size: 11px;
 }
 .concept-strip .wrap {
-  min-height: 32px;
+  height: var(--preview-bar-height);
   display: flex;
   justify-content: space-between;
   align-items: center;
   gap: 12px;
 }
 .concept-strip a {
+  min-height: 44px;
+  font-weight: 600;
   display: flex;
   align-items: center;
   gap: 8px;
@@ -151,7 +157,7 @@ h3 {
 }
 .header {
   position: sticky;
-  top: 0;
+  top: var(--preview-bar-height);
   z-index: 5;
   background: var(--paper);
   border-bottom: 1px solid var(--line);
@@ -464,6 +470,10 @@ h4 {
   color: var(--paper);
   padding-block: 64px;
 }
+.hours-section:focus-visible {
+  outline-color: var(--lemon);
+  outline-offset: -5px;
+}
 .hours-layout {
   display: grid;
   grid-template-columns: 1fr 1fr;
@@ -602,7 +612,8 @@ h4 {
 }
 @media (max-width: 700px) {
   html {
-    scroll-padding-top: 100px;
+    scroll-padding-top: calc(var(--preview-bar-height) + 96px);
+    scroll-padding-bottom: calc(78px + env(safe-area-inset-bottom));
   }
   body {
     padding-bottom: calc(66px + env(safe-area-inset-bottom));
@@ -612,13 +623,6 @@ h4 {
   }
   .concept-strip {
     font-size: 10px;
-  }
-  .concept-strip .wrap {
-    min-height: 34px;
-    justify-content: center;
-  }
-  .concept-strip a {
-    display: none;
   }
   .header-inner {
     min-height: 84px;
@@ -805,6 +809,20 @@ h4 {
     font-size: 9px;
   }
 }
+@media (max-width: 600px) {
+  :root {
+    --preview-bar-height: 70px;
+  }
+  .concept-strip .wrap {
+    flex-direction: column;
+    justify-content: center;
+    gap: 0;
+    padding-top: 6px;
+  }
+  .concept-strip a {
+    font-size: 13px;
+  }
+}
 @media (max-width: 370px) {
   .wrap {
     width: calc(100% - 28px);
@@ -837,5 +855,22 @@ h4 {
   }
   * {
     transition: none !important;
+  }
+}
+
+/* Le bandeau de retour reste accessible pendant le défilement. */
+[data-scroll-header] {
+  transition: transform 180ms ease;
+}
+[data-scroll-header].is-scroll-hidden {
+  transform: translateY(-100%);
+  pointer-events: none;
+}
+[data-scroll-header]:focus-within {
+  pointer-events: auto;
+}
+@media (prefers-reduced-motion: reduce) {
+  [data-scroll-header] {
+    transition: none;
   }
 }

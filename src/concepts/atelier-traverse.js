@@ -33,55 +33,57 @@ export function renderTraverse() {
   <link rel="icon" href="${base}/favicon.svg" type="image/svg+xml">
   <link rel="preload" href="${base}/fonts/barlow-condensed-600.ttf" as="font" type="font/ttf" crossorigin>
   <link rel="stylesheet" href="${assetUrl(base + '/styles.css')}">
-  <script src="${assetUrl(base + '/app.js')}" defer></script>
+  <script src="${assetUrl('/concepts/navigation.js')}" defer></script>
 </head>
-<body id="haut">
+<body id="haut" tabindex="-1">
   <a class="skip-link" href="#contenu">Aller au contenu</a>
-  <div class="concept-banner"><div class="wrap"><span>Projet conceptuel — entreprise fictive</span><a href="/">Un concept de Baerg ${arrow}</a></div></div>
-  <header class="site-header">
+  <div class="concept-banner"><div class="wrap"><span>Projet conceptuel — entreprise fictive</span><a href="/realisations/">← Retour à Baerg</a></div></div>
+  <header class="site-header" data-scroll-header>
     <div class="wrap nav-inner">
       <a class="wordmark" href="#haut" aria-label="Atelier Traverse, début de l’aperçu">${mark}<span><span class="wordmark-small">ATELIER</span><span class="wordmark-name">TRAVERSE</span></span></a>
-      <button class="menu-toggle" aria-expanded="false" aria-controls="navigation" hidden>Menu <span aria-hidden="true">+</span></button>
       <nav id="navigation" aria-label="Navigation principale"><a href="#amenagements">Les aménagements</a></nav>
       <div class="nav-quote"><button class="outline-button" disabled aria-describedby="nav-unavailable">Parlons de votre projet ${arrow}</button><span id="nav-unavailable">Devis indisponible dans cet aperçu</span></div>
     </div>
   </header>
-  <main id="contenu">
+  <main id="contenu" tabindex="-1">
     <section class="hero wrap" aria-labelledby="hero-title">
-      <div class="hero-copy">
+      <div class="hero-heading">
         <p class="eyebrow"><span class="accent-line" aria-hidden="true"></span>MENUISERIE & AGENCEMENT · BULLE</p>
-        <h1 id="hero-title">Des rangements<br>et du mobilier<br>à la mesure de<br><span>votre intérieur.</span></h1>
-        <p class="hero-description">Une entrée à organiser, une bibliothèque à intégrer, un espace sous pente à utiliser. Des aménagements pensés pour vos pièces et votre quotidien.</p>
-        <a class="button" href="#amenagements">Explorer les aménagements ${arrow}</a>
-        <div class="hero-services"><span>Rangements sur mesure</span><span>Mobilier</span><span>Agencement intérieur</span></div>
+        <h1 id="hero-title">Rangements & mobilier.<br><span>À la mesure de votre intérieur.</span></h1>
       </div>
       <figure class="hero-figure">
         <div class="image-heading"><span>UNE PLACE POUR CHAQUE CHOSE</span><span>ÉTUDE 01 / ENTRÉE</span></div>
         <img src="${base}/images/entree.jpg" width="1536" height="1024" fetchpriority="high" alt="Illustration générée : meuble d’entrée en chêne, deux portes à gauche, banquette, trois patères et deux tiroirs à droite.">
         <figcaption><span class="caption-label">IMAGE D’INSPIRATION · GÉNÉRÉE PAR IA</span></figcaption>
-        <div class="material-note"><span class="material-number">01—</span><p>Fermer pour ranger.<br><strong>Ouvrir pour vivre.</strong></p></div>
       </figure>
+      <div class="hero-copy">
+        <p class="eyebrow">L’AMÉNAGEMENT, CÔTÉ USAGE</p>
+        <p class="hero-description">Une entrée à organiser, une bibliothèque à intégrer, un espace sous pente à utiliser. Des aménagements pensés pour vos pièces et votre quotidien.</p>
+        <a class="button" href="#amenagements">Explorer les aménagements ${arrow}</a>
+        <div class="hero-services"><span>Rangements sur mesure</span><span>Mobilier</span><span>Agencement intérieur</span></div>
+        <p class="demo-note">La demande de devis est indisponible dans cet aperçu. Aucune demande n’est envoyée et aucune donnée personnelle n’est collectée.</p>
+      </div>
     </section>
-    <section class="inspirations" id="amenagements" aria-labelledby="inspirations-title">
+    <section class="inspirations" id="amenagements" tabindex="-1" aria-labelledby="inspirations-title">
       <div class="wrap">
         <div class="section-heading"><div><p class="eyebrow">DES IDÉES POUR VOS PIÈCES</p><h2 id="inspirations-title">Partir de l’usage.<br>Penser l’aménagement.</h2></div></div>
         <div class="inspiration-grid">
           <article class="inspiration-card" id="entree">
             <figure><img src="${base}/images/entree.jpg" width="1536" height="1024" loading="lazy" alt="Inspiration fictive d’un rangement d’entrée avec armoire fermée et banquette intégrée."><figcaption>INSPIRATION 01 · IMAGE GÉNÉRÉE PAR IA</figcaption></figure>
-            <div class="card-title"><h3>Une entrée qui fait de la place.</h3><span>01</span></div>
+            <div class="inspiration-body"><div class="card-title"><h3>Une entrée qui fait de la place.</h3><span>01</span></div>
             <p>Réunir les manteaux, les chaussures et une assise dans un seul meuble. La partie fermée libère le regard ; la niche garde l’essentiel à portée de main.</p>
-            <details class="design-detail"><summary>Comprendre le rangement <span aria-hidden="true">+</span></summary><div class="detail-content"><p class="eyebrow">LECTURE DE LA FAÇADE ILLUSTRÉE</p>${facade()}<ol><li><strong>Deux portes toute hauteur.</strong> Un volume fermé pour ranger à l’abri des regards.</li><li><strong>Une assise sous les patères.</strong> S’installer pour se chausser et accrocher une veste en arrivant.</li><li><strong>Deux tiroirs sous la banquette.</strong> Utiliser l’espace bas pour les chaussures.</li></ol></div></details>
+            <details class="design-detail"><summary>Comprendre le rangement <span aria-hidden="true">+</span></summary><div class="detail-content"><p class="eyebrow">LECTURE DE LA FAÇADE ILLUSTRÉE</p>${facade()}<ol><li><strong>Deux portes toute hauteur.</strong> Un volume fermé pour ranger à l’abri des regards.</li><li><strong>Une assise sous les patères.</strong> S’installer pour se chausser et accrocher une veste en arrivant.</li><li><strong>Deux tiroirs sous la banquette.</strong> Utiliser l’espace bas pour les chaussures.</li></ol></div></details></div>
           </article>
           <article class="inspiration-card">
             <figure><img src="${base}/images/bibliotheque.jpg" width="1536" height="1024" loading="lazy" alt="Illustration générée : bibliothèque en chêne à trois travées, étagères ouvertes et placards bas, près d’un fauteuil de lecture."><figcaption>INSPIRATION 02 · IMAGE GÉNÉRÉE PAR IA</figcaption></figure>
-            <div class="card-title"><h3>Des livres. Et de la place autour.</h3><span>02</span></div>
+            <div class="inspiration-body"><div class="card-title"><h3>Des livres. Et de la place autour.</h3><span>02</span></div>
             <p>Des étagères ouvertes pour les livres et les objets, des placards en partie basse pour le reste. Trois travées donnent un rythme au mur du séjour.</p>
-            <details class="design-detail"><summary>Comprendre la bibliothèque <span aria-hidden="true">+</span></summary><div class="detail-content"><p class="eyebrow">LE CHOIX D’AMÉNAGEMENT</p><p>Varier les hauteurs de rangement permet d’accueillir des livres de formats différents. Les portes en partie basse réservent un espace aux objets que l’on préfère ne pas exposer.</p><p>Dans un projet réel, les dimensions, les charges et les fixations seraient étudiées avant de choisir les épaisseurs et de fabriquer.</p></div></details>
+            <details class="design-detail"><summary>Comprendre la bibliothèque <span aria-hidden="true">+</span></summary><div class="detail-content"><p class="eyebrow">LE CHOIX D’AMÉNAGEMENT</p><p>Varier les hauteurs de rangement permet d’accueillir des livres de formats différents. Les portes en partie basse réservent un espace aux objets que l’on préfère ne pas exposer.</p><p>Dans un projet réel, les dimensions, les charges et les fixations seraient étudiées avant de choisir les épaisseurs et de fabriquer.</p></div></details></div>
           </article>
         </div>
       </div>
     </section>
   </main>
-  <footer class="preview-footer"><div class="wrap"><p><strong>Atelier Traverse</strong><span>Aperçu de direction artistique · Concept de Baerg</span></p><p>La méthode, la zone d’intervention et la demande de devis<br>seront développées à la prochaine étape.</p><a href="#haut">Retour en haut ↑</a></div></footer>
+  <footer class="preview-footer"><div class="wrap"><p><strong>Atelier Traverse</strong><span>Aperçu de direction artistique · Concept de Baerg</span></p><p>La méthode, la zone d’intervention et la demande de devis <br>seront développées à la prochaine étape.</p><a href="#haut">Retour en haut ↑</a></div></footer>
 </body></html>`;
 }
