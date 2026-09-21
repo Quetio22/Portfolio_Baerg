@@ -101,7 +101,25 @@ export const budgets = [
 export const projects = [
   {
     published: true,
+    name: 'Lise — soins & bien-être',
+    summary: 'Un institut, trois soins et un parcours de rendez-vous à essayer.',
+    nature: 'Concept non commandé',
+    image: '/images/lise-preview.jpg',
+    imageAlt:
+      'Aperçu de Lise, institut fictif à Bulle : identité pervenche, choix des soins et tarifs illustratifs.',
+    width: 1440,
+    height: 1080,
+    problem:
+      'Imaginer le site d’un institut indépendant fictif à Bulle pour choisir un soin et connaître son prix, sa durée et son déroulement.',
+    solution:
+      'Une page responsive avec des prestations détaillées, une FAQ et une simulation de rendez-vous en trois étapes, sans collecte de données ni réservation réelle.',
+    url: '/concepts/lise/',
+    linkLabel: 'Voir la maquette',
+  },
+  {
+    published: true,
     name: 'Midi & Compagnie',
+    summary: 'Un bistrot du midi, sa carte et toutes les infos pour venir déjeuner.',
     nature: 'Concept non commandé',
     image: '/images/midi-et-compagnie-preview.jpg',
     imageAlt:
@@ -118,6 +136,7 @@ export const projects = [
   {
     published: true,
     name: 'Atelier Traverse',
+    summary: 'Des rangements sur mesure, expliqués par l’image et le dessin.',
     nature: 'Concept non commandé',
     image: '/images/atelier-traverse-preview.jpg',
     imageAlt:

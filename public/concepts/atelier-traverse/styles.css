@@ -456,7 +456,30 @@ summary:hover {
 .facade {
   width: 100%;
   height: auto;
+  max-height: 210px;
   margin-block: 12px;
+}
+@media (min-width: 801px) {
+  .detail-content:has(.facade) {
+    display: grid;
+    grid-template-columns: minmax(0, 0.9fr) minmax(0, 1.1fr);
+    align-items: center;
+    gap: 16px 20px;
+    padding: 18px;
+  }
+  .detail-content:has(.facade) > .eyebrow {
+    grid-column: 1 / -1;
+  }
+  .detail-content .facade {
+    margin: 0;
+  }
+  .detail-content:has(.facade) ol {
+    font-size: 15px;
+    line-height: 1.4;
+  }
+  .detail-content:has(.facade) li:last-child {
+    margin-bottom: 0;
+  }
 }
 .diagram-marker {
   fill: var(--brick);
