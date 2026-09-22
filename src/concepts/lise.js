@@ -33,6 +33,7 @@ const services = [
   },
 ];
 const arrow = '<span aria-hidden="true">↗</span>';
+const calendar = '<svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><rect x="3" y="5" width="18" height="16" rx="2"/><path d="M7 3v4m10-4v4M3 11h18m-14 4h2m6 0h2m-10 3h2"/></svg>';
 
 export function renderLise() {
   return `<!doctype html><html lang="fr"><head>
@@ -62,7 +63,7 @@ export function renderLise() {
       <figure class="gesture wrap"><img src="${base}/images/geste.jpg" width="1536" height="1024" fetchpriority="high" alt="Scène fictive : une cliente reçoit un soin des ongles à une table de manucure, les gestes des mains au premier plan."><figcaption>Image d’inspiration générée par IA · Personnes et lieu fictifs</figcaption><p class="image-caption">Un geste à la fois.<br>Du temps pour vous.</p></figure>
       <section class="services section wrap" id="prestations" tabindex="-1" aria-labelledby="services-title">
         <div class="section-head"><div><h2 id="services-title">Le soin, le temps,<br>le prix.</h2></div><p>Tout ce qu’il faut savoir pour choisir.<br>Les durées incluent l’accueil et l’installation.</p></div>
-        <div class="service-list">${services.map((s) => `<article class="service-row" id="soin-${s.id}" tabindex="-1"><div class="service-content"><h3>${s.name}</h3><p>${s.intro}</p><details><summary>Ce qui est compris <span aria-hidden="true">+</span></summary><div class="detail-copy"><p>${s.includes}</p><p>${s.note}</p></div></details></div><div class="service-action"><p><strong>${s.price} <small>CHF</small></strong><span>${s.duration} minutes</span></p><a class="button secondary" href="#rendez-vous" data-choose="${s.id}">Choisir ce soin ${arrow}</a></div></article>`).join('')}</div>
+        <div class="service-list">${services.map((s) => `<article class="service-row" id="soin-${s.id}" tabindex="-1"><div class="service-content"><h3>${s.name}</h3><p>${s.intro}</p><details><summary>Ce qui est compris <span aria-hidden="true">+</span></summary><div class="detail-copy"><p>${s.includes}</p><p>${s.note}</p></div></details></div><div class="service-action"><p><strong>${s.price} <small>CHF</small></strong><span>${s.duration} minutes</span></p><a class="button secondary" href="#rendez-vous" data-choose="${s.id}">Choisir ce soin ${calendar}</a></div></article>`).join('')}</div>
         <p class="micro">Prestations et prix imaginés pour ce concept. Aucun soin n’est vendu sur ce site.</p>
       </section>
       <section class="visit section" id="visite" tabindex="-1" aria-labelledby="visit-title"><div class="wrap">
