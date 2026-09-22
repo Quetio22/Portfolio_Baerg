@@ -4,15 +4,40 @@ Route : `/concepts/lise/`. Institut fictif indépendant dans la région de Bulle
 
 ## Périmètre livré
 
-Navigation, accès direct aux trois prestations, prix et durées illustratifs, détails des soins, section « Avant, pendant et après votre soin », lieu fictif, FAQ et simulation complète de rendez-vous. Palette pervenche et encre, DM Sans, grille nette et arrondis limités aux contrôles interactifs.
+Navigation, accès direct aux trois prestations, prix et durées illustratifs, détails des soins, section « Avant, pendant et après votre soin », lieu fictif, FAQ et simulation complète de rendez-vous. Palette minérale et pervenche, DM Sans Medium/SemiBold, grille conservée et arrondis discrets de 8 px sur les photographies et les éléments interactifs.
 
 Le parcours fonctionne uniquement dans le navigateur : soin → jour d’une semaine type fictive → heure → récapitulatif → simulation. Les heures de fin sont calculées selon la durée du soin, avec créneaux du samedi terminant au plus tard à 13 h. Changer de jour efface l’heure précédemment choisie. Aucun nom, contact, paiement, appel réseau ni stockage persistant. Les choix sont remis à zéro à la fin. Sans JavaScript, toute la partie informative et les volets restent disponibles ; la simulation est signalée comme indisponible.
 
 Le script partagé `/concepts/navigation.js` masque la navigation en descendant et la révèle dès la remontée ou au focus clavier. Le bandeau fictif et le retour Baerg restent visibles. Page non indexable et exclue du sitemap.
 
-## Images originales et prompts
+## Direction visuelle — septembre 2026
 
-Créées avec l’outil intégré **imagegen**, puis optimisées en JPEG. Illustrations d’inspiration identifiées sur la page ; elles ne représentent ni une fondatrice, ni une cliente, ni un établissement réels. Les originaux sont conservés dans le dossier de génération de Codex.
+Les variables de `styles.css` centralisent les couleurs : fond minéral `#F6F3EF`, surfaces claires `#FCFAF7`, pervenche `#68669C`, lavande grisée `#E8E4EC`, encre aubergine `#302C35` et argile `#C9826D`. L’argile est réservée aux traits de repère, au soulignement des étapes et à certains états actifs ; elle n’est utilisée ni comme grand fond ni pour les textes.
+
+La variante pervenche `#575580` sert aux petits textes sur fond lavande : la teinte principale y atteint seulement 4,22:1. Les paragraphes utilisent `#615A65`, les contours des contrôles `#928591`. Les légendes et notes passent à 13–14 px. Les séparateurs restent là où ils aident à distinguer les soins et les questions, avec moins de lignes autour des sections et des étapes de visite.
+
+## Photographies actuelles et licences
+
+Vérification le **22 septembre 2026** : chacune des deux fiches Pexels ci-dessous indique une photographie gratuite sous [licence Pexels](https://www.pexels.com/license/). Celle-ci autorise le téléchargement, la modification et l’utilisation sur un site web, y compris commercial, sans attribution obligatoire. Elle interdit notamment de suggérer le soutien d’une personne ou d’une marque représentée. Aucun abonnement, contenu premium ou licence payante n’a été utilisé.
+
+| Usage et fichiers locaux                                                                             | Auteur et fiche source                                                                                                                                | Licence                                                                            |
+| ---------------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------- |
+| Introduction : `images/preparation.webp` (1600 × 1067) et `images/preparation-720.webp` (720 × 480)  | **Ron Lach**, [A Person Making a Natural Body Scrub — 8272677](https://www.pexels.com/photo/a-person-making-a-natural-body-scrub-8272677/)            | [Pexels](https://www.pexels.com/license/) ; la fiche indique « Free to use »       |
+| Lieu : `images/cabine-naturelle.webp` (1200 × 800) et `images/cabine-naturelle-720.webp` (720 × 480) | **Anna Tarazevich**, [A Massage Table Near the Window Blinds — 6560308](https://www.pexels.com/photo/a-massage-table-near-the-window-blinds-6560308/) | [Pexels](https://www.pexels.com/license/) ; licence gratuite indiquée sur la fiche |
+
+Sources de téléchargement :
+
+- `https://images.pexels.com/photos/8272677/pexels-photo-8272677.jpeg?auto=compress&cs=tinysrgb&w=1600&fm=webp&q=82`
+- `https://images.pexels.com/photos/6560308/pexels-photo-6560308.jpeg?auto=compress&cs=tinysrgb&w=1200&fm=webp&q=82`
+- Variantes mobiles : mêmes URL avec `w=720` et `q=80`.
+
+Les fichiers sont redimensionnés et encodés en WebP par le serveur d’images Pexels lors du téléchargement, puis stockés dans le projet. `srcset` sélectionne les tailles adaptées, les dimensions sont renseignées et la photo du lieu est chargée à la demande. Aucun appel à Pexels n’est effectué par le navigateur du visiteur. Aucun filtre de couleur ni retouche générative n’est appliqué ; seul le cadrage CSS adapte les formats.
+
+Les deux légendes affichent **« Photographie d’illustration »**. La personne photographiée illustre uniquement un geste de préparation ; elle n’est présentée ni comme la fondatrice, ni comme une employée ou une cliente de Lise. La cabine est une référence visuelle et non un établissement Lise existant. La mention générale « Projet conceptuel — entreprise fictive » et les autres avertissements sont conservés.
+
+## Anciennes illustrations IA — historique, non affichées
+
+Les anciens fichiers JPEG sont conservés pour l’historique mais ne sont plus référencés par la page. Créés avec l’outil intégré **imagegen**, ils ne représentent ni une fondatrice, ni une cliente, ni un établissement réels. Les originaux sont conservés dans le dossier de génération de Codex.
 
 - `images/geste.jpg` : scène de manucure, geste et mains au premier plan.
 - `images/cabine.jpg` : cabine fictive, fauteuil de soin et espace d’accueil.

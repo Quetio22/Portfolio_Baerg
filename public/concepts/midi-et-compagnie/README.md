@@ -14,17 +14,11 @@ Horaires fictifs centralisés dans le module : lundi–vendredi, ouverture 11 h 
 
 Blanc neutre `#FAFAF7`, aubergine `#51283F`, rose pâle `#F0E3E8`, citron `#E8ED83`, texte `#29272A`. Fraunces 600 pour les titres ; Manrope 400/600 pour la carte et les textes. Polices téléchargées depuis Google Fonts et hébergées localement, licences SIL OFL incluses dans `fonts/` (sources officielles : https://github.com/google/fonts/tree/main/ofl/fraunces et https://github.com/google/fonts/tree/main/ofl/manrope).
 
-## Visuels et prompts
+## Photographies
 
-Deux illustrations originales créées avec l’outil intégré imagegen le 20 septembre 2026, optimisées en JPEG dans `images/dejeuner.jpg` et `images/tarte.jpg`. Elles sont explicitement identifiées comme images d’inspiration générées par IA et ne représentent pas un établissement réel. Aucun chargement tiers de polices ou d’images dans le navigateur.
+Deux photographies de stock réelles remplacent les anciennes illustrations IA : une table de bistrot par Manek Singh (Unsplash) et une tarte Tatin aux poires par Geraud pfeiffer (Pexels). Elles sont hébergées localement en WebP et identifiées comme photographies d’illustration. La tarte ne prétend pas reproduire la recette poire-amande de la carte.
 
-### Déjeuner — prompt imagegen
-
-Use case: photorealistic-natural. Original inspiration photograph for a fictional contemporary neighborhood lunch bistro in Bulle Switzerland named Midi & Compagnie. Wide landscape 1536x1024. A convivial daylight lunch table, overhead at a gentle 45-degree angle, beautiful natural midday window light. Two generous everyday lunch plates on a light wooden table: one golden toasted mushroom and melted Gruyere cheese croque sandwich cut in half with green side salad; one ceramic plate with roast chicken, roasted potatoes and carrots. Small white bowl of creamy pumpkin soup, sliced bread, sparkling water carafe, two small glasses of water, folded muted plum linen napkin, ordinary silver cutlery. White ceramic with plum rim, no fancy fine dining, no alcohol, no candles, no breakfast pastries, no dinner ambiance. Background edge hints of a plum upholstered bistro bench, cozy approachable real-world neighborhood cafe. Appetizing realistic textures, small crumbs, natural unfiltered food colors. Composition with plates arranged across the central horizontal band so it crops well into a wide panorama. No people, labels, text, logos or watermarks. Photograph only, not a website mockup.
-
-### Dessert — prompt imagegen
-
-Use case: photorealistic-natural. Original inspiration food photograph for a fictional Swiss lunch bistro. Portrait 1024x1536 close view of a simple homemade pear and almond tart slice on a white ceramic plate with a thin plum rim, a little dollop of cream, golden flaky crust with visible pear slices. An espresso in small white cup and glass of water sit just behind. Light wooden bistro table, neatly folded muted aubergine linen napkin, ordinary spoon. Daylight only, lunchtime, natural side window light, cozy everyday cafe, close photographic detail, appetizing realistic textures. Colors faithful to actual food, restrained stylish composition, generous slice not tiny fine dining, no gold, no candles, no labels, no text, no brand, no people, no watermark. This is a single photo, not website design.
+Voir [IMAGES.md](IMAGES.md) pour les sources, auteurs, licences vérifiées, dimensions, poids et cadrages. Les anciens JPEG générés ne sont plus utilisés ; leur historique reste disponible dans Git.
 
 ## Vérifications
 

@@ -1,6 +1,6 @@
 # Fiches pour le portfolio Baerg
 
-Deux projets personnels conceptuels, pour des entreprises fictives. Aucun client, chantier, repas servi ni résultat commercial à revendiquer. Les images d’inspiration générées par IA restent identifiées dans les maquettes. Les fiches et captures ci-dessous ne sont pas intégrées aux pages Baerg par cette passe.
+Deux projets personnels conceptuels, pour des entreprises fictives. Aucun client, chantier, repas servi ni résultat commercial à revendiquer. Traverse utilise des illustrations IA identifiées ; Midi & Compagnie utilise désormais des photographies de stock légendées « Photographie d’illustration » (sources et licences dans `public/concepts/midi-et-compagnie/IMAGES.md`).
 
 ## Atelier Traverse
 

@@ -271,7 +271,7 @@ h1 span {
 .hero-photo img {
   height: clamp(300px, 29vw, 430px);
   object-fit: cover;
-  object-position: center 62%;
+  object-position: center;
   border-radius: 18px;
 }
 figcaption {
@@ -354,7 +354,7 @@ h2 {
 .menu-aside img {
   aspect-ratio: 4/5;
   object-fit: cover;
-  object-position: center 67%;
+  object-position: center 44%;
   border-radius: 120px 120px 6px 6px;
 }
 .menu-aside figcaption {
@@ -685,7 +685,7 @@ h4 {
   .hero-photo img {
     height: 300px;
     border-radius: 12px;
-    object-position: 40% center;
+    object-position: center;
   }
   .hero-photo figcaption {
     font-size: 10px;
@@ -757,7 +757,7 @@ h4 {
   .menu-aside img {
     aspect-ratio: 1.25;
     border-radius: 10px;
-    object-position: center 68%;
+    object-position: center 40%;
   }
   .dessert-note {
     margin-top: 15px;
