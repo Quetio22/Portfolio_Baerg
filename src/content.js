@@ -26,31 +26,22 @@ export const navigation = [
   { href: '/contact/', label: 'Contact' },
 ];
 
-// Les portraits de démonstration restent limités à la prévisualisation.
-// Remplacer les images, renseigner les prénoms puis passer isPlaceholder à false.
+// Les deux profils restent volontairement courts : les rôles sont partagés au sein du studio.
 export const founders = [
   {
-    id: 'founder-a',
-    name: '',
-    role: 'Cofondateur · Apprenti développeur full-stack',
-    biography: '',
-    image: '/images/portrait-demo-a.jpg',
-    imageAlt: 'Portrait généré de démonstration, à remplacer par celui du cofondateur.',
-    width: 800,
-    height: 1000,
-    isPlaceholder: true,
+    id: 'quentin',
+    name: 'Quentin',
+    role: 'Apprenti développeur full-stack',
+    biography:
+      'Cofondateur de Baerg Design. Nous concevons et développons chaque projet ensemble.',
     profileUrl: '',
   },
   {
-    id: 'founder-b',
-    name: '',
-    role: 'Cofondateur · Apprenti développeur full-stack',
-    biography: '',
-    image: '/images/portrait-demo-b.jpg',
-    imageAlt: 'Portrait généré de démonstration, à remplacer par celui du cofondateur.',
-    width: 800,
-    height: 1000,
-    isPlaceholder: true,
+    id: 'thomas',
+    name: 'Thomas',
+    role: 'Apprenti développeur full-stack',
+    biography:
+      'Cofondateur de Baerg Design. Nous concevons et développons chaque projet ensemble.',
     profileUrl: '',
   },
 ];

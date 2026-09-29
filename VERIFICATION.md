@@ -1,5 +1,17 @@
 # Vérifications
 
+## Aperçus de l’accueil — 29 septembre 2026
+
+- Le montage illustratif a été remplacé par les captures locales des pages d’accueil de Lise et Midi & Compagnie. Chaque aperçu ouvre la maquette correspondante ; la légende précise leur nature de concepts non commandés.
+- Dimensions du cadre comparées avant/après à 320, 390, 768, 1 024, 1 440 et 1 718 px : largeur et hauteur identiques. Captures chargées et liens accessibles ; disposition inspectée sur mobile, tablette et ordinateur.
+- Les 25 tests Chromium de responsive et de thème passent, ainsi que le build. L’image de partage a été régénérée à partir du nouveau montage.
+
+## Présentation des cofondateurs — 29 septembre 2026
+
+- Les portraits provisoires, leurs fichiers et leur documentation ont été retirés. La page À propos présente désormais Quentin et Thomas dans deux panneaux éditoriaux sans photographie.
+- Les deux profils indiquent clairement « Cofondateur » et « Apprenti développeur full-stack ». Les prénoms utilisent Pinyon Script, comme le logo Baerg Design ; les descriptions restent courtes et attribuent la conception et le développement aux deux cofondateurs ensemble.
+- Mise en page vérifiée de 320 à 1 440 px, avec texte doublé, thèmes clair et sombre, Chromium et WebKit. Les 50 tests responsive et thème ainsi que les 13 tests Node, le build et le formatage passent. Les captures à 390 et 1 440 px ont été inspectées.
+
 ## Header au défilement — 20 septembre 2026
 
 - L’en-tête reste attaché au haut de la fenêtre, se masque pendant la descente et revient dès le premier mouvement vers le haut, sans seuil minimal.

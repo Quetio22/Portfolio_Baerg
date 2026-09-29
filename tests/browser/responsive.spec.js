@@ -144,24 +144,25 @@ test.describe('responsive tactile', () => {
     await expect(page).toHaveURL('/contact/');
   });
 
-  test('portraits chargés, proportions et absence de chevauchement', async ({ page }) => {
+  test('présentation du duo sans portrait, lisible et sans chevauchement', async ({ page }) => {
     for (const width of [320, 390, 600, 601, 844]) {
       await page.setViewportSize({ width, height: 844 });
       await page.goto('/a-propos/');
-      const images = page.locator('.founder-photo img');
-      await expect(images).toHaveCount(2);
-      for (const image of await images.all()) {
-        await image.scrollIntoViewIfNeeded();
-        await expect
-          .poll(() => image.evaluate((el) => el.complete && el.naturalWidth > 0))
-          .toBe(true);
-        const box = await image.boundingBox();
-        expect(box.width / box.height).toBeCloseTo(0.8, 2);
-      }
+      await expect(page.locator('.team-section img')).toHaveCount(0);
+      await expect(page.locator('.founder')).toHaveCount(2);
+      await expect(page.locator('.founder-name')).toHaveText(['Quentin', 'Thomas']);
+      await expect(page.locator('.founder-role')).toHaveText([
+        'Apprenti développeur full-stack',
+        'Apprenti développeur full-stack',
+      ]);
+      for (const name of await page.locator('.founder-name').all())
+        expect(await name.evaluate((element) => getComputedStyle(element).fontFamily)).toContain(
+          'Pinyon Script',
+        );
       const first = await page.locator('.founder').nth(0).boundingBox();
       const second = await page.locator('.founder').nth(1).boundingBox();
-      if (width <= 600) expect(second.y).toBeGreaterThan(first.y + first.height);
-      else expect(second.x).toBeGreaterThan(first.x + first.width);
+      if (width <= 600) expect(second.y).toBeGreaterThanOrEqual(first.y + first.height);
+      else expect(second.x).toBeGreaterThanOrEqual(first.x + first.width);
     }
   });
 

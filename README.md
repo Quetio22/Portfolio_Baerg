@@ -36,21 +36,19 @@ Les outils de test et de formatage sont uniquement des dépendances de développ
 - `server.js` : routes HTTP, ressources, en-têtes de sécurité, robots et sitemap.
 - `scripts/build.js` : export des pages et contrôle des projets publiés.
 
-L’accueil affiche une composition de l’identité **du studio**, pas une réalisation client. Les prénoms, coordonnées, liens professionnels, technologies spécifiques et projets absents du brief n’ont pas été inventés. À la demande du studio, la page À propos contient deux portraits générés de démonstration, explicitement marqués « Portrait provisoire » en prévisualisation et masqués en mode publication.
+Le visuel de l’accueil superpose les captures des pages Lise et Midi & Compagnie, avec un lien vers chaque maquette. Ces projets sont identifiés comme des concepts non commandés. Les coordonnées, liens professionnels, technologies spécifiques et projets absents du brief n’ont pas été inventés. La page À propos présente Quentin et Thomas sans portrait, dans deux espaces éditoriaux consacrés à leur rôle commun au sein du studio.
 
 ## Présenter les deux fondateurs
 
-Les profils sont centralisés dans `founders`, dans `src/content.js`. Pour chaque personne, renseigner son prénom dans `name`, ajouter sa vraie photo dans `public/images/`, mettre à jour `image`, `imageAlt`, `width` et `height`, puis passer `isPlaceholder` à `false`. Une courte présentation personnelle (`biography`) et un lien professionnel réel (`profileUrl`) sont facultatifs. Les portraits sont présentés au format 4:5 et s’adaptent au mobile.
+Les profils sont centralisés dans `founders`, dans `src/content.js`. Chaque entrée contient le prénom, le rôle partagé, une courte présentation et, si nécessaire plus tard, un lien professionnel réel dans `profileUrl`. La mise en page ne dépend d’aucune photographie et s’adapte au mobile.
 
-Les images provisoires sont `public/images/portrait-demo-a.jpg` et `public/images/portrait-demo-b.jpg`, en 800 × 1 000 px. Les [prompts et détails de génération](docs/portraits-provisoires.md) sont conservés dans le projet. Aucun nom ou parcours individuel n’est inventé. En mode publication, un profil provisoire ou dépourvu de prénom ou de photo est masqué ; la présentation collective reste visible.
-
-La palette est centralisée dans les variables `:root` de `public/styles.css` : blanc `#FFFFFF`, encre `#292A30`, paragraphes `#50515A`, accent bleu `#4059D8` et annotation abricot `#F0B89A`. Le bleu est réservé aux actions et repères choisis, ainsi qu’à la feuille de marque ; les grandes surfaces restent neutres. Le pied de page utilise l’encre. Le visuel d’accueil est un concept d’interface de réservation non commandé, composé en HTML/CSS, avec une légende explicite. Le logo Pinyon Script et les grands titres Cormorant sont conservés ; les titres de services utilisent DM Sans. Les paragraphes restent à 16–17 px, les repères principaux et la légende du concept à 12 px. Les couleurs fonctionnelles ont leurs propres variables. Le générateur de l’image de partage réutilise la composition `studioArt()` et les styles du site ; la régénérer avec `npm run assets:share` après modification. Le favicon SVG est bleu.
+La palette est centralisée dans les variables `:root` de `public/styles.css` : blanc `#FFFFFF`, encre `#292A30`, paragraphes `#50515A`, accent bleu `#4059D8` et annotation abricot `#F0B89A`. Le bleu est réservé aux actions et repères choisis, ainsi qu’à la feuille de marque ; les grandes surfaces restent neutres. Le pied de page utilise l’encre. Le visuel d’accueil utilise les captures locales de Lise et Midi & Compagnie dans un cadre dont les dimensions sont conservées à chaque breakpoint. Le logo Pinyon Script et les grands titres Cormorant sont conservés ; les titres de services utilisent DM Sans. Les paragraphes restent à 16–17 px, les repères principaux et la légende du concept à 12 px. Les couleurs fonctionnelles ont leurs propres variables. Le générateur de l’image de partage réutilise la composition `studioArt()` et les styles du site ; la régénérer avec `npm run assets:share` après modification. Le favicon SVG est bleu.
 
 Un simple rechargement suffit après une modification : les ressources principales changent d’URL lorsque leur contenu change. Le serveur demande également leur revalidation (`Cache-Control: public, no-cache`) et renvoie une réponse légère `304` lorsqu’elles sont inchangées. Cette protection remplace l’ancienne conservation d’une heure, qui pouvait masquer une nouvelle palette. L’export `dist/` contient aussi les URLs versionnées ; le reconstruire avant de le mettre à jour sur un hébergement statique.
 
 ## Mode sombre
 
-Le bouton lune/soleil à côté du logo permet de basculer entre les deux thèmes sur toutes les pages, y compris sur téléphone. Le mode clair reste le choix initial. Le mode sombre utilise un fond charbon `#1C1D22`, des sections `#25262D` et des textes clairs. Les boutons bleus, les annotations abricot et les couleurs du concept d’accueil sont conservés ; les petits repères bleus et les couleurs fonctionnelles sont adaptés pour rester lisibles.
+Le bouton lune/soleil à droite de l’en-tête permet de basculer entre les deux thèmes sur toutes les pages, y compris sur téléphone. Le mode clair reste le choix initial. Le mode sombre utilise un fond charbon `#1C1D22`, des sections `#25262D` et des textes clairs. Les boutons bleus, les accents abricot et les couleurs des captures de l’accueil sont conservés ; les petits repères bleus et les couleurs fonctionnelles sont adaptés pour rester lisibles.
 
 La palette sombre est centralisée dans `:root[data-theme='dark']` dans `public/styles.css`. Le choix `light` ou `dark` est conservé localement sous la clé `baerg-theme`, restauré par `public/theme.js` avant l’affichage du contenu et synchronisé entre les onglets. Ce petit script s’exécute après la feuille de style, dans l’en-tête du document, pour assurer le bon rendu des champs natifs dans WebKit. Si le stockage est bloqué, le bouton fonctionne pour la page en cours. Sans JavaScript, il est masqué et le thème clair reste utilisable.
 
@@ -108,15 +106,15 @@ Sans publication déclarée, le serveur émet `noindex, nofollow`, `robots.txt` 
 - Domaine public, accès Resend, expéditeur vérifié et destinataire confirmé.
 - Réception d’un message réel à vérifier une fois ces accès disponibles.
 
-Les réalisations, prénoms, portraits et liens professionnels peuvent être ajoutés ultérieurement ; ils ne bloquent pas le fonctionnement. Aucun contenu fictif n’est publié pour les remplacer.
+Les réalisations et liens professionnels peuvent être ajoutés ultérieurement ; ils ne bloquent pas le fonctionnement. Aucun contenu fictif n’est publié pour les remplacer.
 
 ## Ressources et licences
 
-Les quatre fichiers WOFF2 sont hébergés localement : Pinyon Script pour le logo uniquement, Cormorant Garamond normal/italique pour les titres, DM Sans pour le texte. Total des polices : environ 119 Ko. Le navigateur n’appelle aucun service de polices externe. Les licences SIL OFL 1.1 accompagnent les fichiers dans `public/fonts/`.
+Les quatre fichiers WOFF2 sont hébergés localement : Pinyon Script pour le logo et les prénoms des cofondateurs, Cormorant Garamond normal/italique pour les titres, DM Sans pour le texte. Total des polices : environ 119 Ko. Le navigateur n’appelle aucun service de polices externe. Les licences SIL OFL 1.1 accompagnent les fichiers dans `public/fonts/`.
 
 Sources des licences : [Pinyon Script](https://github.com/google/fonts/tree/main/ofl/pinyonscript), [Cormorant Garamond](https://github.com/google/fonts/tree/main/ofl/cormorantgaramond), [DM Sans](https://github.com/google/fonts/tree/main/ofl/dmsans).
 
-Les compositions du studio sont dessinées en CSS et SVG, sans image de client. Les deux portraits temporaires de la page À propos sont des personnages fictifs générés avec l’outil intégré `image_gen`, puis optimisés localement en JPEG. `public/images/og.png` est l’image de partage de 1 200 × 630 px. Pour la régénérer après une modification de l’identité : `npm run assets:share` (Chromium installé).
+Les compositions du studio sont dessinées en CSS et SVG, sans image de client. `public/images/og.png` est l’image de partage de 1 200 × 630 px. Pour la régénérer après une modification de l’identité : `npm run assets:share` (Chromium installé).
 
 ## Vérifications réalisées
 

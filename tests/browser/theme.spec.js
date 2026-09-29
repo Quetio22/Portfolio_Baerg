@@ -26,8 +26,10 @@ test('thème : bouton au clavier, navigation, rechargement et application avant 
     'background-color',
     'rgb(64, 89, 216)',
   );
-  await expect(page.locator('.art-annotation')).toHaveCSS('background-color', 'rgb(240, 184, 154)');
-  await expect(page.locator('.browser-sheet')).toHaveCSS('color', 'rgb(41, 42, 48)');
+  for (const preview of await page.locator('.hero-project').all()) {
+    await expect(preview).toHaveCSS('color', 'rgb(41, 42, 48)');
+    await expect(preview).toHaveCSS('background-color', 'rgb(255, 255, 255)');
+  }
   await expect(page.locator('meta[name="theme-color"]')).toHaveAttribute('content', '#1C1D22');
   await page.locator('.hero-actions .button').click();
   await expect(page).toHaveURL('/contact/');

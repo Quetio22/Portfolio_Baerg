@@ -62,7 +62,17 @@ function finalCta() {
   return `<section class="final-cta"><div class="container cta-inner"><div>${eyebrow('VOTRE PROJET')}<h2>Discutons de votre site.</h2><p>Présentez-nous votre activité et ce que vous souhaitez créer ou améliorer.</p></div><a class="button" href="/contact/">Parler de votre projet${arrow}</a></div></section>`;
 }
 export function studioArt() {
-  return `<figure class="studio-art"><div class="art-scene" aria-hidden="true"><div class="art-grid"></div><div class="art-note">DANS L’ATELIER<br>ÉTUDE N° 01</div><div class="brand-sheet"><div class="sheet-top"><span>BAERG DESIGN</span><span>DESIGN & WEB</span></div><div class="brand-signature">${logo}</div></div><div class="browser-sheet"><div class="browser-bar"><span class="browser-dots"><i></i><i></i><i></i></span><span>Étude d’interface / réservation</span></div><div class="prototype"><div class="prototype-header"><b>l’atelier.</b><span>Les cours &nbsp; À propos</span></div><strong class="prototype-title">Du temps pour<br>créer de ses mains.</strong><span class="prototype-description">Des ateliers créatifs, ouverts aux curieux.</span><div class="prototype-session"><span class="prototype-date"><b>24</b>OCT.</span><span class="prototype-session-title"><b>Initiation à la céramique</b><small>Samedi · 14 h – 16 h · Débutants</small></span><span class="prototype-action">Choisir ce cours ${arrow}</span></div></div></div><div class="art-annotation"><b>Notre choix</b><br>Le cours, la date et l’inscription réunis au même endroit.</div></div><figcaption><span>Concept du studio · non commandé</span><span>Une interface de réservation, pensée pour réunir le cours, la date et l’inscription.</span></figcaption></figure>`;
+  const featured = ['/concepts/lise/', '/concepts/midi-et-compagnie/']
+    .map((url) => projects.find((project) => project.url === url && project.published))
+    .filter(Boolean);
+  return `<figure class="studio-art"><div class="art-scene"><div class="art-grid" aria-hidden="true"></div>${featured
+    .map(
+      (project) =>
+        `<a class="hero-project" href="${e(project.url)}" aria-label="Découvrir ${e(project.name)}"><span class="hero-project-bar"><span>${e(project.name)}</span>${arrow}</span><img src="${e(assetUrl(project.image))}" alt="Aperçu de la page d’accueil de ${e(project.name)}" width="${Number(project.width)}" height="${Number(project.height)}" decoding="async"></a>`,
+    )
+    .join(
+      '',
+    )}</div><figcaption><span>Deux créations du studio</span><span>Lise & Midi & Compagnie · Concepts non commandés</span></figcaption></figure>`;
 }
 function serviceIcon(name) {
   const paths = {
@@ -113,33 +123,25 @@ function home() {
   return `<div class="hero-band"><section class="home-hero container"><div class="hero-copy">${eyebrow('STUDIO WEB INDÉPENDANT')}<h1>Des sites web<br>avec du fond.<br>Et du <em>caractère.</em></h1><p class="hero-description">Nous créons et modernisons des sites pour présenter vos services et faciliter les prises de contact. Vous travaillez directement avec nous deux, de la conception à la mise en ligne.</p><div class="hero-actions">${button('/contact/', 'Parler de votre projet')}${button('/realisations/', 'Voir nos réalisations', true)}</div><div class="hero-footnote"><span class="dual-dot" aria-hidden="true"><i></i><i></i></span><span>Deux apprentis développeurs full-stack, vos interlocuteurs tout au long du projet.</span></div></div>${studioArt()}</section></div><section id="besoins" class="section container split-section"><div>${eyebrow('LE BON POINT DE DÉPART')}<h2>Votre site devrait<br>vous simplifier la vie.</h2></div><div class="needs"><p class="section-intro">Vous lancez votre activité ? Votre site a pris un coup de vieux ? Ou vos visiteurs ne trouvent pas l’essentiel ?</p><p>Nous vous aidons à poser les bonnes bases : une présentation claire, une navigation naturelle et une identité qui vous correspond.</p><a class="text-link" href="/a-propos/">Faire connaissance${arrow}</a></div></section><section class="services-section"><div class="container section"><div class="section-heading"><div>${eyebrow('CE QUE NOUS FAISONS')}<h2>De l’idée à l’écran.</h2></div><p>Un premier site, une refonte<br>ou une meilleure utilisation sur mobile.</p></div><div class="services-grid">${services.map((service) => `<article class="service"><div class="service-top">${serviceIcon(service.icon)}</div><h3>${service.name}</h3><p>${service.text}</p><span class="service-tags">${service.tags}</span></article>`).join('')}</div></div></section><section class="section container"><div class="section-heading"><div>${eyebrow('LES RÉALISATIONS')}<h2>${projects.some((project) => project.published) ? 'Des idées devenues sites.' : 'Nos réalisations.'}</h2></div>${button('/realisations/', 'Explorer les réalisations', true)}</div>${projectPreview()}</section>${workingTogether()}${finalCta()}`;
 }
 function teamProfiles() {
-  const visibleFounders = founders.filter(
-    (founder) => !publicationReady() || (!founder.isPlaceholder && founder.name && founder.image),
-  );
-  if (!visibleFounders.length) return '';
   return `<section class="container team-section" aria-label="Les cofondateurs">
     <div class="team-grid">
-      ${visibleFounders
+      ${founders
         .map(
-          (
-            founder,
-            index,
-          ) => `<article class="founder" aria-label="${e(founder.name || founder.role)}">
-        <div class="founder-photo">
-          <img src="${e(assetUrl(founder.image))}" alt="${e(founder.imageAlt)}" width="${Number(founder.width)}" height="${Number(founder.height)}" loading="${index === 0 ? 'eager' : 'lazy'}" decoding="async">
-          ${founder.isPlaceholder ? '<span class="portrait-label">Photo temporaire</span>' : ''}
+          (founder) => `<article class="founder" aria-labelledby="${e(founder.id)}-name">
+        <div class="founder-heading">
+          <span class="founder-label">Cofondateur</span>
+          <span class="founder-mark" aria-hidden="true"></span>
         </div>
-        <div class="founder-caption">
-          ${founder.name ? `<h2>${e(founder.name)}</h2>` : ''}
+        <h2 class="founder-name" id="${e(founder.id)}-name">${e(founder.name)}</h2>
+        <div class="founder-copy">
           <p class="founder-role">${e(founder.role)}</p>
-          ${founder.biography ? `<p class="founder-biography">${e(founder.biography)}</p>` : ''}
+          <p class="founder-biography">${e(founder.biography)}</p>
           ${founder.profileUrl ? `<a class="text-link" href="${e(founder.profileUrl)}" rel="noopener noreferrer">Profil professionnel${arrow}</a>` : ''}
         </div>
       </article>`,
         )
         .join('')}
     </div>
-    ${visibleFounders.some((founder) => founder.isPlaceholder) ? '<p class="team-preview-note">Photos temporaires pour prévisualiser la mise en page. Elles seront remplacées par nos portraits.</p>' : ''}
   </section>`;
 }
 function about() {

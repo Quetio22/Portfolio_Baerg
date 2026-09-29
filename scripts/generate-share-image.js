@@ -2,7 +2,15 @@ import { chromium } from '@playwright/test';
 import { readFile } from 'node:fs/promises';
 import { studioArt } from '../src/site.js';
 
-// Share the actual studio concept and palette with the homepage.
+// Share the homepage composition, embedding local assets for offline rendering.
+let artwork = studioArt();
+for (const match of artwork.matchAll(/src="(\/images\/[^"?]+)(?:\?[^"]*)?"/g)) {
+  const screenshot = await readFile(new URL(`../public${match[1]}`, import.meta.url));
+  artwork = artwork.replace(
+    match[0],
+    `src="data:image/jpeg;base64,${screenshot.toString('base64')}"`,
+  );
+}
 let stylesheet = await readFile(new URL('../public/styles.css', import.meta.url), 'utf8');
 for (const name of ['pinyon', 'cormorant-regular', 'cormorant-italic', 'dm-sans']) {
   const font = await readFile(new URL(`../public/fonts/${name}.woff2`, import.meta.url));
@@ -27,8 +35,11 @@ try {
   .studio-art .art-scene{height:405px}
   .studio-art figcaption{font-size:10px}
   .studio-art figcaption>span:last-child{display:none}
-  </style></head><body><div class="share-top"><div class="logo"><span class="logo-script">Baerg</span><span class="logo-design">DESIGN</span></div><span>STUDIO WEB INDÉPENDANT</span></div><div class="share-layout"><div class="share-copy"><h1>Des sites web<br>avec du fond.<br>Et du <em>caractère.</em></h1><p>Deux apprentis développeurs.<br>Du premier croquis à la mise en ligne.</p></div>${studioArt()}</div></body></html>`);
+  </style></head><body><div class="share-top"><div class="logo"><span class="logo-script">Baerg</span><span class="logo-design">DESIGN</span></div><span>STUDIO WEB INDÉPENDANT</span></div><div class="share-layout"><div class="share-copy"><h1>Des sites web<br>avec du fond.<br>Et du <em>caractère.</em></h1><p>Deux apprentis développeurs.<br>Du premier croquis à la mise en ligne.</p></div>${artwork}</div></body></html>`);
   await page.evaluate(() => document.fonts.ready);
+  await page
+    .locator('.hero-project img')
+    .evaluateAll((images) => Promise.all(images.map((image) => image.decode())));
   await page.screenshot({ path: new URL('../public/images/og.png', import.meta.url).pathname });
 } finally {
   await browser.close();

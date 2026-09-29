@@ -471,13 +471,13 @@ img {
   margin-left: -6px;
   background: var(--surface);
 }
-/* A code-native interface study, explicitly identified as a studio concept. */
+/* Homepage previews share the same fixed canvas at every breakpoint. */
 .studio-art {
   margin: 0;
   min-width: 0;
 }
 .art-scene {
-  /* The studio concept keeps its paper palette in both display modes. */
+  /* Screenshots retain the original project colors in both themes. */
   --surface-muted: #f4f4f5;
   --ink: var(--brand);
   --muted: #50515a;
@@ -499,174 +499,57 @@ img {
     linear-gradient(90deg, var(--art-grid) 1px, transparent 1px);
   background-size: 40px 40px;
 }
-.art-note {
+.hero-project {
   position: absolute;
-  left: 5%;
-  top: 5%;
-  font-size: clamp(8px, 2cqw, 11px);
-  letter-spacing: 0.08em;
-  line-height: 1.6;
-  color: var(--muted);
-}
-.brand-sheet {
-  position: absolute;
-  width: 67%;
-  height: 66%;
-  right: 3%;
-  top: 5%;
-  background: var(--accent);
-  color: var(--white);
-  transform: rotate(7deg);
-  box-shadow: 4px 12px 22px var(--shadow);
-  padding: 3%;
-}
-.sheet-top {
-  display: flex;
-  justify-content: space-between;
-  font-size: clamp(7px, 1.7cqw, 10px);
-  letter-spacing: 0.1em;
-}
-.brand-signature {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  padding-top: 0;
-}
-.brand-signature .logo-script {
-  font-size: clamp(40px, 11cqw, 64px);
-}
-.brand-signature .logo-design {
-  font-size: clamp(7px, 1.8cqw, 11px);
-  margin-top: 4px;
-}
-.browser-sheet {
-  container-type: inline-size;
   display: grid;
-  grid-template-rows: 12% 88%;
-  position: absolute;
+  grid-template-rows: auto minmax(0, 1fr);
+  width: 82%;
+  height: 52%;
   left: 5%;
-  bottom: 19%;
-  width: 87%;
-  height: 50%;
+  top: 5%;
   background: var(--white);
   color: var(--ink);
-  transform: rotate(-5deg);
   border: 1px solid var(--border);
   box-shadow: 0 12px 28px var(--shadow);
+  transform: rotate(-4deg);
+  transform-origin: center;
 }
-.browser-bar {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  padding: 2.2% 4%;
-  font-size: clamp(7px, 1.6cqw, 10px);
-  border-bottom: 1px solid var(--border);
-  color: var(--muted);
-}
-.browser-dots {
-  display: flex;
-  gap: 3px;
-}
-.browser-dots i {
-  width: 4px;
-  height: 4px;
-  border: 1px solid var(--field-border);
-  border-radius: 50%;
-}
-.prototype {
-  display: grid;
-  grid-template-rows: 18% 34% 14% 34%;
-  padding: 3% 4%;
-}
-.prototype-header {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  font-size: clamp(7px, 1.8cqw, 11px);
-  border-bottom: 1px solid var(--border);
-  padding-bottom: 3%;
-}
-.prototype-header b {
-  font-weight: 600;
-  font-size: clamp(11px, 3.2cqw, 18px);
-  letter-spacing: -0.04em;
-}
-.prototype-title {
-  align-self: center;
-  display: block;
-  font-family: var(--serif);
-  font-weight: 400;
-  font-size: clamp(23px, 6cqw, 34px);
-  letter-spacing: -0.035em;
-  line-height: 1.04;
-  margin: 0;
-}
-.prototype-description {
-  align-self: center;
-  display: block;
-  font-size: clamp(7px, 1.9cqw, 11px);
-  color: var(--muted);
-  margin-bottom: 0;
-}
-.prototype-session {
-  display: flex;
-  align-items: center;
-  gap: 4%;
-  border-top: 1px solid var(--border);
-  padding-top: 3%;
-  font-size: clamp(8px, 2cqw, 12px);
-}
-.prototype-date {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  background: var(--surface-muted);
-  padding: 2% 3%;
-  line-height: 1.2;
-  font-size: clamp(7px, 1.6cqw, 10px);
-}
-.prototype-date b {
-  font-size: clamp(17px, 4cqw, 24px);
-  font-weight: 500;
-}
-.prototype-session-title {
-  display: flex;
-  flex-direction: column;
-  flex: 1;
-  gap: 5px;
-}
-.prototype-session-title small {
-  font-size: clamp(7px, 1.7cqw, 10px);
-  color: var(--muted);
-}
-.prototype-action {
-  display: inline-flex;
-  align-items: center;
-  gap: 0.4em;
-  padding: 3%;
-  background: var(--accent);
-  color: var(--white);
-  white-space: nowrap;
-  font-size: clamp(7px, 1.9cqw, 11px);
-}
-.prototype-action svg {
-  width: 1em;
-  height: 1em;
-}
-.art-annotation {
-  position: absolute;
+.hero-project:nth-of-type(2) {
+  left: auto;
   right: 5%;
-  bottom: 3%;
-  width: 66%;
-  padding: 10px 14px;
-  background: var(--apricot);
-  color: var(--ink);
-  font-size: clamp(10px, 2cqw, 12px);
-  line-height: 1.5;
-  transform: rotate(-2deg);
+  top: auto;
+  bottom: 5%;
+  transform: rotate(4deg);
 }
-.art-annotation b {
-  font-weight: 600;
+.hero-project:hover,
+.hero-project:focus-visible {
+  z-index: 2;
+  transform: rotate(0deg);
+}
+.hero-project:focus-visible {
+  outline-color: var(--accent);
+}
+.hero-project-bar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 8px;
+  min-height: 30px;
+  padding: 7px 12px;
+  border-bottom: 1px solid var(--border);
+  font-size: clamp(9px, 2cqw, 12px);
+  line-height: 1.4;
+}
+.hero-project-bar svg {
+  width: 14px;
+  height: 14px;
+}
+.hero-project img {
+  width: 100%;
+  height: 100%;
+  min-height: 0;
+  object-fit: cover;
+  object-position: top;
 }
 .studio-art figcaption {
   display: flex;
@@ -981,70 +864,72 @@ img {
 .team-grid {
   display: grid;
   grid-template-columns: repeat(2, minmax(0, 1fr));
-  gap: clamp(28px, 6vw, 84px);
-  align-items: start;
-  max-width: 1080px;
+  border: 1px solid var(--line);
   margin-inline: auto;
 }
 .founder {
   min-width: 0;
+  min-height: 370px;
+  padding: clamp(32px, 4vw, 56px);
+  display: flex;
+  flex-direction: column;
+  background: var(--surface);
 }
 .founder:nth-child(2) {
-  padding-top: 54px;
-}
-.founder:only-child {
-  grid-column: 1 / -1;
-  width: min(100%, 510px);
-  margin-inline: auto;
-}
-.founder-photo {
-  position: relative;
-  overflow: hidden;
+  border-left: 1px solid var(--line);
   background: var(--surface-muted);
 }
-.founder-photo img {
-  width: 100%;
-  aspect-ratio: 4 / 5;
-  object-fit: cover;
-  object-position: center 38%;
+.founder-heading {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 20px;
 }
-.portrait-label {
-  position: absolute;
-  left: 16px;
-  bottom: 16px;
-  max-width: calc(100% - 32px);
-  padding: 7px 11px;
-  background: var(--surface);
-  color: var(--ink);
-  font-size: 12px;
+.founder-label,
+.founder-role {
+  font-size: 11px;
+  font-weight: 600;
+  letter-spacing: 0.15em;
   line-height: 1.5;
+  text-transform: uppercase;
 }
-.founder-caption {
-  padding-top: 20px;
+.founder-label {
+  color: var(--muted);
 }
-.founder-caption h2 {
-  margin-bottom: 8px;
-  font-size: clamp(30px, 3vw, 42px);
-  line-height: 1.12;
+.founder-mark {
+  width: 38px;
+  height: 2px;
+  background: var(--accent-detail);
+}
+.founder:nth-child(2) .founder-mark {
+  background: var(--apricot);
+}
+.founder-name {
+  margin: clamp(48px, 6vw, 82px) 0 42px;
+  font-family: 'Pinyon Script', cursive;
+  font-size: clamp(76px, 8vw, 112px);
+  font-weight: 400;
+  letter-spacing: 0;
+  line-height: 0.85;
+  color: var(--ink);
+}
+.founder-copy {
+  margin-top: auto;
+  padding-top: 22px;
+  border-top: 1px solid var(--line);
 }
 .founder-role,
 .founder-biography {
   margin: 0;
-  color: var(--muted);
 }
 .founder-role {
-  font-size: 13px;
+  color: var(--ink);
 }
 .founder-biography {
-  margin-top: 16px;
-}
-.team-preview-note {
-  max-width: 1080px;
-  margin: 42px auto 0;
-  padding-top: 20px;
-  border-top: 1px solid var(--line);
+  max-width: 430px;
+  margin-top: 15px;
   color: var(--muted);
-  font-size: 12px;
+  font-size: 15px;
   line-height: 1.8;
 }
 .team-story {
@@ -1963,20 +1848,21 @@ img {
   }
   .team-grid {
     grid-template-columns: 1fr;
-    gap: 34px;
+  }
+  .founder {
+    min-height: 330px;
+    padding: 30px 24px 34px;
   }
   .founder:nth-child(2) {
-    padding-top: 0;
+    border-top: 1px solid var(--line);
+    border-left: 0;
   }
-  .founder-caption {
-    padding-top: 15px;
+  .founder-name {
+    margin-block: 46px 38px;
+    font-size: clamp(70px, 23vw, 92px);
   }
-  .portrait-label {
-    left: 12px;
-    bottom: 12px;
-  }
-  .team-preview-note {
-    margin-top: 30px;
+  .founder-biography {
+    font-size: 14px;
   }
   .home-hero {
     grid-template-columns: 1fr;

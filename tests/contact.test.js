@@ -48,12 +48,10 @@ test('configuration publique : domaine, sitemap, métadonnées et activation du 
     const about = renderPage('/a-propos/');
     assert.ok(
       !about.includes('portrait-demo-'),
-      'Les portraits de démonstration restent hors publication.',
+      'Aucun portrait de démonstration ne doit être publié.',
     );
-    assert.ok(
-      !about.includes('Prénom à renseigner'),
-      'Les prénoms provisoires restent hors publication.',
-    );
+    assert.match(about, />Quentin</);
+    assert.match(about, />Thomas</);
   } finally {
     Object.assign(studio.legal, legal);
     for (const key of [
