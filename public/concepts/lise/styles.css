@@ -14,7 +14,7 @@
   --muted: #615a65;
   --line: #d8d0d7;
   --control-line: #928591;
-  --clay: #c9826d;
+  --mauve: #887495;
   --hover: #54527f;
   --radius: 8px;
   --bar: 44px;
@@ -296,7 +296,7 @@ figcaption {
 .quick-choices a:hover,
 .quick-choices a:focus-visible {
   background: var(--surface);
-  border-bottom-color: var(--clay);
+  border-bottom-color: var(--mauve);
 }
 .quick-choices strong {
   font-size: 20px;
@@ -326,7 +326,7 @@ figcaption {
   right: 26px;
   bottom: 62px;
   background: var(--surface);
-  border-left: 3px solid var(--clay);
+  border-left: 3px solid var(--mauve);
   border-radius: var(--radius);
   padding: 20px 24px;
   color: var(--ink);
@@ -424,7 +424,7 @@ summary:hover {
   max-width: 620px;
 }
 .detail-copy {
-  border-left: 2px solid var(--clay);
+  border-left: 2px solid var(--mauve);
   padding: 8px 18px;
   margin-block: 8px 12px;
 }
@@ -455,7 +455,7 @@ summary:hover {
   width: 28px;
   height: 3px;
   flex-shrink: 0;
-  background: var(--clay);
+  background: var(--mauve);
 }
 .visit-steps li + li {
   padding-left: 28px;
@@ -553,7 +553,7 @@ summary:hover {
   border-bottom: 3px solid transparent;
 }
 .progress li[aria-current] {
-  border-color: var(--clay);
+  border-color: var(--mauve);
   color: var(--iris-text);
   font-weight: 600;
 }
@@ -599,7 +599,7 @@ summary:hover {
   border-color: var(--iris);
   box-shadow:
     inset 0 0 0 1px var(--iris),
-    inset 0 -4px var(--clay);
+    inset 0 -4px var(--mauve);
 }
 input[type='radio'] {
   accent-color: var(--iris);

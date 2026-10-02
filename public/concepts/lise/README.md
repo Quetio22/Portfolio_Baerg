@@ -10,9 +10,9 @@ Le parcours fonctionne uniquement dans le navigateur : soin → jour d’une sem
 
 Le script partagé `/concepts/navigation.js` masque la navigation en descendant et la révèle dès la remontée ou au focus clavier. Le bandeau fictif et le retour Baerg restent visibles. Page non indexable et exclue du sitemap.
 
-## Direction visuelle — septembre 2026
+## Direction visuelle — accent actualisé le 2 octobre 2026
 
-Les variables de `styles.css` centralisent les couleurs : fond minéral `#F6F3EF`, surfaces claires `#FCFAF7`, pervenche `#68669C`, lavande grisée `#E8E4EC`, encre aubergine `#302C35` et argile `#C9826D`. L’argile est réservée aux traits de repère, au soulignement des étapes et à certains états actifs ; elle n’est utilisée ni comme grand fond ni pour les textes.
+Les variables de `styles.css` centralisent les couleurs : fond minéral `#F6F3EF`, surfaces claires `#FCFAF7`, pervenche `#68669C`, lavande grisée `#E8E4EC`, encre aubergine `#302C35` et mauve grisé `#887495`. Le mauve est réservé aux traits de repère, au soulignement des étapes et à certains états actifs ; elle n’est utilisée ni comme grand fond ni pour les textes.
 
 La variante pervenche `#575580` sert aux petits textes sur fond lavande : la teinte principale y atteint seulement 4,22:1. Les paragraphes utilisent `#615A65`, les contours des contrôles `#928591`. Les légendes et notes passent à 13–14 px. Les séparateurs restent là où ils aident à distinguer les soins et les questions, avec moins de lignes autour des sections et des étapes de visite.
 
