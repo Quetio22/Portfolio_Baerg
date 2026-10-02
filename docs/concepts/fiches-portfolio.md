@@ -4,21 +4,23 @@ Deux projets personnels conceptuels, pour des entreprises fictives. Aucun client
 
 ## Atelier Traverse
 
-**Objectif.** Aider un particulier autour de Bulle à comprendre les possibilités de rangement et d’agencement sur mesure, en vue d’une future demande de devis.
+**Objectif.** Présenter une menuiserie fictive autour de Bulle à travers la direction C — L’enseigne, validée dans le Baerg Design Lab.
 
-**Travail réalisé.** Identité visuelle fictive, rédaction, intégration responsive de la navigation et de l’introduction, deux inspirations d’aménagement, volets explicatifs et schéma SVG correspondant au meuble d’entrée. Retour permanent vers Baerg et contrôles d’accessibilité. La demande de devis n’est pas construite : elle est explicitement indisponible, sans formulaire ni collecte. La méthode et la zone d’intervention restent à développer.
+**Travail réalisé.** Intégration de la composition finale : enseigne TRAVERSE monumentale, photographie brute du banc, présentation courte de l’atelier, deux études et contact de démonstration. Réglages Expressive personnalisés figés dans le CSS, sans Polish Studio ni stockage. Retour à Baerg au pied de page.
 
-**Technologies.** HTML rendu par modules Node.js, CSS Grid et media queries, navigation au défilement en JavaScript, éléments HTML natifs interactifs, SVG, images JPEG et polices locales. Export statique via le build existant ; tests Playwright et axe.
+**Technologies.** HTML rendu par module Node.js, CSS Grid et media queries, JavaScript natif, dialogue HTML accessible et mouvement discret. Arial système et images WebP sans perte. Export statique, Playwright et axe.
 
 **Trois choix de conception.**
 
-1. Une grande photographie à gauche et un ensemble compact titre, texte et action à droite : le meuble occupe le premier plan sans bandeau de titre vide sur ordinateur.
-2. Barlow Condensed, tons pierre et accent brique pour une identité d’atelier, avec photographie non déformée.
-3. Une liste de deux aménagements avec vignettes à droite, un schéma explicatif relié à l’image et des volets HTML natifs : l’organisation du meuble s’explique au clic, au clavier et sans JavaScript.
+1. Une enseigne monumentale précède la photographie puis le titre ; la composition et les espaces validés sont conservés.
+2. Arial Bold 700, palette papier/pierre/encre/brique et CTA pleins ; cadrage du banc à 58 % sur desktop/tablette, image entière sur mobile.
+3. Deux études, contenu limité et interaction de contact explicitement locale : aucune transmission, API ou persistance.
 
-**Route :** `/concepts/atelier-traverse/`.
+**Route :** `/concepts/atelier-traverse/`, avec les anciennes ancres conservées.
 
-**Captures :** premier écran [ordinateur, 1440 × 900](captures/atelier-traverse-1440-ecran.jpg) et [mobile, 390 × 844](captures/atelier-traverse-390-ecran.jpg) ; pages complètes [ordinateur](captures/atelier-traverse-1440.jpg) et [mobile](captures/atelier-traverse-390.jpg).
+**Captures :** [desktop 1440](captures/atelier-traverse-final-1440.png), [tablette 820](captures/atelier-traverse-final-820.png), [mobile 390](captures/atelier-traverse-final-390.png). Les anciennes captures restent historiques.
+
+**Vérification :** `atelier-traverse-final-verification.md`.
 
 ## Midi & Compagnie
 

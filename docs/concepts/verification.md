@@ -1,5 +1,7 @@
 # Vérification des concepts — 21 septembre 2026
 
+> Actualisation Traverse du 1 octobre 2026 : voir [la vérification finale](atelier-traverse-final-verification.md). Les observations Traverse ci-dessous décrivent la version précédente ; celles des autres concepts sont conservées.
+
 ## Corrections
 
 - Retour explicite vers les réalisations de Baerg, dans un bandeau qui reste visible au défilement sur les deux concepts. Le lien de Midi & Compagnie était auparavant masqué sur mobile.

@@ -127,17 +127,17 @@ export const projects = [
   {
     published: true,
     name: 'Atelier Traverse',
-    summary: 'Des rangements sur mesure, expliqués par l’image et le dessin.',
+    summary: 'Une enseigne monumentale pour une menuiserie contemporaine.',
     nature: 'Concept non commandé',
     image: '/images/atelier-traverse-preview.jpg',
     imageAlt:
-      'Aperçu du site conceptuel Atelier Traverse : typographie affirmée, accent brique et inspiration de rangement en bois.',
+      'Aperçu du site conceptuel Atelier Traverse : enseigne monumentale, banc en bois et accent brique.',
     width: 1440,
     height: 1080,
     problem:
       'Imaginer le site d’une menuiserie fictive autour de Bulle pour présenter ses aménagements aux particuliers.',
     solution:
-      'Un premier aperçu responsive avec une identité dédiée, des images d’inspiration et un schéma explicatif du rangement. Le concept est en cours de construction.',
+      'Une composition éditoriale autour d’une enseigne monumentale, de deux études de mobilier et d’une interaction de contact explicitement démonstrative.',
     url: '/concepts/atelier-traverse/',
     linkLabel: 'Voir la maquette',
   },

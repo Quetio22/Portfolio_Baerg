@@ -1,35 +1,21 @@
-# Atelier Traverse — aperçu
+# Atelier Traverse — C, L’enseigne
 
-Route : `/concepts/atelier-traverse/` sur le port habituel du serveur.
+Route conservée : `/concepts/atelier-traverse/`. Document autonome rendu par `src/concepts/atelier-traverse.js`, sans styles, thème ou navigation partagée de Baerg. Export statique via le build existant ; noindex et exclusion du sitemap conservés.
 
-Aperçu limité à la navigation, au premier écran et à deux inspirations d’aménagement. Les volets explicatifs utilisent des éléments HTML `details` et restent utilisables sans JavaScript. La demande de devis est explicitement indisponible, sans collecte ni envoi. Un bandeau permanent indique le caractère fictif et permet de revenir aux réalisations de Baerg.
+Référence : Design Lab, `experiments/atelier-traverse-final/`, sélection Expressive personnalisée du 1 octobre 2026. Arial 700, échelle 101 %, marges 38/20 px (mobile 32/15), image 490 px à 58 % (mobile entière 3:2), sections 112 %, CTA brique pleins. Les valeurs sont figées dans styles.css ; aucun stockage, panneau ni dépendance au Lab.
 
-Fiche, captures et compte rendu de la passe finale : `docs/concepts/fiches-portfolio.md` et `docs/concepts/verification.md` à la racine du projet.
+Images bench.webp et joint.webp : conversions WebP sans perte des originaux 1536 × 1024 du Lab. Images de synthèse, études fictives, aucun chantier réel. Provenance et prompts préservés dans le Lab : `experiments/atelier-traverse/assets-provenance.md`. Les anciens assets restent disponibles pour préserver leurs URL.
 
-## Architecture
+Le contact est une démonstration locale : aucun appel API, aucune transmission ou persistance. Fermeture par Échap, bouton ou extérieur, remise à zéro des saisies à la fermeture et restitution du focus. Sans JavaScript, bouton désactivé et explication visible. Le formulaire Baerg est indépendant.
 
-- Document autonome : `src/concepts/atelier-traverse.js`.
-- Registre de routes : `src/concepts/index.js` ; branche dédiée dans `server.js`.
-- CSS, favicon, polices et images isolés dans ce dossier. Navigation directe et volets natifs utilisables sans JavaScript. Le script partagé `/concepts/navigation.js` masque la navigation à la descente et la révèle à la remontée ou au focus clavier.
-- Export inclus dans `dist/concepts/atelier-traverse/index.html` par `npm run build`.
-- Aperçu non indexable et exclu du sitemap. Les pages et styles de Baerg restent inchangés.
+Ancres historiques haut, contenu, amenagements et entree conservées. Retour à Baerg au pied de page pour préserver la composition validée. Mouvement de l’enseigne 5 px / 360 ms, flèches 2 px ; préférence de mouvement réduit respectée, y compris lors d’un changement en cours de page.
 
-## Images et provenance
+## Évolution éditoriale — 1 octobre 2026
 
-Illustrations originales générées avec l’outil intégré imagegen le 20 septembre 2026 pour cet exercice fictif. Aucun chantier réel, aucune photographie de client, aucune marque tierce. Les légendes visibles identifient les images d’inspiration générées par IA. Versions JPEG optimisées depuis les originaux PNG ; pas de service d’images externe appelé par le navigateur.
+À la demande du studio après l’intégration : suppression de la numérotation et des notes latérales, repères de section plus affirmés (graisse 700 et trait brique) et ajout d’un tabouret détouré dans L’atelier. L’objet utilise un fond alpha réel, sans cadre ni fond rapporté. Il passe sous le texte sur tablette/mobile. `images/stool-cutout.webp` : 1254 × 1254, WebP sans perte avec transparence, généré avec imagegen intégré. Image de synthèse, pas une réalisation réelle. Le Lab reste la référence historique inchangée ; la section atelier et les repères ne sont donc plus identiques pixel à pixel à cette référence.
 
-Fichiers : `images/entree.jpg` et `images/bibliotheque.jpg`.
+## Scène et galerie — 2 octobre 2026
 
-Le schéma de façade a été dessiné en SVG à partir de l’illustration d’entrée retenue : deux portes à gauche, trois patères, une assise et deux tiroirs à droite. Il explique l’organisation du rangement, sans constituer un plan de fabrication.
+Le tabouret isolé est remplacé par `images/atelier-scene.webp` (1254 × 1254, alpha, WebP sans perte). Scène en béton brut, banc et étagère en frêne, haut de l’étagère dépassant du cadre photographique. Visuel de synthèse créé avec imagegen intégré.
 
-### Prompt entrée — outil intégré imagegen
-
-Use case: photorealistic-natural. Asset type: original inspiration image for a fictional Swiss joinery concept website Atelier Traverse. Generate a landscape 1536x1024 editorial interior photograph, absolutely no text or watermark. A functional small apartment entryway with precisely built natural pale oak cabinetry. Front-on elevation camera, straight verticals. Whole cabinet fully visible centered with margins, floor and neutral plaster wall. Cabinet has exactly two zones: left 40% width two full-height closed oak doors with long slender wooden handles; right 60% a recessed sitting bench, TWO equal wide closed shoe drawers under the seat, and a plain oak back panel above with THREE small wooden coat pegs in a horizontal row, one dark olive jacket hanging on one peg. Simple bag on bench, no people. Tall doors reach the same top as the right niche surround. Natural side daylight, tactile wood grain, modest lived-in home, pale grey stone floor. No gilding, luxury staging or excessive decor. Realistic buildable furniture, precise joinery, warm wood against cool neutral walls. Photo only, not a website mockup.
-
-### Prompt bibliothèque — outil intégré imagegen
-
-Use case: photorealistic-natural. Asset type: inspiration image for a fictional Swiss joinery website. Landscape 1536x1024 editorial photograph of a built-in pale oak open bookshelf in a modest contemporary living room, natural window light from left. Strong perpendicular geometric structure: floor-to-ceiling oak bookcase with three vertical bays, varied shelf heights holding books of assorted neutral and brick-red spines, understated everyday ceramics, closed low cupboards across the bottom. A small rust-red upholstered reading chair partly visible at right and a wool rug. Wood grain, matte finish, precise joinery, believable lived-in interior, neutral white walls, balanced daylight rather than golden filter. Furniture is protagonist, realistic practical craftsmanship, no luxury mansion codes. No people, text, logos, watermarks. Entire bookcase visible, straight verticals, appealing composed architectural photograph, not a website mockup.
-
-## Polices
-
-Barlow Condensed 600 et Source Sans 3 400/600, hébergées localement. Sources : Google Fonts (`fonts.gstatic.com`). Licences SIL OFL incluses dans `fonts/` ; textes récupérés depuis les dossiers `ofl/barlowcondensed` et `ofl/sourcesans3` du dépôt officiel https://github.com/google/fonts.
+Les deux études deviennent une galerie : largeur partagée, grande/petite image, échange animé au clic (650 ms), sans autoplay. Boutons natifs et flèches clavier, Home/End, aria-pressed ; transitions supprimées en mouvement réduit. Sans JavaScript, les deux études gardent leur présentation statique. Vérification Chromium/WebKit et captures des deux états à 390/820/1440 px.

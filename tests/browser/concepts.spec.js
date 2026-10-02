@@ -18,7 +18,7 @@ async function noOverflow(page) {
   expect(await page.evaluate(() => document.documentElement.scrollWidth <= innerWidth)).toBe(true);
 }
 
-for (const concept of ['atelier-traverse', 'midi-et-compagnie']) {
+for (const concept of ['midi-et-compagnie']) {
   for (const [width, height] of [
     [320, 568],
     [390, 844],
