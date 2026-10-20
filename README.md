@@ -16,7 +16,9 @@ Ouvrir l’adresse affichée dans le terminal : http://127.0.0.1:4612 par défau
 
 ## Modifier le site
 
-- `index.html` : contenu, navigation et sections.
+- `index.html` : Accueil et paysage 08A.
+- `a-propos/index.html`, `realisations/index.html`, `offres/index.html`, `contact/index.html` : les quatre autres pages.
+- `pages.css` : styles des pages et des sections communes.
 - `common.css` : styles de base ; `fusion.css` : composition 08A et responsive.
 - `app.js` : menu et dialogues ; `motion.js` : parallaxe et arrêt des mouvements.
 - `assets/` : images, polices et licences.
@@ -33,3 +35,7 @@ npm run build
 L’export autonome est écrit dans `dist/`. Cette commande ne publie rien.
 
 Le projet est la version `08A-initial` transférée du Lab le 20 octobre 2026, désormais sans dossier intermédiaire. L’ancien site est retiré de cette branche et reste accessible dans l’historique Git. Les visuels de concept art et leur provenance sont conservés. Le contact copie un brouillon sans envoyer de message ; les projets sont fictifs.
+
+## Contenu des pages
+
+Les textes reprennent presque intégralement `src/content.js` et les pages de `src/site.js` de la branche `Dev`, commit `629787dd14e5e917d0c20c2a3afd4a395ae76de1`. La page Offres regroupe les trois services et la méthode de travail existants ; aucun tarif inventé. Le slogan et le paysage de l’accueil restent ceux de 08A. Le formulaire Contact reprend les champs existants et prépare un brouillon local ; la messagerie reste non configurée.

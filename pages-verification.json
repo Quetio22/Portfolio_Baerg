@@ -1,0 +1,115 @@
+{
+  "pages": [
+    {
+      "route": "/",
+      "width": 1440,
+      "ok": true
+    },
+    {
+      "route": "/a-propos/",
+      "width": 1440,
+      "ok": true
+    },
+    {
+      "route": "/realisations/",
+      "width": 1440,
+      "ok": true
+    },
+    {
+      "route": "/offres/",
+      "width": 1440,
+      "ok": true
+    },
+    {
+      "route": "/contact/",
+      "width": 1440,
+      "ok": true
+    },
+    {
+      "route": "/",
+      "width": 820,
+      "ok": true
+    },
+    {
+      "route": "/a-propos/",
+      "width": 820,
+      "ok": true
+    },
+    {
+      "route": "/realisations/",
+      "width": 820,
+      "ok": true
+    },
+    {
+      "route": "/offres/",
+      "width": 820,
+      "ok": true
+    },
+    {
+      "route": "/contact/",
+      "width": 820,
+      "ok": true
+    },
+    {
+      "route": "/",
+      "width": 390,
+      "ok": true
+    },
+    {
+      "route": "/a-propos/",
+      "width": 390,
+      "ok": true
+    },
+    {
+      "route": "/realisations/",
+      "width": 390,
+      "ok": true
+    },
+    {
+      "route": "/offres/",
+      "width": 390,
+      "ok": true
+    },
+    {
+      "route": "/contact/",
+      "width": 390,
+      "ok": true
+    },
+    {
+      "route": "/",
+      "width": 320,
+      "ok": true
+    },
+    {
+      "route": "/a-propos/",
+      "width": 320,
+      "ok": true
+    },
+    {
+      "route": "/realisations/",
+      "width": 320,
+      "ok": true
+    },
+    {
+      "route": "/offres/",
+      "width": 320,
+      "ok": true
+    },
+    {
+      "route": "/contact/",
+      "width": 320,
+      "ok": true
+    }
+  ],
+  "errors": [],
+  "navigation": true,
+  "contactDraft": true,
+  "demoReturns": true,
+  "build": "passed",
+  "exportLocalLinks": 129,
+  "contentSource": "Dev:629787dd14e5e917d0c20c2a3afd4a395ae76de1",
+  "contentFiles": [
+    "src/content.js",
+    "src/site.js"
+  ]
+}
