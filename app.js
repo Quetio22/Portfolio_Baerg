@@ -48,3 +48,30 @@ if (form) {
     }
   });
 }
+
+// Reveal the navigation on the first upward scroll, without a large threshold.
+const header = document.querySelector('.site-header');
+if (header) {
+  let previousY = Math.max(0, window.scrollY);
+  let frame = 0;
+  const updateHeader = () => {
+    frame = 0;
+    const maximum = Math.max(0, document.documentElement.scrollHeight - innerHeight);
+    const y = Math.min(maximum, Math.max(0, window.scrollY));
+    const keyboardFocus = header.contains(document.activeElement) && document.activeElement.matches(':focus-visible');
+    header.classList.toggle('is-scrolled', y > 8);
+    if (y <= header.offsetHeight || y < previousY || nav.classList.contains('open') || keyboardFocus) {
+      header.classList.remove('is-hidden');
+    } else if (y > previousY) {
+      header.classList.add('is-hidden');
+    }
+    previousY = y;
+  };
+  window.addEventListener('scroll', () => {
+    if (!frame) frame = requestAnimationFrame(updateHeader);
+  }, { passive: true });
+  header.addEventListener('focusin', () => header.classList.remove('is-hidden'));
+  window.addEventListener('resize', updateHeader);
+  window.addEventListener('pageshow', updateHeader);
+  updateHeader();
+}
