@@ -5,7 +5,13 @@ import { fileURLToPath } from 'node:url';
 
 // Local preview: only runtime files are served.
 const root = fileURLToPath(new URL('./', import.meta.url));
-const port = Number(process.env.PORT || 4612);
+const requestedPort = Number(process.env.PORT || 4612);
+if (!Number.isInteger(requestedPort) || requestedPort < 1 || requestedPort > 65535) {
+  console.error('PORT doit être un entier compris entre 1 et 65535.');
+  process.exit(1);
+}
+const autoPort = process.argv.includes('--dev') && !process.env.PORT;
+let port = requestedPort;
 const types = { '.html': 'text/html; charset=utf-8', '.css': 'text/css; charset=utf-8', '.js': 'text/javascript; charset=utf-8', '.png': 'image/png', '.jpg': 'image/jpeg', '.jpeg': 'image/jpeg', '.webp': 'image/webp', '.svg': 'image/svg+xml', '.woff2': 'font/woff2', '.ttf': 'font/ttf', '.json': 'application/json', '.md': 'text/plain; charset=utf-8', '.txt': 'text/plain; charset=utf-8' };
 const server = http.createServer(async (req, res) => {
   try {
@@ -26,4 +32,20 @@ const server = http.createServer(async (req, res) => {
     res.end(req.method === 'HEAD' ? undefined : data);
   } catch { res.writeHead(404); res.end('Not found'); }
 });
-server.listen(port, '127.0.0.1', () => console.log(`08A initial : http://127.0.0.1:${port}`));
+server.on('error', (error) => {
+  if (error.code === 'EADDRINUSE' && autoPort && port < Math.min(requestedPort + 20, 65535)) {
+    console.log(`Port ${port} occupé, essai du port ${port + 1}…`);
+    port += 1;
+    server.listen(port, '127.0.0.1');
+    return;
+  }
+  console.error(error.code === 'EADDRINUSE'
+    ? `Le port ${port} est occupé. Arrêtez l’autre serveur ou choisissez un port avec PORT=4613 npm run dev.`
+    : `Impossible de démarrer le serveur : ${error.message}`);
+  process.exit(1);
+});
+server.on('listening', () => {
+  console.log(`Baerg Design — http://127.0.0.1:${port}`);
+  console.log('Ctrl+C pour arrêter le serveur.');
+});
+server.listen(port, '127.0.0.1');

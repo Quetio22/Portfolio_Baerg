@@ -10,7 +10,9 @@ Node.js 22.9 ou supérieur. Aucune dépendance à installer.
 npm run dev
 ```
 
-Ouvrir http://127.0.0.1:4612. Modifier les fichiers, puis recharger le navigateur. `npm start` lance le serveur sans surveillance. Le port est configurable avec `PORT`.
+Ouvrir l’adresse affichée dans le terminal : http://127.0.0.1:4612 par défaut. Si ce port est occupé, `npm run dev` choisit automatiquement le prochain port libre. Modifier les fichiers, puis recharger le navigateur. Arrêter le serveur avec `Ctrl+C`.
+
+`npm start` lance le serveur sans surveillance, sur le port fixe 4612. Pour imposer un autre port : `PORT=4613 npm run dev`. Un port explicitement demandé reste fixe et affiche un message clair s’il est occupé.
 
 ## Modifier le site
 
