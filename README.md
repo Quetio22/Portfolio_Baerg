@@ -1,5 +1,9 @@
 # Baerg Design
 
+## Base 08A initial — branche dev_q
+
+La direction transférée du Lab est dans [`08A-initial/`](08A-initial/README.md). Lancer `npm run dev:fusion` et ouvrir **http://127.0.0.1:4612** pour construire le site à partir de cette base autonome. Le site existant ci-dessous est conservé.
+
 Site vitrine en français : Accueil, À propos, Réalisations, Contact, mentions légales, confidentialité et page 404. HTML rendu côté serveur, CSS et JavaScript natif, Node.js sans dépendance d’exécution. Aucun compte, base de données, cookie ou outil de tracking.
 
 ## Démarrer

@@ -14,7 +14,8 @@
     "test:browser": "playwright test",
     "assets:share": "node scripts/generate-share-image.js",
     "format": "prettier --write .",
-    "format:check": "prettier --check ."
+    "format:check": "prettier --check .",
+    "dev:fusion": "node scripts/dev-fusion.js"
   },
   "devDependencies": {
     "@axe-core/playwright": "^4.10.2",

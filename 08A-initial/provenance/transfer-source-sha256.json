@@ -1,0 +1,21 @@
+{
+  "preservation-before.json": "796c899ec21904d4c47c53986f29cc1dc88201322c2ab877e605620e20ae1575",
+  "direction.json": "10de52c684642f4ad521f30b78ba79820084d7ff898574ad3ecbe3ce23effe43",
+  "index.html": "e9695b9e5825c3d5310c3809326c74e3e5868c246a8cd65cb988f0057ff108c7",
+  "verify.cjs": "c231f2bdf5dde0cc3fffa4de9d458075d498c42f3ef3ba5f708d6bb7687bbc12",
+  "fusion.css": "7ff5bb94565899a0eaadc84d8bd1beb36c52f5284346de243907917f2227d2ac",
+  "verification.json": "70d2e232fa061e218e0d3779c2bf56380e5324e032fa7500a61b466e117e40a1",
+  "brief.md": "d7347bab66a564d97adba2d89b390b9a61bbf6855350ea7a8c372464bf7f7b1d",
+  "motion.js": "3ff7ac89c9e57b4e1d820d9b3b4d65eb59ac7c6822f974070818dd65bd9ad415",
+  "notes.md": "07d365cc1b81b03264f6d31da8cf1f25d9f2508a8f0eafd501c805972603bef9",
+  "captures/08A-1440.png": "f78c31e7f0c3b0d3f8435351b6ff80c99dc6ea8e74e0c21a16ec8aafa3957c75",
+  "captures/08A-820.png": "377cfca9d055fcb8419ce9b167edaf5d4f40d8a3c1c78957d958f2fb3a02b452",
+  "captures/08A-full-1440.png": "67964ba09a4706c72db94a4e4c2dbcde4c8bcd2c11099946e90250e4458280ee",
+  "captures/08A-390.png": "90e952a5a553bce1c286450f9c6578751713a27cbee507ba5e115c06b08164ed",
+  "captures/08A-320.png": "5fa616ddbf944a473badd030a9a2a7c49c84acacc0b6cb7eada259b396e02067",
+  "assets/forest.png": "023ea78d918694c8a8d75010bc91817c07462bd4f5ceff29fdb6c5db4b692b64",
+  "assets/mountain-split.png": "98724461a2ef17d7a42df3f7b0455f1e7a37ba4eb292eda8f571ea26649fa4bf",
+  "demos/lise/index.html": "58b9c3e0724b2b577c86e98df6848061f561c02d791c7db4cfb2df431f51d1f6",
+  "demos/atelier-traverse/index.html": "0ddb485dc56ac053988a5f6d6ff92fe9e9fe19d347f6785f9a992e9469ab6328",
+  "demos/midi-et-compagnie/index.html": "fecb152ff42af0af860184709dd5a11a531517a7ddb369ac7e7cf261c3c2342b"
+}

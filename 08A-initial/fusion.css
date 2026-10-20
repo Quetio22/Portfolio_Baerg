@@ -1,0 +1,23 @@
+/* An independent composition. Original source directions remain frozen. */
+.v08A{--bg:#07090a;--ink:#f5f5f1;--muted:#b5b8b7;--line:#303638;--accent:#ff8c49}
+.v08A .hero{min-height:900px;height:100svh;max-height:1150px;isolation:isolate;padding-top:170px}
+.v08A .hero h1{font-size:clamp(76px,8.8vw,144px);font-weight:700;line-height:1.02;letter-spacing:-.035em;margin-top:95px;width:49%;text-shadow:0 3px 40px #05070866}
+.v08A .hero h1 span{letter-spacing:inherit}
+.landscape{position:absolute;inset:0;z-index:-1;pointer-events:none;overflow:hidden}
+.forest-layer{position:absolute;inset:-20px;transform:translate3d(var(--forest-x,0px),var(--forest-y,0px),0);filter:saturate(.35) brightness(.7)}
+.forest-layer img{height:100%;object-fit:cover;object-position:55% 50%}
+.mountain-layer{position:absolute;top:22%;right:-8%;width:77%;transform:translate3d(var(--rock-x,0px),var(--rock-y,0px),0);mask-image:linear-gradient(#000 0 61%,#000b 72%,transparent 94%)}
+.mountain-layer>img{width:100%;height:auto}
+.mountain-layer>img:first-child{filter:brightness(.82) saturate(.85)}
+.fissure-light{position:absolute;inset:0;mix-blend-mode:screen;clip-path:polygon(44% 8%,49% 16%,55% 36%,65% 57%,76% 76%,85% 94%,78% 94%,69% 79%,57% 61%,48% 38%);opacity:.12;animation:fissure-breathe 6s ease-in-out infinite alternate}
+.canopy-layer{position:absolute;inset:0;background:url(assets/forest.png) 55% 50%/cover;filter:saturate(.3) brightness(.65);mask-image:linear-gradient(transparent 56%,#000b 76%,#000 88%);transform:translate3d(var(--forest-x,0px),var(--forest-y,0px),0)}
+.atmosphere{position:absolute;inset:0;background:linear-gradient(90deg,#07090ac9,transparent 58%),linear-gradient(#07090a 0%,transparent 24%,transparent 65%,#07090a 96%)}
+.v08A .hero-bottom{bottom:64px;align-items:end}.v08A .hero-intro{max-width:365px}.v08A .hero-actions .button{border-color:#d4d8d4}.v08A .text-link:hover{color:#ffac77}
+.v08A .art-label{color:#8e9696}.v08A .section-number{color:#bdc3c0}.v08A .contact{background:radial-gradient(ellipse at 100% 100%,#4d25151f,transparent 65%),#0b0e0f}
+@keyframes fissure-breathe{to{opacity:.32}}
+.motion-off .fissure-light{animation:none;opacity:.16}
+.motion-off .forest-layer,.motion-off .mountain-layer,.motion-off .canopy-layer{transform:none}
+@media(min-width:651px) and (max-width:1050px){.v08A .hero{min-height:940px}.v08A .hero h1{font-size:9.5vw;margin-top:110px}.mountain-layer{width:95%;right:-21%;top:32%}.canopy-layer{mask-image:linear-gradient(transparent 60%,#000 87%)}.v08A .hero-bottom{gap:28px}}
+@media(max-width:650px){.v08A .hero{height:auto;max-height:none;padding-top:145px;padding-bottom:28px}.v08A .hero h1{font-size:16vw!important;line-height:1.01;margin-top:43px!important;width:100%!important}.landscape{bottom:auto;height:730px}.forest-layer img{object-position:54% 50%}.mountain-layer{top:315px;width:145%;right:-38%;mask-image:linear-gradient(#000 0 57%,#000b 72%,transparent 96%)}.canopy-layer{background-position:54% 50%;mask-image:linear-gradient(transparent 68%,#000 90%)}.atmosphere{background:linear-gradient(90deg,#07090a60,transparent 80%),linear-gradient(#07090a,transparent 24%,transparent 73%,#07090a 98%)}.v08A .hero-bottom{margin-top:370px!important}.v08A .hero-intro{max-width:420px!important}.v08A .art-label{margin-top:30px}.v08A .hero-actions{gap:22px}.v08A .hero-actions .text-link{padding-block:5px}}
+@media(max-width:350px){.mountain-layer{top:290px}.v08A .hero-bottom{margin-top:340px!important}.landscape{height:665px}}
+@media(prefers-reduced-motion:reduce){.fissure-light{animation:none!important;opacity:.16}.forest-layer,.mountain-layer,.canopy-layer{transform:none!important}}
