@@ -29,6 +29,9 @@ if (form) {
   form.querySelector('button[type=submit]').disabled = false;
   const selected = { creation: 'Création de site', refonte: 'Refonte de site', autre: 'Autre projet' }[new URLSearchParams(location.search).get('projet')];
   if (selected) form.elements.projectType.value = selected;
+  if (new URLSearchParams(location.search).get('option') === 'photographies') {
+    form.elements.message.value = 'Je souhaite une refonte de mon site avec l’option de photographies professionnelles.';
+  }
   form.addEventListener('submit', async e => {
     e.preventDefault();
     const values = new FormData(form);

@@ -38,7 +38,7 @@ Le projet est la version `08A-initial` transférée du Lab le 20 octobre 2026, d
 
 ## Contenu des pages
 
-Les textes reprennent presque intégralement `src/content.js` et les pages de `src/site.js` de la branche `Dev`, commit `629787dd14e5e917d0c20c2a3afd4a395ae76de1`. La page Offres regroupe les trois services et la méthode de travail existants ; aucun tarif inventé. Le slogan et le paysage de l’accueil restent ceux de 08A. Le formulaire Contact reprend les champs existants et prépare un brouillon local ; la messagerie reste non configurée.
+Les textes reprennent presque intégralement `src/content.js` et les pages de `src/site.js` de la branche `Dev`, commit `629787dd14e5e917d0c20c2a3afd4a395ae76de1`. La page Offres reprend désormais le texte fourni par le studio : refonte à 3’500 CHF (forfait de référence), avec photographies professionnelles en option à 800 CHF. Le périmètre et les livrables sont précisés dans le devis. Le slogan et le paysage de l’accueil restent ceux de 08A. Le formulaire Contact reprend les champs existants et prépare un brouillon local ; la messagerie reste non configurée.
 
 ## Paysage d’accueil
 
