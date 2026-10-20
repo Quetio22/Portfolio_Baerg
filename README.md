@@ -43,3 +43,5 @@ Les textes reprennent presque intégralement `src/content.js` et les pages de `s
 ## Paysage d’accueil
 
 `assets/fusion-landscape.png` est le paysage continu choisi par le studio : arbres orangés à gauche et fissure dans la montagne à droite. Il remplace la composition initiale en couches séparées. Le paysage entier partage le même cadrage et le même déplacement ; les arbres ne servent plus de fond à une montagne ajoutée. Provenance dans `provenance/fusion-landscape.json`.
+
+La page Offres présente en premier le partenariat de lancement fourni par le studio (prix indicatif de 900 à 1’500 CHF, devis préalable, validation des éléments publiés et témoignage facultatif), puis le sponsoring, avant les offres de référence.
