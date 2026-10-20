@@ -39,3 +39,7 @@ Le projet est la version `08A-initial` transférée du Lab le 20 octobre 2026, d
 ## Contenu des pages
 
 Les textes reprennent presque intégralement `src/content.js` et les pages de `src/site.js` de la branche `Dev`, commit `629787dd14e5e917d0c20c2a3afd4a395ae76de1`. La page Offres regroupe les trois services et la méthode de travail existants ; aucun tarif inventé. Le slogan et le paysage de l’accueil restent ceux de 08A. Le formulaire Contact reprend les champs existants et prépare un brouillon local ; la messagerie reste non configurée.
+
+## Paysage d’accueil
+
+`assets/fusion-landscape.png` est le paysage continu choisi par le studio : arbres orangés à gauche et fissure dans la montagne à droite. Il remplace la composition initiale en couches séparées. Le paysage entier partage le même cadrage et le même déplacement ; les arbres ne servent plus de fond à une montagne ajoutée. Provenance dans `provenance/fusion-landscape.json`.
