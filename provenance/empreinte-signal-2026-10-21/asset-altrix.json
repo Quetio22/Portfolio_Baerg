@@ -1,0 +1,19 @@
+{
+  "tool": "image_gen built-in edit",
+  "prompt": "Two images are supplied. Image 1 is the EDIT TARGET: preserve its composition exactly, the two flat glass planes, fold geometry, camera, placement, ground, horizontal optical streaks and grain. Image 2 is ONLY A COLOUR REFERENCE, supplied by the user: match its highly saturated scarlet-red and vivid orange palette; do not copy any people, layout, logos or typography.\nRecolour Image 1 so its lighting, material and background match the ORANGE of Image 2. The dominant orange sampled from Image 2 is #D14A12; its brightest orange is close to #EF4B0C. Use these clean saturated oranges together with scarlet #D62608, deep crimson #890311, and small neutral ivory highlights. The result must clearly feel scarlet and vivid orange like Image 2. Eliminate the current muddy chocolate brown, bronze, ochre, amber and golden-yellow casts. Dark parts of glass and shadows should be clean crimson red, never brown or black-brown. Highlights should be orange or ivory, never golden yellow. Keep sufficient crimson negative space at upper left and bottom for later ivory HTML text. Keep photoreal grain and lateral blur; no smooth flat synthetic gradient, no new objects, no silhouettes, no text, no logos, no interface. Material colour and lighting edit only; preserve exact scene arrangement and scale. Output artwork only, same landscape format.",
+  "inputs": [
+    {
+      "role": "edit target",
+      "file": "assets/empreinte-orange.png"
+    },
+    {
+      "role": "colour reference only",
+      "file": "../baerg-taste-vault/images/baerg-altrix-detail.png",
+      "creator": "Saklain Sarowor",
+      "sourceUrl": "https://dribbble.com/shots/27670665-Digital-Design-Agency-Website-UI"
+    }
+  ],
+  "sampledOrange": "#d14a12",
+  "originalOutput": "/Users/quentinbergmann/.codex/generated_images/01a15d91-7454-79c2-9006-6845407dd04f/exec-03a3909a-5336-4763-b9fe-f9fec2a68d0f.png",
+  "localPath": "assets/empreinte-altrix.png"
+}

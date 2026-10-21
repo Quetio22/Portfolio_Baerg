@@ -1,0 +1,2322 @@
+{
+  "/a-propos/@1440": {
+    "markup": "<section class=\"page-intro\"><p class=\"eyebrow\">Le studio</p><h1>Derrière Baerg,<br><em>nous deux.</em></h1><p class=\"page-lead\">Deux apprentis développeurs full-stack, réunis pour concevoir des sites clairs et soignés.</p></section><section class=\"section founders\" aria-label=\"Les cofondateurs\"><article><div class=\"founder-top\"><p class=\"eyebrow\">01 / Cofondateur</p><span class=\"founder-monogram\" aria-hidden=\"true\">Q</span></div><h2>Quentin</h2><p class=\"founder-role\">Apprenti développeur full-stack</p><p>Cofondateur de Baerg Design. Nous concevons et développons chaque projet ensemble.</p></article><article><div class=\"founder-top\"><p class=\"eyebrow\">02 / Cofondateur</p><span class=\"founder-monogram\" aria-hidden=\"true\">T</span></div><h2>Thomas</h2><p class=\"founder-role\">Apprenti développeur full-stack</p><p>Cofondateur de Baerg Design. Nous concevons et développons chaque projet ensemble.</p></article></section><section class=\"section editorial\"><p class=\"eyebrow\">Notre histoire</p><div><h2>Deux apprentis.<br>Un projet commun.</h2><p class=\"large-copy\">Nous construisons Baerg Design à deux, en parallèle de notre formation.</p><p>Nous créons et modernisons des sites web. Vous échangez directement avec nous, du premier besoin jusqu’aux derniers ajustements.</p></div></section><section class=\"section editorial\"><p class=\"eyebrow\">Nos compétences</p><div><h2>Du design<br>au développement.</h2><p class=\"large-copy\">Nous travaillons autant sur l’interface que sur son fonctionnement.</p><p>Structure des pages, développement et adaptation mobile sont réunis dans un même projet, avec des choix expliqués simplement.</p></div></section><section class=\"closing section\"><p class=\"eyebrow\">Votre projet</p><h2>Discutons de<br>votre site.</h2><div><p>Présentez-nous votre activité et ce que vous souhaitez créer ou améliorer.</p><a class=\"button\" href=\"/contact/\">Parler de votre projet <span aria-hidden=\"true\">↗</span></a></div></section>",
+    "elements": [
+      {
+        "selector": ".page-intro",
+        "index": 0,
+        "properties": {
+          "display": "block",
+          "gridTemplateColumns": "none",
+          "columnGap": "normal",
+          "rowGap": "normal",
+          "paddingTop": "190px",
+          "paddingRight": "64.8px",
+          "paddingBottom": "90px",
+          "paddingLeft": "64.8px",
+          "marginTop": "0px",
+          "marginRight": "0px",
+          "marginBottom": "0px",
+          "marginLeft": "0px",
+          "flexDirection": "row",
+          "order": "0"
+        }
+      },
+      {
+        "selector": ".section",
+        "index": 0,
+        "properties": {
+          "display": "grid",
+          "gridTemplateColumns": "612px 612.016px",
+          "columnGap": "86.4px",
+          "rowGap": "86.4px",
+          "paddingTop": "70px",
+          "paddingRight": "64.8px",
+          "paddingBottom": "125px",
+          "paddingLeft": "64.8px",
+          "marginTop": "0px",
+          "marginRight": "0px",
+          "marginBottom": "0px",
+          "marginLeft": "0px",
+          "flexDirection": "row",
+          "order": "0"
+        }
+      },
+      {
+        "selector": ".section",
+        "index": 1,
+        "properties": {
+          "display": "grid",
+          "gridTemplateColumns": "408px 816.016px",
+          "columnGap": "86.4px",
+          "rowGap": "86.4px",
+          "paddingTop": "125px",
+          "paddingRight": "64.8px",
+          "paddingBottom": "125px",
+          "paddingLeft": "64.8px",
+          "marginTop": "0px",
+          "marginRight": "0px",
+          "marginBottom": "0px",
+          "marginLeft": "0px",
+          "flexDirection": "row",
+          "order": "0"
+        }
+      },
+      {
+        "selector": ".section",
+        "index": 2,
+        "properties": {
+          "display": "grid",
+          "gridTemplateColumns": "408px 816.016px",
+          "columnGap": "86.4px",
+          "rowGap": "86.4px",
+          "paddingTop": "125px",
+          "paddingRight": "64.8px",
+          "paddingBottom": "125px",
+          "paddingLeft": "64.8px",
+          "marginTop": "0px",
+          "marginRight": "0px",
+          "marginBottom": "0px",
+          "marginLeft": "0px",
+          "flexDirection": "row",
+          "order": "0"
+        }
+      },
+      {
+        "selector": ".section",
+        "index": 3,
+        "properties": {
+          "display": "block",
+          "gridTemplateColumns": "none",
+          "columnGap": "normal",
+          "rowGap": "normal",
+          "paddingTop": "125px",
+          "paddingRight": "64.8px",
+          "paddingBottom": "125px",
+          "paddingLeft": "64.8px",
+          "marginTop": "0px",
+          "marginRight": "0px",
+          "marginBottom": "0px",
+          "marginLeft": "0px",
+          "flexDirection": "row",
+          "order": "0"
+        }
+      },
+      {
+        "selector": ".founders",
+        "index": 0,
+        "properties": {
+          "display": "grid",
+          "gridTemplateColumns": "612px 612.016px",
+          "columnGap": "86.4px",
+          "rowGap": "86.4px",
+          "paddingTop": "70px",
+          "paddingRight": "64.8px",
+          "paddingBottom": "125px",
+          "paddingLeft": "64.8px",
+          "marginTop": "0px",
+          "marginRight": "0px",
+          "marginBottom": "0px",
+          "marginLeft": "0px",
+          "flexDirection": "row",
+          "order": "0"
+        }
+      },
+      {
+        "selector": ".editorial",
+        "index": 0,
+        "properties": {
+          "display": "grid",
+          "gridTemplateColumns": "408px 816.016px",
+          "columnGap": "86.4px",
+          "rowGap": "86.4px",
+          "paddingTop": "125px",
+          "paddingRight": "64.8px",
+          "paddingBottom": "125px",
+          "paddingLeft": "64.8px",
+          "marginTop": "0px",
+          "marginRight": "0px",
+          "marginBottom": "0px",
+          "marginLeft": "0px",
+          "flexDirection": "row",
+          "order": "0"
+        }
+      },
+      {
+        "selector": ".editorial",
+        "index": 1,
+        "properties": {
+          "display": "grid",
+          "gridTemplateColumns": "408px 816.016px",
+          "columnGap": "86.4px",
+          "rowGap": "86.4px",
+          "paddingTop": "125px",
+          "paddingRight": "64.8px",
+          "paddingBottom": "125px",
+          "paddingLeft": "64.8px",
+          "marginTop": "0px",
+          "marginRight": "0px",
+          "marginBottom": "0px",
+          "marginLeft": "0px",
+          "flexDirection": "row",
+          "order": "0"
+        }
+      }
+    ]
+  },
+  "/a-propos/@820": {
+    "markup": "<section class=\"page-intro\"><p class=\"eyebrow\">Le studio</p><h1>Derrière Baerg,<br><em>nous deux.</em></h1><p class=\"page-lead\">Deux apprentis développeurs full-stack, réunis pour concevoir des sites clairs et soignés.</p></section><section class=\"section founders\" aria-label=\"Les cofondateurs\"><article><div class=\"founder-top\"><p class=\"eyebrow\">01 / Cofondateur</p><span class=\"founder-monogram\" aria-hidden=\"true\">Q</span></div><h2>Quentin</h2><p class=\"founder-role\">Apprenti développeur full-stack</p><p>Cofondateur de Baerg Design. Nous concevons et développons chaque projet ensemble.</p></article><article><div class=\"founder-top\"><p class=\"eyebrow\">02 / Cofondateur</p><span class=\"founder-monogram\" aria-hidden=\"true\">T</span></div><h2>Thomas</h2><p class=\"founder-role\">Apprenti développeur full-stack</p><p>Cofondateur de Baerg Design. Nous concevons et développons chaque projet ensemble.</p></article></section><section class=\"section editorial\"><p class=\"eyebrow\">Notre histoire</p><div><h2>Deux apprentis.<br>Un projet commun.</h2><p class=\"large-copy\">Nous construisons Baerg Design à deux, en parallèle de notre formation.</p><p>Nous créons et modernisons des sites web. Vous échangez directement avec nous, du premier besoin jusqu’aux derniers ajustements.</p></div></section><section class=\"section editorial\"><p class=\"eyebrow\">Nos compétences</p><div><h2>Du design<br>au développement.</h2><p class=\"large-copy\">Nous travaillons autant sur l’interface que sur son fonctionnement.</p><p>Structure des pages, développement et adaptation mobile sont réunis dans un même projet, avec des choix expliqués simplement.</p></div></section><section class=\"closing section\"><p class=\"eyebrow\">Votre projet</p><h2>Discutons de<br>votre site.</h2><div><p>Présentez-nous votre activité et ce que vous souhaitez créer ou améliorer.</p><a class=\"button\" href=\"/contact/\">Parler de votre projet <span aria-hidden=\"true\">↗</span></a></div></section>",
+    "elements": [
+      {
+        "selector": ".page-intro",
+        "index": 0,
+        "properties": {
+          "display": "block",
+          "gridTemplateColumns": "none",
+          "columnGap": "normal",
+          "rowGap": "normal",
+          "paddingTop": "190px",
+          "paddingRight": "36.9px",
+          "paddingBottom": "90px",
+          "paddingLeft": "36.9px",
+          "marginTop": "0px",
+          "marginRight": "0px",
+          "marginBottom": "0px",
+          "marginLeft": "0px",
+          "flexDirection": "row",
+          "order": "0"
+        }
+      },
+      {
+        "selector": ".section",
+        "index": 0,
+        "properties": {
+          "display": "grid",
+          "gridTemplateColumns": "348.516px 348.516px",
+          "columnGap": "49.2px",
+          "rowGap": "49.2px",
+          "paddingTop": "70px",
+          "paddingRight": "36.9px",
+          "paddingBottom": "90px",
+          "paddingLeft": "36.9px",
+          "marginTop": "0px",
+          "marginRight": "0px",
+          "marginBottom": "0px",
+          "marginLeft": "0px",
+          "flexDirection": "row",
+          "order": "0"
+        }
+      },
+      {
+        "selector": ".section",
+        "index": 1,
+        "properties": {
+          "display": "grid",
+          "gridTemplateColumns": "232.344px 464.688px",
+          "columnGap": "49.2px",
+          "rowGap": "49.2px",
+          "paddingTop": "90px",
+          "paddingRight": "36.9px",
+          "paddingBottom": "90px",
+          "paddingLeft": "36.9px",
+          "marginTop": "0px",
+          "marginRight": "0px",
+          "marginBottom": "0px",
+          "marginLeft": "0px",
+          "flexDirection": "row",
+          "order": "0"
+        }
+      },
+      {
+        "selector": ".section",
+        "index": 2,
+        "properties": {
+          "display": "grid",
+          "gridTemplateColumns": "232.344px 464.688px",
+          "columnGap": "49.2px",
+          "rowGap": "49.2px",
+          "paddingTop": "90px",
+          "paddingRight": "36.9px",
+          "paddingBottom": "90px",
+          "paddingLeft": "36.9px",
+          "marginTop": "0px",
+          "marginRight": "0px",
+          "marginBottom": "0px",
+          "marginLeft": "0px",
+          "flexDirection": "row",
+          "order": "0"
+        }
+      },
+      {
+        "selector": ".section",
+        "index": 3,
+        "properties": {
+          "display": "block",
+          "gridTemplateColumns": "none",
+          "columnGap": "normal",
+          "rowGap": "normal",
+          "paddingTop": "90px",
+          "paddingRight": "36.9px",
+          "paddingBottom": "90px",
+          "paddingLeft": "36.9px",
+          "marginTop": "0px",
+          "marginRight": "0px",
+          "marginBottom": "0px",
+          "marginLeft": "0px",
+          "flexDirection": "row",
+          "order": "0"
+        }
+      },
+      {
+        "selector": ".founders",
+        "index": 0,
+        "properties": {
+          "display": "grid",
+          "gridTemplateColumns": "348.516px 348.516px",
+          "columnGap": "49.2px",
+          "rowGap": "49.2px",
+          "paddingTop": "70px",
+          "paddingRight": "36.9px",
+          "paddingBottom": "90px",
+          "paddingLeft": "36.9px",
+          "marginTop": "0px",
+          "marginRight": "0px",
+          "marginBottom": "0px",
+          "marginLeft": "0px",
+          "flexDirection": "row",
+          "order": "0"
+        }
+      },
+      {
+        "selector": ".editorial",
+        "index": 0,
+        "properties": {
+          "display": "grid",
+          "gridTemplateColumns": "232.344px 464.688px",
+          "columnGap": "49.2px",
+          "rowGap": "49.2px",
+          "paddingTop": "90px",
+          "paddingRight": "36.9px",
+          "paddingBottom": "90px",
+          "paddingLeft": "36.9px",
+          "marginTop": "0px",
+          "marginRight": "0px",
+          "marginBottom": "0px",
+          "marginLeft": "0px",
+          "flexDirection": "row",
+          "order": "0"
+        }
+      },
+      {
+        "selector": ".editorial",
+        "index": 1,
+        "properties": {
+          "display": "grid",
+          "gridTemplateColumns": "232.344px 464.688px",
+          "columnGap": "49.2px",
+          "rowGap": "49.2px",
+          "paddingTop": "90px",
+          "paddingRight": "36.9px",
+          "paddingBottom": "90px",
+          "paddingLeft": "36.9px",
+          "marginTop": "0px",
+          "marginRight": "0px",
+          "marginBottom": "0px",
+          "marginLeft": "0px",
+          "flexDirection": "row",
+          "order": "0"
+        }
+      }
+    ]
+  },
+  "/a-propos/@390": {
+    "markup": "<section class=\"page-intro\"><p class=\"eyebrow\">Le studio</p><h1>Derrière Baerg,<br><em>nous deux.</em></h1><p class=\"page-lead\">Deux apprentis développeurs full-stack, réunis pour concevoir des sites clairs et soignés.</p></section><section class=\"section founders\" aria-label=\"Les cofondateurs\"><article><div class=\"founder-top\"><p class=\"eyebrow\">01 / Cofondateur</p><span class=\"founder-monogram\" aria-hidden=\"true\">Q</span></div><h2>Quentin</h2><p class=\"founder-role\">Apprenti développeur full-stack</p><p>Cofondateur de Baerg Design. Nous concevons et développons chaque projet ensemble.</p></article><article><div class=\"founder-top\"><p class=\"eyebrow\">02 / Cofondateur</p><span class=\"founder-monogram\" aria-hidden=\"true\">T</span></div><h2>Thomas</h2><p class=\"founder-role\">Apprenti développeur full-stack</p><p>Cofondateur de Baerg Design. Nous concevons et développons chaque projet ensemble.</p></article></section><section class=\"section editorial\"><p class=\"eyebrow\">Notre histoire</p><div><h2>Deux apprentis.<br>Un projet commun.</h2><p class=\"large-copy\">Nous construisons Baerg Design à deux, en parallèle de notre formation.</p><p>Nous créons et modernisons des sites web. Vous échangez directement avec nous, du premier besoin jusqu’aux derniers ajustements.</p></div></section><section class=\"section editorial\"><p class=\"eyebrow\">Nos compétences</p><div><h2>Du design<br>au développement.</h2><p class=\"large-copy\">Nous travaillons autant sur l’interface que sur son fonctionnement.</p><p>Structure des pages, développement et adaptation mobile sont réunis dans un même projet, avec des choix expliqués simplement.</p></div></section><section class=\"closing section\"><p class=\"eyebrow\">Votre projet</p><h2>Discutons de<br>votre site.</h2><div><p>Présentez-nous votre activité et ce que vous souhaitez créer ou améliorer.</p><a class=\"button\" href=\"/contact/\">Parler de votre projet <span aria-hidden=\"true\">↗</span></a></div></section>",
+    "elements": [
+      {
+        "selector": ".page-intro",
+        "index": 0,
+        "properties": {
+          "display": "block",
+          "gridTemplateColumns": "none",
+          "columnGap": "normal",
+          "rowGap": "normal",
+          "paddingTop": "140px",
+          "paddingRight": "22px",
+          "paddingBottom": "55px",
+          "paddingLeft": "22px",
+          "marginTop": "0px",
+          "marginRight": "0px",
+          "marginBottom": "0px",
+          "marginLeft": "0px",
+          "flexDirection": "row",
+          "order": "0"
+        }
+      },
+      {
+        "selector": ".section",
+        "index": 0,
+        "properties": {
+          "display": "grid",
+          "gridTemplateColumns": "346px",
+          "columnGap": "45px",
+          "rowGap": "45px",
+          "paddingTop": "70px",
+          "paddingRight": "22px",
+          "paddingBottom": "75px",
+          "paddingLeft": "22px",
+          "marginTop": "0px",
+          "marginRight": "0px",
+          "marginBottom": "0px",
+          "marginLeft": "0px",
+          "flexDirection": "row",
+          "order": "0"
+        }
+      },
+      {
+        "selector": ".section",
+        "index": 1,
+        "properties": {
+          "display": "block",
+          "gridTemplateColumns": "1fr 2fr",
+          "columnGap": "23.4px",
+          "rowGap": "23.4px",
+          "paddingTop": "75px",
+          "paddingRight": "22px",
+          "paddingBottom": "75px",
+          "paddingLeft": "22px",
+          "marginTop": "0px",
+          "marginRight": "0px",
+          "marginBottom": "0px",
+          "marginLeft": "0px",
+          "flexDirection": "row",
+          "order": "0"
+        }
+      },
+      {
+        "selector": ".section",
+        "index": 2,
+        "properties": {
+          "display": "block",
+          "gridTemplateColumns": "1fr 2fr",
+          "columnGap": "23.4px",
+          "rowGap": "23.4px",
+          "paddingTop": "75px",
+          "paddingRight": "22px",
+          "paddingBottom": "75px",
+          "paddingLeft": "22px",
+          "marginTop": "0px",
+          "marginRight": "0px",
+          "marginBottom": "0px",
+          "marginLeft": "0px",
+          "flexDirection": "row",
+          "order": "0"
+        }
+      },
+      {
+        "selector": ".section",
+        "index": 3,
+        "properties": {
+          "display": "block",
+          "gridTemplateColumns": "none",
+          "columnGap": "normal",
+          "rowGap": "normal",
+          "paddingTop": "75px",
+          "paddingRight": "22px",
+          "paddingBottom": "75px",
+          "paddingLeft": "22px",
+          "marginTop": "0px",
+          "marginRight": "0px",
+          "marginBottom": "0px",
+          "marginLeft": "0px",
+          "flexDirection": "row",
+          "order": "0"
+        }
+      },
+      {
+        "selector": ".founders",
+        "index": 0,
+        "properties": {
+          "display": "grid",
+          "gridTemplateColumns": "346px",
+          "columnGap": "45px",
+          "rowGap": "45px",
+          "paddingTop": "70px",
+          "paddingRight": "22px",
+          "paddingBottom": "75px",
+          "paddingLeft": "22px",
+          "marginTop": "0px",
+          "marginRight": "0px",
+          "marginBottom": "0px",
+          "marginLeft": "0px",
+          "flexDirection": "row",
+          "order": "0"
+        }
+      },
+      {
+        "selector": ".editorial",
+        "index": 0,
+        "properties": {
+          "display": "block",
+          "gridTemplateColumns": "1fr 2fr",
+          "columnGap": "23.4px",
+          "rowGap": "23.4px",
+          "paddingTop": "75px",
+          "paddingRight": "22px",
+          "paddingBottom": "75px",
+          "paddingLeft": "22px",
+          "marginTop": "0px",
+          "marginRight": "0px",
+          "marginBottom": "0px",
+          "marginLeft": "0px",
+          "flexDirection": "row",
+          "order": "0"
+        }
+      },
+      {
+        "selector": ".editorial",
+        "index": 1,
+        "properties": {
+          "display": "block",
+          "gridTemplateColumns": "1fr 2fr",
+          "columnGap": "23.4px",
+          "rowGap": "23.4px",
+          "paddingTop": "75px",
+          "paddingRight": "22px",
+          "paddingBottom": "75px",
+          "paddingLeft": "22px",
+          "marginTop": "0px",
+          "marginRight": "0px",
+          "marginBottom": "0px",
+          "marginLeft": "0px",
+          "flexDirection": "row",
+          "order": "0"
+        }
+      }
+    ]
+  },
+  "/a-propos/@320": {
+    "markup": "<section class=\"page-intro\"><p class=\"eyebrow\">Le studio</p><h1>Derrière Baerg,<br><em>nous deux.</em></h1><p class=\"page-lead\">Deux apprentis développeurs full-stack, réunis pour concevoir des sites clairs et soignés.</p></section><section class=\"section founders\" aria-label=\"Les cofondateurs\"><article><div class=\"founder-top\"><p class=\"eyebrow\">01 / Cofondateur</p><span class=\"founder-monogram\" aria-hidden=\"true\">Q</span></div><h2>Quentin</h2><p class=\"founder-role\">Apprenti développeur full-stack</p><p>Cofondateur de Baerg Design. Nous concevons et développons chaque projet ensemble.</p></article><article><div class=\"founder-top\"><p class=\"eyebrow\">02 / Cofondateur</p><span class=\"founder-monogram\" aria-hidden=\"true\">T</span></div><h2>Thomas</h2><p class=\"founder-role\">Apprenti développeur full-stack</p><p>Cofondateur de Baerg Design. Nous concevons et développons chaque projet ensemble.</p></article></section><section class=\"section editorial\"><p class=\"eyebrow\">Notre histoire</p><div><h2>Deux apprentis.<br>Un projet commun.</h2><p class=\"large-copy\">Nous construisons Baerg Design à deux, en parallèle de notre formation.</p><p>Nous créons et modernisons des sites web. Vous échangez directement avec nous, du premier besoin jusqu’aux derniers ajustements.</p></div></section><section class=\"section editorial\"><p class=\"eyebrow\">Nos compétences</p><div><h2>Du design<br>au développement.</h2><p class=\"large-copy\">Nous travaillons autant sur l’interface que sur son fonctionnement.</p><p>Structure des pages, développement et adaptation mobile sont réunis dans un même projet, avec des choix expliqués simplement.</p></div></section><section class=\"closing section\"><p class=\"eyebrow\">Votre projet</p><h2>Discutons de<br>votre site.</h2><div><p>Présentez-nous votre activité et ce que vous souhaitez créer ou améliorer.</p><a class=\"button\" href=\"/contact/\">Parler de votre projet <span aria-hidden=\"true\">↗</span></a></div></section>",
+    "elements": [
+      {
+        "selector": ".page-intro",
+        "index": 0,
+        "properties": {
+          "display": "block",
+          "gridTemplateColumns": "none",
+          "columnGap": "normal",
+          "rowGap": "normal",
+          "paddingTop": "140px",
+          "paddingRight": "22px",
+          "paddingBottom": "55px",
+          "paddingLeft": "22px",
+          "marginTop": "0px",
+          "marginRight": "0px",
+          "marginBottom": "0px",
+          "marginLeft": "0px",
+          "flexDirection": "row",
+          "order": "0"
+        }
+      },
+      {
+        "selector": ".section",
+        "index": 0,
+        "properties": {
+          "display": "grid",
+          "gridTemplateColumns": "276px",
+          "columnGap": "45px",
+          "rowGap": "45px",
+          "paddingTop": "70px",
+          "paddingRight": "22px",
+          "paddingBottom": "75px",
+          "paddingLeft": "22px",
+          "marginTop": "0px",
+          "marginRight": "0px",
+          "marginBottom": "0px",
+          "marginLeft": "0px",
+          "flexDirection": "row",
+          "order": "0"
+        }
+      },
+      {
+        "selector": ".section",
+        "index": 1,
+        "properties": {
+          "display": "block",
+          "gridTemplateColumns": "1fr 2fr",
+          "columnGap": "19.2px",
+          "rowGap": "19.2px",
+          "paddingTop": "75px",
+          "paddingRight": "22px",
+          "paddingBottom": "75px",
+          "paddingLeft": "22px",
+          "marginTop": "0px",
+          "marginRight": "0px",
+          "marginBottom": "0px",
+          "marginLeft": "0px",
+          "flexDirection": "row",
+          "order": "0"
+        }
+      },
+      {
+        "selector": ".section",
+        "index": 2,
+        "properties": {
+          "display": "block",
+          "gridTemplateColumns": "1fr 2fr",
+          "columnGap": "19.2px",
+          "rowGap": "19.2px",
+          "paddingTop": "75px",
+          "paddingRight": "22px",
+          "paddingBottom": "75px",
+          "paddingLeft": "22px",
+          "marginTop": "0px",
+          "marginRight": "0px",
+          "marginBottom": "0px",
+          "marginLeft": "0px",
+          "flexDirection": "row",
+          "order": "0"
+        }
+      },
+      {
+        "selector": ".section",
+        "index": 3,
+        "properties": {
+          "display": "block",
+          "gridTemplateColumns": "none",
+          "columnGap": "normal",
+          "rowGap": "normal",
+          "paddingTop": "75px",
+          "paddingRight": "22px",
+          "paddingBottom": "75px",
+          "paddingLeft": "22px",
+          "marginTop": "0px",
+          "marginRight": "0px",
+          "marginBottom": "0px",
+          "marginLeft": "0px",
+          "flexDirection": "row",
+          "order": "0"
+        }
+      },
+      {
+        "selector": ".founders",
+        "index": 0,
+        "properties": {
+          "display": "grid",
+          "gridTemplateColumns": "276px",
+          "columnGap": "45px",
+          "rowGap": "45px",
+          "paddingTop": "70px",
+          "paddingRight": "22px",
+          "paddingBottom": "75px",
+          "paddingLeft": "22px",
+          "marginTop": "0px",
+          "marginRight": "0px",
+          "marginBottom": "0px",
+          "marginLeft": "0px",
+          "flexDirection": "row",
+          "order": "0"
+        }
+      },
+      {
+        "selector": ".editorial",
+        "index": 0,
+        "properties": {
+          "display": "block",
+          "gridTemplateColumns": "1fr 2fr",
+          "columnGap": "19.2px",
+          "rowGap": "19.2px",
+          "paddingTop": "75px",
+          "paddingRight": "22px",
+          "paddingBottom": "75px",
+          "paddingLeft": "22px",
+          "marginTop": "0px",
+          "marginRight": "0px",
+          "marginBottom": "0px",
+          "marginLeft": "0px",
+          "flexDirection": "row",
+          "order": "0"
+        }
+      },
+      {
+        "selector": ".editorial",
+        "index": 1,
+        "properties": {
+          "display": "block",
+          "gridTemplateColumns": "1fr 2fr",
+          "columnGap": "19.2px",
+          "rowGap": "19.2px",
+          "paddingTop": "75px",
+          "paddingRight": "22px",
+          "paddingBottom": "75px",
+          "paddingLeft": "22px",
+          "marginTop": "0px",
+          "marginRight": "0px",
+          "marginBottom": "0px",
+          "marginLeft": "0px",
+          "flexDirection": "row",
+          "order": "0"
+        }
+      }
+    ]
+  },
+  "/realisations/@1440": {
+    "markup": "<section class=\"page-intro\"><p class=\"eyebrow\">Le portfolio</p><h1>Nos réalisations.</h1><p class=\"page-lead\">Chaque projet précise son contexte, les besoins auxquels il répond et nos choix de conception.</p></section><section class=\"section portfolio-list\" aria-label=\"Les projets\"><p class=\"portfolio-note\">03 projets · Concepts non commandés</p><article class=\"portfolio-project\" id=\"projet-lise\"><a class=\"project-picture\" href=\"/demos/lise/\"><img src=\"/assets/lise-preview.jpg\" alt=\"Aperçu de Lise, institut fictif à Bulle : identité pervenche, choix des soins et tarifs illustratifs.\" width=\"1440\" height=\"1080\" loading=\"eager\"><span class=\"picture-link\" aria-hidden=\"true\">↗</span></a><div><p class=\"eyebrow\">01 / Concept non commandé</p><h2>Lise — soins &amp; bien-être</h2><p class=\"large-copy\">Un institut, trois soins et un parcours de rendez-vous à essayer.</p><details><summary>Le projet en détail <span aria-hidden=\"true\">+</span></summary><p><strong>Le besoin.</strong> Imaginer le site d’un institut indépendant fictif à Bulle pour choisir un soin et connaître son prix, sa durée et son déroulement.</p><p><strong>Notre réponse.</strong> Une page responsive avec des prestations détaillées, une FAQ et une simulation de rendez-vous en trois étapes, sans collecte de données ni réservation réelle.</p></details><a class=\"button\" href=\"/demos/lise/\">Voir la maquette <span aria-hidden=\"true\">↗</span></a></div></article><article class=\"portfolio-project\" id=\"projet-midi-et-compagnie\"><a class=\"project-picture\" href=\"/demos/midi-et-compagnie/\"><img src=\"/assets/midi-et-compagnie-preview.jpg\" alt=\"Aperçu de Midi &amp; Compagnie : bistrot fictif du midi, identité aubergine et photographie d’inspiration d’un déjeuner.\" width=\"1440\" height=\"1080\" loading=\"eager\"><span class=\"picture-link\" aria-hidden=\"true\">↗</span></a><div><p class=\"eyebrow\">02 / Concept non commandé</p><h2>Midi &amp; Compagnie</h2><p class=\"large-copy\">Un bistrot du midi, sa carte et toutes les infos pour venir déjeuner.</p><details><summary>Le projet en détail <span aria-hidden=\"true\">+</span></summary><p><strong>Le besoin.</strong> Imaginer le site d’un bistrot fictif à Bulle pour donner envie de déjeuner et trouver facilement la carte, les prix et les horaires.</p><p><strong>Notre réponse.</strong> Une maquette responsive avec une carte filtrable en CHF, des images d’inspiration et des horaires dédiés au déjeuner. La réservation reste à venir.</p></details><a class=\"button\" href=\"/demos/midi-et-compagnie/\">Voir la maquette <span aria-hidden=\"true\">↗</span></a></div></article><article class=\"portfolio-project\" id=\"projet-atelier-traverse\"><a class=\"project-picture\" href=\"/demos/atelier-traverse/\"><img src=\"/assets/atelier-traverse-preview.jpg\" alt=\"Aperçu du site conceptuel Atelier Traverse : enseigne monumentale, banc en bois et accent brique.\" width=\"1440\" height=\"1080\" loading=\"eager\"><span class=\"picture-link\" aria-hidden=\"true\">↗</span></a><div><p class=\"eyebrow\">03 / Concept non commandé</p><h2>Atelier Traverse</h2><p class=\"large-copy\">Une enseigne monumentale pour une menuiserie contemporaine.</p><details><summary>Le projet en détail <span aria-hidden=\"true\">+</span></summary><p><strong>Le besoin.</strong> Imaginer le site d’une menuiserie fictive autour de Bulle pour présenter ses aménagements aux particuliers.</p><p><strong>Notre réponse.</strong> Une composition éditoriale autour d’une enseigne monumentale, de deux études de mobilier et d’une interaction de contact explicitement démonstrative.</p></details><a class=\"button\" href=\"/demos/atelier-traverse/\">Voir la maquette <span aria-hidden=\"true\">↗</span></a></div></article></section><section class=\"closing section\"><p class=\"eyebrow\">Votre projet</p><h2>Discutons de<br>votre site.</h2><div><p>Présentez-nous votre activité et ce que vous souhaitez créer ou améliorer.</p><a class=\"button\" href=\"/contact/\">Parler de votre projet <span aria-hidden=\"true\">↗</span></a></div></section>",
+    "elements": [
+      {
+        "selector": ".page-intro",
+        "index": 0,
+        "properties": {
+          "display": "block",
+          "gridTemplateColumns": "none",
+          "columnGap": "normal",
+          "rowGap": "normal",
+          "paddingTop": "190px",
+          "paddingRight": "64.8px",
+          "paddingBottom": "90px",
+          "paddingLeft": "64.8px",
+          "marginTop": "0px",
+          "marginRight": "0px",
+          "marginBottom": "0px",
+          "marginLeft": "0px",
+          "flexDirection": "row",
+          "order": "0"
+        }
+      },
+      {
+        "selector": ".section",
+        "index": 0,
+        "properties": {
+          "display": "block",
+          "gridTemplateColumns": "none",
+          "columnGap": "normal",
+          "rowGap": "normal",
+          "paddingTop": "45px",
+          "paddingRight": "64.8px",
+          "paddingBottom": "125px",
+          "paddingLeft": "64.8px",
+          "marginTop": "0px",
+          "marginRight": "0px",
+          "marginBottom": "0px",
+          "marginLeft": "0px",
+          "flexDirection": "row",
+          "order": "0"
+        }
+      },
+      {
+        "selector": ".section",
+        "index": 1,
+        "properties": {
+          "display": "block",
+          "gridTemplateColumns": "none",
+          "columnGap": "normal",
+          "rowGap": "normal",
+          "paddingTop": "125px",
+          "paddingRight": "64.8px",
+          "paddingBottom": "125px",
+          "paddingLeft": "64.8px",
+          "marginTop": "0px",
+          "marginRight": "0px",
+          "marginBottom": "0px",
+          "marginLeft": "0px",
+          "flexDirection": "row",
+          "order": "0"
+        }
+      },
+      {
+        "selector": ".portfolio-project",
+        "index": 0,
+        "properties": {
+          "display": "grid",
+          "gridTemplateColumns": "680px 544.016px",
+          "columnGap": "86.4px",
+          "rowGap": "86.4px",
+          "paddingTop": "50px",
+          "paddingRight": "0px",
+          "paddingBottom": "0px",
+          "paddingLeft": "0px",
+          "marginTop": "0px",
+          "marginRight": "0px",
+          "marginBottom": "90px",
+          "marginLeft": "0px",
+          "flexDirection": "row",
+          "order": "0"
+        }
+      },
+      {
+        "selector": ".portfolio-project",
+        "index": 1,
+        "properties": {
+          "display": "grid",
+          "gridTemplateColumns": "544px 680.016px",
+          "columnGap": "86.4px",
+          "rowGap": "86.4px",
+          "paddingTop": "50px",
+          "paddingRight": "0px",
+          "paddingBottom": "0px",
+          "paddingLeft": "0px",
+          "marginTop": "0px",
+          "marginRight": "0px",
+          "marginBottom": "90px",
+          "marginLeft": "0px",
+          "flexDirection": "row",
+          "order": "0"
+        }
+      },
+      {
+        "selector": ".portfolio-project",
+        "index": 2,
+        "properties": {
+          "display": "grid",
+          "gridTemplateColumns": "680px 544.016px",
+          "columnGap": "86.4px",
+          "rowGap": "86.4px",
+          "paddingTop": "50px",
+          "paddingRight": "0px",
+          "paddingBottom": "0px",
+          "paddingLeft": "0px",
+          "marginTop": "0px",
+          "marginRight": "0px",
+          "marginBottom": "0px",
+          "marginLeft": "0px",
+          "flexDirection": "row",
+          "order": "0"
+        }
+      }
+    ]
+  },
+  "/realisations/@820": {
+    "markup": "<section class=\"page-intro\"><p class=\"eyebrow\">Le portfolio</p><h1>Nos réalisations.</h1><p class=\"page-lead\">Chaque projet précise son contexte, les besoins auxquels il répond et nos choix de conception.</p></section><section class=\"section portfolio-list\" aria-label=\"Les projets\"><p class=\"portfolio-note\">03 projets · Concepts non commandés</p><article class=\"portfolio-project\" id=\"projet-lise\"><a class=\"project-picture\" href=\"/demos/lise/\"><img src=\"/assets/lise-preview.jpg\" alt=\"Aperçu de Lise, institut fictif à Bulle : identité pervenche, choix des soins et tarifs illustratifs.\" width=\"1440\" height=\"1080\" loading=\"eager\"><span class=\"picture-link\" aria-hidden=\"true\">↗</span></a><div><p class=\"eyebrow\">01 / Concept non commandé</p><h2>Lise — soins &amp; bien-être</h2><p class=\"large-copy\">Un institut, trois soins et un parcours de rendez-vous à essayer.</p><details><summary>Le projet en détail <span aria-hidden=\"true\">+</span></summary><p><strong>Le besoin.</strong> Imaginer le site d’un institut indépendant fictif à Bulle pour choisir un soin et connaître son prix, sa durée et son déroulement.</p><p><strong>Notre réponse.</strong> Une page responsive avec des prestations détaillées, une FAQ et une simulation de rendez-vous en trois étapes, sans collecte de données ni réservation réelle.</p></details><a class=\"button\" href=\"/demos/lise/\">Voir la maquette <span aria-hidden=\"true\">↗</span></a></div></article><article class=\"portfolio-project\" id=\"projet-midi-et-compagnie\"><a class=\"project-picture\" href=\"/demos/midi-et-compagnie/\"><img src=\"/assets/midi-et-compagnie-preview.jpg\" alt=\"Aperçu de Midi &amp; Compagnie : bistrot fictif du midi, identité aubergine et photographie d’inspiration d’un déjeuner.\" width=\"1440\" height=\"1080\" loading=\"eager\"><span class=\"picture-link\" aria-hidden=\"true\">↗</span></a><div><p class=\"eyebrow\">02 / Concept non commandé</p><h2>Midi &amp; Compagnie</h2><p class=\"large-copy\">Un bistrot du midi, sa carte et toutes les infos pour venir déjeuner.</p><details><summary>Le projet en détail <span aria-hidden=\"true\">+</span></summary><p><strong>Le besoin.</strong> Imaginer le site d’un bistrot fictif à Bulle pour donner envie de déjeuner et trouver facilement la carte, les prix et les horaires.</p><p><strong>Notre réponse.</strong> Une maquette responsive avec une carte filtrable en CHF, des images d’inspiration et des horaires dédiés au déjeuner. La réservation reste à venir.</p></details><a class=\"button\" href=\"/demos/midi-et-compagnie/\">Voir la maquette <span aria-hidden=\"true\">↗</span></a></div></article><article class=\"portfolio-project\" id=\"projet-atelier-traverse\"><a class=\"project-picture\" href=\"/demos/atelier-traverse/\"><img src=\"/assets/atelier-traverse-preview.jpg\" alt=\"Aperçu du site conceptuel Atelier Traverse : enseigne monumentale, banc en bois et accent brique.\" width=\"1440\" height=\"1080\" loading=\"eager\"><span class=\"picture-link\" aria-hidden=\"true\">↗</span></a><div><p class=\"eyebrow\">03 / Concept non commandé</p><h2>Atelier Traverse</h2><p class=\"large-copy\">Une enseigne monumentale pour une menuiserie contemporaine.</p><details><summary>Le projet en détail <span aria-hidden=\"true\">+</span></summary><p><strong>Le besoin.</strong> Imaginer le site d’une menuiserie fictive autour de Bulle pour présenter ses aménagements aux particuliers.</p><p><strong>Notre réponse.</strong> Une composition éditoriale autour d’une enseigne monumentale, de deux études de mobilier et d’une interaction de contact explicitement démonstrative.</p></details><a class=\"button\" href=\"/demos/atelier-traverse/\">Voir la maquette <span aria-hidden=\"true\">↗</span></a></div></article></section><section class=\"closing section\"><p class=\"eyebrow\">Votre projet</p><h2>Discutons de<br>votre site.</h2><div><p>Présentez-nous votre activité et ce que vous souhaitez créer ou améliorer.</p><a class=\"button\" href=\"/contact/\">Parler de votre projet <span aria-hidden=\"true\">↗</span></a></div></section>",
+    "elements": [
+      {
+        "selector": ".page-intro",
+        "index": 0,
+        "properties": {
+          "display": "block",
+          "gridTemplateColumns": "none",
+          "columnGap": "normal",
+          "rowGap": "normal",
+          "paddingTop": "190px",
+          "paddingRight": "36.9px",
+          "paddingBottom": "90px",
+          "paddingLeft": "36.9px",
+          "marginTop": "0px",
+          "marginRight": "0px",
+          "marginBottom": "0px",
+          "marginLeft": "0px",
+          "flexDirection": "row",
+          "order": "0"
+        }
+      },
+      {
+        "selector": ".section",
+        "index": 0,
+        "properties": {
+          "display": "block",
+          "gridTemplateColumns": "none",
+          "columnGap": "normal",
+          "rowGap": "normal",
+          "paddingTop": "45px",
+          "paddingRight": "36.9px",
+          "paddingBottom": "90px",
+          "paddingLeft": "36.9px",
+          "marginTop": "0px",
+          "marginRight": "0px",
+          "marginBottom": "0px",
+          "marginLeft": "0px",
+          "flexDirection": "row",
+          "order": "0"
+        }
+      },
+      {
+        "selector": ".section",
+        "index": 1,
+        "properties": {
+          "display": "block",
+          "gridTemplateColumns": "none",
+          "columnGap": "normal",
+          "rowGap": "normal",
+          "paddingTop": "90px",
+          "paddingRight": "36.9px",
+          "paddingBottom": "90px",
+          "paddingLeft": "36.9px",
+          "marginTop": "0px",
+          "marginRight": "0px",
+          "marginBottom": "0px",
+          "marginLeft": "0px",
+          "flexDirection": "row",
+          "order": "0"
+        }
+      },
+      {
+        "selector": ".portfolio-project",
+        "index": 0,
+        "properties": {
+          "display": "grid",
+          "gridTemplateColumns": "387.234px 309.781px",
+          "columnGap": "49.2px",
+          "rowGap": "49.2px",
+          "paddingTop": "50px",
+          "paddingRight": "0px",
+          "paddingBottom": "0px",
+          "paddingLeft": "0px",
+          "marginTop": "0px",
+          "marginRight": "0px",
+          "marginBottom": "90px",
+          "marginLeft": "0px",
+          "flexDirection": "row",
+          "order": "0"
+        }
+      },
+      {
+        "selector": ".portfolio-project",
+        "index": 1,
+        "properties": {
+          "display": "grid",
+          "gridTemplateColumns": "309.781px 387.234px",
+          "columnGap": "49.2px",
+          "rowGap": "49.2px",
+          "paddingTop": "50px",
+          "paddingRight": "0px",
+          "paddingBottom": "0px",
+          "paddingLeft": "0px",
+          "marginTop": "0px",
+          "marginRight": "0px",
+          "marginBottom": "90px",
+          "marginLeft": "0px",
+          "flexDirection": "row",
+          "order": "0"
+        }
+      },
+      {
+        "selector": ".portfolio-project",
+        "index": 2,
+        "properties": {
+          "display": "grid",
+          "gridTemplateColumns": "387.234px 309.781px",
+          "columnGap": "49.2px",
+          "rowGap": "49.2px",
+          "paddingTop": "50px",
+          "paddingRight": "0px",
+          "paddingBottom": "0px",
+          "paddingLeft": "0px",
+          "marginTop": "0px",
+          "marginRight": "0px",
+          "marginBottom": "0px",
+          "marginLeft": "0px",
+          "flexDirection": "row",
+          "order": "0"
+        }
+      }
+    ]
+  },
+  "/realisations/@390": {
+    "markup": "<section class=\"page-intro\"><p class=\"eyebrow\">Le portfolio</p><h1>Nos réalisations.</h1><p class=\"page-lead\">Chaque projet précise son contexte, les besoins auxquels il répond et nos choix de conception.</p></section><section class=\"section portfolio-list\" aria-label=\"Les projets\"><p class=\"portfolio-note\">03 projets · Concepts non commandés</p><article class=\"portfolio-project\" id=\"projet-lise\"><a class=\"project-picture\" href=\"/demos/lise/\"><img src=\"/assets/lise-preview.jpg\" alt=\"Aperçu de Lise, institut fictif à Bulle : identité pervenche, choix des soins et tarifs illustratifs.\" width=\"1440\" height=\"1080\" loading=\"eager\"><span class=\"picture-link\" aria-hidden=\"true\">↗</span></a><div><p class=\"eyebrow\">01 / Concept non commandé</p><h2>Lise — soins &amp; bien-être</h2><p class=\"large-copy\">Un institut, trois soins et un parcours de rendez-vous à essayer.</p><details><summary>Le projet en détail <span aria-hidden=\"true\">+</span></summary><p><strong>Le besoin.</strong> Imaginer le site d’un institut indépendant fictif à Bulle pour choisir un soin et connaître son prix, sa durée et son déroulement.</p><p><strong>Notre réponse.</strong> Une page responsive avec des prestations détaillées, une FAQ et une simulation de rendez-vous en trois étapes, sans collecte de données ni réservation réelle.</p></details><a class=\"button\" href=\"/demos/lise/\">Voir la maquette <span aria-hidden=\"true\">↗</span></a></div></article><article class=\"portfolio-project\" id=\"projet-midi-et-compagnie\"><a class=\"project-picture\" href=\"/demos/midi-et-compagnie/\"><img src=\"/assets/midi-et-compagnie-preview.jpg\" alt=\"Aperçu de Midi &amp; Compagnie : bistrot fictif du midi, identité aubergine et photographie d’inspiration d’un déjeuner.\" width=\"1440\" height=\"1080\" loading=\"eager\"><span class=\"picture-link\" aria-hidden=\"true\">↗</span></a><div><p class=\"eyebrow\">02 / Concept non commandé</p><h2>Midi &amp; Compagnie</h2><p class=\"large-copy\">Un bistrot du midi, sa carte et toutes les infos pour venir déjeuner.</p><details><summary>Le projet en détail <span aria-hidden=\"true\">+</span></summary><p><strong>Le besoin.</strong> Imaginer le site d’un bistrot fictif à Bulle pour donner envie de déjeuner et trouver facilement la carte, les prix et les horaires.</p><p><strong>Notre réponse.</strong> Une maquette responsive avec une carte filtrable en CHF, des images d’inspiration et des horaires dédiés au déjeuner. La réservation reste à venir.</p></details><a class=\"button\" href=\"/demos/midi-et-compagnie/\">Voir la maquette <span aria-hidden=\"true\">↗</span></a></div></article><article class=\"portfolio-project\" id=\"projet-atelier-traverse\"><a class=\"project-picture\" href=\"/demos/atelier-traverse/\"><img src=\"/assets/atelier-traverse-preview.jpg\" alt=\"Aperçu du site conceptuel Atelier Traverse : enseigne monumentale, banc en bois et accent brique.\" width=\"1440\" height=\"1080\" loading=\"eager\"><span class=\"picture-link\" aria-hidden=\"true\">↗</span></a><div><p class=\"eyebrow\">03 / Concept non commandé</p><h2>Atelier Traverse</h2><p class=\"large-copy\">Une enseigne monumentale pour une menuiserie contemporaine.</p><details><summary>Le projet en détail <span aria-hidden=\"true\">+</span></summary><p><strong>Le besoin.</strong> Imaginer le site d’une menuiserie fictive autour de Bulle pour présenter ses aménagements aux particuliers.</p><p><strong>Notre réponse.</strong> Une composition éditoriale autour d’une enseigne monumentale, de deux études de mobilier et d’une interaction de contact explicitement démonstrative.</p></details><a class=\"button\" href=\"/demos/atelier-traverse/\">Voir la maquette <span aria-hidden=\"true\">↗</span></a></div></article></section><section class=\"closing section\"><p class=\"eyebrow\">Votre projet</p><h2>Discutons de<br>votre site.</h2><div><p>Présentez-nous votre activité et ce que vous souhaitez créer ou améliorer.</p><a class=\"button\" href=\"/contact/\">Parler de votre projet <span aria-hidden=\"true\">↗</span></a></div></section>",
+    "elements": [
+      {
+        "selector": ".page-intro",
+        "index": 0,
+        "properties": {
+          "display": "block",
+          "gridTemplateColumns": "none",
+          "columnGap": "normal",
+          "rowGap": "normal",
+          "paddingTop": "140px",
+          "paddingRight": "22px",
+          "paddingBottom": "55px",
+          "paddingLeft": "22px",
+          "marginTop": "0px",
+          "marginRight": "0px",
+          "marginBottom": "0px",
+          "marginLeft": "0px",
+          "flexDirection": "row",
+          "order": "0"
+        }
+      },
+      {
+        "selector": ".section",
+        "index": 0,
+        "properties": {
+          "display": "block",
+          "gridTemplateColumns": "none",
+          "columnGap": "normal",
+          "rowGap": "normal",
+          "paddingTop": "45px",
+          "paddingRight": "22px",
+          "paddingBottom": "75px",
+          "paddingLeft": "22px",
+          "marginTop": "0px",
+          "marginRight": "0px",
+          "marginBottom": "0px",
+          "marginLeft": "0px",
+          "flexDirection": "row",
+          "order": "0"
+        }
+      },
+      {
+        "selector": ".section",
+        "index": 1,
+        "properties": {
+          "display": "block",
+          "gridTemplateColumns": "none",
+          "columnGap": "normal",
+          "rowGap": "normal",
+          "paddingTop": "75px",
+          "paddingRight": "22px",
+          "paddingBottom": "75px",
+          "paddingLeft": "22px",
+          "marginTop": "0px",
+          "marginRight": "0px",
+          "marginBottom": "0px",
+          "marginLeft": "0px",
+          "flexDirection": "row",
+          "order": "0"
+        }
+      },
+      {
+        "selector": ".portfolio-project",
+        "index": 0,
+        "properties": {
+          "display": "flex",
+          "gridTemplateColumns": "1.25fr 1fr",
+          "columnGap": "30px",
+          "rowGap": "30px",
+          "paddingTop": "30px",
+          "paddingRight": "0px",
+          "paddingBottom": "0px",
+          "paddingLeft": "0px",
+          "marginTop": "0px",
+          "marginRight": "0px",
+          "marginBottom": "60px",
+          "marginLeft": "0px",
+          "flexDirection": "column",
+          "order": "0"
+        }
+      },
+      {
+        "selector": ".portfolio-project",
+        "index": 1,
+        "properties": {
+          "display": "flex",
+          "gridTemplateColumns": "1fr 1.25fr",
+          "columnGap": "30px",
+          "rowGap": "30px",
+          "paddingTop": "30px",
+          "paddingRight": "0px",
+          "paddingBottom": "0px",
+          "paddingLeft": "0px",
+          "marginTop": "0px",
+          "marginRight": "0px",
+          "marginBottom": "60px",
+          "marginLeft": "0px",
+          "flexDirection": "column",
+          "order": "0"
+        }
+      },
+      {
+        "selector": ".portfolio-project",
+        "index": 2,
+        "properties": {
+          "display": "flex",
+          "gridTemplateColumns": "1.25fr 1fr",
+          "columnGap": "30px",
+          "rowGap": "30px",
+          "paddingTop": "30px",
+          "paddingRight": "0px",
+          "paddingBottom": "0px",
+          "paddingLeft": "0px",
+          "marginTop": "0px",
+          "marginRight": "0px",
+          "marginBottom": "0px",
+          "marginLeft": "0px",
+          "flexDirection": "column",
+          "order": "0"
+        }
+      }
+    ]
+  },
+  "/realisations/@320": {
+    "markup": "<section class=\"page-intro\"><p class=\"eyebrow\">Le portfolio</p><h1>Nos réalisations.</h1><p class=\"page-lead\">Chaque projet précise son contexte, les besoins auxquels il répond et nos choix de conception.</p></section><section class=\"section portfolio-list\" aria-label=\"Les projets\"><p class=\"portfolio-note\">03 projets · Concepts non commandés</p><article class=\"portfolio-project\" id=\"projet-lise\"><a class=\"project-picture\" href=\"/demos/lise/\"><img src=\"/assets/lise-preview.jpg\" alt=\"Aperçu de Lise, institut fictif à Bulle : identité pervenche, choix des soins et tarifs illustratifs.\" width=\"1440\" height=\"1080\" loading=\"eager\"><span class=\"picture-link\" aria-hidden=\"true\">↗</span></a><div><p class=\"eyebrow\">01 / Concept non commandé</p><h2>Lise — soins &amp; bien-être</h2><p class=\"large-copy\">Un institut, trois soins et un parcours de rendez-vous à essayer.</p><details><summary>Le projet en détail <span aria-hidden=\"true\">+</span></summary><p><strong>Le besoin.</strong> Imaginer le site d’un institut indépendant fictif à Bulle pour choisir un soin et connaître son prix, sa durée et son déroulement.</p><p><strong>Notre réponse.</strong> Une page responsive avec des prestations détaillées, une FAQ et une simulation de rendez-vous en trois étapes, sans collecte de données ni réservation réelle.</p></details><a class=\"button\" href=\"/demos/lise/\">Voir la maquette <span aria-hidden=\"true\">↗</span></a></div></article><article class=\"portfolio-project\" id=\"projet-midi-et-compagnie\"><a class=\"project-picture\" href=\"/demos/midi-et-compagnie/\"><img src=\"/assets/midi-et-compagnie-preview.jpg\" alt=\"Aperçu de Midi &amp; Compagnie : bistrot fictif du midi, identité aubergine et photographie d’inspiration d’un déjeuner.\" width=\"1440\" height=\"1080\" loading=\"eager\"><span class=\"picture-link\" aria-hidden=\"true\">↗</span></a><div><p class=\"eyebrow\">02 / Concept non commandé</p><h2>Midi &amp; Compagnie</h2><p class=\"large-copy\">Un bistrot du midi, sa carte et toutes les infos pour venir déjeuner.</p><details><summary>Le projet en détail <span aria-hidden=\"true\">+</span></summary><p><strong>Le besoin.</strong> Imaginer le site d’un bistrot fictif à Bulle pour donner envie de déjeuner et trouver facilement la carte, les prix et les horaires.</p><p><strong>Notre réponse.</strong> Une maquette responsive avec une carte filtrable en CHF, des images d’inspiration et des horaires dédiés au déjeuner. La réservation reste à venir.</p></details><a class=\"button\" href=\"/demos/midi-et-compagnie/\">Voir la maquette <span aria-hidden=\"true\">↗</span></a></div></article><article class=\"portfolio-project\" id=\"projet-atelier-traverse\"><a class=\"project-picture\" href=\"/demos/atelier-traverse/\"><img src=\"/assets/atelier-traverse-preview.jpg\" alt=\"Aperçu du site conceptuel Atelier Traverse : enseigne monumentale, banc en bois et accent brique.\" width=\"1440\" height=\"1080\" loading=\"eager\"><span class=\"picture-link\" aria-hidden=\"true\">↗</span></a><div><p class=\"eyebrow\">03 / Concept non commandé</p><h2>Atelier Traverse</h2><p class=\"large-copy\">Une enseigne monumentale pour une menuiserie contemporaine.</p><details><summary>Le projet en détail <span aria-hidden=\"true\">+</span></summary><p><strong>Le besoin.</strong> Imaginer le site d’une menuiserie fictive autour de Bulle pour présenter ses aménagements aux particuliers.</p><p><strong>Notre réponse.</strong> Une composition éditoriale autour d’une enseigne monumentale, de deux études de mobilier et d’une interaction de contact explicitement démonstrative.</p></details><a class=\"button\" href=\"/demos/atelier-traverse/\">Voir la maquette <span aria-hidden=\"true\">↗</span></a></div></article></section><section class=\"closing section\"><p class=\"eyebrow\">Votre projet</p><h2>Discutons de<br>votre site.</h2><div><p>Présentez-nous votre activité et ce que vous souhaitez créer ou améliorer.</p><a class=\"button\" href=\"/contact/\">Parler de votre projet <span aria-hidden=\"true\">↗</span></a></div></section>",
+    "elements": [
+      {
+        "selector": ".page-intro",
+        "index": 0,
+        "properties": {
+          "display": "block",
+          "gridTemplateColumns": "none",
+          "columnGap": "normal",
+          "rowGap": "normal",
+          "paddingTop": "140px",
+          "paddingRight": "22px",
+          "paddingBottom": "55px",
+          "paddingLeft": "22px",
+          "marginTop": "0px",
+          "marginRight": "0px",
+          "marginBottom": "0px",
+          "marginLeft": "0px",
+          "flexDirection": "row",
+          "order": "0"
+        }
+      },
+      {
+        "selector": ".section",
+        "index": 0,
+        "properties": {
+          "display": "block",
+          "gridTemplateColumns": "none",
+          "columnGap": "normal",
+          "rowGap": "normal",
+          "paddingTop": "45px",
+          "paddingRight": "22px",
+          "paddingBottom": "75px",
+          "paddingLeft": "22px",
+          "marginTop": "0px",
+          "marginRight": "0px",
+          "marginBottom": "0px",
+          "marginLeft": "0px",
+          "flexDirection": "row",
+          "order": "0"
+        }
+      },
+      {
+        "selector": ".section",
+        "index": 1,
+        "properties": {
+          "display": "block",
+          "gridTemplateColumns": "none",
+          "columnGap": "normal",
+          "rowGap": "normal",
+          "paddingTop": "75px",
+          "paddingRight": "22px",
+          "paddingBottom": "75px",
+          "paddingLeft": "22px",
+          "marginTop": "0px",
+          "marginRight": "0px",
+          "marginBottom": "0px",
+          "marginLeft": "0px",
+          "flexDirection": "row",
+          "order": "0"
+        }
+      },
+      {
+        "selector": ".portfolio-project",
+        "index": 0,
+        "properties": {
+          "display": "flex",
+          "gridTemplateColumns": "1.25fr 1fr",
+          "columnGap": "30px",
+          "rowGap": "30px",
+          "paddingTop": "30px",
+          "paddingRight": "0px",
+          "paddingBottom": "0px",
+          "paddingLeft": "0px",
+          "marginTop": "0px",
+          "marginRight": "0px",
+          "marginBottom": "60px",
+          "marginLeft": "0px",
+          "flexDirection": "column",
+          "order": "0"
+        }
+      },
+      {
+        "selector": ".portfolio-project",
+        "index": 1,
+        "properties": {
+          "display": "flex",
+          "gridTemplateColumns": "1fr 1.25fr",
+          "columnGap": "30px",
+          "rowGap": "30px",
+          "paddingTop": "30px",
+          "paddingRight": "0px",
+          "paddingBottom": "0px",
+          "paddingLeft": "0px",
+          "marginTop": "0px",
+          "marginRight": "0px",
+          "marginBottom": "60px",
+          "marginLeft": "0px",
+          "flexDirection": "column",
+          "order": "0"
+        }
+      },
+      {
+        "selector": ".portfolio-project",
+        "index": 2,
+        "properties": {
+          "display": "flex",
+          "gridTemplateColumns": "1.25fr 1fr",
+          "columnGap": "30px",
+          "rowGap": "30px",
+          "paddingTop": "30px",
+          "paddingRight": "0px",
+          "paddingBottom": "0px",
+          "paddingLeft": "0px",
+          "marginTop": "0px",
+          "marginRight": "0px",
+          "marginBottom": "0px",
+          "marginLeft": "0px",
+          "flexDirection": "column",
+          "order": "0"
+        }
+      }
+    ]
+  },
+  "/offres/@1440": {
+    "markup": "<section class=\"page-intro\"><p class=\"eyebrow\">Notre offre de refonte</p><h1>Moderniser et repenser<br><em>votre site.</em></h1><p class=\"page-lead\">Une refonte de site vitrine pour moderniser votre présence en ligne et mieux mettre en valeur votre activité.</p></section>\n<section class=\"section launch-offer\" id=\"lancement\" aria-labelledby=\"launch-title\">\n<div class=\"priced-offer\"><div class=\"offer-heading\"><p class=\"eyebrow\">Offre de lancement · Refonte</p><h2 id=\"launch-title\">Partenaire<br>pilote.</h2><p class=\"offer-price launch-price\">900–1’500 <span>CHF</span></p><p class=\"price-caption\">Prix indicatif · selon l’ampleur du projet</p><a class=\"button\" href=\"/contact/?projet=refonte\">Parlons de votre projet <span aria-hidden=\"true\">↗</span></a></div>\n<div class=\"offer-copy\"><p class=\"large-copy\">Pour accompagner son lancement, Baerg Design propose à ses premiers clients l’offre « Partenaire pilote », une refonte de site web à tarif préférentiel.</p><p>Le prix indicatif se situe entre <strong>900 et 1’500 CHF</strong>, selon l’ampleur du projet et les besoins de l’entreprise. Le périmètre des prestations et le montant définitif sont précisés dans un devis avant le démarrage.</p><p>Cette offre permet aux entreprises partenaires de moderniser leur site à un budget réduit tout en participant au développement de Baerg Design.</p></div></div>\n<div class=\"launch-details\"><div class=\"partnership\"><h3>Un partenariat fondé sur une réalisation concrète</h3><p>En contrepartie de ce tarif préférentiel, l’entreprise accepte que la collaboration soit présentée sur notre site vitrine. Cette présentation peut comprendre :</p><ul><li>Le nom et le logo de l’entreprise, avec un lien vers son site.</li><li>Une présentation du projet et des améliorations réalisées.</li><li>Des visuels du site avant et après la refonte.</li><li>Un témoignage sur la collaboration, si le client souhaite partager son expérience.</li></ul><p>Les éléments publiés sont définis ensemble et soumis à la validation du partenaire. Tout témoignage doit refléter son avis sincère.</p><p>Ce partenariat donne une visibilité supplémentaire à l’entreprise et permet à Baerg Design de présenter ses premières réalisations. Il aide ainsi les futurs clients à découvrir notre travail et à mieux apprécier la qualité de notre accompagnement.</p></div>\n<aside class=\"sponsor-offer\" aria-labelledby=\"sponsor-title\"><p class=\"eyebrow\">Sponsoring</p><h3 id=\"sponsor-title\">Sponsor</h3><p>Une entreprise peut également soutenir le lancement de Baerg Design sans nous confier la refonte de son site.</p><p>En échange d’une contribution financière, elle bénéficie d’une présence dans l’espace consacré aux sponsors sur notre site vitrine. Cette présence peut inclure son logo, une courte présentation de son activité et un lien vers son site.</p><p>Le montant de la contribution, les emplacements proposés et la durée de visibilité seront précisés dans une offre de sponsoring dédiée.</p><a class=\"text-link\" href=\"/contact/?projet=sponsor\">Devenir sponsor <span aria-hidden=\"true\">↗</span></a></aside></div>\n</section>\n<section class=\"section priced-offers\" aria-label=\"Notre offre et son option\">\n<article class=\"priced-offer\" id=\"refonte\" aria-labelledby=\"refonte-title\">\n<div class=\"offer-heading\"><p class=\"eyebrow\">01 / Site vitrine</p><h2 id=\"refonte-title\">Notre offre<br>de refonte.</h2><p class=\"offer-price\">3’000 <span>CHF</span></p><p class=\"price-caption\">Forfait de référence</p><a class=\"button\" href=\"/contact/?projet=refonte\">Parlons de votre refonte <span aria-hidden=\"true\">↗</span></a></div>\n<div class=\"offer-copy\"><p class=\"large-copy\">Baerg Design propose une offre unique de refonte de site vitrine, avec un forfait de référence de <strong>3’000 CHF</strong>, pour moderniser votre présence en ligne et mieux mettre en valeur votre activité.</p>\n<p>Notre accompagnement commence par une analyse du site existant afin d’identifier ses points faibles, de comprendre vos objectifs et de définir les améliorations pertinentes. Nous examinons notamment la présentation visuelle, l’organisation des pages, la navigation et les principales contraintes techniques.</p>\n<p>À partir de cette analyse, nous repensons le design et adaptons la structure du site à vos besoins. Nous valorisons les contenus utiles déjà présents et intégrons les changements convenus pour créer un site plus clair, moderne et agréable à consulter sur ordinateur, tablette et téléphone.</p>\n<p>L’offre couvre les étapes du projet, du cadrage à la mise en ligne : conception graphique, développement, intégration des contenus prévus, vérifications et remise du site.</p>\n<div class=\"offer-scope\"><h3>Un périmètre défini ensemble.</h3><p>Le nombre de pages, les fonctionnalités, les contenus et les corrections incluses sont définis avec vous et précisés dans le devis. Les besoins dépassant ce périmètre font l’objet d’une proposition complémentaire, soumise à votre accord avant réalisation.</p></div></div>\n</article>\n<article class=\"priced-offer photo-option\" id=\"photographies\" aria-labelledby=\"photo-title\"><div class=\"offer-heading\"><p class=\"eyebrow\">02 / En complément de la refonte</p><h2 id=\"photo-title\">Photographies<br>professionnelles.</h2><p class=\"offer-price\">800 <span>CHF</span></p><p class=\"price-caption\">Option · en supplément de la refonte</p><a class=\"text-link\" href=\"/contact/?projet=refonte&amp;option=photographies\">Ajouter une séance photo <span aria-hidden=\"true\">↗</span></a></div><div class=\"offer-copy\"><p class=\"large-copy\">Si vous souhaitez de nouvelles photographies pour votre site, Baerg Design peut également se déplacer dans votre entreprise pour réaliser une séance photo.</p><p>Cette prestation est proposée en complément de la refonte, pour un supplément de <strong>800 CHF</strong>. Les prises de vue et les photographies à livrer sont définies avec vous et précisées dans le devis.</p></div></article>\n</section><section class=\"closing section\"><p class=\"eyebrow\">Votre projet</p><h2>Discutons de<br>votre site.</h2><div><p>Présentez-nous votre activité et ce que vous souhaitez créer ou améliorer.</p><a class=\"button\" href=\"/contact/\">Parler de votre projet <span aria-hidden=\"true\">↗</span></a></div></section>",
+    "elements": [
+      {
+        "selector": ".page-intro",
+        "index": 0,
+        "properties": {
+          "display": "block",
+          "gridTemplateColumns": "none",
+          "columnGap": "normal",
+          "rowGap": "normal",
+          "paddingTop": "190px",
+          "paddingRight": "64.8px",
+          "paddingBottom": "90px",
+          "paddingLeft": "64.8px",
+          "marginTop": "0px",
+          "marginRight": "0px",
+          "marginBottom": "0px",
+          "marginLeft": "0px",
+          "flexDirection": "row",
+          "order": "0"
+        }
+      },
+      {
+        "selector": ".section",
+        "index": 0,
+        "properties": {
+          "display": "block",
+          "gridTemplateColumns": "none",
+          "columnGap": "normal",
+          "rowGap": "normal",
+          "paddingTop": "65px",
+          "paddingRight": "64.8px",
+          "paddingBottom": "125px",
+          "paddingLeft": "64.8px",
+          "marginTop": "0px",
+          "marginRight": "0px",
+          "marginBottom": "0px",
+          "marginLeft": "0px",
+          "flexDirection": "row",
+          "order": "0"
+        }
+      },
+      {
+        "selector": ".section",
+        "index": 1,
+        "properties": {
+          "display": "block",
+          "gridTemplateColumns": "none",
+          "columnGap": "normal",
+          "rowGap": "normal",
+          "paddingTop": "65px",
+          "paddingRight": "64.8px",
+          "paddingBottom": "125px",
+          "paddingLeft": "64.8px",
+          "marginTop": "0px",
+          "marginRight": "0px",
+          "marginBottom": "0px",
+          "marginLeft": "0px",
+          "flexDirection": "row",
+          "order": "0"
+        }
+      },
+      {
+        "selector": ".section",
+        "index": 2,
+        "properties": {
+          "display": "block",
+          "gridTemplateColumns": "none",
+          "columnGap": "normal",
+          "rowGap": "normal",
+          "paddingTop": "125px",
+          "paddingRight": "64.8px",
+          "paddingBottom": "125px",
+          "paddingLeft": "64.8px",
+          "marginTop": "0px",
+          "marginRight": "0px",
+          "marginBottom": "0px",
+          "marginLeft": "0px",
+          "flexDirection": "row",
+          "order": "0"
+        }
+      },
+      {
+        "selector": ".launch-offer",
+        "index": 0,
+        "properties": {
+          "display": "block",
+          "gridTemplateColumns": "none",
+          "columnGap": "normal",
+          "rowGap": "normal",
+          "paddingTop": "65px",
+          "paddingRight": "64.8px",
+          "paddingBottom": "125px",
+          "paddingLeft": "64.8px",
+          "marginTop": "0px",
+          "marginRight": "0px",
+          "marginBottom": "0px",
+          "marginLeft": "0px",
+          "flexDirection": "row",
+          "order": "0"
+        }
+      },
+      {
+        "selector": ".launch-details",
+        "index": 0,
+        "properties": {
+          "display": "grid",
+          "gridTemplateColumns": "664px 531.203px",
+          "columnGap": "115.2px",
+          "rowGap": "115.2px",
+          "paddingTop": "0px",
+          "paddingRight": "0px",
+          "paddingBottom": "0px",
+          "paddingLeft": "0px",
+          "marginTop": "0px",
+          "marginRight": "0px",
+          "marginBottom": "0px",
+          "marginLeft": "0px",
+          "flexDirection": "row",
+          "order": "0"
+        }
+      },
+      {
+        "selector": ".priced-offer",
+        "index": 0,
+        "properties": {
+          "display": "grid",
+          "gridTemplateColumns": "531.203px 664px",
+          "columnGap": "115.2px",
+          "rowGap": "115.2px",
+          "paddingTop": "25px",
+          "paddingRight": "0px",
+          "paddingBottom": "60px",
+          "paddingLeft": "0px",
+          "marginTop": "0px",
+          "marginRight": "0px",
+          "marginBottom": "0px",
+          "marginLeft": "0px",
+          "flexDirection": "row",
+          "order": "0"
+        }
+      },
+      {
+        "selector": ".priced-offer",
+        "index": 1,
+        "properties": {
+          "display": "grid",
+          "gridTemplateColumns": "531.203px 664px",
+          "columnGap": "115.2px",
+          "rowGap": "115.2px",
+          "paddingTop": "25px",
+          "paddingRight": "0px",
+          "paddingBottom": "80px",
+          "paddingLeft": "0px",
+          "marginTop": "0px",
+          "marginRight": "0px",
+          "marginBottom": "0px",
+          "marginLeft": "0px",
+          "flexDirection": "row",
+          "order": "0"
+        }
+      },
+      {
+        "selector": ".priced-offer",
+        "index": 2,
+        "properties": {
+          "display": "grid",
+          "gridTemplateColumns": "531.203px 664px",
+          "columnGap": "115.2px",
+          "rowGap": "115.2px",
+          "paddingTop": "70px",
+          "paddingRight": "0px",
+          "paddingBottom": "0px",
+          "paddingLeft": "0px",
+          "marginTop": "0px",
+          "marginRight": "0px",
+          "marginBottom": "0px",
+          "marginLeft": "0px",
+          "flexDirection": "row",
+          "order": "0"
+        }
+      },
+      {
+        "selector": ".sponsor-offer",
+        "index": 0,
+        "properties": {
+          "display": "block",
+          "gridTemplateColumns": "none",
+          "columnGap": "normal",
+          "rowGap": "normal",
+          "paddingTop": "35px",
+          "paddingRight": "0px",
+          "paddingBottom": "0px",
+          "paddingLeft": "35px",
+          "marginTop": "0px",
+          "marginRight": "0px",
+          "marginBottom": "0px",
+          "marginLeft": "0px",
+          "flexDirection": "row",
+          "order": "0"
+        }
+      }
+    ]
+  },
+  "/offres/@820": {
+    "markup": "<section class=\"page-intro\"><p class=\"eyebrow\">Notre offre de refonte</p><h1>Moderniser et repenser<br><em>votre site.</em></h1><p class=\"page-lead\">Une refonte de site vitrine pour moderniser votre présence en ligne et mieux mettre en valeur votre activité.</p></section>\n<section class=\"section launch-offer\" id=\"lancement\" aria-labelledby=\"launch-title\">\n<div class=\"priced-offer\"><div class=\"offer-heading\"><p class=\"eyebrow\">Offre de lancement · Refonte</p><h2 id=\"launch-title\">Partenaire<br>pilote.</h2><p class=\"offer-price launch-price\">900–1’500 <span>CHF</span></p><p class=\"price-caption\">Prix indicatif · selon l’ampleur du projet</p><a class=\"button\" href=\"/contact/?projet=refonte\">Parlons de votre projet <span aria-hidden=\"true\">↗</span></a></div>\n<div class=\"offer-copy\"><p class=\"large-copy\">Pour accompagner son lancement, Baerg Design propose à ses premiers clients l’offre « Partenaire pilote », une refonte de site web à tarif préférentiel.</p><p>Le prix indicatif se situe entre <strong>900 et 1’500 CHF</strong>, selon l’ampleur du projet et les besoins de l’entreprise. Le périmètre des prestations et le montant définitif sont précisés dans un devis avant le démarrage.</p><p>Cette offre permet aux entreprises partenaires de moderniser leur site à un budget réduit tout en participant au développement de Baerg Design.</p></div></div>\n<div class=\"launch-details\"><div class=\"partnership\"><h3>Un partenariat fondé sur une réalisation concrète</h3><p>En contrepartie de ce tarif préférentiel, l’entreprise accepte que la collaboration soit présentée sur notre site vitrine. Cette présentation peut comprendre :</p><ul><li>Le nom et le logo de l’entreprise, avec un lien vers son site.</li><li>Une présentation du projet et des améliorations réalisées.</li><li>Des visuels du site avant et après la refonte.</li><li>Un témoignage sur la collaboration, si le client souhaite partager son expérience.</li></ul><p>Les éléments publiés sont définis ensemble et soumis à la validation du partenaire. Tout témoignage doit refléter son avis sincère.</p><p>Ce partenariat donne une visibilité supplémentaire à l’entreprise et permet à Baerg Design de présenter ses premières réalisations. Il aide ainsi les futurs clients à découvrir notre travail et à mieux apprécier la qualité de notre accompagnement.</p></div>\n<aside class=\"sponsor-offer\" aria-labelledby=\"sponsor-title\"><p class=\"eyebrow\">Sponsoring</p><h3 id=\"sponsor-title\">Sponsor</h3><p>Une entreprise peut également soutenir le lancement de Baerg Design sans nous confier la refonte de son site.</p><p>En échange d’une contribution financière, elle bénéficie d’une présence dans l’espace consacré aux sponsors sur notre site vitrine. Cette présence peut inclure son logo, une courte présentation de son activité et un lien vers son site.</p><p>Le montant de la contribution, les emplacements proposés et la durée de visibilité seront précisés dans une offre de sponsoring dédiée.</p><a class=\"text-link\" href=\"/contact/?projet=sponsor\">Devenir sponsor <span aria-hidden=\"true\">↗</span></a></aside></div>\n</section>\n<section class=\"section priced-offers\" aria-label=\"Notre offre et son option\">\n<article class=\"priced-offer\" id=\"refonte\" aria-labelledby=\"refonte-title\">\n<div class=\"offer-heading\"><p class=\"eyebrow\">01 / Site vitrine</p><h2 id=\"refonte-title\">Notre offre<br>de refonte.</h2><p class=\"offer-price\">3’000 <span>CHF</span></p><p class=\"price-caption\">Forfait de référence</p><a class=\"button\" href=\"/contact/?projet=refonte\">Parlons de votre refonte <span aria-hidden=\"true\">↗</span></a></div>\n<div class=\"offer-copy\"><p class=\"large-copy\">Baerg Design propose une offre unique de refonte de site vitrine, avec un forfait de référence de <strong>3’000 CHF</strong>, pour moderniser votre présence en ligne et mieux mettre en valeur votre activité.</p>\n<p>Notre accompagnement commence par une analyse du site existant afin d’identifier ses points faibles, de comprendre vos objectifs et de définir les améliorations pertinentes. Nous examinons notamment la présentation visuelle, l’organisation des pages, la navigation et les principales contraintes techniques.</p>\n<p>À partir de cette analyse, nous repensons le design et adaptons la structure du site à vos besoins. Nous valorisons les contenus utiles déjà présents et intégrons les changements convenus pour créer un site plus clair, moderne et agréable à consulter sur ordinateur, tablette et téléphone.</p>\n<p>L’offre couvre les étapes du projet, du cadrage à la mise en ligne : conception graphique, développement, intégration des contenus prévus, vérifications et remise du site.</p>\n<div class=\"offer-scope\"><h3>Un périmètre défini ensemble.</h3><p>Le nombre de pages, les fonctionnalités, les contenus et les corrections incluses sont définis avec vous et précisés dans le devis. Les besoins dépassant ce périmètre font l’objet d’une proposition complémentaire, soumise à votre accord avant réalisation.</p></div></div>\n</article>\n<article class=\"priced-offer photo-option\" id=\"photographies\" aria-labelledby=\"photo-title\"><div class=\"offer-heading\"><p class=\"eyebrow\">02 / En complément de la refonte</p><h2 id=\"photo-title\">Photographies<br>professionnelles.</h2><p class=\"offer-price\">800 <span>CHF</span></p><p class=\"price-caption\">Option · en supplément de la refonte</p><a class=\"text-link\" href=\"/contact/?projet=refonte&amp;option=photographies\">Ajouter une séance photo <span aria-hidden=\"true\">↗</span></a></div><div class=\"offer-copy\"><p class=\"large-copy\">Si vous souhaitez de nouvelles photographies pour votre site, Baerg Design peut également se déplacer dans votre entreprise pour réaliser une séance photo.</p><p>Cette prestation est proposée en complément de la refonte, pour un supplément de <strong>800 CHF</strong>. Les prises de vue et les photographies à livrer sont définies avec vous et précisées dans le devis.</p></div></article>\n</section><section class=\"closing section\"><p class=\"eyebrow\">Votre projet</p><h2>Discutons de<br>votre site.</h2><div><p>Présentez-nous votre activité et ce que vous souhaitez créer ou améliorer.</p><a class=\"button\" href=\"/contact/\">Parler de votre projet <span aria-hidden=\"true\">↗</span></a></div></section>",
+    "elements": [
+      {
+        "selector": ".page-intro",
+        "index": 0,
+        "properties": {
+          "display": "block",
+          "gridTemplateColumns": "none",
+          "columnGap": "normal",
+          "rowGap": "normal",
+          "paddingTop": "190px",
+          "paddingRight": "36.9px",
+          "paddingBottom": "90px",
+          "paddingLeft": "36.9px",
+          "marginTop": "0px",
+          "marginRight": "0px",
+          "marginBottom": "0px",
+          "marginLeft": "0px",
+          "flexDirection": "row",
+          "order": "0"
+        }
+      },
+      {
+        "selector": ".section",
+        "index": 0,
+        "properties": {
+          "display": "block",
+          "gridTemplateColumns": "none",
+          "columnGap": "normal",
+          "rowGap": "normal",
+          "paddingTop": "65px",
+          "paddingRight": "36.9px",
+          "paddingBottom": "90px",
+          "paddingLeft": "36.9px",
+          "marginTop": "0px",
+          "marginRight": "0px",
+          "marginBottom": "0px",
+          "marginLeft": "0px",
+          "flexDirection": "row",
+          "order": "0"
+        }
+      },
+      {
+        "selector": ".section",
+        "index": 1,
+        "properties": {
+          "display": "block",
+          "gridTemplateColumns": "none",
+          "columnGap": "normal",
+          "rowGap": "normal",
+          "paddingTop": "65px",
+          "paddingRight": "36.9px",
+          "paddingBottom": "90px",
+          "paddingLeft": "36.9px",
+          "marginTop": "0px",
+          "marginRight": "0px",
+          "marginBottom": "0px",
+          "marginLeft": "0px",
+          "flexDirection": "row",
+          "order": "0"
+        }
+      },
+      {
+        "selector": ".section",
+        "index": 2,
+        "properties": {
+          "display": "block",
+          "gridTemplateColumns": "none",
+          "columnGap": "normal",
+          "rowGap": "normal",
+          "paddingTop": "90px",
+          "paddingRight": "36.9px",
+          "paddingBottom": "90px",
+          "paddingLeft": "36.9px",
+          "marginTop": "0px",
+          "marginRight": "0px",
+          "marginBottom": "0px",
+          "marginLeft": "0px",
+          "flexDirection": "row",
+          "order": "0"
+        }
+      },
+      {
+        "selector": ".launch-offer",
+        "index": 0,
+        "properties": {
+          "display": "block",
+          "gridTemplateColumns": "none",
+          "columnGap": "normal",
+          "rowGap": "normal",
+          "paddingTop": "65px",
+          "paddingRight": "36.9px",
+          "paddingBottom": "90px",
+          "paddingLeft": "36.9px",
+          "marginTop": "0px",
+          "marginRight": "0px",
+          "marginBottom": "0px",
+          "marginLeft": "0px",
+          "flexDirection": "row",
+          "order": "0"
+        }
+      },
+      {
+        "selector": ".launch-details",
+        "index": 0,
+        "properties": {
+          "display": "grid",
+          "gridTemplateColumns": "746.219px",
+          "columnGap": "40px",
+          "rowGap": "40px",
+          "paddingTop": "0px",
+          "paddingRight": "0px",
+          "paddingBottom": "0px",
+          "paddingLeft": "0px",
+          "marginTop": "0px",
+          "marginRight": "0px",
+          "marginBottom": "0px",
+          "marginLeft": "0px",
+          "flexDirection": "row",
+          "order": "0"
+        }
+      },
+      {
+        "selector": ".priced-offer",
+        "index": 0,
+        "properties": {
+          "display": "grid",
+          "gridTemplateColumns": "746.219px",
+          "columnGap": "40px",
+          "rowGap": "40px",
+          "paddingTop": "25px",
+          "paddingRight": "0px",
+          "paddingBottom": "60px",
+          "paddingLeft": "0px",
+          "marginTop": "0px",
+          "marginRight": "0px",
+          "marginBottom": "0px",
+          "marginLeft": "0px",
+          "flexDirection": "row",
+          "order": "0"
+        }
+      },
+      {
+        "selector": ".priced-offer",
+        "index": 1,
+        "properties": {
+          "display": "grid",
+          "gridTemplateColumns": "746.219px",
+          "columnGap": "40px",
+          "rowGap": "40px",
+          "paddingTop": "25px",
+          "paddingRight": "0px",
+          "paddingBottom": "80px",
+          "paddingLeft": "0px",
+          "marginTop": "0px",
+          "marginRight": "0px",
+          "marginBottom": "0px",
+          "marginLeft": "0px",
+          "flexDirection": "row",
+          "order": "0"
+        }
+      },
+      {
+        "selector": ".priced-offer",
+        "index": 2,
+        "properties": {
+          "display": "grid",
+          "gridTemplateColumns": "746.219px",
+          "columnGap": "40px",
+          "rowGap": "40px",
+          "paddingTop": "70px",
+          "paddingRight": "0px",
+          "paddingBottom": "0px",
+          "paddingLeft": "0px",
+          "marginTop": "0px",
+          "marginRight": "0px",
+          "marginBottom": "0px",
+          "marginLeft": "0px",
+          "flexDirection": "row",
+          "order": "0"
+        }
+      },
+      {
+        "selector": ".sponsor-offer",
+        "index": 0,
+        "properties": {
+          "display": "block",
+          "gridTemplateColumns": "none",
+          "columnGap": "normal",
+          "rowGap": "normal",
+          "paddingTop": "35px",
+          "paddingRight": "0px",
+          "paddingBottom": "0px",
+          "paddingLeft": "0px",
+          "marginTop": "0px",
+          "marginRight": "0px",
+          "marginBottom": "0px",
+          "marginLeft": "0px",
+          "flexDirection": "row",
+          "order": "0"
+        }
+      }
+    ]
+  },
+  "/offres/@390": {
+    "markup": "<section class=\"page-intro\"><p class=\"eyebrow\">Notre offre de refonte</p><h1>Moderniser et repenser<br><em>votre site.</em></h1><p class=\"page-lead\">Une refonte de site vitrine pour moderniser votre présence en ligne et mieux mettre en valeur votre activité.</p></section>\n<section class=\"section launch-offer\" id=\"lancement\" aria-labelledby=\"launch-title\">\n<div class=\"priced-offer\"><div class=\"offer-heading\"><p class=\"eyebrow\">Offre de lancement · Refonte</p><h2 id=\"launch-title\">Partenaire<br>pilote.</h2><p class=\"offer-price launch-price\">900–1’500 <span>CHF</span></p><p class=\"price-caption\">Prix indicatif · selon l’ampleur du projet</p><a class=\"button\" href=\"/contact/?projet=refonte\">Parlons de votre projet <span aria-hidden=\"true\">↗</span></a></div>\n<div class=\"offer-copy\"><p class=\"large-copy\">Pour accompagner son lancement, Baerg Design propose à ses premiers clients l’offre « Partenaire pilote », une refonte de site web à tarif préférentiel.</p><p>Le prix indicatif se situe entre <strong>900 et 1’500 CHF</strong>, selon l’ampleur du projet et les besoins de l’entreprise. Le périmètre des prestations et le montant définitif sont précisés dans un devis avant le démarrage.</p><p>Cette offre permet aux entreprises partenaires de moderniser leur site à un budget réduit tout en participant au développement de Baerg Design.</p></div></div>\n<div class=\"launch-details\"><div class=\"partnership\"><h3>Un partenariat fondé sur une réalisation concrète</h3><p>En contrepartie de ce tarif préférentiel, l’entreprise accepte que la collaboration soit présentée sur notre site vitrine. Cette présentation peut comprendre :</p><ul><li>Le nom et le logo de l’entreprise, avec un lien vers son site.</li><li>Une présentation du projet et des améliorations réalisées.</li><li>Des visuels du site avant et après la refonte.</li><li>Un témoignage sur la collaboration, si le client souhaite partager son expérience.</li></ul><p>Les éléments publiés sont définis ensemble et soumis à la validation du partenaire. Tout témoignage doit refléter son avis sincère.</p><p>Ce partenariat donne une visibilité supplémentaire à l’entreprise et permet à Baerg Design de présenter ses premières réalisations. Il aide ainsi les futurs clients à découvrir notre travail et à mieux apprécier la qualité de notre accompagnement.</p></div>\n<aside class=\"sponsor-offer\" aria-labelledby=\"sponsor-title\"><p class=\"eyebrow\">Sponsoring</p><h3 id=\"sponsor-title\">Sponsor</h3><p>Une entreprise peut également soutenir le lancement de Baerg Design sans nous confier la refonte de son site.</p><p>En échange d’une contribution financière, elle bénéficie d’une présence dans l’espace consacré aux sponsors sur notre site vitrine. Cette présence peut inclure son logo, une courte présentation de son activité et un lien vers son site.</p><p>Le montant de la contribution, les emplacements proposés et la durée de visibilité seront précisés dans une offre de sponsoring dédiée.</p><a class=\"text-link\" href=\"/contact/?projet=sponsor\">Devenir sponsor <span aria-hidden=\"true\">↗</span></a></aside></div>\n</section>\n<section class=\"section priced-offers\" aria-label=\"Notre offre et son option\">\n<article class=\"priced-offer\" id=\"refonte\" aria-labelledby=\"refonte-title\">\n<div class=\"offer-heading\"><p class=\"eyebrow\">01 / Site vitrine</p><h2 id=\"refonte-title\">Notre offre<br>de refonte.</h2><p class=\"offer-price\">3’000 <span>CHF</span></p><p class=\"price-caption\">Forfait de référence</p><a class=\"button\" href=\"/contact/?projet=refonte\">Parlons de votre refonte <span aria-hidden=\"true\">↗</span></a></div>\n<div class=\"offer-copy\"><p class=\"large-copy\">Baerg Design propose une offre unique de refonte de site vitrine, avec un forfait de référence de <strong>3’000 CHF</strong>, pour moderniser votre présence en ligne et mieux mettre en valeur votre activité.</p>\n<p>Notre accompagnement commence par une analyse du site existant afin d’identifier ses points faibles, de comprendre vos objectifs et de définir les améliorations pertinentes. Nous examinons notamment la présentation visuelle, l’organisation des pages, la navigation et les principales contraintes techniques.</p>\n<p>À partir de cette analyse, nous repensons le design et adaptons la structure du site à vos besoins. Nous valorisons les contenus utiles déjà présents et intégrons les changements convenus pour créer un site plus clair, moderne et agréable à consulter sur ordinateur, tablette et téléphone.</p>\n<p>L’offre couvre les étapes du projet, du cadrage à la mise en ligne : conception graphique, développement, intégration des contenus prévus, vérifications et remise du site.</p>\n<div class=\"offer-scope\"><h3>Un périmètre défini ensemble.</h3><p>Le nombre de pages, les fonctionnalités, les contenus et les corrections incluses sont définis avec vous et précisés dans le devis. Les besoins dépassant ce périmètre font l’objet d’une proposition complémentaire, soumise à votre accord avant réalisation.</p></div></div>\n</article>\n<article class=\"priced-offer photo-option\" id=\"photographies\" aria-labelledby=\"photo-title\"><div class=\"offer-heading\"><p class=\"eyebrow\">02 / En complément de la refonte</p><h2 id=\"photo-title\">Photographies<br>professionnelles.</h2><p class=\"offer-price\">800 <span>CHF</span></p><p class=\"price-caption\">Option · en supplément de la refonte</p><a class=\"text-link\" href=\"/contact/?projet=refonte&amp;option=photographies\">Ajouter une séance photo <span aria-hidden=\"true\">↗</span></a></div><div class=\"offer-copy\"><p class=\"large-copy\">Si vous souhaitez de nouvelles photographies pour votre site, Baerg Design peut également se déplacer dans votre entreprise pour réaliser une séance photo.</p><p>Cette prestation est proposée en complément de la refonte, pour un supplément de <strong>800 CHF</strong>. Les prises de vue et les photographies à livrer sont définies avec vous et précisées dans le devis.</p></div></article>\n</section><section class=\"closing section\"><p class=\"eyebrow\">Votre projet</p><h2>Discutons de<br>votre site.</h2><div><p>Présentez-nous votre activité et ce que vous souhaitez créer ou améliorer.</p><a class=\"button\" href=\"/contact/\">Parler de votre projet <span aria-hidden=\"true\">↗</span></a></div></section>",
+    "elements": [
+      {
+        "selector": ".page-intro",
+        "index": 0,
+        "properties": {
+          "display": "block",
+          "gridTemplateColumns": "none",
+          "columnGap": "normal",
+          "rowGap": "normal",
+          "paddingTop": "140px",
+          "paddingRight": "22px",
+          "paddingBottom": "55px",
+          "paddingLeft": "22px",
+          "marginTop": "0px",
+          "marginRight": "0px",
+          "marginBottom": "0px",
+          "marginLeft": "0px",
+          "flexDirection": "row",
+          "order": "0"
+        }
+      },
+      {
+        "selector": ".section",
+        "index": 0,
+        "properties": {
+          "display": "block",
+          "gridTemplateColumns": "none",
+          "columnGap": "normal",
+          "rowGap": "normal",
+          "paddingTop": "45px",
+          "paddingRight": "22px",
+          "paddingBottom": "75px",
+          "paddingLeft": "22px",
+          "marginTop": "0px",
+          "marginRight": "0px",
+          "marginBottom": "0px",
+          "marginLeft": "0px",
+          "flexDirection": "row",
+          "order": "0"
+        }
+      },
+      {
+        "selector": ".section",
+        "index": 1,
+        "properties": {
+          "display": "block",
+          "gridTemplateColumns": "none",
+          "columnGap": "normal",
+          "rowGap": "normal",
+          "paddingTop": "45px",
+          "paddingRight": "22px",
+          "paddingBottom": "75px",
+          "paddingLeft": "22px",
+          "marginTop": "0px",
+          "marginRight": "0px",
+          "marginBottom": "0px",
+          "marginLeft": "0px",
+          "flexDirection": "row",
+          "order": "0"
+        }
+      },
+      {
+        "selector": ".section",
+        "index": 2,
+        "properties": {
+          "display": "block",
+          "gridTemplateColumns": "none",
+          "columnGap": "normal",
+          "rowGap": "normal",
+          "paddingTop": "75px",
+          "paddingRight": "22px",
+          "paddingBottom": "75px",
+          "paddingLeft": "22px",
+          "marginTop": "0px",
+          "marginRight": "0px",
+          "marginBottom": "0px",
+          "marginLeft": "0px",
+          "flexDirection": "row",
+          "order": "0"
+        }
+      },
+      {
+        "selector": ".launch-offer",
+        "index": 0,
+        "properties": {
+          "display": "block",
+          "gridTemplateColumns": "none",
+          "columnGap": "normal",
+          "rowGap": "normal",
+          "paddingTop": "45px",
+          "paddingRight": "22px",
+          "paddingBottom": "75px",
+          "paddingLeft": "22px",
+          "marginTop": "0px",
+          "marginRight": "0px",
+          "marginBottom": "0px",
+          "marginLeft": "0px",
+          "flexDirection": "row",
+          "order": "0"
+        }
+      },
+      {
+        "selector": ".launch-details",
+        "index": 0,
+        "properties": {
+          "display": "grid",
+          "gridTemplateColumns": "346px",
+          "columnGap": "40px",
+          "rowGap": "40px",
+          "paddingTop": "0px",
+          "paddingRight": "0px",
+          "paddingBottom": "0px",
+          "paddingLeft": "0px",
+          "marginTop": "0px",
+          "marginRight": "0px",
+          "marginBottom": "0px",
+          "marginLeft": "0px",
+          "flexDirection": "row",
+          "order": "0"
+        }
+      },
+      {
+        "selector": ".priced-offer",
+        "index": 0,
+        "properties": {
+          "display": "grid",
+          "gridTemplateColumns": "346px",
+          "columnGap": "35px",
+          "rowGap": "35px",
+          "paddingTop": "0px",
+          "paddingRight": "0px",
+          "paddingBottom": "40px",
+          "paddingLeft": "0px",
+          "marginTop": "0px",
+          "marginRight": "0px",
+          "marginBottom": "0px",
+          "marginLeft": "0px",
+          "flexDirection": "row",
+          "order": "0"
+        }
+      },
+      {
+        "selector": ".priced-offer",
+        "index": 1,
+        "properties": {
+          "display": "grid",
+          "gridTemplateColumns": "346px",
+          "columnGap": "35px",
+          "rowGap": "35px",
+          "paddingTop": "0px",
+          "paddingRight": "0px",
+          "paddingBottom": "50px",
+          "paddingLeft": "0px",
+          "marginTop": "0px",
+          "marginRight": "0px",
+          "marginBottom": "0px",
+          "marginLeft": "0px",
+          "flexDirection": "row",
+          "order": "0"
+        }
+      },
+      {
+        "selector": ".priced-offer",
+        "index": 2,
+        "properties": {
+          "display": "grid",
+          "gridTemplateColumns": "346px",
+          "columnGap": "35px",
+          "rowGap": "35px",
+          "paddingTop": "45px",
+          "paddingRight": "0px",
+          "paddingBottom": "0px",
+          "paddingLeft": "0px",
+          "marginTop": "0px",
+          "marginRight": "0px",
+          "marginBottom": "0px",
+          "marginLeft": "0px",
+          "flexDirection": "row",
+          "order": "0"
+        }
+      },
+      {
+        "selector": ".sponsor-offer",
+        "index": 0,
+        "properties": {
+          "display": "block",
+          "gridTemplateColumns": "none",
+          "columnGap": "normal",
+          "rowGap": "normal",
+          "paddingTop": "35px",
+          "paddingRight": "0px",
+          "paddingBottom": "0px",
+          "paddingLeft": "0px",
+          "marginTop": "0px",
+          "marginRight": "0px",
+          "marginBottom": "0px",
+          "marginLeft": "0px",
+          "flexDirection": "row",
+          "order": "0"
+        }
+      }
+    ]
+  },
+  "/offres/@320": {
+    "markup": "<section class=\"page-intro\"><p class=\"eyebrow\">Notre offre de refonte</p><h1>Moderniser et repenser<br><em>votre site.</em></h1><p class=\"page-lead\">Une refonte de site vitrine pour moderniser votre présence en ligne et mieux mettre en valeur votre activité.</p></section>\n<section class=\"section launch-offer\" id=\"lancement\" aria-labelledby=\"launch-title\">\n<div class=\"priced-offer\"><div class=\"offer-heading\"><p class=\"eyebrow\">Offre de lancement · Refonte</p><h2 id=\"launch-title\">Partenaire<br>pilote.</h2><p class=\"offer-price launch-price\">900–1’500 <span>CHF</span></p><p class=\"price-caption\">Prix indicatif · selon l’ampleur du projet</p><a class=\"button\" href=\"/contact/?projet=refonte\">Parlons de votre projet <span aria-hidden=\"true\">↗</span></a></div>\n<div class=\"offer-copy\"><p class=\"large-copy\">Pour accompagner son lancement, Baerg Design propose à ses premiers clients l’offre « Partenaire pilote », une refonte de site web à tarif préférentiel.</p><p>Le prix indicatif se situe entre <strong>900 et 1’500 CHF</strong>, selon l’ampleur du projet et les besoins de l’entreprise. Le périmètre des prestations et le montant définitif sont précisés dans un devis avant le démarrage.</p><p>Cette offre permet aux entreprises partenaires de moderniser leur site à un budget réduit tout en participant au développement de Baerg Design.</p></div></div>\n<div class=\"launch-details\"><div class=\"partnership\"><h3>Un partenariat fondé sur une réalisation concrète</h3><p>En contrepartie de ce tarif préférentiel, l’entreprise accepte que la collaboration soit présentée sur notre site vitrine. Cette présentation peut comprendre :</p><ul><li>Le nom et le logo de l’entreprise, avec un lien vers son site.</li><li>Une présentation du projet et des améliorations réalisées.</li><li>Des visuels du site avant et après la refonte.</li><li>Un témoignage sur la collaboration, si le client souhaite partager son expérience.</li></ul><p>Les éléments publiés sont définis ensemble et soumis à la validation du partenaire. Tout témoignage doit refléter son avis sincère.</p><p>Ce partenariat donne une visibilité supplémentaire à l’entreprise et permet à Baerg Design de présenter ses premières réalisations. Il aide ainsi les futurs clients à découvrir notre travail et à mieux apprécier la qualité de notre accompagnement.</p></div>\n<aside class=\"sponsor-offer\" aria-labelledby=\"sponsor-title\"><p class=\"eyebrow\">Sponsoring</p><h3 id=\"sponsor-title\">Sponsor</h3><p>Une entreprise peut également soutenir le lancement de Baerg Design sans nous confier la refonte de son site.</p><p>En échange d’une contribution financière, elle bénéficie d’une présence dans l’espace consacré aux sponsors sur notre site vitrine. Cette présence peut inclure son logo, une courte présentation de son activité et un lien vers son site.</p><p>Le montant de la contribution, les emplacements proposés et la durée de visibilité seront précisés dans une offre de sponsoring dédiée.</p><a class=\"text-link\" href=\"/contact/?projet=sponsor\">Devenir sponsor <span aria-hidden=\"true\">↗</span></a></aside></div>\n</section>\n<section class=\"section priced-offers\" aria-label=\"Notre offre et son option\">\n<article class=\"priced-offer\" id=\"refonte\" aria-labelledby=\"refonte-title\">\n<div class=\"offer-heading\"><p class=\"eyebrow\">01 / Site vitrine</p><h2 id=\"refonte-title\">Notre offre<br>de refonte.</h2><p class=\"offer-price\">3’000 <span>CHF</span></p><p class=\"price-caption\">Forfait de référence</p><a class=\"button\" href=\"/contact/?projet=refonte\">Parlons de votre refonte <span aria-hidden=\"true\">↗</span></a></div>\n<div class=\"offer-copy\"><p class=\"large-copy\">Baerg Design propose une offre unique de refonte de site vitrine, avec un forfait de référence de <strong>3’000 CHF</strong>, pour moderniser votre présence en ligne et mieux mettre en valeur votre activité.</p>\n<p>Notre accompagnement commence par une analyse du site existant afin d’identifier ses points faibles, de comprendre vos objectifs et de définir les améliorations pertinentes. Nous examinons notamment la présentation visuelle, l’organisation des pages, la navigation et les principales contraintes techniques.</p>\n<p>À partir de cette analyse, nous repensons le design et adaptons la structure du site à vos besoins. Nous valorisons les contenus utiles déjà présents et intégrons les changements convenus pour créer un site plus clair, moderne et agréable à consulter sur ordinateur, tablette et téléphone.</p>\n<p>L’offre couvre les étapes du projet, du cadrage à la mise en ligne : conception graphique, développement, intégration des contenus prévus, vérifications et remise du site.</p>\n<div class=\"offer-scope\"><h3>Un périmètre défini ensemble.</h3><p>Le nombre de pages, les fonctionnalités, les contenus et les corrections incluses sont définis avec vous et précisés dans le devis. Les besoins dépassant ce périmètre font l’objet d’une proposition complémentaire, soumise à votre accord avant réalisation.</p></div></div>\n</article>\n<article class=\"priced-offer photo-option\" id=\"photographies\" aria-labelledby=\"photo-title\"><div class=\"offer-heading\"><p class=\"eyebrow\">02 / En complément de la refonte</p><h2 id=\"photo-title\">Photographies<br>professionnelles.</h2><p class=\"offer-price\">800 <span>CHF</span></p><p class=\"price-caption\">Option · en supplément de la refonte</p><a class=\"text-link\" href=\"/contact/?projet=refonte&amp;option=photographies\">Ajouter une séance photo <span aria-hidden=\"true\">↗</span></a></div><div class=\"offer-copy\"><p class=\"large-copy\">Si vous souhaitez de nouvelles photographies pour votre site, Baerg Design peut également se déplacer dans votre entreprise pour réaliser une séance photo.</p><p>Cette prestation est proposée en complément de la refonte, pour un supplément de <strong>800 CHF</strong>. Les prises de vue et les photographies à livrer sont définies avec vous et précisées dans le devis.</p></div></article>\n</section><section class=\"closing section\"><p class=\"eyebrow\">Votre projet</p><h2>Discutons de<br>votre site.</h2><div><p>Présentez-nous votre activité et ce que vous souhaitez créer ou améliorer.</p><a class=\"button\" href=\"/contact/\">Parler de votre projet <span aria-hidden=\"true\">↗</span></a></div></section>",
+    "elements": [
+      {
+        "selector": ".page-intro",
+        "index": 0,
+        "properties": {
+          "display": "block",
+          "gridTemplateColumns": "none",
+          "columnGap": "normal",
+          "rowGap": "normal",
+          "paddingTop": "140px",
+          "paddingRight": "22px",
+          "paddingBottom": "55px",
+          "paddingLeft": "22px",
+          "marginTop": "0px",
+          "marginRight": "0px",
+          "marginBottom": "0px",
+          "marginLeft": "0px",
+          "flexDirection": "row",
+          "order": "0"
+        }
+      },
+      {
+        "selector": ".section",
+        "index": 0,
+        "properties": {
+          "display": "block",
+          "gridTemplateColumns": "none",
+          "columnGap": "normal",
+          "rowGap": "normal",
+          "paddingTop": "45px",
+          "paddingRight": "22px",
+          "paddingBottom": "75px",
+          "paddingLeft": "22px",
+          "marginTop": "0px",
+          "marginRight": "0px",
+          "marginBottom": "0px",
+          "marginLeft": "0px",
+          "flexDirection": "row",
+          "order": "0"
+        }
+      },
+      {
+        "selector": ".section",
+        "index": 1,
+        "properties": {
+          "display": "block",
+          "gridTemplateColumns": "none",
+          "columnGap": "normal",
+          "rowGap": "normal",
+          "paddingTop": "45px",
+          "paddingRight": "22px",
+          "paddingBottom": "75px",
+          "paddingLeft": "22px",
+          "marginTop": "0px",
+          "marginRight": "0px",
+          "marginBottom": "0px",
+          "marginLeft": "0px",
+          "flexDirection": "row",
+          "order": "0"
+        }
+      },
+      {
+        "selector": ".section",
+        "index": 2,
+        "properties": {
+          "display": "block",
+          "gridTemplateColumns": "none",
+          "columnGap": "normal",
+          "rowGap": "normal",
+          "paddingTop": "75px",
+          "paddingRight": "22px",
+          "paddingBottom": "75px",
+          "paddingLeft": "22px",
+          "marginTop": "0px",
+          "marginRight": "0px",
+          "marginBottom": "0px",
+          "marginLeft": "0px",
+          "flexDirection": "row",
+          "order": "0"
+        }
+      },
+      {
+        "selector": ".launch-offer",
+        "index": 0,
+        "properties": {
+          "display": "block",
+          "gridTemplateColumns": "none",
+          "columnGap": "normal",
+          "rowGap": "normal",
+          "paddingTop": "45px",
+          "paddingRight": "22px",
+          "paddingBottom": "75px",
+          "paddingLeft": "22px",
+          "marginTop": "0px",
+          "marginRight": "0px",
+          "marginBottom": "0px",
+          "marginLeft": "0px",
+          "flexDirection": "row",
+          "order": "0"
+        }
+      },
+      {
+        "selector": ".launch-details",
+        "index": 0,
+        "properties": {
+          "display": "grid",
+          "gridTemplateColumns": "276px",
+          "columnGap": "40px",
+          "rowGap": "40px",
+          "paddingTop": "0px",
+          "paddingRight": "0px",
+          "paddingBottom": "0px",
+          "paddingLeft": "0px",
+          "marginTop": "0px",
+          "marginRight": "0px",
+          "marginBottom": "0px",
+          "marginLeft": "0px",
+          "flexDirection": "row",
+          "order": "0"
+        }
+      },
+      {
+        "selector": ".priced-offer",
+        "index": 0,
+        "properties": {
+          "display": "grid",
+          "gridTemplateColumns": "276px",
+          "columnGap": "35px",
+          "rowGap": "35px",
+          "paddingTop": "0px",
+          "paddingRight": "0px",
+          "paddingBottom": "40px",
+          "paddingLeft": "0px",
+          "marginTop": "0px",
+          "marginRight": "0px",
+          "marginBottom": "0px",
+          "marginLeft": "0px",
+          "flexDirection": "row",
+          "order": "0"
+        }
+      },
+      {
+        "selector": ".priced-offer",
+        "index": 1,
+        "properties": {
+          "display": "grid",
+          "gridTemplateColumns": "276px",
+          "columnGap": "35px",
+          "rowGap": "35px",
+          "paddingTop": "0px",
+          "paddingRight": "0px",
+          "paddingBottom": "50px",
+          "paddingLeft": "0px",
+          "marginTop": "0px",
+          "marginRight": "0px",
+          "marginBottom": "0px",
+          "marginLeft": "0px",
+          "flexDirection": "row",
+          "order": "0"
+        }
+      },
+      {
+        "selector": ".priced-offer",
+        "index": 2,
+        "properties": {
+          "display": "grid",
+          "gridTemplateColumns": "276px",
+          "columnGap": "35px",
+          "rowGap": "35px",
+          "paddingTop": "45px",
+          "paddingRight": "0px",
+          "paddingBottom": "0px",
+          "paddingLeft": "0px",
+          "marginTop": "0px",
+          "marginRight": "0px",
+          "marginBottom": "0px",
+          "marginLeft": "0px",
+          "flexDirection": "row",
+          "order": "0"
+        }
+      },
+      {
+        "selector": ".sponsor-offer",
+        "index": 0,
+        "properties": {
+          "display": "block",
+          "gridTemplateColumns": "none",
+          "columnGap": "normal",
+          "rowGap": "normal",
+          "paddingTop": "35px",
+          "paddingRight": "0px",
+          "paddingBottom": "0px",
+          "paddingLeft": "0px",
+          "marginTop": "0px",
+          "marginRight": "0px",
+          "marginBottom": "0px",
+          "marginLeft": "0px",
+          "flexDirection": "row",
+          "order": "0"
+        }
+      }
+    ]
+  },
+  "/contact/@1440": {
+    "markup": "<section class=\"page-intro\"><p class=\"eyebrow\">Premier échange</p><h1>Parlons de<br><em>votre projet.</em></h1><p class=\"page-lead\">Indiquez votre activité, ce que vous souhaitez créer ou modifier et, si vous en avez un, le lien de votre site actuel.</p></section><section class=\"section contact-grid\"><aside><p class=\"eyebrow\">Et ensuite ?</p><h2>Un premier<br>échange.</h2><p>Nous vous répondrons pour préciser les pages et les fonctionnalités utiles à votre projet, puis définir les prochaines étapes avec vous.</p></aside><div><div class=\"form-notice\"><strong>Le formulaire n’est pas encore ouvert.</strong><p>Le service de messagerie et les informations de contact sont en cours de configuration. Aucun message ne peut être transmis pour le moment.</p></div><form id=\"project-form\"><p class=\"form-required\">Les champs marqués d’un * sont obligatoires pour préparer votre brouillon.</p><div class=\"form-grid\"><div class=\"field\"><label for=\"name\">Votre nom *</label><input id=\"name\" name=\"name\" autocomplete=\"name\" maxlength=\"100\" placeholder=\"Prénom et nom\" required=\"\"></div><div class=\"field\"><label for=\"email\">Votre e-mail *</label><input id=\"email\" name=\"email\" type=\"email\" autocomplete=\"email\" maxlength=\"254\" placeholder=\"vous@exemple.ch\" required=\"\"></div><div class=\"field field-full\"><label for=\"company\">Entreprise <span>facultatif</span></label><input id=\"company\" name=\"company\" autocomplete=\"organization\" maxlength=\"160\" placeholder=\"Le nom de votre activité\"></div><div class=\"field\"><label for=\"projectType\">Votre projet <span>facultatif</span></label><select id=\"projectType\" name=\"projectType\"><option>À définir</option><option>Création de site</option><option>Refonte de site</option><option>Sponsor</option><option>Autre projet</option></select></div><div class=\"field\"><label for=\"budget\">Budget envisagé <span>facultatif</span></label><select id=\"budget\" name=\"budget\"><option>À définir</option><option>Moins de 1 000 CHF</option><option>1 000 à 3 000 CHF</option><option>3 000 à 5 000 CHF</option><option>Plus de 5 000 CHF</option></select></div><div class=\"field field-full\"><label for=\"message\">Votre message *</label><textarea id=\"message\" name=\"message\" required=\"\" minlength=\"10\" maxlength=\"5000\" rows=\"6\" placeholder=\"Votre activité, vos envies, ce que vous aimeriez faire évoluer…\"></textarea><span class=\"field-hint\">10 caractères minimum.</span></div></div><p class=\"form-required\">Votre saisie reste dans cette page. Aucun message n’est envoyé et aucune donnée n’est enregistrée.</p><button class=\"button\" type=\"submit\">Copier mon brouillon <span aria-hidden=\"true\">↗</span></button><p id=\"form-feedback\" role=\"status\" aria-live=\"polite\"></p><div id=\"draft-fallback\" hidden=\"\"><label for=\"draft-text\">Copiez ce brouillon avec votre clavier</label><textarea id=\"draft-text\" readonly=\"\" rows=\"8\"></textarea></div><noscript><p>JavaScript est nécessaire pour copier le brouillon. Aucun envoi n’est possible.</p></noscript></form></div></section>",
+    "elements": [
+      {
+        "selector": ".page-intro",
+        "index": 0,
+        "properties": {
+          "display": "block",
+          "gridTemplateColumns": "none",
+          "columnGap": "normal",
+          "rowGap": "normal",
+          "paddingTop": "190px",
+          "paddingRight": "64.8px",
+          "paddingBottom": "90px",
+          "paddingLeft": "64.8px",
+          "marginTop": "0px",
+          "marginRight": "0px",
+          "marginBottom": "0px",
+          "marginLeft": "0px",
+          "flexDirection": "row",
+          "order": "0"
+        }
+      },
+      {
+        "selector": ".section",
+        "index": 0,
+        "properties": {
+          "display": "grid",
+          "gridTemplateColumns": "478.078px 717.141px",
+          "columnGap": "115.2px",
+          "rowGap": "115.2px",
+          "paddingTop": "65px",
+          "paddingRight": "64.8px",
+          "paddingBottom": "125px",
+          "paddingLeft": "64.8px",
+          "marginTop": "0px",
+          "marginRight": "0px",
+          "marginBottom": "0px",
+          "marginLeft": "0px",
+          "flexDirection": "row",
+          "order": "0"
+        }
+      },
+      {
+        "selector": ".contact-grid",
+        "index": 0,
+        "properties": {
+          "display": "grid",
+          "gridTemplateColumns": "478.078px 717.141px",
+          "columnGap": "115.2px",
+          "rowGap": "115.2px",
+          "paddingTop": "65px",
+          "paddingRight": "64.8px",
+          "paddingBottom": "125px",
+          "paddingLeft": "64.8px",
+          "marginTop": "0px",
+          "marginRight": "0px",
+          "marginBottom": "0px",
+          "marginLeft": "0px",
+          "flexDirection": "row",
+          "order": "0"
+        }
+      },
+      {
+        "selector": ".form-grid",
+        "index": 0,
+        "properties": {
+          "display": "grid",
+          "gridTemplateColumns": "346.562px 346.578px",
+          "columnGap": "24px",
+          "rowGap": "24px",
+          "paddingTop": "0px",
+          "paddingRight": "0px",
+          "paddingBottom": "0px",
+          "paddingLeft": "0px",
+          "marginTop": "0px",
+          "marginRight": "0px",
+          "marginBottom": "0px",
+          "marginLeft": "0px",
+          "flexDirection": "row",
+          "order": "0"
+        }
+      }
+    ]
+  },
+  "/contact/@820": {
+    "markup": "<section class=\"page-intro\"><p class=\"eyebrow\">Premier échange</p><h1>Parlons de<br><em>votre projet.</em></h1><p class=\"page-lead\">Indiquez votre activité, ce que vous souhaitez créer ou modifier et, si vous en avez un, le lien de votre site actuel.</p></section><section class=\"section contact-grid\"><aside><p class=\"eyebrow\">Et ensuite ?</p><h2>Un premier<br>échange.</h2><p>Nous vous répondrons pour préciser les pages et les fonctionnalités utiles à votre projet, puis définir les prochaines étapes avec vous.</p></aside><div><div class=\"form-notice\"><strong>Le formulaire n’est pas encore ouvert.</strong><p>Le service de messagerie et les informations de contact sont en cours de configuration. Aucun message ne peut être transmis pour le moment.</p></div><form id=\"project-form\"><p class=\"form-required\">Les champs marqués d’un * sont obligatoires pour préparer votre brouillon.</p><div class=\"form-grid\"><div class=\"field\"><label for=\"name\">Votre nom *</label><input id=\"name\" name=\"name\" autocomplete=\"name\" maxlength=\"100\" placeholder=\"Prénom et nom\" required=\"\"></div><div class=\"field\"><label for=\"email\">Votre e-mail *</label><input id=\"email\" name=\"email\" type=\"email\" autocomplete=\"email\" maxlength=\"254\" placeholder=\"vous@exemple.ch\" required=\"\"></div><div class=\"field field-full\"><label for=\"company\">Entreprise <span>facultatif</span></label><input id=\"company\" name=\"company\" autocomplete=\"organization\" maxlength=\"160\" placeholder=\"Le nom de votre activité\"></div><div class=\"field\"><label for=\"projectType\">Votre projet <span>facultatif</span></label><select id=\"projectType\" name=\"projectType\"><option>À définir</option><option>Création de site</option><option>Refonte de site</option><option>Sponsor</option><option>Autre projet</option></select></div><div class=\"field\"><label for=\"budget\">Budget envisagé <span>facultatif</span></label><select id=\"budget\" name=\"budget\"><option>À définir</option><option>Moins de 1 000 CHF</option><option>1 000 à 3 000 CHF</option><option>3 000 à 5 000 CHF</option><option>Plus de 5 000 CHF</option></select></div><div class=\"field field-full\"><label for=\"message\">Votre message *</label><textarea id=\"message\" name=\"message\" required=\"\" minlength=\"10\" maxlength=\"5000\" rows=\"6\" placeholder=\"Votre activité, vos envies, ce que vous aimeriez faire évoluer…\"></textarea><span class=\"field-hint\">10 caractères minimum.</span></div></div><p class=\"form-required\">Votre saisie reste dans cette page. Aucun message n’est envoyé et aucune donnée n’est enregistrée.</p><button class=\"button\" type=\"submit\">Copier mon brouillon <span aria-hidden=\"true\">↗</span></button><p id=\"form-feedback\" role=\"status\" aria-live=\"polite\"></p><div id=\"draft-fallback\" hidden=\"\"><label for=\"draft-text\">Copiez ce brouillon avec votre clavier</label><textarea id=\"draft-text\" readonly=\"\" rows=\"8\"></textarea></div><noscript><p>JavaScript est nécessaire pour copier le brouillon. Aucun envoi n’est possible.</p></noscript></form></div></section>",
+    "elements": [
+      {
+        "selector": ".page-intro",
+        "index": 0,
+        "properties": {
+          "display": "block",
+          "gridTemplateColumns": "none",
+          "columnGap": "normal",
+          "rowGap": "normal",
+          "paddingTop": "190px",
+          "paddingRight": "36.9px",
+          "paddingBottom": "90px",
+          "paddingLeft": "36.9px",
+          "marginTop": "0px",
+          "marginRight": "0px",
+          "marginBottom": "0px",
+          "marginLeft": "0px",
+          "flexDirection": "row",
+          "order": "0"
+        }
+      },
+      {
+        "selector": ".section",
+        "index": 0,
+        "properties": {
+          "display": "grid",
+          "gridTemplateColumns": "293.828px 411.375px",
+          "columnGap": "41px",
+          "rowGap": "41px",
+          "paddingTop": "65px",
+          "paddingRight": "36.9px",
+          "paddingBottom": "90px",
+          "paddingLeft": "36.9px",
+          "marginTop": "0px",
+          "marginRight": "0px",
+          "marginBottom": "0px",
+          "marginLeft": "0px",
+          "flexDirection": "row",
+          "order": "0"
+        }
+      },
+      {
+        "selector": ".contact-grid",
+        "index": 0,
+        "properties": {
+          "display": "grid",
+          "gridTemplateColumns": "293.828px 411.375px",
+          "columnGap": "41px",
+          "rowGap": "41px",
+          "paddingTop": "65px",
+          "paddingRight": "36.9px",
+          "paddingBottom": "90px",
+          "paddingLeft": "36.9px",
+          "marginTop": "0px",
+          "marginRight": "0px",
+          "marginBottom": "0px",
+          "marginLeft": "0px",
+          "flexDirection": "row",
+          "order": "0"
+        }
+      },
+      {
+        "selector": ".form-grid",
+        "index": 0,
+        "properties": {
+          "display": "grid",
+          "gridTemplateColumns": "411.375px",
+          "columnGap": "24px",
+          "rowGap": "24px",
+          "paddingTop": "0px",
+          "paddingRight": "0px",
+          "paddingBottom": "0px",
+          "paddingLeft": "0px",
+          "marginTop": "0px",
+          "marginRight": "0px",
+          "marginBottom": "0px",
+          "marginLeft": "0px",
+          "flexDirection": "row",
+          "order": "0"
+        }
+      }
+    ]
+  },
+  "/contact/@390": {
+    "markup": "<section class=\"page-intro\"><p class=\"eyebrow\">Premier échange</p><h1>Parlons de<br><em>votre projet.</em></h1><p class=\"page-lead\">Indiquez votre activité, ce que vous souhaitez créer ou modifier et, si vous en avez un, le lien de votre site actuel.</p></section><section class=\"section contact-grid\"><aside><p class=\"eyebrow\">Et ensuite ?</p><h2>Un premier<br>échange.</h2><p>Nous vous répondrons pour préciser les pages et les fonctionnalités utiles à votre projet, puis définir les prochaines étapes avec vous.</p></aside><div><div class=\"form-notice\"><strong>Le formulaire n’est pas encore ouvert.</strong><p>Le service de messagerie et les informations de contact sont en cours de configuration. Aucun message ne peut être transmis pour le moment.</p></div><form id=\"project-form\"><p class=\"form-required\">Les champs marqués d’un * sont obligatoires pour préparer votre brouillon.</p><div class=\"form-grid\"><div class=\"field\"><label for=\"name\">Votre nom *</label><input id=\"name\" name=\"name\" autocomplete=\"name\" maxlength=\"100\" placeholder=\"Prénom et nom\" required=\"\"></div><div class=\"field\"><label for=\"email\">Votre e-mail *</label><input id=\"email\" name=\"email\" type=\"email\" autocomplete=\"email\" maxlength=\"254\" placeholder=\"vous@exemple.ch\" required=\"\"></div><div class=\"field field-full\"><label for=\"company\">Entreprise <span>facultatif</span></label><input id=\"company\" name=\"company\" autocomplete=\"organization\" maxlength=\"160\" placeholder=\"Le nom de votre activité\"></div><div class=\"field\"><label for=\"projectType\">Votre projet <span>facultatif</span></label><select id=\"projectType\" name=\"projectType\"><option>À définir</option><option>Création de site</option><option>Refonte de site</option><option>Sponsor</option><option>Autre projet</option></select></div><div class=\"field\"><label for=\"budget\">Budget envisagé <span>facultatif</span></label><select id=\"budget\" name=\"budget\"><option>À définir</option><option>Moins de 1 000 CHF</option><option>1 000 à 3 000 CHF</option><option>3 000 à 5 000 CHF</option><option>Plus de 5 000 CHF</option></select></div><div class=\"field field-full\"><label for=\"message\">Votre message *</label><textarea id=\"message\" name=\"message\" required=\"\" minlength=\"10\" maxlength=\"5000\" rows=\"6\" placeholder=\"Votre activité, vos envies, ce que vous aimeriez faire évoluer…\"></textarea><span class=\"field-hint\">10 caractères minimum.</span></div></div><p class=\"form-required\">Votre saisie reste dans cette page. Aucun message n’est envoyé et aucune donnée n’est enregistrée.</p><button class=\"button\" type=\"submit\">Copier mon brouillon <span aria-hidden=\"true\">↗</span></button><p id=\"form-feedback\" role=\"status\" aria-live=\"polite\"></p><div id=\"draft-fallback\" hidden=\"\"><label for=\"draft-text\">Copiez ce brouillon avec votre clavier</label><textarea id=\"draft-text\" readonly=\"\" rows=\"8\"></textarea></div><noscript><p>JavaScript est nécessaire pour copier le brouillon. Aucun envoi n’est possible.</p></noscript></form></div></section>",
+    "elements": [
+      {
+        "selector": ".page-intro",
+        "index": 0,
+        "properties": {
+          "display": "block",
+          "gridTemplateColumns": "none",
+          "columnGap": "normal",
+          "rowGap": "normal",
+          "paddingTop": "140px",
+          "paddingRight": "22px",
+          "paddingBottom": "55px",
+          "paddingLeft": "22px",
+          "marginTop": "0px",
+          "marginRight": "0px",
+          "marginBottom": "0px",
+          "marginLeft": "0px",
+          "flexDirection": "row",
+          "order": "0"
+        }
+      },
+      {
+        "selector": ".section",
+        "index": 0,
+        "properties": {
+          "display": "block",
+          "gridTemplateColumns": "1fr 1.4fr",
+          "columnGap": "19.5px",
+          "rowGap": "19.5px",
+          "paddingTop": "45px",
+          "paddingRight": "22px",
+          "paddingBottom": "75px",
+          "paddingLeft": "22px",
+          "marginTop": "0px",
+          "marginRight": "0px",
+          "marginBottom": "0px",
+          "marginLeft": "0px",
+          "flexDirection": "row",
+          "order": "0"
+        }
+      },
+      {
+        "selector": ".contact-grid",
+        "index": 0,
+        "properties": {
+          "display": "block",
+          "gridTemplateColumns": "1fr 1.4fr",
+          "columnGap": "19.5px",
+          "rowGap": "19.5px",
+          "paddingTop": "45px",
+          "paddingRight": "22px",
+          "paddingBottom": "75px",
+          "paddingLeft": "22px",
+          "marginTop": "0px",
+          "marginRight": "0px",
+          "marginBottom": "0px",
+          "marginLeft": "0px",
+          "flexDirection": "row",
+          "order": "0"
+        }
+      },
+      {
+        "selector": ".form-grid",
+        "index": 0,
+        "properties": {
+          "display": "grid",
+          "gridTemplateColumns": "346px",
+          "columnGap": "20px",
+          "rowGap": "20px",
+          "paddingTop": "0px",
+          "paddingRight": "0px",
+          "paddingBottom": "0px",
+          "paddingLeft": "0px",
+          "marginTop": "0px",
+          "marginRight": "0px",
+          "marginBottom": "0px",
+          "marginLeft": "0px",
+          "flexDirection": "row",
+          "order": "0"
+        }
+      }
+    ]
+  },
+  "/contact/@320": {
+    "markup": "<section class=\"page-intro\"><p class=\"eyebrow\">Premier échange</p><h1>Parlons de<br><em>votre projet.</em></h1><p class=\"page-lead\">Indiquez votre activité, ce que vous souhaitez créer ou modifier et, si vous en avez un, le lien de votre site actuel.</p></section><section class=\"section contact-grid\"><aside><p class=\"eyebrow\">Et ensuite ?</p><h2>Un premier<br>échange.</h2><p>Nous vous répondrons pour préciser les pages et les fonctionnalités utiles à votre projet, puis définir les prochaines étapes avec vous.</p></aside><div><div class=\"form-notice\"><strong>Le formulaire n’est pas encore ouvert.</strong><p>Le service de messagerie et les informations de contact sont en cours de configuration. Aucun message ne peut être transmis pour le moment.</p></div><form id=\"project-form\"><p class=\"form-required\">Les champs marqués d’un * sont obligatoires pour préparer votre brouillon.</p><div class=\"form-grid\"><div class=\"field\"><label for=\"name\">Votre nom *</label><input id=\"name\" name=\"name\" autocomplete=\"name\" maxlength=\"100\" placeholder=\"Prénom et nom\" required=\"\"></div><div class=\"field\"><label for=\"email\">Votre e-mail *</label><input id=\"email\" name=\"email\" type=\"email\" autocomplete=\"email\" maxlength=\"254\" placeholder=\"vous@exemple.ch\" required=\"\"></div><div class=\"field field-full\"><label for=\"company\">Entreprise <span>facultatif</span></label><input id=\"company\" name=\"company\" autocomplete=\"organization\" maxlength=\"160\" placeholder=\"Le nom de votre activité\"></div><div class=\"field\"><label for=\"projectType\">Votre projet <span>facultatif</span></label><select id=\"projectType\" name=\"projectType\"><option>À définir</option><option>Création de site</option><option>Refonte de site</option><option>Sponsor</option><option>Autre projet</option></select></div><div class=\"field\"><label for=\"budget\">Budget envisagé <span>facultatif</span></label><select id=\"budget\" name=\"budget\"><option>À définir</option><option>Moins de 1 000 CHF</option><option>1 000 à 3 000 CHF</option><option>3 000 à 5 000 CHF</option><option>Plus de 5 000 CHF</option></select></div><div class=\"field field-full\"><label for=\"message\">Votre message *</label><textarea id=\"message\" name=\"message\" required=\"\" minlength=\"10\" maxlength=\"5000\" rows=\"6\" placeholder=\"Votre activité, vos envies, ce que vous aimeriez faire évoluer…\"></textarea><span class=\"field-hint\">10 caractères minimum.</span></div></div><p class=\"form-required\">Votre saisie reste dans cette page. Aucun message n’est envoyé et aucune donnée n’est enregistrée.</p><button class=\"button\" type=\"submit\">Copier mon brouillon <span aria-hidden=\"true\">↗</span></button><p id=\"form-feedback\" role=\"status\" aria-live=\"polite\"></p><div id=\"draft-fallback\" hidden=\"\"><label for=\"draft-text\">Copiez ce brouillon avec votre clavier</label><textarea id=\"draft-text\" readonly=\"\" rows=\"8\"></textarea></div><noscript><p>JavaScript est nécessaire pour copier le brouillon. Aucun envoi n’est possible.</p></noscript></form></div></section>",
+    "elements": [
+      {
+        "selector": ".page-intro",
+        "index": 0,
+        "properties": {
+          "display": "block",
+          "gridTemplateColumns": "none",
+          "columnGap": "normal",
+          "rowGap": "normal",
+          "paddingTop": "140px",
+          "paddingRight": "22px",
+          "paddingBottom": "55px",
+          "paddingLeft": "22px",
+          "marginTop": "0px",
+          "marginRight": "0px",
+          "marginBottom": "0px",
+          "marginLeft": "0px",
+          "flexDirection": "row",
+          "order": "0"
+        }
+      },
+      {
+        "selector": ".section",
+        "index": 0,
+        "properties": {
+          "display": "block",
+          "gridTemplateColumns": "1fr 1.4fr",
+          "columnGap": "16px",
+          "rowGap": "16px",
+          "paddingTop": "45px",
+          "paddingRight": "22px",
+          "paddingBottom": "75px",
+          "paddingLeft": "22px",
+          "marginTop": "0px",
+          "marginRight": "0px",
+          "marginBottom": "0px",
+          "marginLeft": "0px",
+          "flexDirection": "row",
+          "order": "0"
+        }
+      },
+      {
+        "selector": ".contact-grid",
+        "index": 0,
+        "properties": {
+          "display": "block",
+          "gridTemplateColumns": "1fr 1.4fr",
+          "columnGap": "16px",
+          "rowGap": "16px",
+          "paddingTop": "45px",
+          "paddingRight": "22px",
+          "paddingBottom": "75px",
+          "paddingLeft": "22px",
+          "marginTop": "0px",
+          "marginRight": "0px",
+          "marginBottom": "0px",
+          "marginLeft": "0px",
+          "flexDirection": "row",
+          "order": "0"
+        }
+      },
+      {
+        "selector": ".form-grid",
+        "index": 0,
+        "properties": {
+          "display": "grid",
+          "gridTemplateColumns": "276px",
+          "columnGap": "20px",
+          "rowGap": "20px",
+          "paddingTop": "0px",
+          "paddingRight": "0px",
+          "paddingBottom": "0px",
+          "paddingLeft": "0px",
+          "marginTop": "0px",
+          "marginRight": "0px",
+          "marginBottom": "0px",
+          "marginLeft": "0px",
+          "flexDirection": "row",
+          "order": "0"
+        }
+      }
+    ]
+  }
+}

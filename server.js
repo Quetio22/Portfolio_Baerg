@@ -19,7 +19,7 @@ const server = http.createServer(async (req, res) => {
     const pathname = decodeURIComponent(new URL(req.url, 'http://localhost').pathname);
     if (pathname.split('/').some(part => part.startsWith('.'))) { res.writeHead(403); res.end(); return; }
     const entry = pathname.split('/')[1];
-    const allowed = new Set(['', 'index.html', 'common.css', 'fusion.css', 'app.js', 'motion.js', 'assets', 'demos', 'pages.css', 'a-propos', 'realisations', 'offres', 'contact']);
+    const allowed = new Set(['', 'index.html', 'common.css', 'fusion.css', 'app.js', 'motion.js', 'assets', 'demos', 'pages.css', 'theme.css', 'home.css', 'a-propos', 'realisations', 'offres', 'contact']);
     if (!allowed.has(entry)) { res.writeHead(404); res.end(); return; }
     let file = path.resolve(root, '.' + pathname);
     if (file !== path.resolve(root) && !file.startsWith(root)) { res.writeHead(403); res.end(); return; }

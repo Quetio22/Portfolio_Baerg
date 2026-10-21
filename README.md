@@ -1,30 +1,33 @@
-# Baerg Design — 08A Fusion
+# Baerg Design — Empreinte × Signal
 
-Le site 08A est directement à la racine de `Portfolio_Baerg`, sur la branche `dev_q`.
+Site multipage dans `Portfolio_Baerg`, sur la branche `dev_q`. L’accueil reprend la direction Empreinte du Design Lab, avec une atmosphère orange vif, fidèle à la référence Altrix, avec des sections crème. Les autres pages conservent leurs contenus et leurs compositions ; leur palette et leur traitement typographique sont harmonisés.
 
 ## Démarrer
 
-Node.js 22.9 ou supérieur. Aucune dépendance à installer.
+Node.js 22.9 ou supérieur. Aucune dépendance à installer pour le site.
 
 ```sh
 npm run dev
 ```
 
-Ouvrir l’adresse affichée dans le terminal : http://127.0.0.1:4612 par défaut. Si ce port est occupé, `npm run dev` choisit automatiquement le prochain port libre. Modifier les fichiers, puis recharger le navigateur. Arrêter le serveur avec `Ctrl+C`.
+Ouvrir l’adresse affichée dans le terminal : http://127.0.0.1:4612 par défaut. Le mode développement choisit le prochain port libre si nécessaire. Recharger le navigateur après une modification. Arrêter avec `Ctrl+C`.
 
-`npm start` lance le serveur sans surveillance, sur le port fixe 4612. Pour imposer un autre port : `PORT=4613 npm run dev`. Un port explicitement demandé reste fixe et affiche un message clair s’il est occupé.
+`npm start` utilise le port fixe 4612. Pour choisir un port : `PORT=4613 npm run dev`.
 
 ## Modifier le site
 
-- `index.html` : Accueil et paysage 08A.
-- `a-propos/index.html`, `realisations/index.html`, `offres/index.html`, `contact/index.html` : les quatre autres pages.
-- `pages.css` : styles des pages et des sections communes.
-- `common.css` : styles de base ; `fusion.css` : composition 08A et responsive.
-- `app.js` : menu et dialogues ; `motion.js` : parallaxe et arrêt des mouvements.
-- `assets/` : images, polices et licences.
-- `demos/` : trois maquettes fictives et leurs ressources.
-- `server.js` : aperçu local ; `scripts/build.js` : export statique.
-- `brief.md`, `notes.md`, `captures/`, `provenance/` : historique propre à 08A. Les chemins du Lab cités dans ces archives sont historiques.
+- `index.html` : accueil et contenu de présentation.
+- `home.css` : composition Empreinte de l’accueil et responsive.
+- `theme.css` : couleurs orange/crème, typographie, boutons et champs des cinq pages.
+- `a-propos/`, `realisations/`, `offres/`, `contact/` : pages existantes.
+- `pages.css` : mise en page des sections et des pages intérieures.
+- `common.css`, `fusion.css` : styles de base et styles historiques conservés.
+- `app.js` : menus, navigation au scroll, fenêtres et copie du brouillon de contact.
+- `assets/empreinte-altrix.png` : matière de verre dans la palette Altrix de l’accueil.
+- `assets/` et `demos/` : ressources et trois projets conceptuels.
+- `provenance/empreinte-signal-2026-10-21/` : intentions, provenance du visuel et vérification de la conservation des pages.
+
+La page Offres conserve l’offre Partenaire pilote (900 à 1’500 CHF indicatifs), le sponsoring, la refonte à 3’000 CHF et l’option photo à 800 CHF, avec leurs textes et conditions. Le formulaire prépare un brouillon local ; aucun message n’est envoyé. Les maquettes présentées restent des projets fictifs.
 
 ## Exporter
 
@@ -34,14 +37,14 @@ npm run build
 
 L’export autonome est écrit dans `dist/`. Cette commande ne publie rien.
 
-Le projet est la version `08A-initial` transférée du Lab le 20 octobre 2026, désormais sans dossier intermédiaire. L’ancien site est retiré de cette branche et reste accessible dans l’historique Git. Les visuels de concept art et leur provenance sont conservés. Le contact copie un brouillon sans envoyer de message ; les projets sont fictifs.
+## Vérifier le design
 
-## Contenu des pages
+Avec Playwright et Chrome disponibles :
 
-Les textes reprennent presque intégralement `src/content.js` et les pages de `src/site.js` de la branche `Dev`, commit `629787dd14e5e917d0c20c2a3afd4a395ae76de1`. La page Offres reprend désormais le texte fourni par le studio : refonte à 3’000 CHF (forfait de référence), avec photographies professionnelles en option à 800 CHF. Le périmètre et les livrables sont précisés dans le devis. Le slogan et le paysage de l’accueil restent ceux de 08A. Le formulaire Contact reprend les champs existants et prépare un brouillon local ; la messagerie reste non configurée.
+```sh
+SITE_URL=http://127.0.0.1:4612 node scripts/verify-design.cjs
+```
 
-## Paysage d’accueil
+Le script utilise le relevé de mise en page conservé dans `provenance/empreinte-signal-2026-10-21/layout-before.json`. `PLAYWRIGHT_MODULE` et `CHROME_PATH` permettent de préciser les runtimes ; `CAPTURE_DIR` permet de choisir le dossier des captures.
 
-`assets/fusion-landscape.png` est le paysage continu choisi par le studio : arbres orangés à gauche et fissure dans la montagne à droite. Il remplace la composition initiale en couches séparées. Le paysage entier partage le même cadrage et le même déplacement ; les arbres ne servent plus de fond à une montagne ajoutée. Provenance dans `provenance/fusion-landscape.json`.
-
-La page Offres présente en premier le partenariat de lancement fourni par le studio (prix indicatif de 900 à 1’500 CHF, devis préalable, validation des éléments publiés et témoignage facultatif), puis le sponsoring, avant les offres de référence.
+Les archives de 08A, ses images et leur provenance sont conservées. La nouvelle étude de matière est générée et statique ; sa provenance et son prompt sont documentés.
