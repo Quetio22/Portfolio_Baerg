@@ -4,7 +4,7 @@ Site multipage dans `Portfolio_Baerg`, sur la branche `dev_q`. L’accueil repre
 
 ## Démarrer
 
-Node.js 22.9 ou supérieur. Aucune dépendance à installer pour le site.
+Node.js 22.12 ou supérieur. Aucune dépendance à installer pour le site.
 
 ```sh
 npm run dev
@@ -48,3 +48,7 @@ SITE_URL=http://127.0.0.1:4612 node scripts/verify-design.cjs
 Le script utilise le relevé de mise en page conservé dans `provenance/empreinte-signal-2026-10-21/layout-before.json`. `PLAYWRIGHT_MODULE` et `CHROME_PATH` permettent de préciser les runtimes ; `CAPTURE_DIR` permet de choisir le dossier des captures.
 
 Les archives de 08A, ses images et leur provenance sont conservées. La nouvelle étude de matière est générée et statique ; sa provenance et son prompt sont documentés.
+
+## Expérience Thomas — liquid glass
+
+Sur `dev_t`, les deux actions du hero peuvent être comparées en version originale (`/?glass=original`) ou Liqui Design (`/?glass=liqui`). L’affichage par défaut reste original. Les dépendances de l’essai sont isolées dans `experiments/liquid-glass/` : `npm run setup:glass`, puis `PORT=4613 npm run dev:glass`. Le build général compile et inclut aussi les assets de l’essai dans l’export statique. Détails, compatibilité et vérifications : `experiments/liquid-glass/README.md`.
