@@ -52,3 +52,7 @@ body.inner-page .contact-grid .field input,body.inner-page .contact-grid .field 
 body.inner-page .contact-grid .field input::placeholder,body.inner-page .contact-grid .field textarea::placeholder{color:#74716d;opacity:1}
 body.inner-page .contact-grid .field select option{background:#fbf6ed;color:#282828}
 body.inner-page .contact-grid .field input:focus,body.inner-page .contact-grid .field select:focus,body.inner-page .contact-grid .field textarea:focus{border-color:#cf4710}
+
+/* Footer utility action matches the neighbouring text links. */
+footer .legal-link{font:inherit;color:inherit;background:none;border:0;padding:0;cursor:pointer}
+footer .legal-link:hover{text-decoration:underline;text-underline-offset:4px}

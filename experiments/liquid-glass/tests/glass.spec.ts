@@ -2,7 +2,7 @@ import { test, expect } from "@playwright/test";
 import AxeBuilder from "@axe-core/playwright";
 const routes = ["/", "/a-propos/", "/realisations/", "/offres/", "/contact/"];
 const targets =
-  "a.button, a.text-link, button.button, .menu-toggle, .legal-link, .dialog-close, .duo-select";
+  "a.button, a.text-link, button.button, .menu-toggle, .dialog-close, .duo-select";
 for (const width of [320, 390, 650, 651, 760, 820, 1050, 1440, 1920]) {
   test(`boutons et cartes sur cinq pages à ${width}`, async ({
     page,
@@ -127,6 +127,7 @@ test("menu et fenêtre juridique gardent leur comportement natif", async ({
   await expect(page.locator("#navigation")).toHaveClass(/open/);
   await page.keyboard.press("Escape");
   await expect(menu).toBeFocused();
+  await expect(page.locator("[data-legal]")).not.toHaveClass(/glass-native/);
   await page.locator("[data-legal]").click();
   await expect(page.locator("#legal-dialog")).toBeVisible();
   await expect(page.locator("#legal-dialog .dialog-close")).toHaveClass(

@@ -2,7 +2,7 @@
 // remains available for direct comparison or a lightweight native-only view.
 const actions = [
   ...document.querySelectorAll(
-    "a.button, a.text-link, button.button, .menu-toggle, .legal-link, .dialog-close, .duo-select",
+    "a.button, a.text-link, button.button, .menu-toggle, .dialog-close, .duo-select",
   ),
 ].filter((el) => !el.closest(".home-hero-actions"));
 const nativeMode =
