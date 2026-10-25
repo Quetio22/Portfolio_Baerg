@@ -70,13 +70,9 @@ footer>div>a,footer .legal-link{line-height:1.5}
 @media(max-width:650px){
  .site-header .menu-toggle{display:grid;place-items:center;width:48px;height:48px;padding:12px;border-radius:12px}
  .menu-toggle svg{display:block;overflow:visible}
- .menu-line{transform-origin:12px 12px;transition:transform 220ms ease,opacity 180ms ease}
- .menu-toggle[aria-expanded=true] .menu-line--top{transform:translateY(6px) rotate(45deg);transform-origin:12px 6px}
- .menu-toggle[aria-expanded=true] .menu-line--middle{opacity:0}
- .menu-toggle[aria-expanded=true] .menu-line--bottom{transform:translateY(-6px) rotate(-45deg);transform-origin:12px 18px}
  .site-header #navigation{display:flex;left:auto;right:22px;top:82px;width:min(310px,calc(100vw - 44px));padding:12px;background:#f7efdf;color:#48200f;border:1px solid #ffe7c4;border-radius:16px;box-shadow:0 16px 42px #5b170b38;transform-origin:top right;transform:translateX(16px) scaleX(.94);opacity:0;visibility:hidden;pointer-events:none;transition:transform 240ms cubic-bezier(.2,.7,.2,1),opacity 180ms ease}
  .site-header #navigation.open{transform:translateX(0) scaleX(1);opacity:1;visibility:visible;pointer-events:auto}
  .site-header #navigation a{padding:14px 16px;border-radius:8px;font-size:15px}
  .site-header #navigation a:hover,.site-header #navigation a:focus-visible{background:#e7c8a455}
 }
-@media(prefers-reduced-motion:reduce){.menu-line,.site-header #navigation{transition:none!important}}
+@media(prefers-reduced-motion:reduce){.site-header #navigation{transition:none!important}}

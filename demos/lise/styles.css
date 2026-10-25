@@ -414,7 +414,7 @@ summary > span {
   line-height: 1;
 }
 details[open] summary > span {
-  transform: rotate(45deg);
+  transform: none;
 }
 summary:hover {
   color: var(--iris);

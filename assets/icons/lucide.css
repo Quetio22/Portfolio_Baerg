@@ -1,0 +1,70 @@
+/* Lucide 1.61.0 — official SVG geometry, locally styled; see lucide/LICENSE. */
+svg.site-icon {
+  width: var(--icon-size, 20px);
+  height: var(--icon-size, 20px);
+  display: inline-block;
+  vertical-align: middle;
+  flex-shrink: 0;
+  stroke-width: var(--icon-stroke, 1.7);
+}
+.menu-glyph {
+  display: block;
+  position: relative;
+  width: 24px;
+  height: 24px;
+  --icon-size: 24px;
+}
+.menu-glyph .site-icon {
+  position: absolute;
+  inset: 0;
+  transition:
+    opacity 180ms ease,
+    transform 220ms ease;
+}
+.menu-glyph [data-lucide="x"] {
+  opacity: 0;
+  transform: rotate(-45deg);
+}
+.menu-toggle[aria-expanded="true"] .menu-glyph [data-lucide="menu"] {
+  opacity: 0;
+  transform: rotate(45deg);
+}
+.menu-toggle[aria-expanded="true"] .menu-glyph [data-lucide="x"] {
+  opacity: 1;
+  transform: rotate(0);
+}
+.duo-select .site-icon {
+  display: block;
+  margin: auto;
+  --icon-size: 22px;
+}
+.disclosure-icons {
+  display: grid;
+  place-items: center;
+  --icon-size: 22px;
+}
+.disclosure-icons [data-lucide="minus"] {
+  display: none;
+}
+details[open] .disclosure-icons [data-lucide="plus"] {
+  display: none;
+}
+details[open] .disclosure-icons [data-lucide="minus"] {
+  display: inline-block;
+}
+.gallery-icon {
+  --icon-size: 22px;
+}
+.dialog-close,
+.close {
+  --icon-size: 22px;
+}
+.dialog-close .site-icon,
+.close .site-icon {
+  vertical-align: middle;
+}
+@media (prefers-reduced-motion: reduce) {
+  .menu-glyph .site-icon {
+    transition: none;
+  }
+}

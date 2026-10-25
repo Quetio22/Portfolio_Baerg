@@ -56,3 +56,17 @@ Sur `dev_t`, les boutons et CTA des cinq pages utilisent un verre teinté orange
 La page À propos relie « Notre histoire » et « Nos compétences » par un repère commun et un mouvement réciproque au survol, au focus ou à la sélection. Les contenus restent visibles. Styles et comportement limités à cette section dans `assets/studio-duo.css` et `assets/studio-duo.js`.
 
 Détails, compatibilité et vérifications : `experiments/liquid-glass/README.md`. Intentions et références Taste Vault : `experiments/liquid-glass/STUDIO-DUO.md`.
+
+## Icônes Lucide et aperçu sur téléphone
+
+Les icônes des cinq pages et trois démos sont des SVG Lucide locaux, sans bibliothèque au chargement. Sources, licences et conventions : `assets/icons/README.md`. `npm run icons:sync` synchronise leur géométrie.
+
+Pour un essai sur téléphone physique connecté au même réseau que le Mac :
+
+```sh
+PORT=4614 npm run dev:phone
+```
+
+Ouvrir `http://ADRESSE_LOCALE_DU_MAC:4614/` dans Safari. Ce mode écoute sur le réseau local ; le serveur normal reste limité à cet ordinateur. Arrêter avec Ctrl+C après le test. Ce mode ne publie pas le site sur Internet ; éviter un réseau partagé non fiable. L’aperçu HTTP local peut désactiver le presse-papiers automatique : le formulaire conserve son repli de copie manuelle.
+
+La validation sur un appareil physique reste distincte des contrôles Playwright/WebKit. Tant que le modèle, la version iOS et les observations n’ont pas été relevés, elle doit rester marquée « en attente ».

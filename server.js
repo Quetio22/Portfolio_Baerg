@@ -5,6 +5,7 @@ import { fileURLToPath } from 'node:url';
 
 // Local preview: only runtime files are served.
 const root = fileURLToPath(new URL('./', import.meta.url));
+const hostname = process.argv.includes('--lan') ? '0.0.0.0' : '127.0.0.1';
 const requestedPort = Number(process.env.PORT || 4612);
 if (!Number.isInteger(requestedPort) || requestedPort < 1 || requestedPort > 65535) {
   console.error('PORT doit être un entier compris entre 1 et 65535.');
@@ -36,7 +37,7 @@ server.on('error', (error) => {
   if (error.code === 'EADDRINUSE' && autoPort && port < Math.min(requestedPort + 20, 65535)) {
     console.log(`Port ${port} occupé, essai du port ${port + 1}…`);
     port += 1;
-    server.listen(port, '127.0.0.1');
+    server.listen(port, hostname);
     return;
   }
   console.error(error.code === 'EADDRINUSE'
@@ -46,6 +47,7 @@ server.on('error', (error) => {
 });
 server.on('listening', () => {
   console.log(`Baerg Design — http://127.0.0.1:${port}`);
+  if (hostname === '0.0.0.0') console.log(`Aperçu Wi-Fi actif : ouvrir http://ADRESSE_DU_MAC:${port} sur le téléphone du même réseau.`);
   console.log('Ctrl+C pour arrêter le serveur.');
 });
-server.listen(port, '127.0.0.1');
+server.listen(port, hostname);

@@ -12,6 +12,8 @@
     "build": "npm run build:glass && node scripts/build.js",
     "setup:glass": "npm ci --prefix experiments/liquid-glass",
     "build:glass": "npm run build --prefix experiments/liquid-glass",
-    "dev:glass": "npm run build:glass && npm run dev"
+    "dev:glass": "npm run build:glass && npm run dev",
+    "dev:phone": "node server.js --dev --lan",
+    "icons:sync": "node scripts/sync-icons.js"
   }
 }

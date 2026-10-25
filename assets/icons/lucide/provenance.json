@@ -1,0 +1,20 @@
+{
+  "package": "lucide-static",
+  "version": "1.61.0",
+  "integrity": "sha512-yLAiQB3MWUJEstsEDAwenSA3m7vr1tdLvgnC16Q/XMxRRma0DWwMs8M2bWlvgShrIs1m2mWMJ+0AiahqQO4GrA==",
+  "source": "https://github.com/lucide-icons/lucide",
+  "registry": "https://www.npmjs.com/package/lucide-static",
+  "icons": [
+    "menu",
+    "x",
+    "arrow-up-right",
+    "arrow-right",
+    "arrow-left",
+    "arrow-up",
+    "rotate-ccw",
+    "calendar-days",
+    "plus",
+    "minus"
+  ],
+  "integration": "Official SVG paths inlined at build/edit time; no runtime library; default stroke 1.7 via local CSS."
+}
