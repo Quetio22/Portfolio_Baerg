@@ -1,0 +1,78 @@
+/* Empreinte × Signal. Shared appearance only: page grids and spacing stay in pages.css. */
+body{--bg:#cd410f;--ink:#ffffff;--muted:#fffdf8;--line:rgba(255,244,235,.3);--accent:#ffdbc9;--on-accent:#cd410f;color-scheme:dark;background-color:var(--bg);text-rendering:optimizeLegibility}
+body.inner-page{--bg:#cd410f;--ink:#ffffff;--muted:#fffdf8;--line:rgba(255,244,235,.3);--accent:#ffdbc9;background:linear-gradient(112deg,rgba(195,45,8,.98),rgba(205,65,15,.98)),url('/assets/empreinte-altrix.png') center top/100% auto no-repeat;background-color:#cd410f}
+::selection{background:#f04b0b;color:#232323}
+.site-header{color:var(--ink)}
+/* The top stays clear; the returning header uses a quiet warm glass wash. */
+.site-header{isolation:isolate}
+.site-header::before{content:'';position:absolute;inset:0;z-index:-1;pointer-events:none;opacity:0;background:linear-gradient(110deg,rgba(67,18,15,.72),rgba(101,29,17,.58));transition:opacity 160ms ease-out}
+.site-header.is-scrolled{background:transparent;border-bottom-color:#fff2dd30;backdrop-filter:blur(16px);-webkit-backdrop-filter:blur(16px)}
+.site-header.is-scrolled::before{opacity:calc(var(--header-surface-opacity,1) * .88)}
+@media(prefers-reduced-motion:reduce){.site-header::before{transition:none}}
+.brand{font-weight:750}.brand-studio{color:var(--muted);font-weight:400}
+#navigation a[aria-current="page"]{text-decoration-color:var(--accent)}
+.eyebrow{font-family:ui-monospace,SFMono-Regular,Consolas,monospace;letter-spacing:.055em;color:var(--muted)}
+.eyebrow,.sponsor-offer>.eyebrow{font-size:14px}
+.inner-page h1,.inner-page h2,.home-page .editorial h2,.home-page .home-links h2,.home-page .closing h2{font-weight:600}
+.inner-page .page-intro{background:linear-gradient(115deg,rgba(246,84,9,.12),rgba(239,75,12,.08))}
+.inner-page .page-intro em{color:#fff4e7}
+.inner-page .large-copy,.home-page .large-copy{color:#fff8f1!important}
+.button,.menu-toggle{border-radius:6px}
+.button{background:var(--ink);color:#232323;border-color:var(--ink);font-weight:500;transition:background-color .18s,color .18s,border-color .18s}
+.button:hover{background:#ffe8d4;border-color:#ffe8d4;color:#232323;filter:none}
+.text-link:hover{color:#fff0dc}
+.picture-link{background:var(--ink);color:#232323;border-radius:0}
+.project-picture{background:#dd4a11}
+.inner-page .founder-monogram{color:rgba(255,241,224,.4)}
+.inner-page .launch-offer{background:linear-gradient(110deg,rgba(230,67,8,.12),rgba(255,120,42,.035))}
+.inner-page .offer-price{color:#ffffff;font-weight:600}
+.inner-page .offer-price span,.inner-page .sponsor-offer>.eyebrow{color:#fff0dc}
+.inner-page .offer-copy strong{font-weight:600}
+.closing{background:linear-gradient(112deg,#c32f09,#d14a12);border-color:var(--line)}
+.inner-page .field input,.inner-page .field select,.inner-page .field textarea{background:rgba(172,34,5,.45);border-color:#f6b69a;color:var(--ink);color-scheme:dark}
+.field input::placeholder,.field textarea::placeholder{color:#ffe0cd;opacity:.8}
+.inner-page .field input:focus,.inner-page .field select:focus,.inner-page .field textarea:focus{border-color:#ffffff}
+.inner-page .field select option{background:#c5350a;color:var(--ink)}
+footer{background:#c6380b;border-color:var(--line)}
+.footer-brand{font-weight:650}
+dialog{background:#c33409;border-color:#ffc6ac;color:var(--ink)}
+dialog::backdrop{background:rgba(35,35,35,.8)}
+dialog h2{font-weight:600}
+@media(max-width:650px){nav{background:#c33409;border-color:#ffc6ac}body.inner-page{background-attachment:scroll}}
+@media(prefers-reduced-motion:reduce){.button{transition:none}}
+
+
+/* Cream sections create neutral breaks within the red / vermilion identity. */
+:is(body.home-page .editorial,body.home-page .closing,body.inner-page .founders,body.inner-page .editorial:nth-of-type(4),body.inner-page .portfolio-list,body.inner-page .launch-offer,body.inner-page .contact-grid,body.inner-page:has(.launch-offer) .closing){--bg:#f1eadd;--ink:#282828;--muted:#63605b;--line:rgba(35,35,35,.22);--accent:#cf4710;--on-accent:#f8f0e4;background:#f1eadd;color:var(--ink);color-scheme:light}
+:is(body.home-page .editorial,body.home-page .closing,body.inner-page .founders,body.inner-page .editorial:nth-of-type(4),body.inner-page .portfolio-list,body.inner-page .launch-offer,body.inner-page .contact-grid,body.inner-page:has(.launch-offer) .closing) .large-copy{color:#363636!important}
+:is(body.home-page .editorial,body.home-page .closing,body.inner-page .founders,body.inner-page .editorial:nth-of-type(4),body.inner-page .portfolio-list,body.inner-page .launch-offer,body.inner-page .contact-grid,body.inner-page:has(.launch-offer) .closing) .button{background:#cf4710;color:#ffffff;border-color:#cf4710}
+:is(body.home-page .editorial,body.home-page .closing,body.inner-page .founders,body.inner-page .editorial:nth-of-type(4),body.inner-page .portfolio-list,body.inner-page .launch-offer,body.inner-page .contact-grid,body.inner-page:has(.launch-offer) .closing) .button:hover{background:#b73008;border-color:#b73008;color:#ffffff}
+:is(body.home-page .editorial,body.home-page .closing,body.inner-page .founders,body.inner-page .editorial:nth-of-type(4),body.inner-page .portfolio-list,body.inner-page .launch-offer,body.inner-page .contact-grid,body.inner-page:has(.launch-offer) .closing) .text-link:hover{color:#c43e0d}
+:is(body.home-page .editorial,body.home-page .closing,body.inner-page .founders,body.inner-page .editorial:nth-of-type(4),body.inner-page .portfolio-list,body.inner-page .launch-offer,body.inner-page .contact-grid,body.inner-page:has(.launch-offer) .closing) .picture-link{background:#cf4710;color:#ffffff}
+:is(body.home-page .editorial,body.home-page .closing,body.inner-page .founders,body.inner-page .editorial:nth-of-type(4),body.inner-page .portfolio-list,body.inner-page .launch-offer,body.inner-page .contact-grid,body.inner-page:has(.launch-offer) .closing) .project-picture{background:#e5dccd}
+body.inner-page .founders .founder-monogram{color:#d14a12}
+body.inner-page .launch-offer .offer-price{color:#282828}
+body.inner-page .launch-offer .offer-price span,body.inner-page .launch-offer .sponsor-offer>.eyebrow{color:#cf4710}
+body.inner-page .contact-grid .field input,body.inner-page .contact-grid .field select,body.inner-page .contact-grid .field textarea{background:#fbf6ed;border-color:#bbb2a6;color:#282828;color-scheme:light}
+body.inner-page .contact-grid .field input::placeholder,body.inner-page .contact-grid .field textarea::placeholder{color:#74716d;opacity:1}
+body.inner-page .contact-grid .field select option{background:#fbf6ed;color:#282828}
+body.inner-page .contact-grid .field input:focus,body.inner-page .contact-grid .field select:focus,body.inner-page .contact-grid .field textarea:focus{border-color:#cf4710}
+
+/* Footer utility action matches the neighbouring text links. */
+footer .legal-link{font:inherit;color:inherit;background:none;border:0;padding:0;cursor:pointer}
+footer .legal-link:hover{text-decoration:underline;text-underline-offset:4px}
+
+footer>div{align-items:baseline}
+footer>div>a,footer .legal-link{line-height:1.5}
+@media(max-width:650px){footer>div{align-items:flex-start}}
+
+/* Compact mobile navigation opens leftwards from the header control. */
+@media(max-width:650px){
+ .site-header .menu-toggle{display:grid;place-items:center;width:48px;height:48px;padding:12px;border-radius:12px}
+ .menu-toggle svg{display:block;overflow:visible}
+ .site-header #navigation{display:flex;left:auto;right:22px;top:82px;width:min(310px,calc(100vw - 44px));padding:12px;background:#f7efdf;color:#48200f;border:1px solid #ffe7c4;border-radius:16px;box-shadow:0 16px 42px #5b170b38;transform-origin:top right;transform:translateX(16px) scaleX(.94);opacity:0;visibility:hidden;pointer-events:none;transition:transform 240ms cubic-bezier(.2,.7,.2,1),opacity 180ms ease}
+ .site-header #navigation.open{transform:translateX(0) scaleX(1);opacity:1;visibility:visible;pointer-events:auto}
+ .site-header #navigation a{padding:14px 16px;border-radius:8px;font-size:15px}
+ .site-header #navigation a:hover,.site-header #navigation a:focus-visible{background:#e7c8a455}
+}
+@media(prefers-reduced-motion:reduce){.site-header #navigation{transition:none!important}}

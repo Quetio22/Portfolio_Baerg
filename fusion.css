@@ -1,0 +1,19 @@
+/* One continuous landscape: trees and mountain always share the same plane. */
+.v08A{--bg:#07090a;--ink:#f5f5f1;--muted:#b5b8b7;--line:#303638;--accent:#ff8c49}
+.v08A .hero{min-height:900px;height:100svh;max-height:1150px;isolation:isolate;padding-top:170px}
+.v08A .hero h1{font-size:clamp(76px,8.8vw,144px);font-weight:700;line-height:1.02;letter-spacing:-.035em;margin-top:95px;width:49%;text-shadow:0 3px 40px #05070866}
+.v08A .hero h1 span{letter-spacing:inherit}
+.landscape{position:absolute;inset:0;z-index:-1;pointer-events:none;overflow:hidden}
+.scene-plane{position:absolute;inset:-12px;transform:translate3d(var(--scene-x,0px),var(--scene-y,0px),0)}
+.scene-plane img{width:100%;height:100%;object-fit:cover;object-position:55% 50%}
+.fissure-light{position:absolute;inset:0;mix-blend-mode:screen;opacity:.04;animation:fissure-breathe 6s ease-in-out infinite alternate;mask-image:linear-gradient(140deg,transparent 30%,#000 53%,transparent 80%)}
+.atmosphere{position:absolute;inset:0;background:linear-gradient(90deg,#07090a55,transparent 57%),linear-gradient(#07090ae6,transparent 24%,transparent 71%,#07090a 98%)}
+.v08A .hero-bottom{bottom:64px;align-items:end}.v08A .hero-intro{max-width:365px}.v08A .hero-actions .button{border-color:#d4d8d4}.v08A .text-link:hover{color:#ffac77}
+.v08A .art-label{color:#8e9696}.v08A .section-number{color:#bdc3c0}.v08A .contact{background:radial-gradient(ellipse at 100% 100%,#4d25151f,transparent 65%),#0b0e0f}
+@keyframes fissure-breathe{to{opacity:.14}}
+.motion-off .fissure-light{animation:none;opacity:.06}
+.motion-off .scene-plane{transform:none}
+@media(min-width:651px) and (max-width:1050px){.v08A .hero{min-height:940px}.v08A .hero h1{font-size:9.5vw;margin-top:110px}.v08A .hero-bottom{gap:28px}.scene-plane img{object-position:60% 50%}}
+@media(max-width:650px){.v08A .hero{height:auto;max-height:none;padding-top:145px;padding-bottom:28px}.v08A .hero h1{font-size:16vw!important;line-height:1.01;margin-top:43px!important;width:100%!important}.landscape{bottom:auto;height:710px}.scene-plane{top:220px;bottom:auto;left:-36%;right:-12%;height:440px;mask-image:linear-gradient(transparent,#000 19%,#000 78%,transparent)}.scene-plane img{object-position:60% 50%}.atmosphere{background:linear-gradient(#07090a 9%,transparent 45%,transparent 79%,#07090a 96%)}.v08A .hero-bottom{margin-top:340px!important}.v08A .hero-intro{max-width:420px!important}.v08A .art-label{margin-top:30px}.v08A .hero-actions{gap:22px}.v08A .hero-actions .text-link{padding-block:5px}}
+@media(max-width:350px){.scene-plane{top:205px;height:410px}.v08A .hero-bottom{margin-top:320px!important}.landscape{height:665px}}
+@media(prefers-reduced-motion:reduce){.fissure-light{animation:none!important;opacity:.06}.scene-plane{transform:none!important}}

@@ -1,0 +1,144 @@
+/* Material is namespaced; no Tailwind reset, no site-wide token override. */
+@layer theme,base,components,utilities;
+@import "tailwindcss/theme.css" layer(theme) prefix(lgx);
+@import "tailwindcss/utilities.css" layer(utilities) prefix(lgx);
+.glass-shell {
+  --lq-text: var(--glass-ink);
+  --lq-tint: rgba(255, 245, 222, 0.78);
+  --lq-tint-deep: rgba(246, 213, 170, 0.9);
+  --lq-rim-hi: rgba(255, 251, 238, 0.92);
+  --lq-rim-lo: rgba(255, 177, 116, 0.62);
+  position: relative;
+  display: inline-grid;
+  max-width: 100%;
+  vertical-align: middle;
+  isolation: isolate;
+  justify-self: start;
+}
+.glass-shell--orange {
+  --lq-tint: rgba(193, 47, 7, 0.94);
+  --lq-tint-deep: rgba(160, 32, 5, 0.9);
+  --lq-rim-hi: rgba(255, 244, 218, 0.98);
+  --lq-rim-lo: rgba(255, 143, 69, 0.72);
+}
+.glass-shell--clear {
+  --lq-tint: rgba(154, 29, 7, 0.68);
+  --lq-tint-deep: rgba(118, 18, 6, 0.56);
+}
+.glass-underlay {
+  position: absolute;
+  pointer-events: none;
+  z-index: 0;
+  max-width: 100%;
+  max-height: 100%;
+}
+.glass-skin {
+  width: 100%;
+  height: 100%;
+  box-shadow:
+    0 5px 16px #7a21081c,
+    inset 0 0 0 1px #ffe0b966;
+}
+.glass-native {
+  position: relative;
+  z-index: 1;
+  background: transparent !important;
+  border-color: transparent !important;
+  color: var(--glass-ink) !important;
+  box-shadow: none !important;
+  filter: none !important;
+}
+.glass-native:hover {
+  background: transparent !important;
+}
+.glass-native:focus-visible {
+  outline: 2px solid var(--ink);
+  outline-offset: 4px;
+}
+.glass-shell:has(.glass-native:hover) .liqui-glass__shine {
+  box-shadow:
+    inset 0 1px 1px #fff6df,
+    inset 1px 0 0 #ffedce99,
+    inset -1px -1px 0 #ff9b6380;
+}
+.glass-shell:has(:disabled) {
+  opacity: 0.55;
+}
+.glass-shell[data-kind="menu"] {
+  display: none;
+}
+.glass-native.legal-link {
+  padding: 10px 13px;
+  min-height: 44px;
+  line-height: 1.4;
+}
+.glass-shell[data-kind="close"] {
+  position: absolute;
+  top: 12px;
+  right: 16px;
+  width: 44px;
+  height: 44px;
+}
+.glass-native.dialog-close {
+  position: relative;
+  inset: auto;
+  display: grid;
+  place-items: center;
+  width: 44px;
+  height: 44px;
+  padding: 0;
+  line-height: 1;
+}
+.glass-shell[data-kind="close"] .glass-underlay {
+  inset: 0;
+}
+@media (max-width: 650px) {
+  .glass-shell[data-kind="menu"] {
+    display: inline-grid;
+  }
+}
+@media (prefers-reduced-motion: reduce) {
+  .glass-shell .liqui-glass__refract--fade,
+  .glass-shell .liqui-glass__specular--fade {
+    animation: none;
+  }
+}
+@media (forced-colors: active) {
+  .glass-underlay {
+    display: none;
+  }
+  .glass-native {
+    color: ButtonText !important;
+    border-color: ButtonText !important;
+    background: ButtonFace !important;
+  }
+}
+
+.glass-native.text-link {
+  min-height: 48px;
+  padding: 12px 16px;
+}
+.glass-shell:has([aria-pressed="true"]) .glass-skin {
+  outline: 2px solid var(--ink);
+  outline-offset: 3px;
+}
+
+/* A bright lip and a shaded inner edge give the surface visible thickness. */
+.glass-shell .glass-skin {
+  box-shadow:
+    0 6px 12px #72230b2b,
+    inset 0 0 0 1px #7c2c164d,
+    inset 0 2px 0 #fff8e8,
+    inset 2px 0 1px #ffe6c7d9,
+    inset 0 -2px 0 #ffdcaaeb,
+    inset -2px 0 1px #6b250d80;
+}
+.glass-shell .liqui-glass__shine {
+  box-shadow:
+    inset 0 1px 2px #fff9e9,
+    inset 0 7px 10px #5b190b33,
+    inset 0 -5px 8px #fff0cd33;
+}
+
+/* Keep the tint independent of blur density: clear glass need not lose its hue. */
+.glass-shell .liqui-glass__tint { opacity: .96 !important; }

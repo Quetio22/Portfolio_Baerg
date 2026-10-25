@@ -1,0 +1,99 @@
+const menu = document.querySelector('.menu-toggle');
+const nav = document.querySelector('#navigation');
+const setMenu = open => {
+  menu.setAttribute('aria-expanded', String(open));
+  menu.setAttribute('aria-label', open ? 'Fermer le menu' : 'Ouvrir le menu');
+  nav.classList.toggle('open', open);
+};
+const closeMenu = () => setMenu(false);
+menu.addEventListener('click', event => {
+  const open = menu.getAttribute('aria-expanded') !== 'true';
+  setMenu(open);
+  if (open && event.detail === 0) requestAnimationFrame(() => {
+    if (menu.getAttribute('aria-expanded') === 'true') {
+      nav.querySelector('a').focus();
+    }
+  });
+});
+nav.querySelectorAll('a').forEach(a => a.addEventListener('click', closeMenu));
+document.addEventListener('keydown', e => {
+  if (e.key === 'Escape' && nav.classList.contains('open')) { closeMenu(); menu.focus(); }
+});
+document.addEventListener('click', e => {
+  if (!menu.contains(e.target) && !nav.contains(e.target)) closeMenu();
+});
+const desktopNavigation = matchMedia('(min-width:651px)');
+desktopNavigation.addEventListener('change', () => {
+  if (nav.contains(document.activeElement) && !desktopNavigation.matches) menu.focus();
+  closeMenu();
+});
+const legal = document.querySelector('#legal-dialog');
+document.querySelector('[data-legal]')?.addEventListener('click', () => legal.showModal());
+document.querySelectorAll('dialog').forEach(d => {
+  d.querySelector('.dialog-close').addEventListener('click', () => d.close());
+  d.addEventListener('click', e => {
+    if (e.target !== d) return;
+    const r = d.getBoundingClientRect();
+    if (e.clientX < r.left || e.clientX > r.right || e.clientY < r.top || e.clientY > r.bottom) d.close();
+  });
+});
+const motion = document.querySelector('.motion-control');
+motion?.addEventListener('click', () => {
+  const off = document.body.classList.toggle('motion-off');
+  motion.setAttribute('aria-pressed', String(off)); motion.textContent = off ? 'Mouvement : arrêté' : 'Mouvement : actif';
+});
+const form = document.querySelector('#project-form');
+if (form) {
+  form.querySelector('button[type=submit]').disabled = false;
+  const selected = { creation: 'Création de site', refonte: 'Refonte de site', autre: 'Autre projet', sponsor: 'Sponsor' }[new URLSearchParams(location.search).get('projet')];
+  if (selected) form.elements.projectType.value = selected;
+  if (new URLSearchParams(location.search).get('option') === 'photographies') {
+    form.elements.message.value = 'Je souhaite une refonte de mon site avec l’option de photographies professionnelles.';
+  }
+  form.addEventListener('submit', async e => {
+    e.preventDefault();
+    const values = new FormData(form);
+    const draft = [['Nom', 'name'], ['E-mail', 'email'], ['Entreprise', 'company'], ['Projet', 'projectType'], ['Budget', 'budget'], ['Message', 'message']].map(([label, key]) => `${label} : ${values.get(key) || 'Non précisé'}`).join('\n\n');
+    const status = document.querySelector('#form-feedback');
+    try {
+      await navigator.clipboard.writeText(draft);
+      document.querySelector('#draft-fallback').hidden = true;
+      status.textContent = 'Brouillon copié. Aucun message envoyé.';
+    } catch {
+      document.querySelector('#draft-fallback').hidden = false;
+      const text = document.querySelector('#draft-text'); text.value = draft; text.focus(); text.select();
+      status.textContent = 'Copiez le brouillon ci-dessous avec votre clavier. Aucun message envoyé.';
+    }
+  });
+}
+
+// Reveal the navigation on the first upward scroll, without a large threshold.
+const header = document.querySelector('.site-header');
+if (header) {
+  let previousY = Math.max(0, window.scrollY);
+  let frame = 0;
+  let hasLeftTop = false;
+  const updateHeader = () => {
+    frame = 0;
+    const maximum = Math.max(0, document.documentElement.scrollHeight - innerHeight);
+    const y = Math.min(maximum, Math.max(0, window.scrollY));
+    const keyboardFocus = header.contains(document.activeElement) && document.activeElement.matches(':focus-visible');
+    if (y > header.offsetHeight) hasLeftTop = true;
+    if (y === 0) hasLeftTop = false;
+    header.classList.toggle('is-scrolled', hasLeftTop);
+    header.style.setProperty('--header-surface-opacity', String(Math.min(1, y / header.offsetHeight)));
+    if (y <= header.offsetHeight || y < previousY || nav.classList.contains('open') || keyboardFocus) {
+      header.classList.remove('is-hidden');
+    } else if (y > previousY) {
+      header.classList.add('is-hidden');
+    }
+    previousY = y;
+  };
+  window.addEventListener('scroll', () => {
+    if (!frame) frame = requestAnimationFrame(updateHeader);
+  }, { passive: true });
+  header.addEventListener('focusin', () => header.classList.remove('is-hidden'));
+  window.addEventListener('resize', updateHeader);
+  window.addEventListener('pageshow', updateHeader);
+  updateHeader();
+}

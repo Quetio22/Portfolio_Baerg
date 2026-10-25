@@ -1,0 +1,36 @@
+{
+  "sizes": [
+    {
+      "width": 1440,
+      "overflow": false,
+      "dialogs": true,
+      "menu": true
+    },
+    {
+      "width": 820,
+      "overflow": false,
+      "dialogs": true,
+      "menu": true
+    },
+    {
+      "width": 390,
+      "overflow": false,
+      "dialogs": true,
+      "menu": true
+    },
+    {
+      "width": 320,
+      "overflow": false,
+      "dialogs": true,
+      "menu": true
+    }
+  ],
+  "errors": [],
+  "originalsUnchanged": true,
+  "motion": true,
+  "demoReturns": true,
+  "layout": "08A à la racine",
+  "build": "passed",
+  "exportLocalLinks": 51,
+  "runtimeFilesUnchanged": true
+}

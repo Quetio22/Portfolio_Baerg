@@ -1,121 +1,72 @@
-# Baerg Design
+# Baerg Design — Empreinte × Signal
 
-Site vitrine en français : Accueil, À propos, Réalisations, Contact, mentions légales, confidentialité et page 404. HTML rendu côté serveur, CSS et JavaScript natif, Node.js sans dépendance d’exécution. Aucun compte, base de données, cookie ou outil de tracking.
+Site multipage dans `Portfolio_Baerg`, sur la branche `dev_q`. L’accueil reprend la direction Empreinte du Design Lab, avec une atmosphère orange vif, fidèle à la référence Altrix, avec des sections crème. Les autres pages conservent leurs contenus et leurs compositions ; leur palette et leur traitement typographique sont harmonisés.
 
 ## Démarrer
 
-Node.js **22.9 ou supérieur**.
+Node.js 22.12 ou supérieur. Aucune dépendance à installer pour le site.
 
 ```sh
-npm ci
-cp .env.example .env
 npm run dev
 ```
 
-Ouvrir **http://127.0.0.1:3000**. Les modifications des modules redémarrent le serveur ; recharger le navigateur après une modification. `npm start` lance le serveur sans surveillance. `PORT` et `HOST` sont configurables. Un environnement qui interdit les serveurs locaux nécessite d’autoriser l’ouverture du port.
+Ouvrir l’adresse affichée dans le terminal : http://127.0.0.1:4612 par défaut. Le mode développement choisit le prochain port libre si nécessaire. Recharger le navigateur après une modification. Arrêter avec `Ctrl+C`.
 
-```sh
-npm run build          # Export HTML dans dist/
-npm test               # Validation et serveur ; messagerie simulée
-npx playwright install chromium webkit
-npm run test:browser   # Navigation, responsive, accessibilité et formulaire
-npm run format:check
-```
-
-Les outils de test et de formatage sont uniquement des dépendances de développement. L’exécution du site ne nécessite aucun paquet npm.
+`npm start` utilise le port fixe 4612. Pour choisir un port : `PORT=4613 npm run dev`.
 
 ## Modifier le site
 
-- `src/content.js` : identité, navigation, services, méthode, options du formulaire, projets et informations légales.
-- `src/site.js` : composants partagés, contenus propres aux pages et métadonnées.
-- `public/styles.css` : palette, typographie, grille et responsive.
-- `src/assets.js` : URLs des styles, scripts, favicon et image de partage versionnées selon leur contenu, pour éviter l’affichage d’anciennes ressources en cache.
-- `public/app.js` : menu accessible et états du formulaire.
-- `public/theme.js` : restauration du thème avant l’affichage de la page.
-- `src/contact.js` : validation, limitation et appel au service de messagerie.
-- `server.js` : routes HTTP, ressources, en-têtes de sécurité, robots et sitemap.
-- `scripts/build.js` : export des pages et contrôle des projets publiés.
+- `index.html` : accueil et contenu de présentation.
+- `home.css` : composition Empreinte de l’accueil et responsive.
+- `theme.css` : couleurs orange/crème, typographie, boutons et champs des cinq pages.
+- `a-propos/`, `realisations/`, `offres/`, `contact/` : pages existantes.
+- `pages.css` : mise en page des sections et des pages intérieures.
+- `common.css`, `fusion.css` : styles de base et styles historiques conservés.
+- `app.js` : menus, navigation au scroll, fenêtres et copie du brouillon de contact.
+- `assets/empreinte-altrix.png` : matière de verre dans la palette Altrix de l’accueil.
+- `assets/` et `demos/` : ressources et trois projets conceptuels.
+- `provenance/empreinte-signal-2026-10-21/` : intentions, provenance du visuel et vérification de la conservation des pages.
 
-Le visuel de l’accueil superpose les captures des pages Lise et Midi & Compagnie, avec un lien vers chaque maquette. Ces projets sont identifiés comme des concepts non commandés. Les coordonnées, liens professionnels, technologies spécifiques et projets absents du brief n’ont pas été inventés. La page À propos présente Quentin et Thomas sans portrait, dans deux espaces éditoriaux consacrés à leur rôle commun au sein du studio.
+La page Offres conserve l’offre Partenaire pilote (900 à 1’500 CHF indicatifs), le sponsoring, la refonte à 3’000 CHF et l’option photo à 800 CHF, avec leurs textes et conditions. Le formulaire prépare un brouillon local ; aucun message n’est envoyé. Les maquettes présentées restent des projets fictifs.
 
-## Présenter les deux fondateurs
+## Exporter
 
-Les profils sont centralisés dans `founders`, dans `src/content.js`. Chaque entrée contient le prénom, le rôle partagé, une courte présentation et, si nécessaire plus tard, un lien professionnel réel dans `profileUrl`. La mise en page ne dépend d’aucune photographie et s’adapte au mobile.
-
-La palette est centralisée dans les variables `:root` de `public/styles.css` : blanc `#FFFFFF`, encre `#292A30`, paragraphes `#50515A`, accent bleu `#4059D8` et annotation abricot `#F0B89A`. Le bleu est réservé aux actions et repères choisis, ainsi qu’à la feuille de marque ; les grandes surfaces restent neutres. Le pied de page utilise l’encre. Le visuel d’accueil utilise les captures locales de Lise et Midi & Compagnie dans un cadre dont les dimensions sont conservées à chaque breakpoint. Le logo Pinyon Script et les grands titres Cormorant sont conservés ; les titres de services utilisent DM Sans. Les paragraphes restent à 16–17 px, les repères principaux et la légende du concept à 12 px. Les couleurs fonctionnelles ont leurs propres variables. Le générateur de l’image de partage réutilise la composition `studioArt()` et les styles du site ; la régénérer avec `npm run assets:share` après modification. Le favicon SVG est bleu.
-
-Un simple rechargement suffit après une modification : les ressources principales changent d’URL lorsque leur contenu change. Le serveur demande également leur revalidation (`Cache-Control: public, no-cache`) et renvoie une réponse légère `304` lorsqu’elles sont inchangées. Cette protection remplace l’ancienne conservation d’une heure, qui pouvait masquer une nouvelle palette. L’export `dist/` contient aussi les URLs versionnées ; le reconstruire avant de le mettre à jour sur un hébergement statique.
-
-## Mode sombre
-
-Le bouton lune/soleil à droite de l’en-tête permet de basculer entre les deux thèmes sur toutes les pages, y compris sur téléphone. Le mode clair reste le choix initial. Le mode sombre utilise un fond charbon `#1C1D22`, des sections `#25262D` et des textes clairs. Les boutons bleus, les accents abricot et les couleurs des captures de l’accueil sont conservés ; les petits repères bleus et les couleurs fonctionnelles sont adaptés pour rester lisibles.
-
-La palette sombre est centralisée dans `:root[data-theme='dark']` dans `public/styles.css`. Le choix `light` ou `dark` est conservé localement sous la clé `baerg-theme`, restauré par `public/theme.js` avant l’affichage du contenu et synchronisé entre les onglets. Ce petit script s’exécute après la feuille de style, dans l’en-tête du document, pour assurer le bon rendu des champs natifs dans WebKit. Si le stockage est bloqué, le bouton fonctionne pour la page en cours. Sans JavaScript, il est masqué et le thème clair reste utilisable.
-
-## Ajouter une réalisation
-
-Ajouter un objet dans `projects` dans `src/content.js`. Tous les champs de l’exemple ci-dessous sont des indications de saisie, **pas un projet à publier tel quel** :
-
-```js
-{
-  published: false, // Passer à true après vérification et autorisation de publication.
-  name: 'Nom réel du projet',
-  nature: 'Personnel', // Client | Personnel | Scolaire | Concept non commandé
-  image: '/images/nom-du-projet.webp',
-  imageAlt: 'Description utile de la capture réelle',
-  width: 1600,
-  height: 1200,
-  problem: 'Le besoin réel auquel répond le projet.',
-  solution: 'Les choix effectivement réalisés.',
-  technologies: [], // Uniquement les technologies effectivement utilisées.
-  url: '', // Facultatif. Renseigner une vraie URL HTTPS, sinon laisser vide.
-}
+```sh
+npm run build
 ```
 
-Placer la capture optimisée dans `public/images/`. Les dimensions doivent correspondre au fichier. Préférer WebP ou AVIF, viser moins de 300 Ko et conserver une capture lisible. La grille réserve un ratio de 4:3. Deux projets au maximum apparaissent sur l’accueil ; tous les projets publiés apparaissent dans Réalisations. Sans projet, le site affiche un état vide honnête. Le build vérifie les champs, la nature, les dimensions déclarées, la présence du fichier et la forme du lien. L’existence du site distant et les droits de diffusion restent à vérifier au moment de l’ajout.
+L’export autonome est écrit dans `dist/`. Cette commande ne publie rien.
 
-## Configurer le formulaire
+## Vérifier le design
 
-L’envoi est **désactivé par défaut**, côté navigateur et côté serveur. Il ne suffit pas d’activer un bouton : les informations légales et la configuration serveur doivent être complètes.
+Avec Playwright et Chrome disponibles :
 
-1. Définir le domaine réel dans `SITE_URL`, par exemple une origine HTTPS sans chemin. Aucun domaine officiel n’est supposé dans le code.
-2. Compléter tous les champs `studio.legal` dans `src/content.js` avec les informations vérifiées. Pour un statut réellement non applicable, le préciser explicitement plutôt que laisser un champ vide. Adapter les textes légaux aux prestataires et à la réglementation applicables.
-3. Configurer `RESEND_API_KEY`, `CONTACT_FROM` (expéditeur sur un domaine vérifié chez Resend) et `CONTACT_TO` (boîte de réception confirmée), uniquement dans les variables du serveur ou `.env`. Pour afficher une adresse publique, renseigner séparément `studio.email`.
-4. Passer `PUBLICATION_READY=true`, puis redémarrer le serveur. Cette valeur déclare que les contenus et informations réels ont été relus. Le démarrage et le build refusent cette valeur si le domaine ou des informations légales manquent.
-5. Envoyer un message de test autorisé, vérifier sa **réception effective** dans la messagerie et son éventuel classement en spam. La réponse positive de l’API signifie l’acceptation par Resend, pas une preuve de livraison en boîte de réception.
+```sh
+SITE_URL=http://127.0.0.1:4612 node scripts/verify-design.cjs
+```
 
-Le client vérifie les champs obligatoires, empêche les doubles clics, affiche l’attente et conserve les saisies lors d’un échec. Une clé d’idempotence est réutilisée lors des nouvelles tentatives du même message. Le serveur vérifie à nouveau les champs, leur longueur, les choix proposés, l’origine de la demande et le type JSON. Il ajoute un champ piège, un délai minimal de deux secondes, une limite de cinq tentatives par adresse réseau sur quinze minutes et une limite de corps à 24 Ko. L’appel au fournisseur expire après douze secondes. Aucun faux succès n’est renvoyé en cas d’erreur ou d’absence de configuration.
+Le script utilise le relevé de mise en page conservé dans `provenance/empreinte-signal-2026-10-21/layout-before.json`. `PLAYWRIGHT_MODULE` et `CHROME_PATH` permettent de préciser les runtimes ; `CAPTURE_DIR` permet de choisir le dossier des captures.
 
-L’idempotence est appliquée par [Resend pendant 24 heures](https://resend.com/docs/dashboard/emails/idempotency-keys). La validation utilise du texte brut pour l’e-mail et l’expéditeur est fixé côté serveur. La clé API n’est jamais transmise au navigateur. Les tests substituent le fournisseur : ils **n’envoient aucun e-mail réel**.
+Les archives de 08A, ses images et leur provenance sont conservées. La nouvelle étude de matière est générée et statique ; sa provenance et son prompt sont documentés.
 
-## Hébergement et publication
+## Expérience Thomas — liquid glass
 
-Utiliser le **serveur Node**, derrière un reverse proxy HTTPS, pour disposer de `/api/contact`. Le dossier `dist/` permet un export statique ou une inspection ; un hébergement purement statique ne peut pas traiter le formulaire. Pour ce mode, conserver le formulaire désactivé ou intégrer explicitement une fonction serveur équivalente et les mêmes protections HTTP. Ne pas exposer la racine du dépôt comme répertoire public.
+Sur `dev_t`, les boutons et CTA des cinq pages utilisent un verre teinté orange, crème ou rouge suivant leur couleur d’origine. Les deux liens du hero conservent leur présentation originale. `?glass=original` permet de comparer les actions natives. Les dépendances sont isolées dans `experiments/liquid-glass/` : `npm run setup:glass`, puis `PORT=4613 npm run dev:glass`. Le build général compile et inclut les assets dans l’export statique.
 
-Le serveur écoute sur `127.0.0.1` par défaut. Utiliser `HOST=0.0.0.0` uniquement si la plateforme le nécessite. Terminer TLS sur le proxy et faire suivre le chemin et le corps de la requête. `SITE_URL` doit correspondre à l’origine publique exacte ; rediriger tout domaine alternatif vers cette origine. Les en-têtes CSP, anti-iframe, MIME, permissions et référent sont émis par Node ; HSTS est ajouté lorsque `SITE_URL` utilise HTTPS.
+La page À propos relie « Notre histoire » et « Nos compétences » par un repère commun et un mouvement réciproque au survol, au focus ou à la sélection. Les contenus restent visibles. Styles et comportement limités à cette section dans `assets/studio-duo.css` et `assets/studio-duo.js`.
 
-La limitation utilise la mémoire d’**un seul processus Node** et disparaît au redémarrage. Pour plusieurs instances, configurer une limitation partagée au reverse proxy ou à la plateforme. Derrière un proxy, définir `TRUSTED_PROXY_IP` à son adresse exacte et lui faire **remplacer** `X-Real-IP` par l’adresse réelle du client ; ne jamais accepter une valeur fournie par le visiteur. Sans cette configuration, les visiteurs derrière le même proxy partagent le quota. Ajouter au proxy une limite de corps de 24 Ko et des délais de lecture adaptés. Ne pas journaliser les corps de requête et définir la conservation des journaux d’hébergement.
+Détails, compatibilité et vérifications : `experiments/liquid-glass/README.md`. Intentions et références Taste Vault : `experiments/liquid-glass/STUDIO-DUO.md`.
 
-Sans publication déclarée, le serveur émet `noindex, nofollow`, `robots.txt` interdit l’exploration et le sitemap ne contient aucune URL. Cela évite l’indexation involontaire, **sans constituer un contrôle d’accès** : garder les prévisualisations privées au niveau de l’hébergement si nécessaire. Après configuration, chaque page possède son titre, sa description, ses balises de partage et son URL canonique ; le sitemap utilise le domaine réel.
+## Icônes Lucide et aperçu sur téléphone
 
-## Informations manquantes avant publication
+Les icônes des cinq pages et trois démos sont des SVG Lucide locaux, sans bibliothèque au chargement. Sources, licences et conventions : `assets/icons/README.md`. `npm run icons:sync` synchronise leur géométrie.
 
-- Identité juridique, forme/statut, adresse, immatriculation ou statut applicable et responsable de publication.
-- Nom, adresse et contact de l’hébergeur effectivement retenu.
-- Responsable et contact pour les données personnelles, durée réelle de conservation, lieux de traitement, garanties de transfert des prestataires et politique des journaux d’hébergement. Les textes sont préparatoires, à adapter ; référence utile si le droit suisse s’applique : [devoir d’informer du PFPDT](https://www.edoeb.admin.ch/fr/devoir-dinformer).
-- Domaine public, accès Resend, expéditeur vérifié et destinataire confirmé.
-- Réception d’un message réel à vérifier une fois ces accès disponibles.
+Pour un essai sur téléphone physique connecté au même réseau que le Mac :
 
-Les réalisations et liens professionnels peuvent être ajoutés ultérieurement ; ils ne bloquent pas le fonctionnement. Aucun contenu fictif n’est publié pour les remplacer.
+```sh
+PORT=4614 npm run dev:phone
+```
 
-## Ressources et licences
+Ouvrir `http://ADRESSE_LOCALE_DU_MAC:4614/` dans Safari. Ce mode écoute sur le réseau local ; le serveur normal reste limité à cet ordinateur. Arrêter avec Ctrl+C après le test. Ce mode ne publie pas le site sur Internet ; éviter un réseau partagé non fiable. L’aperçu HTTP local peut désactiver le presse-papiers automatique : le formulaire conserve son repli de copie manuelle.
 
-Les quatre fichiers WOFF2 sont hébergés localement : Pinyon Script pour le logo et les prénoms des cofondateurs, Cormorant Garamond normal/italique pour les titres, DM Sans pour le texte. Total des polices : environ 119 Ko. Le navigateur n’appelle aucun service de polices externe. Les licences SIL OFL 1.1 accompagnent les fichiers dans `public/fonts/`.
-
-Sources des licences : [Pinyon Script](https://github.com/google/fonts/tree/main/ofl/pinyonscript), [Cormorant Garamond](https://github.com/google/fonts/tree/main/ofl/cormorantgaramond), [DM Sans](https://github.com/google/fonts/tree/main/ofl/dmsans).
-
-Les compositions du studio sont dessinées en CSS et SVG, sans image de client. `public/images/og.png` est l’image de partage de 1 200 × 630 px. Pour la régénérer après une modification de l’identité : `npm run assets:share` (Chromium installé).
-
-## Vérifications réalisées
-
-Voir `VERIFICATION.md` pour les contrôles et leurs limites. Les captures sont générées dans `test-results/` et restent hors Git.
+La validation sur un appareil physique reste distincte des contrôles Playwright/WebKit. Tant que le modèle, la version iOS et les observations n’ont pas été relevés, elle doit rester marquée « en attente ».
