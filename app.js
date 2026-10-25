@@ -72,12 +72,16 @@ const header = document.querySelector('.site-header');
 if (header) {
   let previousY = Math.max(0, window.scrollY);
   let frame = 0;
+  let hasLeftTop = false;
   const updateHeader = () => {
     frame = 0;
     const maximum = Math.max(0, document.documentElement.scrollHeight - innerHeight);
     const y = Math.min(maximum, Math.max(0, window.scrollY));
     const keyboardFocus = header.contains(document.activeElement) && document.activeElement.matches(':focus-visible');
-    header.classList.toggle('is-scrolled', y > 8);
+    if (y > header.offsetHeight) hasLeftTop = true;
+    if (y === 0) hasLeftTop = false;
+    header.classList.toggle('is-scrolled', hasLeftTop);
+    header.style.setProperty('--header-surface-opacity', String(Math.min(1, y / header.offsetHeight)));
     if (y <= header.offsetHeight || y < previousY || nav.classList.contains('open') || keyboardFocus) {
       header.classList.remove('is-hidden');
     } else if (y > previousY) {
