@@ -16,10 +16,11 @@
   justify-self: start;
 }
 .glass-shell--orange {
-  --lq-tint: rgba(199, 57, 10, 0.99);
-  --lq-tint-deep: rgba(166, 29, 5, 0.99);
-  --lq-rim-hi: rgba(255, 213, 169, 0.88);
-  --lq-rim-lo: rgba(255, 112, 47, 0.55);
+  --glass-ink: #48200f !important;
+  --lq-tint: rgba(238, 116, 48, 0.38);
+  --lq-tint-deep: rgba(218, 77, 19, 0.58);
+  --lq-rim-hi: rgba(255, 244, 218, 0.98);
+  --lq-rim-lo: rgba(255, 143, 69, 0.72);
 }
 .glass-shell--clear {
   --lq-tint: rgba(154, 29, 7, 0.68);
@@ -122,3 +123,5 @@
   outline: 2px solid var(--ink);
   outline-offset: 3px;
 }
+
+.glass-shell--orange .glass-skin { box-shadow: 0 6px 18px #7a21081c, inset 0 1px 0 #fff5dfeb, inset 1px 0 0 #ffe0b999, inset 0 -1px 0 #a93c1855; }

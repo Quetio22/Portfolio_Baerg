@@ -42,3 +42,7 @@ Le build produit `assets/liquid-glass/glass.js` et `glass.css`, ignorés par Git
 La suite comprend 38 tests Chromium/WebKit : cinq routes aux largeurs 320, 390, 650, 651, 760, 820, 1050, 1440 et 1920 px ; débordements, liens originaux du hero, menu, fenêtres, formulaire de brouillon, nouvel onglet, replis de chargement, clavier, toucher et rotation, mouvement réduit. Axe A/AA est limité aux surfaces modifiées et aux cartes à 390 et 1440 px. L’export statique est également vérifié sur cinq routes et trois maquettes. Tests en émulation, sans essai sur téléphone physique.
 
 Le formulaire conserve son fonctionnement local : copie d’un brouillon, aucun envoi. Aucun déploiement ni publication.
+
+## Ajustement du verre orange — 25 octobre
+
+Teintes orange à 38 % / 58 % d’opacité, densité de dépoli 0,22, reflet spéculaire 1 et bord supérieur lumineux. Texte brun foncé pour maintenir le contraste sur la surface plus transparente. Les surfaces crème et rouges et les liens du hero sont inchangés. Build réussi et quatre contrôles multi-pages Chromium/WebKit à 390 et 1440 px réussis, avec Axe sur les composants modifiés.

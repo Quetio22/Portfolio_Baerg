@@ -60,8 +60,8 @@ export function mountGlassControls(targets: NativeAction[]) {
             bezel={kind === "action" ? 9 : 7}
             refraction={kind === "action" ? 38 : 24}
             dispersion={0}
-            frost={tone === "orange" ? 0.92 : tone === "cream" ? 0.7 : 0.45}
-            specular={0.8}
+            frost={tone === "orange" ? 0.22 : tone === "cream" ? 0.7 : 0.45}
+            specular={tone === "orange" ? 1 : 0.8}
             saturation={1.02}
             className="glass-skin"
           />,
