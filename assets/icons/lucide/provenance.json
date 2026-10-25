@@ -14,7 +14,8 @@
     "rotate-ccw",
     "calendar-days",
     "plus",
-    "minus"
+    "minus",
+    "chevron-right"
   ],
   "integration": "Official SVG paths inlined at build/edit time; no runtime library; default stroke 1.7 via local CSS."
 }
