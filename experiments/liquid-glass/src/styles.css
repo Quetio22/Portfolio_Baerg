@@ -1,130 +1,124 @@
-/* Only theme/utility layers: NO Tailwind preflight or global element reset. */
-@layer theme, base, components, utilities;
+/* Material is namespaced; no Tailwind reset, no site-wide token override. */
+@layer theme,base,components,utilities;
 @import "tailwindcss/theme.css" layer(theme) prefix(lgx);
 @import "tailwindcss/utilities.css" layer(utilities) prefix(lgx);
-@source "./";
-@source inline("lgx:flex lgx:items-center lgx:justify-between lgx:gap-3");
-
-.home-hero-actions[data-glass-ready] > :is(.home-primary, .home-secondary) {
-  display: none;
-}
-.liquid-glass-actions[hidden] {
-  display: none;
-}
-.liquid-glass-actions {
-  display: flex;
-  flex-direction: column;
-  gap: 12px;
-  width: 100%;
-  max-width: 260px;
-}
-.glass-action {
-  --lq-text: #3a160d;
-  --lq-tint: rgba(255, 241, 218, 0.9);
-  --lq-tint-deep: rgba(255, 224, 194, 0.6);
-  --lq-rim-hi: rgba(255, 247, 228, 0.92);
-  --lq-rim-lo: rgba(255, 174, 120, 0.5);
-  --lq-highlight: rgba(255, 245, 223, 0.1);
-  --lq-accent: #cf4710;
-  display: block;
+.glass-shell {
+  --lq-text: var(--glass-ink);
+  --lq-tint: rgba(255, 245, 222, 0.97);
+  --lq-tint-deep: rgba(255, 221, 184, 0.85);
+  --lq-rim-hi: rgba(255, 251, 238, 0.92);
+  --lq-rim-lo: rgba(255, 177, 116, 0.62);
   position: relative;
-  width: 100%;
-  color: var(--lq-text);
-  border-radius: 12px;
-  text-decoration: none;
-  cursor: pointer;
-  font-family: inherit;
-  font-weight: 550;
-  font-size: 13px;
-  line-height: 1.35;
-  -webkit-tap-highlight-color: transparent;
-  transition: transform 160ms ease-out;
+  display: inline-grid;
+  max-width: 100%;
+  vertical-align: middle;
+  isolation: isolate;
+  justify-self: start;
 }
-.glass-action--ember {
-  --lq-text: #fff8e9;
-  --lq-tint: rgba(120, 15, 5, 0.6);
-  --lq-tint-deep: rgba(117, 12, 7, 0.4);
-  --lq-rim-hi: rgba(255, 228, 192, 0.82);
-  --lq-rim-lo: rgba(255, 131, 71, 0.55);
+.glass-shell--orange {
+  --lq-tint: rgba(199, 57, 10, 0.99);
+  --lq-tint-deep: rgba(166, 29, 5, 0.99);
+  --lq-rim-hi: rgba(255, 213, 169, 0.88);
+  --lq-rim-lo: rgba(255, 112, 47, 0.55);
 }
-.glass-action__surface {
-  box-shadow:
-    0 7px 18px rgba(91, 17, 5, 0.14),
-    inset 0 0 0 1px rgba(255, 240, 212, 0.38);
+.glass-shell--clear {
+  --lq-tint: rgba(154, 29, 7, 0.68);
+  --lq-tint-deep: rgba(118, 18, 6, 0.56);
 }
-.glass-action__content {
-  box-sizing: border-box;
-  min-height: 58px;
-  padding: 17px 17px;
-  font-size: inherit;
-  line-height: inherit;
-}
-.glass-action__label {
-  min-width: 0;
-  overflow-wrap: anywhere;
-}
-.glass-action__arrow {
-  flex: 0 0 18px;
-  transition: transform 160ms ease-out;
-}
-.glass-action:hover {
-  color: var(--lq-text);
-  text-decoration: none;
-}
-.glass-action:hover .glass-action__arrow {
-  transform: translate(2px, -2px);
-}
-.glass-action:active {
-  transform: scale(0.98);
-}
-.glass-action:focus-visible {
-  outline: 3px solid #fff8e9;
-  outline-offset: 5px;
-}
-.glass-action:focus-visible::after {
-  content: "";
+.glass-underlay {
   position: absolute;
-  inset: -2px;
-  border: 1px solid #692208;
-  border-radius: 14px;
   pointer-events: none;
+  z-index: 0;
+  max-width: 100%;
+  max-height: 100%;
 }
-@media (min-width: 651px) and (max-width: 1050px) {
-  .glass-action {
-    font-size: 11px;
-  }
-  .glass-action__content {
-    padding-inline: 13px;
-  }
+.glass-skin {
+  width: 100%;
+  height: 100%;
+  box-shadow:
+    0 5px 16px #7a21081c,
+    inset 0 0 0 1px #ffe0b966;
+}
+.glass-native {
+  position: relative;
+  z-index: 1;
+  background: transparent !important;
+  border-color: transparent !important;
+  color: var(--glass-ink) !important;
+  box-shadow: none !important;
+  filter: none !important;
+}
+.glass-native:hover {
+  background: transparent !important;
+}
+.glass-native:focus-visible {
+  outline: 2px solid var(--ink);
+  outline-offset: 4px;
+}
+.glass-shell:has(.glass-native:hover) .liqui-glass__shine {
+  box-shadow:
+    inset 0 1px 1px #fff6df,
+    inset 1px 0 0 #ffedce99,
+    inset -1px -1px 0 #ff9b6380;
+}
+.glass-shell:has(:disabled) {
+  opacity: 0.55;
+}
+.glass-shell[data-kind="menu"] {
+  display: none;
+}
+.glass-native.legal-link {
+  padding: 10px 13px;
+  min-height: 44px;
+  line-height: 1.4;
+}
+.glass-shell[data-kind="close"] {
+  position: absolute;
+  top: 12px;
+  right: 16px;
+  width: 44px;
+  height: 44px;
+}
+.glass-native.dialog-close {
+  position: relative;
+  inset: auto;
+  display: grid;
+  place-items: center;
+  width: 44px;
+  height: 44px;
+  padding: 0;
+  line-height: 1;
+}
+.glass-shell[data-kind="close"] .glass-underlay {
+  inset: 0;
 }
 @media (max-width: 650px) {
-  .glass-action {
-    font-size: 12px;
-  }
-  .glass-action__content {
-    min-height: 56px;
-  }
-  .liquid-glass-actions {
-    gap: 10px;
+  .glass-shell[data-kind="menu"] {
+    display: inline-grid;
   }
 }
 @media (prefers-reduced-motion: reduce) {
-  .glass-action,
-  .glass-action__arrow {
-    transition: none;
-    transform: none !important;
-  }
-  .liquid-glass-actions .liqui-glass__refract--fade,
-  .liquid-glass-actions .liqui-glass__specular--fade {
+  .glass-shell .liqui-glass__refract--fade,
+  .glass-shell .liqui-glass__specular--fade {
     animation: none;
   }
 }
 @media (forced-colors: active) {
-  .glass-action {
-    color: LinkText;
-    border: 1px solid LinkText;
-  }
-  .glass-action .liqui-glass > :not(.liqui-glass__content) {
+  .glass-underlay {
     display: none;
   }
+  .glass-native {
+    color: ButtonText !important;
+    border-color: ButtonText !important;
+    background: ButtonFace !important;
+  }
+}
+
+.glass-native.text-link {
+  min-height: 48px;
+  padding: 12px 16px;
+}
+.glass-shell:has([aria-pressed="true"]) .glass-skin {
+  outline: 2px solid var(--ink);
+  outline-offset: 3px;
 }

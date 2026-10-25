@@ -1,205 +1,295 @@
 import { test, expect } from "@playwright/test";
 import AxeBuilder from "@axe-core/playwright";
-
-const modes = ["original", "liqui"];
-for (const width of [320, 390, 650, 651, 820, 1050, 1440, 1920]) {
-  test(`deux liens et responsive ${width}`, async ({ page, browserName }) => {
+const routes = ["/", "/a-propos/", "/realisations/", "/offres/", "/contact/"];
+const targets =
+  "a.button, a.text-link, button.button, .menu-toggle, .legal-link, .dialog-close, .duo-select";
+for (const width of [320, 390, 650, 651, 760, 820, 1050, 1440, 1920]) {
+  test(`boutons et cartes sur cinq pages à ${width}`, async ({
+    page,
+    browserName,
+  }) => {
     await page.setViewportSize({ width, height: 1000 });
     const errors: string[] = [];
-    const mutations: string[] = [];
+    const posts: string[] = [];
     page.on("pageerror", (e) => errors.push(e.message));
+    page.on("request", (r) => {
+      if (r.method() !== "GET") posts.push(r.url());
+    });
     page.on("response", (r) => {
       if (r.status() >= 400) errors.push(r.url());
     });
-    page.on("request", (r) => {
-      if (r.method() !== "GET") mutations.push(r.url());
-    });
-    for (const mode of modes) {
-      await page.goto(`/?glass=${mode}`);
+    for (const route of routes) {
+      await page.goto(route);
+      await expect(page.locator("html")).toHaveAttribute("data-glass", "site");
       await page.evaluate(() => document.fonts.ready);
-      if (mode === "liqui")
-        await expect(page.locator(".glass-action")).toHaveCount(2);
-      else await expect(page.locator(".glass-action")).toHaveCount(0);
-      const actions = page.locator(".home-hero-actions");
-      const links = actions.getByRole("link");
-      await expect(links).toHaveCount(2);
-      await expect(links.nth(0)).toHaveAttribute("href", "/realisations/");
-      await expect(links.nth(1)).toHaveAttribute("href", "/contact/");
-      if (mode === "liqui") {
-        await expect(page.locator("html")).toHaveAttribute(
-          "data-glass",
-          "liqui",
-        );
-        await expect(
-          page.locator(
-            `.liqui-glass--${browserName === "chromium" ? "refract" : "frost"}`,
+      expect(
+        await page
+          .locator(targets)
+          .evaluateAll((nodes) =>
+            nodes.every((n) => n.classList.contains("glass-native")),
           ),
-        ).toHaveCount(2);
-        for (const link of await links.all())
-          expect((await link.boundingBox())!.height).toBeGreaterThanOrEqual(44);
-      }
+      ).toBe(true);
+      await expect(page.locator(".glass-shell .liqui-glass")).toHaveCount(
+        await page.locator(".glass-native").count(),
+      );
+      await expect(
+        page.locator(
+          `.liqui-glass--${browserName === "chromium" ? "refract" : "frost"}`,
+        ),
+      ).toHaveCount(await page.locator(".glass-native").count());
       expect(
         await page.evaluate(
           () => document.documentElement.scrollWidth <= innerWidth,
         ),
       ).toBe(true);
-      for (const label of await actions.locator(".glass-action__label").all()) {
-        expect(
-          await label.evaluate((el) => {
-            const r = document.createRange();
-            r.selectNodeContents(el);
-            const a = el.closest("a")!.getBoundingClientRect();
-            return [...r.getClientRects()].every(
-              (r) => r.left >= a.left && r.right <= a.right,
-            );
-          }),
-        ).toBe(true);
+      if (route === "/") {
+        await expect(page.locator(".home-hero-actions > a")).toHaveCount(2);
+        await expect(
+          page.locator(".home-hero-actions .glass-shell"),
+        ).toHaveCount(0);
+        await expect(page.locator(".home-primary")).toHaveAttribute(
+          "href",
+          "/realisations/",
+        );
+        await expect(page.locator(".home-secondary")).toHaveAttribute(
+          "href",
+          "/contact/",
+        );
       }
+      if (route === "/a-propos/") {
+        await expect(page.locator(".duo-card")).toHaveCount(2);
+        const clipped = await page
+          .locator(".duo-card h2,.duo-card p:not(.eyebrow)")
+          .evaluateAll((nodes) =>
+            nodes.some((n) => {
+              const range = document.createRange();
+              range.selectNodeContents(n);
+              const card = n.closest(".duo-card")!.getBoundingClientRect();
+              return [...range.getClientRects()].some(
+                (r) => r.left < card.left || r.right > card.right,
+              );
+            }),
+          );
+        expect(clipped).toBe(false);
+      }
+      if ([390, 1440].includes(width))
+        expect(
+          (
+            await new AxeBuilder({ page })
+              .include(".glass-shell, .studio-duo")
+              .withTags(["wcag2a", "wcag2aa", "wcag21aa"])
+              .analyze()
+          ).violations,
+        ).toEqual([]);
     }
     expect(errors).toEqual([]);
-    expect(mutations).toEqual([]);
-    if ([390, 1440].includes(width)) {
-      const violations = (
-        await new AxeBuilder({ page })
-          .include(".home-hero-actions")
-          .withTags(["wcag2a", "wcag2aa", "wcag21aa"])
-          .analyze()
-      ).violations;
-      expect(violations).toEqual([]);
-      await page.locator(".glass-action").first().scrollIntoViewIfNeeded();
-      await page.screenshot({
-        path: `../../test-results/liquid-glass/${browserName}-${width}.png`,
-      });
-    }
+    expect(posts).toEqual([]);
   });
 }
-test("la page originale reste identique et ne charge pas React", async ({
+test("les liens du hero gardent exactement le rendu original", async ({
   page,
 }) => {
-  const requests: string[] = [];
-  page.on("request", (r) => requests.push(r.url()));
-  await page.goto("/");
-  expect(requests.some((u) => /\/liquid-glass\/glass\.(js|css)/.test(u))).toBe(
-    false,
-  );
-  const selectors = [
-    ".site-header",
-    ".home-hero h1",
-    ".home-scene",
-    ".home-signature",
-    ".editorial",
-    ".closing",
-  ];
-  const read = () =>
-    page.evaluate(
-      (selectors) =>
-        Object.fromEntries(
-          selectors.map((s) => {
-            const e = document.querySelector(s)!;
-            const r = e.getBoundingClientRect(),
-              c = getComputedStyle(e);
-            return [s, [r.x, r.y, r.width, r.height, c.color, c.font]];
-          }),
-        ),
-      selectors,
+  const metrics = () =>
+    page.locator(".home-hero-actions").evaluate((el) =>
+      [...el.querySelectorAll("a")].map((a) => {
+        const c = getComputedStyle(a),
+          r = a.getBoundingClientRect();
+        return [
+          a.textContent,
+          a.getAttribute("href"),
+          c.color,
+          c.backgroundColor,
+          c.borderTop,
+          c.padding,
+          r.x,
+          r.y,
+          r.width,
+          r.height,
+        ];
+      }),
     );
-  await page.evaluate(() => document.fonts.ready);
-  const original = await read();
   await page.goto("/?glass=original");
   await page.evaluate(() => document.fonts.ready);
-  expect(await read()).toEqual(original);
+  const original = await metrics();
+  await page.goto("/");
+  await expect(page.locator(".glass-shell").first()).toBeAttached();
+  await page.evaluate(() => document.fonts.ready);
+  expect(await metrics()).toEqual(original);
 });
-test("navigation clavier, Enter et nouvel onglet", async ({
+test("menu et fenêtre juridique gardent leur comportement natif", async ({
+  page,
+}) => {
+  await page.setViewportSize({ width: 390, height: 844 });
+  await page.goto("/");
+  const menu = page.locator(".menu-toggle");
+  await expect(menu).toHaveClass(/glass-native/);
+  await menu.click();
+  await expect(page.locator("#navigation")).toHaveClass(/open/);
+  await page.keyboard.press("Escape");
+  await expect(menu).toBeFocused();
+  await page.locator("[data-legal]").click();
+  await expect(page.locator("#legal-dialog")).toBeVisible();
+  await expect(page.locator("#legal-dialog .dialog-close")).toHaveClass(
+    /glass-native/,
+  );
+  await page.locator("#legal-dialog .dialog-close").click();
+  await expect(page.locator("#legal-dialog")).toBeHidden();
+});
+test("liens, préremplissage et nouvel onglet conservés", async ({
   page,
   context,
 }) => {
-  await page.goto("/?glass=liqui");
-  const first = page.getByRole("link", {
-    name: "Découvrir les réalisations",
-    exact: true,
-  });
-  await expect(first).toHaveClass(/glass-action/);
-  await first.focus();
-  await expect(first).toBeFocused();
-  await expect(first).toHaveCSS("outline-style", "solid");
+  await page.goto("/offres/");
+  const link = page
+    .locator('a.button[href="/contact/?projet=refonte"]')
+    .first();
+  await expect(link).toHaveClass(/glass-native/);
+  await link.focus();
   await page.keyboard.press("Enter");
-  await expect(page).toHaveURL("/realisations/");
-  await page.goto("/?glass=liqui");
-  const second = page.locator(".glass-action").nth(1);
-  await expect(second).toBeVisible();
-  const opened = context.waitForEvent("page");
-  await second.click({ modifiers: ["Meta"] });
-  const tab = await opened;
+  await expect(page).toHaveURL(/projet=refonte/);
+  await expect(page.locator("[name=projectType]")).toHaveValue(
+    "Refonte de site",
+  );
+  await page.goto("/realisations/");
+  const demo = page.locator('a.button[href="/demos/lise/"]');
+  await expect(demo).toHaveClass(/glass-native/);
+  const popup = context.waitForEvent("page");
+  await demo.click({ modifiers: ["Meta"] });
+  const tab = await popup;
   await tab.waitForLoadState();
-  await expect(tab).toHaveURL(/\/contact\/$/);
+  await expect(tab).toHaveURL(/\/demos\/lise\/$/);
   await tab.close();
 });
+test("soumission de brouillon sans recréer le bouton du formulaire", async ({
+  page,
+}) => {
+  const requests: string[] = [];
+  page.on("request", (r) => {
+    if (r.method() !== "GET") requests.push(r.url());
+  });
+  await page.goto("/contact/");
+  const submit = page.locator("button[type=submit]");
+  await expect(submit).toHaveClass(/glass-native/);
+  expect(await submit.evaluate((b: HTMLButtonElement) => b.form?.id)).toBe(
+    "project-form",
+  );
+  await page.evaluate(() => {
+    navigator.clipboard.writeText = async (text) => {
+      (window as any).copied = text;
+    };
+  });
+  await page.locator("#name").fill("Test Thomas");
+  await page.locator("#email").fill("test@example.test");
+  await page
+    .locator("#message")
+    .fill("Un projet de test de brouillon, sans envoi.");
+  await submit.click();
+  await expect(page.locator("#form-feedback")).toContainText(
+    "Brouillon copié. Aucun message envoyé.",
+  );
+  expect(await page.evaluate(() => (window as any).copied)).toContain(
+    "Test Thomas",
+  );
+  expect(requests).toEqual([]);
+});
 for (const blocked of ["glass.js", "glass.css"])
-  test(`repli lorsque ${blocked} échoue`, async ({ page }) => {
+  test(`repli natif si ${blocked} manque`, async ({ page }) => {
     await page.route(`**/liquid-glass/${blocked}`, (r) => r.abort());
-    await page.goto("/?glass=liqui");
+    await page.goto("/");
     await expect(page.locator("html")).toHaveAttribute(
       "data-glass",
       "original",
     );
-    await expect(page.locator(".home-primary")).toBeVisible();
-    await expect(page.locator(".home-secondary")).toBeVisible();
-    await page.locator(".home-primary").click();
-    await expect(page).toHaveURL("/realisations/");
+    await expect(page.locator(".glass-native")).toHaveCount(0);
+    await page.locator(".closing a.button").click();
+    await expect(page).toHaveURL("/contact/");
   });
-test("sans JavaScript, les liens HTML restent disponibles", async ({
+test("comparaison originale sans chargement React", async ({ page }) => {
+  const requests: string[] = [];
+  page.on("request", (r) => requests.push(r.url()));
+  await page.goto("/?glass=original");
+  expect(requests.some((u) => /\/liquid-glass\/glass\.(js|css)/.test(u))).toBe(
+    false,
+  );
+  await expect(page.locator(".glass-shell")).toHaveCount(0);
+});
+test("sans JavaScript, tous les contenus et liens restent disponibles", async ({
   browser,
 }) => {
-  const c = await browser.newContext({ javaScriptEnabled: false });
-  const p = await c.newPage();
-  await p.goto("http://127.0.0.1:4613/?glass=liqui");
-  await expect(p.locator(".home-primary")).toBeVisible();
-  await expect(p.locator(".home-secondary")).toBeVisible();
-  await p.locator(".home-secondary").click();
-  await expect(p).toHaveURL(/\/contact\/$/);
-  await c.close();
-});
-test("mouvement réduit et état de focus", async ({ page }) => {
-  await page.goto("/?glass=liqui");
-  await expect(page.locator(".glass-action")).toHaveCount(2);
-  expect(
-    await page
-      .locator(".glass-action")
-      .first()
-      .evaluate((el) => getComputedStyle(el).transitionDuration),
-  ).toBe("0s");
-  expect(
-    await page
-      .locator(".glass-action__arrow")
-      .first()
-      .evaluate((el) => getComputedStyle(el).transitionDuration),
-  ).toBe("0s");
-  await expect
-    .poll(() =>
-      page.evaluate(
-        () =>
-          document
-            .getAnimations()
-            .filter(
-              (a) =>
-                a.effect?.target instanceof Element &&
-                a.effect.target.closest(".liquid-glass-actions"),
-            ).length,
-      ),
-    )
-    .toBe(0);
-});
-
-test("sans filtre de fond, conserver les liens natifs", async ({ page }) => {
-  await page.addInitScript(() => {
-    const original = CSS.supports.bind(CSS);
-    CSS.supports = ((...args: string[]) =>
-      args[0].includes("backdrop-filter")
-        ? false
-        : original(args[0], args[1])) as typeof CSS.supports;
+  const context = await browser.newContext({
+    javaScriptEnabled: false,
+    viewport: { width: 390, height: 844 },
   });
-  await page.goto("/?glass=liqui");
-  await expect(page.locator("html")).toHaveAttribute("data-glass", "original");
-  await expect(page.locator(".home-primary")).toBeVisible();
-  await expect(page.locator(".glass-action")).toHaveCount(0);
+  const p = await context.newPage();
+  await p.goto("http://127.0.0.1:4613/a-propos/");
+  await expect(p.locator(".duo-card")).toHaveCount(2);
+  await expect(p.locator(".duo-card h2")).toHaveText([
+    "Deux apprentis.Un projet commun.",
+    "Du designau développement.",
+  ]);
+  await expect(p.locator(".duo-select").first()).toBeHidden();
+  await expect(p.locator(".glass-shell")).toHaveCount(0);
+  await p.locator(".closing .button").click();
+  await expect(p).toHaveURL(/\/contact\/$/);
+  await context.close();
+});
+test("le lien commun répond au survol, à la sélection et au clavier", async ({
+  page,
+}) => {
+  await page.emulateMedia({ reducedMotion: "no-preference" });
+  await page.goto("/a-propos/");
+  const duo = page.locator("[data-studio-duo]");
+  const first = page.locator("[data-duo-select=history]");
+  const second = page.locator("[data-duo-select=skills]");
+  await expect(first).toHaveClass(/glass-native/);
+  await page.locator(".duo-card--history").hover();
+  await expect(duo).toHaveAttribute("data-focus", "history");
+  await page.locator(".duo-card--skills").hover();
+  await expect(duo).toHaveAttribute("data-focus", "skills");
+  await second.click();
+  await expect(second).toHaveAttribute("aria-pressed", "true");
+  await page.locator("h1").hover();
+  await expect(duo).toHaveAttribute("data-focus", "skills");
+  await first.focus();
+  await page.keyboard.press("Enter");
+  await expect(first).toHaveAttribute("aria-pressed", "true");
+  await page.keyboard.press("ArrowRight");
+  await expect(second).toBeFocused();
+  await page.keyboard.press("Enter");
+  await expect(second).toHaveAttribute("aria-pressed", "true");
+  await page.keyboard.press("Escape");
+  await expect(duo).toHaveAttribute("data-focus", "both");
+  await page.emulateMedia({ reducedMotion: "reduce" });
+  await first.focus();
+  await expect(page.locator(".duo-card--history")).toHaveCSS(
+    "transform",
+    "none",
+  );
+  await expect(page.locator(".duo-card--skills")).toHaveCSS(
+    "transform",
+    "none",
+  );
+});
+test("tactile, joint vertical et rotation des cartes", async ({ browser }) => {
+  const context = await browser.newContext({
+    viewport: { width: 390, height: 844 },
+    hasTouch: true,
+    reducedMotion: "reduce",
+  });
+  const page = await context.newPage();
+  await page.goto("http://127.0.0.1:4613/a-propos/");
+  const second = page.locator("[data-duo-select=skills]");
+  await expect(second).toHaveClass(/glass-native/);
+  await second.tap();
+  await expect(second).toHaveAttribute("aria-pressed", "true");
+  const a = await page.locator(".duo-card--history").boundingBox();
+  const b = await page.locator(".duo-card--skills").boundingBox();
+  expect(b!.y).toBeGreaterThan(a!.y + a!.height);
+  await page.setViewportSize({ width: 1050, height: 844 });
+  expect(
+    await page.evaluate(
+      () => document.documentElement.scrollWidth <= innerWidth,
+    ),
+  ).toBe(true);
+  await context.close();
 });

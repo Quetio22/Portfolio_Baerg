@@ -1,0 +1,252 @@
+.studio-duo {
+  padding: 80px 4.5vw 110px;
+  background: #f1eadd;
+  color: #282828;
+  position: relative;
+}
+.duo-stage {
+  position: relative;
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
+  gap: 22px;
+  align-items: stretch;
+}
+.duo-card {
+  --ink: #282828;
+  --muted: #5c534b;
+  position: relative;
+  min-width: 0;
+  padding: 40px 40px 46px;
+  border: 1px solid #cf471044;
+  border-radius: 14px;
+  background: #f8f2e7;
+  transform-origin: 50% 65%;
+  transition:
+    transform 500ms cubic-bezier(0.2, 0.7, 0.2, 1),
+    box-shadow 500ms;
+}
+.duo-card--skills {
+  --ink: #fff8ec;
+  --muted: #fff2e0;
+  background: #c93d0e;
+  color: var(--ink);
+  border-color: #c93d0e;
+}
+.duo-card-head {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 20px;
+  margin-bottom: 48px;
+  min-height: 44px;
+}
+.duo-card .eyebrow {
+  color: inherit;
+  font-size: 12px;
+  letter-spacing: 0.07em;
+}
+.duo-card h2 {
+  font-size: clamp(34px, 3.8vw, 62px);
+  font-weight: 600;
+  letter-spacing: -0.05em;
+  line-height: 1.04;
+  margin: 0 0 30px;
+  max-width: 620px;
+}
+.duo-card p:not(.eyebrow) {
+  color: var(--muted);
+  max-width: 580px;
+  line-height: 1.65;
+  font-size: 16px;
+  margin: 0 0 20px;
+}
+.duo-card .large-copy {
+  font-size: 20px;
+  color: var(--ink) !important;
+}
+.duo-select {
+  font: inherit;
+  font-size: 20px;
+  width: 44px;
+  height: 44px;
+  min-width: 44px;
+  border: 1px solid currentColor;
+  border-radius: 8px;
+  color: inherit;
+  background: transparent;
+  cursor: pointer;
+}
+.duo-select[aria-pressed="true"] {
+  background: var(--ink);
+  color: var(--duo-button-ink, #f8f2e7);
+}
+.duo-card--skills {
+  --duo-button-ink: #c93d0e;
+}
+.duo-select[hidden] {
+  display: none;
+}
+.duo-select:focus-visible {
+  outline: 2px solid currentColor;
+  outline-offset: 4px;
+}
+.duo-bridge {
+  position: absolute;
+  left: calc(50% - 33px);
+  top: 65px;
+  width: 66px;
+  height: 32px;
+  z-index: 4;
+  pointer-events: none;
+  color: #ac320c;
+}
+.duo-bridge::before {
+  content: "";
+  position: absolute;
+  top: 15px;
+  left: 0;
+  right: 0;
+  height: 1px;
+  background: linear-gradient(90deg, #b33b11, #fff0d4);
+}
+.duo-bridge::after {
+  content: "";
+  position: absolute;
+  left: 27px;
+  top: 9px;
+  width: 12px;
+  height: 12px;
+  border: 1px solid #fff4df;
+  border-radius: 50%;
+  background: #b3320b;
+  box-shadow: 0 0 0 4px #f1eadd;
+  transition: transform 500ms cubic-bezier(0.2, 0.7, 0.2, 1);
+}
+.studio-duo[data-focus="history"] .duo-bridge::after {
+  transform: translateX(-18px);
+}
+.studio-duo[data-focus="skills"] .duo-bridge::after {
+  transform: translateX(18px);
+}
+.studio-duo[data-focus="history"] .duo-card--history {
+  transform: translateY(-7px) rotate(-0.45deg);
+  box-shadow: 0 16px 35px #7a210812;
+}
+.studio-duo[data-focus="history"] .duo-card--skills {
+  transform: translateY(5px) rotate(0.45deg);
+}
+.studio-duo[data-focus="skills"] .duo-card--skills {
+  transform: translateY(-7px) rotate(0.45deg);
+  box-shadow: 0 16px 35px #7a210820;
+}
+.studio-duo[data-focus="skills"] .duo-card--history {
+  transform: translateY(5px) rotate(-0.45deg);
+}
+.duo-skill-line {
+  display: flex;
+  gap: 10px;
+  align-items: center;
+  margin-top: 34px;
+  height: 26px;
+  color: #fff5e5;
+}
+.duo-skill-line i {
+  height: 1px;
+  background: currentColor;
+  flex: 1;
+  transform-origin: left;
+  transition: transform 500ms;
+}
+.duo-skill-line span {
+  font-size: 12px;
+  letter-spacing: 0.05em;
+}
+.studio-duo[data-focus="history"] .duo-card--skills .duo-skill-line i {
+  transform: scaleX(0.7);
+}
+.studio-duo[data-focus="skills"] .duo-card--skills .duo-skill-line i {
+  transform: scaleX(1);
+}
+@media (max-width: 900px) {
+  .duo-card {
+    padding: 28px;
+  }
+  .duo-card h2 {
+    font-size: clamp(30px, 4.5vw, 38px);
+  }
+  .duo-card-head {
+    margin-bottom: 34px;
+  }
+  .duo-card .large-copy {
+    font-size: 18px;
+  }
+  .duo-bridge {
+    top: 53px;
+  }
+}
+@media (max-width: 760px) {
+  .studio-duo {
+    padding: 45px 22px 65px;
+  }
+  .duo-stage {
+    grid-template-columns: 1fr;
+    gap: 22px;
+  }
+  .duo-card {
+    padding: 28px 24px;
+  }
+  .duo-card h2 {
+    font-size: clamp(30px, 4.5vw, 38px);
+  }
+  .duo-card-head {
+    margin-bottom: 32px;
+  }
+  .duo-bridge {
+    left: calc(50% - 16px);
+    top: var(--duo-joint, 50%);
+    width: 32px;
+    height: 44px;
+    transform: translateY(-22px);
+  }
+  .duo-bridge::before {
+    top: 0;
+    bottom: 0;
+    left: 15px;
+    width: 1px;
+    height: auto;
+    background: linear-gradient(#ac320c, #fff0d4);
+  }
+  .duo-bridge::after {
+    left: 9px;
+    top: 16px;
+  }
+  .studio-duo[data-focus="history"] .duo-bridge::after {
+    transform: translateY(-12px);
+  }
+  .studio-duo[data-focus="skills"] .duo-bridge::after {
+    transform: translateY(12px);
+  }
+  .studio-duo[data-focus] .duo-card {
+    transform: none;
+  }
+  .duo-card p:not(.eyebrow) {
+    font-size: 16px;
+  }
+  .duo-skill-line {
+    margin-top: 26px;
+  }
+}
+@media (prefers-reduced-motion: reduce) {
+  .duo-card,
+  .duo-bridge::after,
+  .duo-skill-line i {
+    transition: none;
+  }
+  .studio-duo[data-focus] .duo-card {
+    transform: none;
+  }
+}
+
+.studio-duo:not([data-ready]) .duo-bridge {
+  display: none;
+}

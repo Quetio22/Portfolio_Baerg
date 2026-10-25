@@ -51,4 +51,8 @@ Les archives de 08A, ses images et leur provenance sont conservées. La nouvelle
 
 ## Expérience Thomas — liquid glass
 
-Sur `dev_t`, les deux actions du hero peuvent être comparées en version originale (`/?glass=original`) ou Liqui Design (`/?glass=liqui`). L’affichage par défaut reste original. Les dépendances de l’essai sont isolées dans `experiments/liquid-glass/` : `npm run setup:glass`, puis `PORT=4613 npm run dev:glass`. Le build général compile et inclut aussi les assets de l’essai dans l’export statique. Détails, compatibilité et vérifications : `experiments/liquid-glass/README.md`.
+Sur `dev_t`, les boutons et CTA des cinq pages utilisent un verre teinté orange, crème ou rouge suivant leur couleur d’origine. Les deux liens du hero conservent leur présentation originale. `?glass=original` permet de comparer les actions natives. Les dépendances sont isolées dans `experiments/liquid-glass/` : `npm run setup:glass`, puis `PORT=4613 npm run dev:glass`. Le build général compile et inclut les assets dans l’export statique.
+
+La page À propos relie « Notre histoire » et « Nos compétences » par un repère commun et un mouvement réciproque au survol, au focus ou à la sélection. Les contenus restent visibles. Styles et comportement limités à cette section dans `assets/studio-duo.css` et `assets/studio-duo.js`.
+
+Détails, compatibilité et vérifications : `experiments/liquid-glass/README.md`. Intentions et références Taste Vault : `experiments/liquid-glass/STUDIO-DUO.md`.
