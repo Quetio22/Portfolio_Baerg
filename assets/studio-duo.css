@@ -250,3 +250,5 @@
 .studio-duo:not([data-ready]) .duo-bridge {
   display: none;
 }
+
+.duo-select svg { display: block; margin: auto; flex: none; }
