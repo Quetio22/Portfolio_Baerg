@@ -46,3 +46,9 @@ Le formulaire conserve son fonctionnement local : copie d’un brouillon, aucun 
 ## Ajustement du verre orange — 25 octobre
 
 Teintes orange à 38 % / 58 % d’opacité, densité de dépoli 0,22, reflet spéculaire 1 et bord supérieur lumineux. Texte brun foncé pour maintenir le contraste sur la surface plus transparente. Les surfaces crème et rouges et les liens du hero sont inchangés. Build réussi et quatre contrôles multi-pages Chromium/WebKit à 390 et 1440 px réussis, avec Axe sur les composants modifiés.
+
+## Cohérence des actions et bord du verre — 25 octobre
+
+Ce réglage remplace le précédent : orange soutenu et texte crème sur section claire ; crème et texte brun sur section orange/sombre. Le choix dépend de la couleur du texte environnant, et non du fond historique de chaque bouton. Les liens du hero restent originaux. Densité de dépoli orange 0,18, teinte orange à 94 % / 90 % avec couche de teinte à 96 %, indépendante du dépoli. Les couleurs restent franches ; le verre se lit dans le bord lumineux, le biseau intérieur ombré et le reflet inférieur. Rayon des actions porté à 28, petites commandes à 12. L’exemple fourni sert de référence pour l’épaisseur optique, avec adaptation à la palette Baerg.
+
+Footer : les liens et le bouton texte partagent une hauteur de ligne de 1,5 et un alignement sur la ligne de base. Mesure desktop confirmée : même ordonnée et hauteur pour les trois textes. Sur mobile, l’alignement reste à gauche. Export construit, six tests ciblés Chromium/WebKit réussis ; contrôles à 390 et 1440 px sur les cinq routes, contraste Axe et fonctionnement du menu/de la fenêtre. Captures finales inspectées.

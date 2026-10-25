@@ -4,8 +4,8 @@
 @import "tailwindcss/utilities.css" layer(utilities) prefix(lgx);
 .glass-shell {
   --lq-text: var(--glass-ink);
-  --lq-tint: rgba(255, 245, 222, 0.97);
-  --lq-tint-deep: rgba(255, 221, 184, 0.85);
+  --lq-tint: rgba(255, 245, 222, 0.78);
+  --lq-tint-deep: rgba(246, 213, 170, 0.9);
   --lq-rim-hi: rgba(255, 251, 238, 0.92);
   --lq-rim-lo: rgba(255, 177, 116, 0.62);
   position: relative;
@@ -16,9 +16,8 @@
   justify-self: start;
 }
 .glass-shell--orange {
-  --glass-ink: #48200f !important;
-  --lq-tint: rgba(238, 116, 48, 0.38);
-  --lq-tint-deep: rgba(218, 77, 19, 0.58);
+  --lq-tint: rgba(193, 47, 7, 0.94);
+  --lq-tint-deep: rgba(160, 32, 5, 0.9);
   --lq-rim-hi: rgba(255, 244, 218, 0.98);
   --lq-rim-lo: rgba(255, 143, 69, 0.72);
 }
@@ -124,4 +123,22 @@
   outline-offset: 3px;
 }
 
-.glass-shell--orange .glass-skin { box-shadow: 0 6px 18px #7a21081c, inset 0 1px 0 #fff5dfeb, inset 1px 0 0 #ffe0b999, inset 0 -1px 0 #a93c1855; }
+/* A bright lip and a shaded inner edge give the surface visible thickness. */
+.glass-shell .glass-skin {
+  box-shadow:
+    0 6px 12px #72230b2b,
+    inset 0 0 0 1px #7c2c164d,
+    inset 0 2px 0 #fff8e8,
+    inset 2px 0 1px #ffe6c7d9,
+    inset 0 -2px 0 #ffdcaaeb,
+    inset -2px 0 1px #6b250d80;
+}
+.glass-shell .liqui-glass__shine {
+  box-shadow:
+    inset 0 1px 2px #fff9e9,
+    inset 0 7px 10px #5b190b33,
+    inset 0 -5px 8px #fff0cd33;
+}
+
+/* Keep the tint independent of blur density: clear glass need not lose its hue. */
+.glass-shell .liqui-glass__tint { opacity: .96 !important; }
