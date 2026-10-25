@@ -3,10 +3,10 @@ body{--bg:#cd410f;--ink:#ffffff;--muted:#fffdf8;--line:rgba(255,244,235,.3);--ac
 body.inner-page{--bg:#cd410f;--ink:#ffffff;--muted:#fffdf8;--line:rgba(255,244,235,.3);--accent:#ffdbc9;background:linear-gradient(112deg,rgba(195,45,8,.98),rgba(205,65,15,.98)),url('/assets/empreinte-altrix.png') center top/100% auto no-repeat;background-color:#cd410f}
 ::selection{background:#f04b0b;color:#232323}
 .site-header{color:var(--ink)}
-/* The top stays clear; the returning header carries the hero texture as glass. */
+/* The top stays clear; the returning header uses a quiet warm glass wash. */
 .site-header{isolation:isolate}
-.site-header::before{content:'';position:absolute;inset:0;z-index:-1;pointer-events:none;opacity:0;background:linear-gradient(90deg,#6b090c42,#dc390c1f),url('/assets/empreinte-altrix.png') center top/100vw auto no-repeat;transition:opacity 160ms ease-out}
-.site-header.is-scrolled{background:transparent;border-bottom-color:#fff2dd24;backdrop-filter:blur(12px);-webkit-backdrop-filter:blur(12px)}
+.site-header::before{content:'';position:absolute;inset:0;z-index:-1;pointer-events:none;opacity:0;background:linear-gradient(110deg,rgba(67,18,15,.72),rgba(101,29,17,.58));transition:opacity 160ms ease-out}
+.site-header.is-scrolled{background:transparent;border-bottom-color:#fff2dd30;backdrop-filter:blur(16px);-webkit-backdrop-filter:blur(16px)}
 .site-header.is-scrolled::before{opacity:calc(var(--header-surface-opacity,1) * .88)}
 @media(prefers-reduced-motion:reduce){.site-header::before{transition:none}}
 .brand{font-weight:750}.brand-studio{color:var(--muted);font-weight:400}
