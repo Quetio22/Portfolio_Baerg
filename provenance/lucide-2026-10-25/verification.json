@@ -23,11 +23,15 @@
     "real_device": false
   },
   "physical_device_validation": {
-    "status": "pending_user_test",
-    "iphone_available": true,
+    "status": "passed_user_report",
+    "device": "iPhone",
+    "browser": "Safari (requested test context)",
     "model": null,
     "ios_version": null,
-    "observations": null
+    "reporter": "user",
+    "observations": "Tout fonctionne, rendu lisible",
+    "scope": "User confirmation in response to the Safari checklist: glass buttons, menu, returning header and phone rotation. No per-step measurements or physical Android test.",
+    "date": "2026-10-25"
   },
   "notes": [
     "Physical iPhone testing is not claimed by the WebKit emulation results.",
