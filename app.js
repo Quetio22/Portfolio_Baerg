@@ -1,13 +1,31 @@
 const menu = document.querySelector('.menu-toggle');
 const nav = document.querySelector('#navigation');
-const closeMenu = () => { menu.setAttribute('aria-expanded', 'false'); nav.classList.remove('open'); };
-menu.addEventListener('click', () => {
+const setMenu = open => {
+  menu.setAttribute('aria-expanded', String(open));
+  menu.setAttribute('aria-label', open ? 'Fermer le menu' : 'Ouvrir le menu');
+  nav.classList.toggle('open', open);
+};
+const closeMenu = () => setMenu(false);
+menu.addEventListener('click', event => {
   const open = menu.getAttribute('aria-expanded') !== 'true';
-  menu.setAttribute('aria-expanded', String(open)); nav.classList.toggle('open', open);
+  setMenu(open);
+  if (open && event.detail === 0) requestAnimationFrame(() => {
+    if (menu.getAttribute('aria-expanded') === 'true') {
+      nav.querySelector('a').focus();
+    }
+  });
 });
 nav.querySelectorAll('a').forEach(a => a.addEventListener('click', closeMenu));
 document.addEventListener('keydown', e => {
   if (e.key === 'Escape' && nav.classList.contains('open')) { closeMenu(); menu.focus(); }
+});
+document.addEventListener('click', e => {
+  if (!menu.contains(e.target) && !nav.contains(e.target)) closeMenu();
+});
+const desktopNavigation = matchMedia('(min-width:651px)');
+desktopNavigation.addEventListener('change', () => {
+  if (nav.contains(document.activeElement) && !desktopNavigation.matches) menu.focus();
+  closeMenu();
 });
 const legal = document.querySelector('#legal-dialog');
 document.querySelector('[data-legal]')?.addEventListener('click', () => legal.showModal());
