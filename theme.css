@@ -52,7 +52,8 @@ dialog h2{font-weight:600}
 :is(body.home-page .editorial,body.home-page .closing,body.inner-page .founders,body.inner-page .editorial:nth-of-type(4),body.inner-page .portfolio-list,body.inner-page .launch-offer,body.inner-page .contact-grid,body.inner-page:has(.launch-offer) .closing) .project-picture{background:#e5dccd}
 body.inner-page .founders .founder-monogram{color:#d14a12}
 body.inner-page .launch-offer .offer-price{color:#282828}
-body.inner-page .launch-offer .offer-price span,body.inner-page .launch-offer .sponsor-offer>.eyebrow{color:#cf4710}
+/* Small informational accents need stronger contrast on the cream background. */
+body.inner-page .launch-offer .offer-price span,body.inner-page .launch-offer .sponsor-offer>.eyebrow{color:#b83d0d}
 body.inner-page .contact-grid .field input,body.inner-page .contact-grid .field select,body.inner-page .contact-grid .field textarea{background:#fbf6ed;border-color:#bbb2a6;color:#282828;color-scheme:light}
 body.inner-page .contact-grid .field input::placeholder,body.inner-page .contact-grid .field textarea::placeholder{color:#74716d;opacity:1}
 body.inner-page .contact-grid .field select option{background:#fbf6ed;color:#282828}
