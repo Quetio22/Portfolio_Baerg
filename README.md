@@ -84,3 +84,7 @@ Le build exporte la page 404 et ce manifeste. **Un hébergement statique ne lit 
 Le fond Empreinte et les trois visuels Traverse disposent de variantes WebP 640/960/origine dans leurs dossiers `responsive/`. Les originaux sont conservés. `srcset`/`sizes` et `image-set` choisissent la taille adaptée ; le hero conserve son chargement prioritaire et les autres images leur chargement différé. Le `sizes` du hero Baerg tient compte du recadrage `object-fit:cover` : sa source reste assez grande sur mobile pour ne pas dégrader le zoom existant.
 
 Régénération facultative : Python avec Pillow 13, puis `python scripts/optimize-images.py`. Aucun paquet Python n'est requis pour lancer ou compiler le site. Les variantes sont versionnées et copiées par le build existant. Synthèse des mesures et limites : `provenance/bdt-19-images/`.
+
+### Nettoyage de l’export
+
+`scripts/export-exclusions.json` liste les 16 anciens médias/polices et originaux remplacés qui restent dans Git comme références mais ne sont plus copiés dans `dist/`. Le build applique cette liste de chemins exacts, sans suppression des sources ni modification du Design Lab. Les variantes responsive, polices actives et licences restent exportées. Si un original est réutilisé plus tard par une page, le retirer de cette liste avant de compiler.
