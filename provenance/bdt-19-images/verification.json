@@ -1,0 +1,115 @@
+{
+  "date": "2026-11-06",
+  "viewport": "390x844 DPR2, Chromium, local uncompressed resource bytes at initial viewport",
+  "initialResources": [
+    {
+      "route": "/",
+      "beforeBytes": 2265084,
+      "afterBytes": 481408
+    },
+    {
+      "route": "/a-propos/",
+      "beforeBytes": 2270873,
+      "afterBytes": 424563
+    },
+    {
+      "route": "/realisations/",
+      "beforeBytes": 2803276,
+      "afterBytes": 956966
+    },
+    {
+      "route": "/offres/",
+      "beforeBytes": 2263883,
+      "afterBytes": 417573
+    },
+    {
+      "route": "/contact/",
+      "beforeBytes": 2263883,
+      "afterBytes": 417573
+    },
+    {
+      "route": "/demos/lise/",
+      "beforeBytes": 138654,
+      "afterBytes": 138654
+    },
+    {
+      "route": "/demos/atelier-traverse/",
+      "beforeBytes": 4181468,
+      "afterBytes": 323222
+    },
+    {
+      "route": "/demos/midi-et-compagnie/",
+      "beforeBytes": 611298,
+      "afterBytes": 611298
+    }
+  ],
+  "observationsPerPhase": 40,
+  "overflowOrJsErrors": 0,
+  "existingTestsPassed": 44,
+  "performance": {
+    "before": {
+      "conditions": {
+        "viewport": "390x844 DPR1",
+        "latencyMs": 150,
+        "downloadBitsPerSecond": 1600000,
+        "uploadBitsPerSecond": 750000,
+        "cpuSlowdown": 4,
+        "cache": "disabled",
+        "server": "local HTTP, no compression, no CDN",
+        "method": "Chromium CDP + PerformanceObserver, not Lighthouse, not field CWV; INP not measured"
+      },
+      "pages": {
+        "/": {
+          "medianLcpMs": 11728,
+          "cls": [
+            0,
+            0,
+            0
+          ],
+          "lcpElement": "IMG"
+        },
+        "/demos/atelier-traverse/": {
+          "medianLcpMs": 20320,
+          "cls": [
+            0,
+            0,
+            0
+          ],
+          "lcpElement": "IMG"
+        }
+      }
+    },
+    "after": {
+      "conditions": {
+        "viewport": "390x844 DPR1",
+        "latencyMs": 150,
+        "downloadBitsPerSecond": 1600000,
+        "uploadBitsPerSecond": 750000,
+        "cpuSlowdown": 4,
+        "cache": "disabled",
+        "server": "local HTTP, no compression, no CDN",
+        "method": "Chromium CDP + PerformanceObserver, not Lighthouse, not field CWV; INP not measured"
+      },
+      "pages": {
+        "/": {
+          "medianLcpMs": 936,
+          "cls": [
+            0,
+            0,
+            0
+          ],
+          "lcpElement": "SPAN"
+        },
+        "/demos/atelier-traverse/": {
+          "medianLcpMs": 704,
+          "cls": [
+            0,
+            0,
+            0
+          ],
+          "lcpElement": "IMG"
+        }
+      }
+    }
+  }
+}

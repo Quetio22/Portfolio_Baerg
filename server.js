@@ -14,14 +14,26 @@ if (!Number.isInteger(requestedPort) || requestedPort < 1 || requestedPort > 655
 const autoPort = process.argv.includes('--dev') && !process.env.PORT;
 let port = requestedPort;
 const types = { '.html': 'text/html; charset=utf-8', '.css': 'text/css; charset=utf-8', '.js': 'text/javascript; charset=utf-8', '.png': 'image/png', '.jpg': 'image/jpeg', '.jpeg': 'image/jpeg', '.webp': 'image/webp', '.svg': 'image/svg+xml', '.woff2': 'font/woff2', '.ttf': 'font/ttf', '.json': 'application/json', '.md': 'text/plain; charset=utf-8', '.txt': 'text/plain; charset=utf-8' };
+const redirects = JSON.parse(await readFile(new URL('./redirects.json', import.meta.url), 'utf8'));
+async function notFound(req, res) {
+  const data = await readFile(new URL('./404.html', import.meta.url));
+  res.writeHead(404, { 'Content-Type': 'text/html; charset=utf-8', 'Cache-Control': 'no-store', 'X-Content-Type-Options': 'nosniff', 'X-Robots-Tag': 'noindex, nofollow' });
+  res.end(req.method === 'HEAD' ? undefined : data);
+}
 const server = http.createServer(async (req, res) => {
   try {
     if (!['GET', 'HEAD'].includes(req.method)) { res.writeHead(405); res.end(); return; }
-    const pathname = decodeURIComponent(new URL(req.url, 'http://localhost').pathname);
+    const url = new URL(req.url, 'http://localhost');
+    const pathname = decodeURIComponent(url.pathname);
+    const legacyPath = pathname.replace(/\/index\.html$/, '').replace(/\/$/, '');
+    if (Object.hasOwn(redirects, legacyPath)) {
+      res.writeHead(308, { Location: redirects[legacyPath] + url.search });
+      res.end(); return;
+    }
     if (pathname.split('/').some(part => part.startsWith('.'))) { res.writeHead(403); res.end(); return; }
     const entry = pathname.split('/')[1];
-    const allowed = new Set(['', 'index.html', 'common.css', 'fusion.css', 'app.js', 'motion.js', 'assets', 'demos', 'pages.css', 'theme.css', 'home.css', 'a-propos', 'realisations', 'offres', 'contact']);
-    if (!allowed.has(entry)) { res.writeHead(404); res.end(); return; }
+    const allowed = new Set(['404.html', '', 'index.html', 'common.css', 'fusion.css', 'app.js', 'motion.js', 'assets', 'demos', 'pages.css', 'theme.css', 'home.css', 'a-propos', 'realisations', 'offres', 'contact']);
+    if (!allowed.has(entry)) { await notFound(req, res); return; }
     let file = path.resolve(root, '.' + pathname);
     if (file !== path.resolve(root) && !file.startsWith(root)) { res.writeHead(403); res.end(); return; }
     if ((await stat(file)).isDirectory()) {
@@ -31,7 +43,7 @@ const server = http.createServer(async (req, res) => {
     const data = await readFile(file);
     res.writeHead(200, { 'Content-Type': types[path.extname(file)] || 'application/octet-stream', 'Cache-Control': 'no-store', 'X-Content-Type-Options': 'nosniff', 'X-Robots-Tag': 'noindex, nofollow' });
     res.end(req.method === 'HEAD' ? undefined : data);
-  } catch { res.writeHead(404); res.end('Not found'); }
+  } catch { await notFound(req, res); }
 });
 server.on('error', (error) => {
   if (error.code === 'EADDRINUSE' && autoPort && port < Math.min(requestedPort + 20, 65535)) {
