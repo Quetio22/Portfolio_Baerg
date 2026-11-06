@@ -70,3 +70,11 @@ PORT=4614 npm run dev:phone
 Ouvrir `http://ADRESSE_LOCALE_DU_MAC:4614/` dans Safari. Ce mode écoute sur le réseau local ; le serveur normal reste limité à cet ordinateur. Arrêter avec Ctrl+C après le test. Ce mode ne publie pas le site sur Internet ; éviter un réseau partagé non fiable. L’aperçu HTTP local peut désactiver le presse-papiers automatique : le formulaire conserve son repli de copie manuelle.
 
 La validation sur un appareil physique reste distincte des contrôles Playwright/WebKit. Tant que le modèle, la version iOS et les observations n’ont pas été relevés, elle doit rester marquée « en attente ».
+
+## Page 404 et anciennes adresses (BDT-22)
+
+`404.html` utilise les styles, la navigation et le footer Baerg. Ses assets utilisent des chemins absolus pour fonctionner même sur une URL inconnue imbriquée. Le serveur local renvoie ce document avec le statut 404 pour les ressources introuvables (GET/HEAD).
+
+`redirects.json` contient les trois correspondances exactes `/concepts/...` vers `/demos/.../`. Le serveur local accepte aussi la barre finale et `/index.html`, conserve la query string et renvoie une redirection permanente 308. Une ancre reste gérée par le navigateur. Les sous-pages inconnues ne sont pas redirigées arbitrairement.
+
+Le build exporte la page 404 et ce manifeste. **Un hébergement statique ne lit pas automatiquement redirects.json.** Une fois l’hébergeur choisi, convertir les trois correspondances (et variantes) vers son format de redirections permanentes, configurer la page d’erreur avec un vrai statut 404, sans réécriture générale vers l’accueil en 200. Vérifier en préproduction : destination finale en 200, conservation des paramètres, absence de boucle, GET/HEAD et page inconnue imbriquée en 404. Cette validation distante reste à faire ; aucune publication n’est déclenchée.
