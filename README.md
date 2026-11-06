@@ -78,3 +78,9 @@ La validation sur un appareil physique reste distincte des contrôles Playwright
 `redirects.json` contient les trois correspondances exactes `/concepts/...` vers `/demos/.../`. Le serveur local accepte aussi la barre finale et `/index.html`, conserve la query string et renvoie une redirection permanente 308. Une ancre reste gérée par le navigateur. Les sous-pages inconnues ne sont pas redirigées arbitrairement.
 
 Le build exporte la page 404 et ce manifeste. **Un hébergement statique ne lit pas automatiquement redirects.json.** Une fois l’hébergeur choisi, convertir les trois correspondances (et variantes) vers son format de redirections permanentes, configurer la page d’erreur avec un vrai statut 404, sans réécriture générale vers l’accueil en 200. Vérifier en préproduction : destination finale en 200, conservation des paramètres, absence de boucle, GET/HEAD et page inconnue imbriquée en 404. Cette validation distante reste à faire ; aucune publication n’est déclenchée.
+
+## Images responsive (BDT-19)
+
+Le fond Empreinte et les trois visuels Traverse disposent de variantes WebP 640/960/origine dans leurs dossiers `responsive/`. Les originaux sont conservés. `srcset`/`sizes` et `image-set` choisissent la taille adaptée ; le hero conserve son chargement prioritaire et les autres images leur chargement différé. Le `sizes` du hero Baerg tient compte du recadrage `object-fit:cover` : sa source reste assez grande sur mobile pour ne pas dégrader le zoom existant.
+
+Régénération facultative : Python avec Pillow 13, puis `python scripts/optimize-images.py`. Aucun paquet Python n'est requis pour lancer ou compiler le site. Les variantes sont versionnées et copiées par le build existant. Synthèse des mesures et limites : `provenance/bdt-19-images/`.

@@ -1,6 +1,6 @@
 /* Empreinte × Signal. Shared appearance only: page grids and spacing stay in pages.css. */
 body{--bg:#cd410f;--ink:#ffffff;--muted:#fffdf8;--line:rgba(255,244,235,.3);--accent:#ffdbc9;--on-accent:#cd410f;color-scheme:dark;background-color:var(--bg);text-rendering:optimizeLegibility}
-body.inner-page{--bg:#cd410f;--ink:#ffffff;--muted:#fffdf8;--line:rgba(255,244,235,.3);--accent:#ffdbc9;background:linear-gradient(112deg,rgba(195,45,8,.98),rgba(205,65,15,.98)),url('/assets/empreinte-altrix.png') center top/100% auto no-repeat;background-color:#cd410f}
+body.inner-page{--bg:#cd410f;--ink:#ffffff;--muted:#fffdf8;--line:rgba(255,244,235,.3);--accent:#ffdbc9;background:linear-gradient(112deg,rgba(195,45,8,.98),rgba(205,65,15,.98)),var(--signal-image) center top/100% auto no-repeat;background-color:#cd410f}
 ::selection{background:#f04b0b;color:#232323}
 .site-header{color:var(--ink)}
 /* The top stays clear; the returning header uses a quiet warm glass wash. */
@@ -77,3 +77,8 @@ footer>div>a,footer .legal-link{line-height:1.5}
  .site-header #navigation a:hover,.site-header #navigation a:focus-visible{background:#e7c8a455}
 }
 @media(prefers-reduced-motion:reduce){.site-header #navigation{transition:none!important}}
+
+/* Cover art retains its crop; small backgrounds select an appropriate density. */
+body.inner-page{--signal-image:url('/assets/responsive/empreinte-altrix-1536.webp')}
+@media(max-width:960px){body.inner-page{--signal-image:image-set(url('/assets/responsive/empreinte-altrix-960.webp') 1x,url('/assets/responsive/empreinte-altrix-1536.webp') 2x)}}
+@media(max-width:650px){body.inner-page{--signal-image:image-set(url('/assets/responsive/empreinte-altrix-640.webp') 1x,url('/assets/responsive/empreinte-altrix-960.webp') 2x,url('/assets/responsive/empreinte-altrix-1536.webp') 3x)}}
