@@ -1,0 +1,30 @@
+{
+  "result": "failed",
+  "renders": 20,
+  "layouts": 16,
+  "links": 16,
+  "failures": [
+    "/a-propos/ 1440: page content and DOM preserved",
+    "/a-propos/ 1440: structural CSS preserved",
+    "/a-propos/ 820: page content and DOM preserved",
+    "/a-propos/ 820: structural CSS preserved",
+    "/a-propos/ 390: page content and DOM preserved",
+    "/a-propos/ 390: structural CSS preserved",
+    "/a-propos/ 320: page content and DOM preserved",
+    "/a-propos/ 320: structural CSS preserved",
+    "/realisations/ 1440: page content and DOM preserved",
+    "/realisations/ 820: page content and DOM preserved",
+    "/realisations/ 390: page content and DOM preserved",
+    "/realisations/ 320: page content and DOM preserved",
+    "/offres/ 1440: page content and DOM preserved",
+    "/offres/ 820: page content and DOM preserved",
+    "/offres/ 390: page content and DOM preserved",
+    "/offres/ 320: page content and DOM preserved",
+    "/contact/ 1440: page content and DOM preserved",
+    "/contact/ 820: page content and DOM preserved",
+    "/contact/ 390: page content and DOM preserved",
+    "/contact/ 320: page content and DOM preserved"
+  ],
+  "jsErrors": [],
+  "httpErrors": []
+}

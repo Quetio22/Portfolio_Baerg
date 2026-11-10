@@ -1,0 +1,27 @@
+ 404.html                                           |   2 +
+ README.md                                          |  18 ++++
+ assets/not-found.css                               |   7 ++
+ assets/responsive/empreinte-altrix-1536.webp       | Bin 0 -> 113170 bytes
+ assets/responsive/empreinte-altrix-640.webp        | Bin 0 -> 25502 bytes
+ assets/responsive/empreinte-altrix-960.webp        | Bin 0 -> 50536 bytes
+ .../images/responsive/atelier-scene-1254.webp      | Bin 0 -> 250316 bytes
+ .../images/responsive/atelier-scene-640.webp       | Bin 0 -> 67668 bytes
+ .../images/responsive/atelier-scene-960.webp       | Bin 0 -> 152942 bytes
+ .../images/responsive/bench-1536.webp              | Bin 0 -> 146120 bytes
+ .../images/responsive/bench-640.webp               | Bin 0 -> 30876 bytes
+ .../images/responsive/bench-960.webp               | Bin 0 -> 62596 bytes
+ .../images/responsive/joint-1536.webp              | Bin 0 -> 171566 bytes
+ .../images/responsive/joint-640.webp               | Bin 0 -> 35428 bytes
+ .../images/responsive/joint-960.webp               | Bin 0 -> 74808 bytes
+ demos/atelier-traverse/index.html                  |   4 +-
+ home.css                                           |   2 +-
+ index.html                                         |   2 +-
+ provenance/bdt-19-images/README.md                 |  17 +++
+ provenance/bdt-19-images/verification.json         | 115 +++++++++++++++++++++
+ redirects.json                                     |   5 +
+ scripts/build.js                                   |  12 ++-
+ scripts/export-exclusions.json                     |  18 ++++
+ scripts/optimize-images.py                         |  16 +++
+ server.js                                          |  20 +++-
+ theme.css                                          |  10 +-
+ 26 files changed, 235 insertions(+), 13 deletions(-)

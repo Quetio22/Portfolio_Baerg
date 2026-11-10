@@ -1,0 +1,181 @@
+{
+  "site": "http://127.0.0.1:4739",
+  "tests": [
+    {
+      "engine": "webkit",
+      "name": "lien d’évitement accessible au premier Tab — huit pages",
+      "result": "passed",
+      "detail": [
+        {
+          "route": "/",
+          "focused": {
+            "href": "#contenu",
+            "text": "Aller au contenu",
+            "rect": {
+              "x": 20,
+              "y": 10,
+              "width": 152.46875,
+              "height": 53,
+              "top": 10,
+              "right": 172.46875,
+              "bottom": 63,
+              "left": 20
+            }
+          },
+          "destination": {
+            "id": "contenu",
+            "hash": "#contenu"
+          }
+        },
+        {
+          "route": "/a-propos/",
+          "focused": {
+            "href": "#contenu",
+            "text": "Aller au contenu",
+            "rect": {
+              "x": 20,
+              "y": 10,
+              "width": 152.46875,
+              "height": 53,
+              "top": 10,
+              "right": 172.46875,
+              "bottom": 63,
+              "left": 20
+            }
+          },
+          "destination": {
+            "id": "contenu",
+            "hash": "#contenu"
+          }
+        },
+        {
+          "route": "/realisations/",
+          "focused": {
+            "href": "#contenu",
+            "text": "Aller au contenu",
+            "rect": {
+              "x": 20,
+              "y": 10,
+              "width": 152.46875,
+              "height": 53,
+              "top": 10,
+              "right": 172.46875,
+              "bottom": 63,
+              "left": 20
+            }
+          },
+          "destination": {
+            "id": "contenu",
+            "hash": "#contenu"
+          }
+        },
+        {
+          "route": "/offres/",
+          "focused": {
+            "href": "#contenu",
+            "text": "Aller au contenu",
+            "rect": {
+              "x": 20,
+              "y": 10,
+              "width": 152.46875,
+              "height": 53,
+              "top": 10,
+              "right": 172.46875,
+              "bottom": 63,
+              "left": 20
+            }
+          },
+          "destination": {
+            "id": "contenu",
+            "hash": "#contenu"
+          }
+        },
+        {
+          "route": "/contact/",
+          "focused": {
+            "href": "#contenu",
+            "text": "Aller au contenu",
+            "rect": {
+              "x": 20,
+              "y": 10,
+              "width": 152.46875,
+              "height": 53,
+              "top": 10,
+              "right": 172.46875,
+              "bottom": 63,
+              "left": 20
+            }
+          },
+          "destination": {
+            "id": "contenu",
+            "hash": "#contenu"
+          }
+        },
+        {
+          "route": "/demos/lise/",
+          "focused": {
+            "href": "#contenu",
+            "text": "Aller au contenu",
+            "rect": {
+              "x": 20,
+              "y": 8,
+              "width": 152,
+              "height": 52.046875,
+              "top": 8,
+              "right": 172,
+              "bottom": 60.046875,
+              "left": 20
+            }
+          },
+          "destination": {
+            "id": "contenu",
+            "hash": "#contenu"
+          }
+        },
+        {
+          "route": "/demos/midi-et-compagnie/",
+          "focused": {
+            "href": "#contenu",
+            "text": "Aller au contenu",
+            "rect": {
+              "x": 20,
+              "y": 10,
+              "width": 143.3125,
+              "height": 50.390625,
+              "top": 10,
+              "right": 163.3125,
+              "bottom": 60.390625,
+              "left": 20
+            }
+          },
+          "destination": {
+            "id": "contenu",
+            "hash": "#contenu"
+          }
+        },
+        {
+          "route": "/demos/atelier-traverse/",
+          "focused": {
+            "href": "#contenu",
+            "text": "Aller au contenu",
+            "rect": {
+              "x": 10,
+              "y": 10,
+              "width": 145.640625,
+              "height": 48,
+              "top": 10,
+              "right": 155.640625,
+              "bottom": 58,
+              "left": 10
+            }
+          },
+          "destination": {
+            "id": "contenu",
+            "hash": "#contenu"
+          }
+        }
+      ]
+    }
+  ],
+  "errors": []
+}

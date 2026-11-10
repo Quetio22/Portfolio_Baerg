@@ -1,0 +1,863 @@
+{
+  "date": "2026-11-08T19:36:17.263Z",
+  "site": "http://127.0.0.1:4739",
+  "renders": [
+    {
+      "route": "/",
+      "width": 1440,
+      "backgroundColor": "rgb(205, 65, 15)",
+      "overflow": false,
+      "broken": [],
+      "headings": [
+        {
+          "text": "Des sites web. Pensés avec vous.",
+          "rect": {
+            "x": 64.796875,
+            "y": 473.234375,
+            "width": 760,
+            "height": 251.765625,
+            "top": 473.234375,
+            "right": 824.796875,
+            "bottom": 725,
+            "left": 64.796875
+          }
+        }
+      ],
+      "sections": [
+        "home-hero",
+        "section editorial",
+        "section home-links",
+        "closing section"
+      ]
+    },
+    {
+      "route": "/",
+      "width": 820,
+      "backgroundColor": "rgb(205, 65, 15)",
+      "overflow": false,
+      "broken": [],
+      "headings": [
+        {
+          "text": "Des sites web. Pensés avec vous.",
+          "rect": {
+            "x": 36.890625,
+            "y": 608.5,
+            "width": 485.03125,
+            "height": 166.5,
+            "top": 608.5,
+            "right": 521.921875,
+            "bottom": 775,
+            "left": 36.890625
+          }
+        }
+      ],
+      "sections": [
+        "home-hero",
+        "section editorial",
+        "section home-links",
+        "closing section"
+      ]
+    },
+    {
+      "route": "/",
+      "width": 390,
+      "backgroundColor": "rgb(205, 65, 15)",
+      "overflow": false,
+      "broken": [],
+      "headings": [
+        {
+          "text": "Des sites web. Pensés avec vous.",
+          "rect": {
+            "x": 22,
+            "y": 460,
+            "width": 346,
+            "height": 131.8125,
+            "top": 460,
+            "right": 368,
+            "bottom": 591.8125,
+            "left": 22
+          }
+        }
+      ],
+      "sections": [
+        "home-hero",
+        "section editorial",
+        "section home-links",
+        "closing section"
+      ]
+    },
+    {
+      "route": "/",
+      "width": 320,
+      "backgroundColor": "rgb(205, 65, 15)",
+      "overflow": false,
+      "broken": [],
+      "headings": [
+        {
+          "text": "Des sites web. Pensés avec vous.",
+          "rect": {
+            "x": 22,
+            "y": 435,
+            "width": 276,
+            "height": 164.625,
+            "top": 435,
+            "right": 298,
+            "bottom": 599.625,
+            "left": 22
+          }
+        }
+      ],
+      "sections": [
+        "home-hero",
+        "section editorial",
+        "section home-links",
+        "closing section"
+      ]
+    },
+    {
+      "route": "/a-propos/",
+      "width": 1440,
+      "backgroundColor": "rgb(205, 65, 15)",
+      "overflow": false,
+      "broken": [],
+      "headings": [
+        {
+          "text": "Derrière Baerg,nous deux.",
+          "rect": {
+            "x": 64.796875,
+            "y": 243,
+            "width": 1310.40625,
+            "height": 249.6875,
+            "top": 243,
+            "right": 1375.203125,
+            "bottom": 492.6875,
+            "left": 64.796875
+          }
+        }
+      ],
+      "sections": [
+        "page-intro",
+        "section founders",
+        "closing section"
+      ]
+    },
+    {
+      "route": "/a-propos/",
+      "width": 820,
+      "backgroundColor": "rgb(205, 65, 15)",
+      "overflow": false,
+      "broken": [],
+      "headings": [
+        {
+          "text": "Derrière Baerg,nous deux.",
+          "rect": {
+            "x": 36.890625,
+            "y": 243,
+            "width": 746.21875,
+            "height": 142.1875,
+            "top": 243,
+            "right": 783.109375,
+            "bottom": 385.1875,
+            "left": 36.890625
+          }
+        }
+      ],
+      "sections": [
+        "page-intro",
+        "section founders",
+        "closing section"
+      ]
+    },
+    {
+      "route": "/a-propos/",
+      "width": 390,
+      "backgroundColor": "rgb(205, 65, 15)",
+      "overflow": false,
+      "broken": [],
+      "headings": [
+        {
+          "text": "Derrière Baerg,nous deux.",
+          "rect": {
+            "x": 22,
+            "y": 186,
+            "width": 346,
+            "height": 93.0625,
+            "top": 186,
+            "right": 368,
+            "bottom": 279.0625,
+            "left": 22
+          }
+        }
+      ],
+      "sections": [
+        "page-intro",
+        "section founders",
+        "closing section"
+      ]
+    },
+    {
+      "route": "/a-propos/",
+      "width": 320,
+      "backgroundColor": "rgb(205, 65, 15)",
+      "overflow": false,
+      "broken": [],
+      "headings": [
+        {
+          "text": "Derrière Baerg,nous deux.",
+          "rect": {
+            "x": 22,
+            "y": 186,
+            "width": 276,
+            "height": 87.71875,
+            "top": 186,
+            "right": 298,
+            "bottom": 273.71875,
+            "left": 22
+          }
+        }
+      ],
+      "sections": [
+        "page-intro",
+        "section founders",
+        "closing section"
+      ]
+    },
+    {
+      "route": "/realisations/",
+      "width": 1440,
+      "backgroundColor": "rgb(205, 65, 15)",
+      "overflow": false,
+      "broken": [],
+      "headings": [
+        {
+          "text": "Nos réalisations.",
+          "rect": {
+            "x": 64.796875,
+            "y": 243,
+            "width": 1310.40625,
+            "height": 124.84375,
+            "top": 243,
+            "right": 1375.203125,
+            "bottom": 367.84375,
+            "left": 64.796875
+          }
+        }
+      ],
+      "sections": [
+        "page-intro",
+        "section portfolio-list",
+        "closing section"
+      ]
+    },
+    {
+      "route": "/realisations/",
+      "width": 820,
+      "backgroundColor": "rgb(205, 65, 15)",
+      "overflow": false,
+      "broken": [],
+      "headings": [
+        {
+          "text": "Nos réalisations.",
+          "rect": {
+            "x": 36.890625,
+            "y": 243,
+            "width": 746.21875,
+            "height": 71.09375,
+            "top": 243,
+            "right": 783.109375,
+            "bottom": 314.09375,
+            "left": 36.890625
+          }
+        }
+      ],
+      "sections": [
+        "page-intro",
+        "section portfolio-list",
+        "closing section"
+      ]
+    },
+    {
+      "route": "/realisations/",
+      "width": 390,
+      "backgroundColor": "rgb(205, 65, 15)",
+      "overflow": false,
+      "broken": [],
+      "headings": [
+        {
+          "text": "Nos réalisations.",
+          "rect": {
+            "x": 22,
+            "y": 186,
+            "width": 346,
+            "height": 46.53125,
+            "top": 186,
+            "right": 368,
+            "bottom": 232.53125,
+            "left": 22
+          }
+        }
+      ],
+      "sections": [
+        "page-intro",
+        "section portfolio-list",
+        "closing section"
+      ]
+    },
+    {
+      "route": "/realisations/",
+      "width": 320,
+      "backgroundColor": "rgb(205, 65, 15)",
+      "overflow": false,
+      "broken": [],
+      "headings": [
+        {
+          "text": "Nos réalisations.",
+          "rect": {
+            "x": 22,
+            "y": 186,
+            "width": 276,
+            "height": 87.71875,
+            "top": 186,
+            "right": 298,
+            "bottom": 273.71875,
+            "left": 22
+          }
+        }
+      ],
+      "sections": [
+        "page-intro",
+        "section portfolio-list",
+        "closing section"
+      ]
+    },
+    {
+      "route": "/offres/",
+      "width": 1440,
+      "backgroundColor": "rgb(205, 65, 15)",
+      "overflow": false,
+      "broken": [],
+      "headings": [
+        {
+          "text": "Moderniser et repenservotre site.",
+          "rect": {
+            "x": 64.796875,
+            "y": 243,
+            "width": 1310.40625,
+            "height": 249.6875,
+            "top": 243,
+            "right": 1375.203125,
+            "bottom": 492.6875,
+            "left": 64.796875
+          }
+        }
+      ],
+      "sections": [
+        "page-intro",
+        "section launch-offer",
+        "section priced-offers",
+        "closing section"
+      ]
+    },
+    {
+      "route": "/offres/",
+      "width": 820,
+      "backgroundColor": "rgb(205, 65, 15)",
+      "overflow": false,
+      "broken": [],
+      "headings": [
+        {
+          "text": "Moderniser et repenservotre site.",
+          "rect": {
+            "x": 36.890625,
+            "y": 243,
+            "width": 746.21875,
+            "height": 142.1875,
+            "top": 243,
+            "right": 783.109375,
+            "bottom": 385.1875,
+            "left": 36.890625
+          }
+        }
+      ],
+      "sections": [
+        "page-intro",
+        "section launch-offer",
+        "section priced-offers",
+        "closing section"
+      ]
+    },
+    {
+      "route": "/offres/",
+      "width": 390,
+      "backgroundColor": "rgb(205, 65, 15)",
+      "overflow": false,
+      "broken": [],
+      "headings": [
+        {
+          "text": "Moderniser et repenservotre site.",
+          "rect": {
+            "x": 22,
+            "y": 186,
+            "width": 346,
+            "height": 139.59375,
+            "top": 186,
+            "right": 368,
+            "bottom": 325.59375,
+            "left": 22
+          }
+        }
+      ],
+      "sections": [
+        "page-intro",
+        "section launch-offer",
+        "section priced-offers",
+        "closing section"
+      ]
+    },
+    {
+      "route": "/offres/",
+      "width": 320,
+      "backgroundColor": "rgb(205, 65, 15)",
+      "overflow": false,
+      "broken": [],
+      "headings": [
+        {
+          "text": "Moderniser et repenservotre site.",
+          "rect": {
+            "x": 22,
+            "y": 186,
+            "width": 276,
+            "height": 131.578125,
+            "top": 186,
+            "right": 298,
+            "bottom": 317.578125,
+            "left": 22
+          }
+        }
+      ],
+      "sections": [
+        "page-intro",
+        "section launch-offer",
+        "section priced-offers",
+        "closing section"
+      ]
+    },
+    {
+      "route": "/contact/",
+      "width": 1440,
+      "backgroundColor": "rgb(205, 65, 15)",
+      "overflow": false,
+      "broken": [],
+      "headings": [
+        {
+          "text": "Parlons devotre projet.",
+          "rect": {
+            "x": 64.796875,
+            "y": 243,
+            "width": 1310.40625,
+            "height": 249.6875,
+            "top": 243,
+            "right": 1375.203125,
+            "bottom": 492.6875,
+            "left": 64.796875
+          }
+        }
+      ],
+      "sections": [
+        "page-intro",
+        "section contact-grid"
+      ]
+    },
+    {
+      "route": "/contact/",
+      "width": 820,
+      "backgroundColor": "rgb(205, 65, 15)",
+      "overflow": false,
+      "broken": [],
+      "headings": [
+        {
+          "text": "Parlons devotre projet.",
+          "rect": {
+            "x": 36.890625,
+            "y": 243,
+            "width": 746.21875,
+            "height": 142.1875,
+            "top": 243,
+            "right": 783.109375,
+            "bottom": 385.1875,
+            "left": 36.890625
+          }
+        }
+      ],
+      "sections": [
+        "page-intro",
+        "section contact-grid"
+      ]
+    },
+    {
+      "route": "/contact/",
+      "width": 390,
+      "backgroundColor": "rgb(205, 65, 15)",
+      "overflow": false,
+      "broken": [],
+      "headings": [
+        {
+          "text": "Parlons devotre projet.",
+          "rect": {
+            "x": 22,
+            "y": 186,
+            "width": 346,
+            "height": 93.0625,
+            "top": 186,
+            "right": 368,
+            "bottom": 279.0625,
+            "left": 22
+          }
+        }
+      ],
+      "sections": [
+        "page-intro",
+        "section contact-grid"
+      ]
+    },
+    {
+      "route": "/contact/",
+      "width": 320,
+      "backgroundColor": "rgb(205, 65, 15)",
+      "overflow": false,
+      "broken": [],
+      "headings": [
+        {
+          "text": "Parlons devotre projet.",
+          "rect": {
+            "x": 22,
+            "y": 186,
+            "width": 276,
+            "height": 87.71875,
+            "top": 186,
+            "right": 298,
+            "bottom": 273.71875,
+            "left": 22
+          }
+        }
+      ],
+      "sections": [
+        "page-intro",
+        "section contact-grid"
+      ]
+    }
+  ],
+  "layoutChecks": [
+    {
+      "route": "/a-propos/",
+      "width": 1440,
+      "mainDOM": false,
+      "layout": false
+    },
+    {
+      "route": "/a-propos/",
+      "width": 820,
+      "mainDOM": false,
+      "layout": false
+    },
+    {
+      "route": "/a-propos/",
+      "width": 390,
+      "mainDOM": false,
+      "layout": false
+    },
+    {
+      "route": "/a-propos/",
+      "width": 320,
+      "mainDOM": false,
+      "layout": false
+    },
+    {
+      "route": "/realisations/",
+      "width": 1440,
+      "mainDOM": false,
+      "layout": true
+    },
+    {
+      "route": "/realisations/",
+      "width": 820,
+      "mainDOM": false,
+      "layout": true
+    },
+    {
+      "route": "/realisations/",
+      "width": 390,
+      "mainDOM": false,
+      "layout": true
+    },
+    {
+      "route": "/realisations/",
+      "width": 320,
+      "mainDOM": false,
+      "layout": true
+    },
+    {
+      "route": "/offres/",
+      "width": 1440,
+      "mainDOM": false,
+      "layout": true
+    },
+    {
+      "route": "/offres/",
+      "width": 820,
+      "mainDOM": false,
+      "layout": true
+    },
+    {
+      "route": "/offres/",
+      "width": 390,
+      "mainDOM": false,
+      "layout": true
+    },
+    {
+      "route": "/offres/",
+      "width": 320,
+      "mainDOM": false,
+      "layout": true
+    },
+    {
+      "route": "/contact/",
+      "width": 1440,
+      "mainDOM": false,
+      "layout": true
+    },
+    {
+      "route": "/contact/",
+      "width": 820,
+      "mainDOM": false,
+      "layout": true
+    },
+    {
+      "route": "/contact/",
+      "width": 390,
+      "mainDOM": false,
+      "layout": true
+    },
+    {
+      "route": "/contact/",
+      "width": 320,
+      "mainDOM": false,
+      "layout": true
+    }
+  ],
+  "interactions": [
+    {
+      "route": "/",
+      "width": 1440,
+      "menu": true,
+      "legal": true
+    },
+    {
+      "route": "/",
+      "width": 820,
+      "menu": true,
+      "legal": true
+    },
+    {
+      "route": "/",
+      "width": 390,
+      "menu": true,
+      "legal": true
+    },
+    {
+      "route": "/",
+      "width": 320,
+      "menu": true,
+      "legal": true
+    },
+    {
+      "route": "/a-propos/",
+      "width": 1440,
+      "menu": true,
+      "legal": true
+    },
+    {
+      "route": "/a-propos/",
+      "width": 820,
+      "menu": true,
+      "legal": true
+    },
+    {
+      "route": "/a-propos/",
+      "width": 390,
+      "menu": true,
+      "legal": true
+    },
+    {
+      "route": "/a-propos/",
+      "width": 320,
+      "menu": true,
+      "legal": true
+    },
+    {
+      "route": "/realisations/",
+      "width": 1440,
+      "menu": true,
+      "legal": true
+    },
+    {
+      "route": "/realisations/",
+      "width": 820,
+      "menu": true,
+      "legal": true
+    },
+    {
+      "route": "/realisations/",
+      "width": 390,
+      "menu": true,
+      "legal": true
+    },
+    {
+      "route": "/realisations/",
+      "width": 320,
+      "menu": true,
+      "legal": true
+    },
+    {
+      "route": "/offres/",
+      "width": 1440,
+      "menu": true,
+      "legal": true
+    },
+    {
+      "route": "/offres/",
+      "width": 820,
+      "menu": true,
+      "legal": true
+    },
+    {
+      "route": "/offres/",
+      "width": 390,
+      "menu": true,
+      "legal": true
+    },
+    {
+      "route": "/offres/",
+      "width": 320,
+      "menu": true,
+      "legal": true
+    },
+    {
+      "route": "/contact/",
+      "width": 1440,
+      "menu": true,
+      "legal": true
+    },
+    {
+      "route": "/contact/",
+      "width": 820,
+      "menu": true,
+      "legal": true
+    },
+    {
+      "route": "/contact/",
+      "width": 390,
+      "menu": true,
+      "legal": true
+    },
+    {
+      "route": "/contact/",
+      "width": 320,
+      "menu": true,
+      "legal": true
+    }
+  ],
+  "links": [
+    {
+      "url": "http://127.0.0.1:4739/#contenu",
+      "status": 200
+    },
+    {
+      "url": "http://127.0.0.1:4739/",
+      "status": 200
+    },
+    {
+      "url": "http://127.0.0.1:4739/a-propos/",
+      "status": 200
+    },
+    {
+      "url": "http://127.0.0.1:4739/realisations/",
+      "status": 200
+    },
+    {
+      "url": "http://127.0.0.1:4739/offres/",
+      "status": 200
+    },
+    {
+      "url": "http://127.0.0.1:4739/contact/",
+      "status": 200
+    },
+    {
+      "url": "http://127.0.0.1:4739/a-propos/#contenu",
+      "status": 200
+    },
+    {
+      "url": "http://127.0.0.1:4739/realisations/#contenu",
+      "status": 200
+    },
+    {
+      "url": "http://127.0.0.1:4739/demos/lise/",
+      "status": 200
+    },
+    {
+      "url": "http://127.0.0.1:4739/demos/midi-et-compagnie/",
+      "status": 200
+    },
+    {
+      "url": "http://127.0.0.1:4739/demos/atelier-traverse/",
+      "status": 200
+    },
+    {
+      "url": "http://127.0.0.1:4739/offres/#contenu",
+      "status": 200
+    },
+    {
+      "url": "http://127.0.0.1:4739/contact/?projet=refonte",
+      "status": 200
+    },
+    {
+      "url": "http://127.0.0.1:4739/contact/?projet=sponsor",
+      "status": 200
+    },
+    {
+      "url": "http://127.0.0.1:4739/contact/?projet=refonte&option=photographies",
+      "status": 200
+    },
+    {
+      "url": "http://127.0.0.1:4739/contact/#contenu",
+      "status": 200
+    }
+  ],
+  "failures": [
+    "/a-propos/ 1440: page content and DOM preserved",
+    "/a-propos/ 1440: structural CSS preserved",
+    "/a-propos/ 820: page content and DOM preserved",
+    "/a-propos/ 820: structural CSS preserved",
+    "/a-propos/ 390: page content and DOM preserved",
+    "/a-propos/ 390: structural CSS preserved",
+    "/a-propos/ 320: page content and DOM preserved",
+    "/a-propos/ 320: structural CSS preserved",
+    "/realisations/ 1440: page content and DOM preserved",
+    "/realisations/ 820: page content and DOM preserved",
+    "/realisations/ 390: page content and DOM preserved",
+    "/realisations/ 320: page content and DOM preserved",
+    "/offres/ 1440: page content and DOM preserved",
+    "/offres/ 820: page content and DOM preserved",
+    "/offres/ 390: page content and DOM preserved",
+    "/offres/ 320: page content and DOM preserved",
+    "/contact/ 1440: page content and DOM preserved",
+    "/contact/ 820: page content and DOM preserved",
+    "/contact/ 390: page content and DOM preserved",
+    "/contact/ 320: page content and DOM preserved"
+  ],
+  "jsErrors": [],
+  "httpErrors": [],
+  "postRequests": [],
+  "headerScroll": true,
+  "result": "failed"
+}

@@ -1,0 +1,6 @@
+80dc112 2026-11-06T15:18:11+01:00 Intègre le nettoyage de l’export dans Dev
+5beee95 2026-11-06T15:17:44+01:00 Exclut 18 Mo de références inutilisées de l’export
+85c9a02 2026-11-06T15:12:25+01:00 Intègre les corrections BDT-19, BDT-20 et BDT-22 dans Dev
+e5b15d5 2026-11-06T15:10:08+01:00 Optimise les images responsive Baerg et Traverse (BDT-19)
+0c582d4 2026-11-06T14:54:19+01:00 Ajoute la page 404 et les redirections des anciennes URL (BDT-22)
+81088e1 2026-11-06T14:43:06+01:00 Corrige les trois contrastes de BDT-20

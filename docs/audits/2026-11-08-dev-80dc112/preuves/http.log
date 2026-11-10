@@ -1,0 +1,66 @@
+{
+  "checks": 53,
+  "resources": 85,
+  "failures": [
+    {
+      "path": "/a-propos?projet=refonte&origine=audit",
+      "method": "GET",
+      "status": 308,
+      "expected": 308,
+      "headers": {
+        "Location": "/a-propos/",
+        "Date": "Sun, 08 Nov 2026 19:33:04 GMT",
+        "Connection": "close",
+        "Transfer-Encoding": "chunked"
+      },
+      "bodyBytes": 0,
+      "expectedLocation": "/a-propos/?projet=refonte&origine=audit",
+      "passed": false
+    },
+    {
+      "path": "/contact?projet=refonte&origine=audit",
+      "method": "GET",
+      "status": 308,
+      "expected": 308,
+      "headers": {
+        "Location": "/contact/",
+        "Date": "Sun, 08 Nov 2026 19:33:04 GMT",
+        "Connection": "close",
+        "Transfer-Encoding": "chunked"
+      },
+      "bodyBytes": 0,
+      "expectedLocation": "/contact/?projet=refonte&origine=audit",
+      "passed": false
+    },
+    {
+      "path": "/offres?projet=refonte&origine=audit",
+      "method": "GET",
+      "status": 308,
+      "expected": 308,
+      "headers": {
+        "Location": "/offres/",
+        "Date": "Sun, 08 Nov 2026 19:33:04 GMT",
+        "Connection": "close",
+        "Transfer-Encoding": "chunked"
+      },
+      "bodyBytes": 0,
+      "expectedLocation": "/offres/?projet=refonte&origine=audit",
+      "passed": false
+    },
+    {
+      "path": "/demos/lise?projet=refonte&origine=audit",
+      "method": "GET",
+      "status": 308,
+      "expected": 308,
+      "headers": {
+        "Location": "/demos/lise/",
+        "Date": "Sun, 08 Nov 2026 19:33:04 GMT",
+        "Connection": "close",
+        "Transfer-Encoding": "chunked"
+      },
+      "bodyBytes": 0,
+      "expectedLocation": "/demos/lise/?projet=refonte&origine=audit",
+      "passed": false
+    }
+  ]
+}

@@ -1,0 +1,172 @@
+[
+  {
+    "selector": "#navigation a:nth-child(1)",
+    "text": "Accueil",
+    "rect": {
+      "x": 998.78125,
+      "y": 42,
+      "width": 44.015625,
+      "height": 17,
+      "top": 42,
+      "right": 1042.796875,
+      "bottom": 59,
+      "left": 998.78125
+    },
+    "color": "rgb(255, 255, 255)",
+    "font": "13px",
+    "weight": "400"
+  },
+  {
+    "selector": "#navigation a:nth-child(2)",
+    "text": "À propos",
+    "rect": {
+      "x": 1072.796875,
+      "y": 42,
+      "width": 54.875,
+      "height": 17,
+      "top": 42,
+      "right": 1127.671875,
+      "bottom": 59,
+      "left": 1072.796875
+    },
+    "color": "rgb(255, 255, 255)",
+    "font": "13px",
+    "weight": "400"
+  },
+  {
+    "selector": "#navigation a:nth-child(3)",
+    "text": "Réalisations",
+    "rect": {
+      "x": 1157.671875,
+      "y": 42,
+      "width": 71.140625,
+      "height": 17,
+      "top": 42,
+      "right": 1228.8125,
+      "bottom": 59,
+      "left": 1157.671875
+    },
+    "color": "rgb(255, 255, 255)",
+    "font": "13px",
+    "weight": "400"
+  },
+  {
+    "selector": "#navigation a:nth-child(4)",
+    "text": "Offres",
+    "rect": {
+      "x": 1258.8125,
+      "y": 42,
+      "width": 37.375,
+      "height": 17,
+      "top": 42,
+      "right": 1296.1875,
+      "bottom": 59,
+      "left": 1258.8125
+    },
+    "color": "rgb(255, 255, 255)",
+    "font": "13px",
+    "weight": "400"
+  },
+  {
+    "selector": "#navigation a:nth-child(5)",
+    "text": "Contact",
+    "rect": {
+      "x": 1326.1875,
+      "y": 42,
+      "width": 49.015625,
+      "height": 17,
+      "top": 42,
+      "right": 1375.203125,
+      "bottom": 59,
+      "left": 1326.1875
+    },
+    "color": "rgb(255, 255, 255)",
+    "font": "13px",
+    "weight": "400"
+  },
+  {
+    "selector": "#home-title span:nth-child(1)",
+    "text": "Des sites web.",
+    "rect": {
+      "x": 64.796875,
+      "y": 473.234375,
+      "width": 760,
+      "height": 83.921875,
+      "top": 473.234375,
+      "right": 824.796875,
+      "bottom": 557.15625,
+      "left": 64.796875
+    },
+    "color": "rgb(255, 255, 255)",
+    "font": "89.28px",
+    "weight": "700"
+  },
+  {
+    "selector": "#home-title span:nth-child(2)",
+    "text": "Pensés avec vous.",
+    "rect": {
+      "x": 64.796875,
+      "y": 557.15625,
+      "width": 760,
+      "height": 167.84375,
+      "top": 557.15625,
+      "right": 824.796875,
+      "bottom": 725,
+      "left": 64.796875
+    },
+    "color": "rgb(255, 255, 255)",
+    "font": "89.28px",
+    "weight": "700"
+  },
+  {
+    "selector": ".home-primary",
+    "text": "Découvrir les réalisations",
+    "rect": {
+      "x": 1125.203125,
+      "y": 625,
+      "width": 250,
+      "height": 53,
+      "top": 625,
+      "right": 1375.203125,
+      "bottom": 678,
+      "left": 1125.203125
+    },
+    "color": "rgb(255, 255, 255)",
+    "font": "13px",
+    "weight": "400"
+  },
+  {
+    "selector": ".home-secondary",
+    "text": "Discuter d’un projet",
+    "rect": {
+      "x": 1125.203125,
+      "y": 693,
+      "width": 250,
+      "height": 24,
+      "top": 693,
+      "right": 1375.203125,
+      "bottom": 717,
+      "left": 1125.203125
+    },
+    "color": "rgb(255, 255, 255)",
+    "font": "12px",
+    "weight": "400"
+  },
+  {
+    "selector": ".home-label",
+    "text": "Studio web · Bulle, Suisse",
+    "rect": {
+      "x": 64.796875,
+      "y": 955.5625,
+      "width": 216.359375,
+      "height": 21.4375,
+      "top": 955.5625,
+      "right": 281.15625,
+      "bottom": 977,
+      "left": 64.796875
+    },
+    "color": "rgb(255, 245, 232)",
+    "font": "13px",
+    "weight": "400"
+  }
+]

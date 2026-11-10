@@ -1,0 +1,30 @@
+{
+  "date": "2026-11-08",
+  "branch": "Dev",
+  "commit": "80dc11290e29ecf9fe490855b3676b724c55b218",
+  "referenceCommit": "bd94201",
+  "originalCheckoutBranch": "dev_t",
+  "node": "v25.9.0",
+  "npm": "11.12.1",
+  "source": "git archive Dev ; copie isolée, sans fichiers non versionnés",
+  "remoteDevConfirmed": "80dc11290e29ecf9fe490855b3676b724c55b218",
+  "remoteCheck": "git ls-remote --heads origin Dev ; 8 novembre 2026",
+  "engines": [
+    {
+      "engine": "chromium",
+      "version": "153.0.8010.12"
+    },
+    {
+      "engine": "webkit",
+      "version": "26.6"
+    },
+    {
+      "engine": "firefox",
+      "version": "155.0"
+    }
+  ],
+  "testedEnvironment": "macOS arm64, Node 25.9.0, npm 11.12.1",
+  "physicalDevicesTested": false,
+  "realMessageSent": false,
+  "productionDeployed": false
+}

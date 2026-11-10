@@ -1,0 +1,276 @@
+{
+  "site": "http://127.0.0.1:4739",
+  "tests": [
+    {
+      "engine": "chromium",
+      "name": "reflow 200 % et 400 % par largeur CSS équivalente — cinq pages",
+      "result": "passed",
+      "detail": {
+        "method": "Reflow à 640 puis 320 pixels CSS, équivalent en largeur à une fenêtre de 1280 pixels zoomée à 200/400 %. Ne remplace pas un vrai zoom navigateur ou système sur appareil physique.",
+        "observations": [
+          {
+            "route": "/",
+            "equivalentZoom": 2,
+            "viewport": 640,
+            "scrollWidth": 640,
+            "zoom": "1",
+            "bodyWidth": 640
+          },
+          {
+            "route": "/a-propos/",
+            "equivalentZoom": 2,
+            "viewport": 640,
+            "scrollWidth": 640,
+            "zoom": "1",
+            "bodyWidth": 640
+          },
+          {
+            "route": "/realisations/",
+            "equivalentZoom": 2,
+            "viewport": 640,
+            "scrollWidth": 640,
+            "zoom": "1",
+            "bodyWidth": 640
+          },
+          {
+            "route": "/offres/",
+            "equivalentZoom": 2,
+            "viewport": 640,
+            "scrollWidth": 640,
+            "zoom": "1",
+            "bodyWidth": 640
+          },
+          {
+            "route": "/contact/",
+            "equivalentZoom": 2,
+            "viewport": 640,
+            "scrollWidth": 640,
+            "zoom": "1",
+            "bodyWidth": 640
+          },
+          {
+            "route": "/",
+            "equivalentZoom": 4,
+            "viewport": 320,
+            "scrollWidth": 320,
+            "zoom": "1",
+            "bodyWidth": 320
+          },
+          {
+            "route": "/a-propos/",
+            "equivalentZoom": 4,
+            "viewport": 320,
+            "scrollWidth": 320,
+            "zoom": "1",
+            "bodyWidth": 320
+          },
+          {
+            "route": "/realisations/",
+            "equivalentZoom": 4,
+            "viewport": 320,
+            "scrollWidth": 320,
+            "zoom": "1",
+            "bodyWidth": 320
+          },
+          {
+            "route": "/offres/",
+            "equivalentZoom": 4,
+            "viewport": 320,
+            "scrollWidth": 320,
+            "zoom": "1",
+            "bodyWidth": 320
+          },
+          {
+            "route": "/contact/",
+            "equivalentZoom": 4,
+            "viewport": 320,
+            "scrollWidth": 320,
+            "zoom": "1",
+            "bodyWidth": 320
+          }
+        ]
+      }
+    },
+    {
+      "engine": "webkit",
+      "name": "reflow 200 % et 400 % par largeur CSS équivalente — cinq pages",
+      "result": "passed",
+      "detail": {
+        "method": "Reflow à 640 puis 320 pixels CSS, équivalent en largeur à une fenêtre de 1280 pixels zoomée à 200/400 %. Ne remplace pas un vrai zoom navigateur ou système sur appareil physique.",
+        "observations": [
+          {
+            "route": "/",
+            "equivalentZoom": 2,
+            "viewport": 640,
+            "scrollWidth": 640,
+            "zoom": "1",
+            "bodyWidth": 640
+          },
+          {
+            "route": "/a-propos/",
+            "equivalentZoom": 2,
+            "viewport": 640,
+            "scrollWidth": 640,
+            "zoom": "1",
+            "bodyWidth": 640
+          },
+          {
+            "route": "/realisations/",
+            "equivalentZoom": 2,
+            "viewport": 640,
+            "scrollWidth": 640,
+            "zoom": "1",
+            "bodyWidth": 640
+          },
+          {
+            "route": "/offres/",
+            "equivalentZoom": 2,
+            "viewport": 640,
+            "scrollWidth": 640,
+            "zoom": "1",
+            "bodyWidth": 640
+          },
+          {
+            "route": "/contact/",
+            "equivalentZoom": 2,
+            "viewport": 640,
+            "scrollWidth": 640,
+            "zoom": "1",
+            "bodyWidth": 640
+          },
+          {
+            "route": "/",
+            "equivalentZoom": 4,
+            "viewport": 320,
+            "scrollWidth": 320,
+            "zoom": "1",
+            "bodyWidth": 320
+          },
+          {
+            "route": "/a-propos/",
+            "equivalentZoom": 4,
+            "viewport": 320,
+            "scrollWidth": 320,
+            "zoom": "1",
+            "bodyWidth": 320
+          },
+          {
+            "route": "/realisations/",
+            "equivalentZoom": 4,
+            "viewport": 320,
+            "scrollWidth": 320,
+            "zoom": "1",
+            "bodyWidth": 320
+          },
+          {
+            "route": "/offres/",
+            "equivalentZoom": 4,
+            "viewport": 320,
+            "scrollWidth": 320,
+            "zoom": "1",
+            "bodyWidth": 320
+          },
+          {
+            "route": "/contact/",
+            "equivalentZoom": 4,
+            "viewport": 320,
+            "scrollWidth": 320,
+            "zoom": "1",
+            "bodyWidth": 320
+          }
+        ]
+      }
+    },
+    {
+      "engine": "firefox",
+      "name": "reflow 200 % et 400 % par largeur CSS équivalente — cinq pages",
+      "result": "passed",
+      "detail": {
+        "method": "Reflow à 640 puis 320 pixels CSS, équivalent en largeur à une fenêtre de 1280 pixels zoomée à 200/400 %. Ne remplace pas un vrai zoom navigateur ou système sur appareil physique.",
+        "observations": [
+          {
+            "route": "/",
+            "equivalentZoom": 2,
+            "viewport": 640,
+            "scrollWidth": 640,
+            "zoom": "1",
+            "bodyWidth": 640
+          },
+          {
+            "route": "/a-propos/",
+            "equivalentZoom": 2,
+            "viewport": 640,
+            "scrollWidth": 640,
+            "zoom": "1",
+            "bodyWidth": 640
+          },
+          {
+            "route": "/realisations/",
+            "equivalentZoom": 2,
+            "viewport": 640,
+            "scrollWidth": 640,
+            "zoom": "1",
+            "bodyWidth": 640
+          },
+          {
+            "route": "/offres/",
+            "equivalentZoom": 2,
+            "viewport": 640,
+            "scrollWidth": 640,
+            "zoom": "1",
+            "bodyWidth": 640
+          },
+          {
+            "route": "/contact/",
+            "equivalentZoom": 2,
+            "viewport": 640,
+            "scrollWidth": 640,
+            "zoom": "1",
+            "bodyWidth": 640
+          },
+          {
+            "route": "/",
+            "equivalentZoom": 4,
+            "viewport": 320,
+            "scrollWidth": 320,
+            "zoom": "1",
+            "bodyWidth": 320
+          },
+          {
+            "route": "/a-propos/",
+            "equivalentZoom": 4,
+            "viewport": 320,
+            "scrollWidth": 320,
+            "zoom": "1",
+            "bodyWidth": 320
+          },
+          {
+            "route": "/realisations/",
+            "equivalentZoom": 4,
+            "viewport": 320,
+            "scrollWidth": 320,
+            "zoom": "1",
+            "bodyWidth": 320
+          },
+          {
+            "route": "/offres/",
+            "equivalentZoom": 4,
+            "viewport": 320,
+            "scrollWidth": 320,
+            "zoom": "1",
+            "bodyWidth": 320
+          },
+          {
+            "route": "/contact/",
+            "equivalentZoom": 4,
+            "viewport": 320,
+            "scrollWidth": 320,
+            "zoom": "1",
+            "bodyWidth": 320
+          }
+        ]
+      }
+    }
+  ],
+  "errors": []
+}

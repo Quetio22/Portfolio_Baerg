@@ -1,0 +1,4 @@
+chromium: 1/1 contrôles réussis
+webkit: 1/1 contrôles réussis
+firefox: 1/1 contrôles réussis
+{"tests":3,"passed":3,"failed":[]}

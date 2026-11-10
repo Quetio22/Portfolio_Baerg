@@ -1,0 +1,4 @@
+chromium: 15/15 contrôles réussis
+webkit: 14/15 contrôles réussis
+firefox: 15/15 contrôles réussis
+{"tests":45,"passed":44,"failed":[{"engine":"webkit","name":"lien d’évitement accessible au premier Tab — huit pages","error":"Error: premier Tab /contact/{\"href\":null,\"text\":\"\",\"rect\":{\"x\":22,\"y\":982.390625,\"width\":346,\"height\":52,\"top\":982.390625,\"right\":368,\"bottom\":1034.390625,\"left\":22}}"}]}

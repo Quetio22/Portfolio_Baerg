@@ -1,0 +1,1496 @@
+{
+  "site": "http://127.0.0.1:4739",
+  "tests": [
+    {
+      "engine": "chromium",
+      "name": "menu au clavier, Escape, focus et fermeture extérieure — cinq pages",
+      "result": "passed",
+      "detail": [
+        "/",
+        "/a-propos/",
+        "/realisations/",
+        "/offres/",
+        "/contact/"
+      ]
+    },
+    {
+      "engine": "chromium",
+      "name": "lien d’évitement accessible au premier Tab — huit pages",
+      "result": "passed",
+      "detail": [
+        {
+          "route": "/",
+          "focused": {
+            "href": "#contenu",
+            "text": "Aller au contenu",
+            "rect": {
+              "x": 20,
+              "y": 10,
+              "width": 152.46875,
+              "height": 53,
+              "top": 10,
+              "right": 172.46875,
+              "bottom": 63,
+              "left": 20
+            }
+          },
+          "destination": {
+            "id": "contenu",
+            "hash": "#contenu"
+          }
+        },
+        {
+          "route": "/a-propos/",
+          "focused": {
+            "href": "#contenu",
+            "text": "Aller au contenu",
+            "rect": {
+              "x": 20,
+              "y": 10,
+              "width": 152.46875,
+              "height": 53,
+              "top": 10,
+              "right": 172.46875,
+              "bottom": 63,
+              "left": 20
+            }
+          },
+          "destination": {
+            "id": "contenu",
+            "hash": "#contenu"
+          }
+        },
+        {
+          "route": "/realisations/",
+          "focused": {
+            "href": "#contenu",
+            "text": "Aller au contenu",
+            "rect": {
+              "x": 20,
+              "y": 10,
+              "width": 152.46875,
+              "height": 53,
+              "top": 10,
+              "right": 172.46875,
+              "bottom": 63,
+              "left": 20
+            }
+          },
+          "destination": {
+            "id": "contenu",
+            "hash": "#contenu"
+          }
+        },
+        {
+          "route": "/offres/",
+          "focused": {
+            "href": "#contenu",
+            "text": "Aller au contenu",
+            "rect": {
+              "x": 20,
+              "y": 10,
+              "width": 152.46875,
+              "height": 53,
+              "top": 10,
+              "right": 172.46875,
+              "bottom": 63,
+              "left": 20
+            }
+          },
+          "destination": {
+            "id": "contenu",
+            "hash": "#contenu"
+          }
+        },
+        {
+          "route": "/contact/",
+          "focused": {
+            "href": "#contenu",
+            "text": "Aller au contenu",
+            "rect": {
+              "x": 20,
+              "y": 10,
+              "width": 152.46875,
+              "height": 53,
+              "top": 10,
+              "right": 172.46875,
+              "bottom": 63,
+              "left": 20
+            }
+          },
+          "destination": {
+            "id": "contenu",
+            "hash": "#contenu"
+          }
+        },
+        {
+          "route": "/demos/lise/",
+          "focused": {
+            "href": "#contenu",
+            "text": "Aller au contenu",
+            "rect": {
+              "x": 20,
+              "y": 8,
+              "width": 152,
+              "height": 52.046875,
+              "top": 8,
+              "right": 172,
+              "bottom": 60.046875,
+              "left": 20
+            }
+          },
+          "destination": {
+            "id": "contenu",
+            "hash": "#contenu"
+          }
+        },
+        {
+          "route": "/demos/midi-et-compagnie/",
+          "focused": {
+            "href": "#contenu",
+            "text": "Aller au contenu",
+            "rect": {
+              "x": 20,
+              "y": 10,
+              "width": 143.3125,
+              "height": 50.390625,
+              "top": 10,
+              "right": 163.3125,
+              "bottom": 60.390625,
+              "left": 20
+            }
+          },
+          "destination": {
+            "id": "contenu",
+            "hash": "#contenu"
+          }
+        },
+        {
+          "route": "/demos/atelier-traverse/",
+          "focused": {
+            "href": "#contenu",
+            "text": "Aller au contenu",
+            "rect": {
+              "x": 10,
+              "y": 10,
+              "width": 145.640625,
+              "height": 48,
+              "top": 10,
+              "right": 155.640625,
+              "bottom": 58,
+              "left": 10
+            }
+          },
+          "destination": {
+            "id": "contenu",
+            "hash": "#contenu"
+          }
+        }
+      ]
+    },
+    {
+      "engine": "chromium",
+      "name": "fenêtre juridique : piège de focus, fermeture et retour — cinq pages",
+      "result": "passed",
+      "detail": [
+        {
+          "route": "/",
+          "text": "RECHERCHE LOCALE\n\nInformations & confidentialité\n\nCette exploration est un prototype local de Baerg Studio. Les projets présentés sont fictifs et non commandés. Les photographies des concepts servent d’illustrations.\n\nAucune donnée saisie n’est envoyée ni enregistrée. Le bouton de copie place uniquement votre brouillon dans votre presse-papiers. Les coordonnées et mentions légales du studio devront être renseignées avant toute publication."
+        },
+        {
+          "route": "/a-propos/",
+          "text": "RECHERCHE LOCALE\n\nInformations & confidentialité\n\nCette exploration est un prototype local de Baerg Studio. Les projets présentés sont fictifs et non commandés. Les photographies des concepts servent d’illustrations.\n\nAucune donnée saisie n’est envoyée ni enregistrée. Le bouton de copie place uniquement votre brouillon dans votre presse-papiers. Les coordonnées et mentions légales du studio devront être renseignées avant toute publication."
+        },
+        {
+          "route": "/realisations/",
+          "text": "RECHERCHE LOCALE\n\nInformations & confidentialité\n\nCette exploration est un prototype local de Baerg Studio. Les projets présentés sont fictifs et non commandés. Les photographies des concepts servent d’illustrations.\n\nAucune donnée saisie n’est envoyée ni enregistrée. Le bouton de copie place uniquement votre brouillon dans votre presse-papiers. Les coordonnées et mentions légales du studio devront être renseignées avant toute publication."
+        },
+        {
+          "route": "/offres/",
+          "text": "RECHERCHE LOCALE\n\nInformations & confidentialité\n\nCette exploration est un prototype local de Baerg Studio. Les projets présentés sont fictifs et non commandés. Les photographies des concepts servent d’illustrations.\n\nAucune donnée saisie n’est envoyée ni enregistrée. Le bouton de copie place uniquement votre brouillon dans votre presse-papiers. Les coordonnées et mentions légales du studio devront être renseignées avant toute publication."
+        },
+        {
+          "route": "/contact/",
+          "text": "RECHERCHE LOCALE\n\nInformations & confidentialité\n\nCette exploration est un prototype local de Baerg Studio. Les projets présentés sont fictifs et non commandés. Les photographies des concepts servent d’illustrations.\n\nAucune donnée saisie n’est envoyée ni enregistrée. Le bouton de copie place uniquement votre brouillon dans votre presse-papiers. Les coordonnées et mentions légales du studio devront être renseignées avant toute publication."
+        }
+      ]
+    },
+    {
+      "engine": "chromium",
+      "name": "préremplissage refonte, sponsor et photo",
+      "result": "passed",
+      "detail": [
+        {
+          "query": "projet=refonte",
+          "value": "Refonte de site"
+        },
+        {
+          "query": "projet=sponsor",
+          "value": "Sponsor"
+        },
+        {
+          "query": "projet=creation",
+          "value": "Création de site"
+        },
+        {
+          "query": "projet=autre",
+          "value": "Autre projet"
+        }
+      ]
+    },
+    {
+      "engine": "chromium",
+      "name": "formulaire : champs obligatoires et e-mail invalide bloqués",
+      "result": "passed",
+      "detail": {
+        "mutations": []
+      }
+    },
+    {
+      "engine": "chromium",
+      "name": "copie de brouillon — succès simulé, aucun envoi",
+      "result": "passed",
+      "detail": {
+        "feedback": "Brouillon copié. Aucun message envoyé.",
+        "transport": "presse-papiers simulé ; pas de transport e-mail"
+      }
+    },
+    {
+      "engine": "chromium",
+      "name": "copie de brouillon — refus simulé et repli manuel",
+      "result": "passed",
+      "detail": {
+        "feedback": "Copiez le brouillon ci-dessous avec votre clavier. Aucun message envoyé.",
+        "mutations": []
+      }
+    },
+    {
+      "engine": "chromium",
+      "name": "repli natif : glass.css indisponible",
+      "result": "passed",
+      "detail": {
+        "fallback": "original"
+      }
+    },
+    {
+      "engine": "chromium",
+      "name": "repli natif : glass.js indisponible",
+      "result": "passed",
+      "detail": {
+        "fallback": "original"
+      }
+    },
+    {
+      "engine": "chromium",
+      "name": "Lise : erreur, soin, samedi, horaire, récapitulatif, retour et réinitialisation",
+      "result": "passed",
+      "detail": {
+        "summary": "Prestation\nSoin du visage\nJour fictif\nSamedi — semaine type\nHoraire\n12 h 00 – 13 h 00\nDurée totale\n60 minutes\nPrix illustratif\n95 CHF",
+        "mutations": []
+      }
+    },
+    {
+      "engine": "chromium",
+      "name": "Midi : filtres, réservation désactivée et retour portfolio",
+      "result": "passed",
+      "detail": [
+        {
+          "filter": "all",
+          "hidden": 0
+        },
+        {
+          "filter": "entrees",
+          "hidden": 2
+        },
+        {
+          "filter": "plats",
+          "hidden": 2
+        },
+        {
+          "filter": "desserts",
+          "hidden": 2
+        }
+      ]
+    },
+    {
+      "engine": "chromium",
+      "name": "Traverse : galerie au clavier, formulaire simulé, fermeture et effacement",
+      "result": "passed",
+      "detail": {
+        "mutations": []
+      }
+    },
+    {
+      "engine": "chromium",
+      "name": "mouvement réduit — huit pages et cartes studio",
+      "result": "passed",
+      "detail": [
+        {
+          "route": "/",
+          "animations": []
+        },
+        {
+          "route": "/a-propos/",
+          "animations": []
+        },
+        {
+          "route": "/realisations/",
+          "animations": []
+        },
+        {
+          "route": "/offres/",
+          "animations": []
+        },
+        {
+          "route": "/contact/",
+          "animations": []
+        },
+        {
+          "route": "/demos/lise/",
+          "animations": []
+        },
+        {
+          "route": "/demos/midi-et-compagnie/",
+          "animations": []
+        },
+        {
+          "route": "/demos/atelier-traverse/",
+          "animations": []
+        }
+      ]
+    },
+    {
+      "engine": "chromium",
+      "name": "sans JavaScript — contenu présent et navigation par liens",
+      "result": "passed",
+      "detail": [
+        {
+          "route": "/",
+          "links": 11,
+          "menus": 1
+        },
+        {
+          "route": "/a-propos/",
+          "links": 6,
+          "menus": 1
+        },
+        {
+          "route": "/realisations/",
+          "links": 12,
+          "menus": 1
+        },
+        {
+          "route": "/offres/",
+          "links": 10,
+          "menus": 1
+        },
+        {
+          "route": "/contact/",
+          "links": 5,
+          "menus": 1
+        },
+        {
+          "route": "/demos/lise/",
+          "links": 15,
+          "menus": 0
+        },
+        {
+          "route": "/demos/midi-et-compagnie/",
+          "links": 10,
+          "menus": 0
+        },
+        {
+          "route": "/demos/atelier-traverse/",
+          "links": 8,
+          "menus": 0
+        }
+      ]
+    },
+    {
+      "engine": "webkit",
+      "name": "menu au clavier, Escape, focus et fermeture extérieure — cinq pages",
+      "result": "passed",
+      "detail": [
+        "/",
+        "/a-propos/",
+        "/realisations/",
+        "/offres/",
+        "/contact/"
+      ]
+    },
+    {
+      "engine": "webkit",
+      "name": "fenêtre juridique : piège de focus, fermeture et retour — cinq pages",
+      "result": "passed",
+      "detail": [
+        {
+          "route": "/",
+          "text": "RECHERCHE LOCALE\n\nInformations & confidentialité\n\nCette exploration est un prototype local de Baerg Studio. Les projets présentés sont fictifs et non commandés. Les photographies des concepts servent d’illustrations.\n\nAucune donnée saisie n’est envoyée ni enregistrée. Le bouton de copie place uniquement votre brouillon dans votre presse-papiers. Les coordonnées et mentions légales du studio devront être renseignées avant toute publication."
+        },
+        {
+          "route": "/a-propos/",
+          "text": "RECHERCHE LOCALE\n\nInformations & confidentialité\n\nCette exploration est un prototype local de Baerg Studio. Les projets présentés sont fictifs et non commandés. Les photographies des concepts servent d’illustrations.\n\nAucune donnée saisie n’est envoyée ni enregistrée. Le bouton de copie place uniquement votre brouillon dans votre presse-papiers. Les coordonnées et mentions légales du studio devront être renseignées avant toute publication."
+        },
+        {
+          "route": "/realisations/",
+          "text": "RECHERCHE LOCALE\n\nInformations & confidentialité\n\nCette exploration est un prototype local de Baerg Studio. Les projets présentés sont fictifs et non commandés. Les photographies des concepts servent d’illustrations.\n\nAucune donnée saisie n’est envoyée ni enregistrée. Le bouton de copie place uniquement votre brouillon dans votre presse-papiers. Les coordonnées et mentions légales du studio devront être renseignées avant toute publication."
+        },
+        {
+          "route": "/offres/",
+          "text": "RECHERCHE LOCALE\n\nInformations & confidentialité\n\nCette exploration est un prototype local de Baerg Studio. Les projets présentés sont fictifs et non commandés. Les photographies des concepts servent d’illustrations.\n\nAucune donnée saisie n’est envoyée ni enregistrée. Le bouton de copie place uniquement votre brouillon dans votre presse-papiers. Les coordonnées et mentions légales du studio devront être renseignées avant toute publication."
+        },
+        {
+          "route": "/contact/",
+          "text": "RECHERCHE LOCALE\n\nInformations & confidentialité\n\nCette exploration est un prototype local de Baerg Studio. Les projets présentés sont fictifs et non commandés. Les photographies des concepts servent d’illustrations.\n\nAucune donnée saisie n’est envoyée ni enregistrée. Le bouton de copie place uniquement votre brouillon dans votre presse-papiers. Les coordonnées et mentions légales du studio devront être renseignées avant toute publication."
+        }
+      ]
+    },
+    {
+      "engine": "webkit",
+      "name": "préremplissage refonte, sponsor et photo",
+      "result": "passed",
+      "detail": [
+        {
+          "query": "projet=refonte",
+          "value": "Refonte de site"
+        },
+        {
+          "query": "projet=sponsor",
+          "value": "Sponsor"
+        },
+        {
+          "query": "projet=creation",
+          "value": "Création de site"
+        },
+        {
+          "query": "projet=autre",
+          "value": "Autre projet"
+        }
+      ]
+    },
+    {
+      "engine": "webkit",
+      "name": "formulaire : champs obligatoires et e-mail invalide bloqués",
+      "result": "passed",
+      "detail": {
+        "mutations": []
+      }
+    },
+    {
+      "engine": "webkit",
+      "name": "copie de brouillon — succès simulé, aucun envoi",
+      "result": "passed",
+      "detail": {
+        "feedback": "Brouillon copié. Aucun message envoyé.",
+        "transport": "presse-papiers simulé ; pas de transport e-mail"
+      }
+    },
+    {
+      "engine": "webkit",
+      "name": "copie de brouillon — refus simulé et repli manuel",
+      "result": "passed",
+      "detail": {
+        "feedback": "Copiez le brouillon ci-dessous avec votre clavier. Aucun message envoyé.",
+        "mutations": []
+      }
+    },
+    {
+      "engine": "webkit",
+      "name": "repli natif : glass.css indisponible",
+      "result": "passed",
+      "detail": {
+        "fallback": "original"
+      }
+    },
+    {
+      "engine": "webkit",
+      "name": "repli natif : glass.js indisponible",
+      "result": "passed",
+      "detail": {
+        "fallback": "original"
+      }
+    },
+    {
+      "engine": "webkit",
+      "name": "Lise : erreur, soin, samedi, horaire, récapitulatif, retour et réinitialisation",
+      "result": "passed",
+      "detail": {
+        "summary": "Prestation\nSoin du visage\nJour fictif\nSamedi — semaine type\nHoraire\n12 h 00 – 13 h 00\nDurée totale\n60 minutes\nPrix illustratif\n95 CHF",
+        "mutations": []
+      }
+    },
+    {
+      "engine": "webkit",
+      "name": "Midi : filtres, réservation désactivée et retour portfolio",
+      "result": "passed",
+      "detail": [
+        {
+          "filter": "all",
+          "hidden": 0
+        },
+        {
+          "filter": "entrees",
+          "hidden": 2
+        },
+        {
+          "filter": "plats",
+          "hidden": 2
+        },
+        {
+          "filter": "desserts",
+          "hidden": 2
+        }
+      ]
+    },
+    {
+      "engine": "webkit",
+      "name": "Traverse : galerie au clavier, formulaire simulé, fermeture et effacement",
+      "result": "passed",
+      "detail": {
+        "mutations": []
+      }
+    },
+    {
+      "engine": "webkit",
+      "name": "mouvement réduit — huit pages et cartes studio",
+      "result": "passed",
+      "detail": [
+        {
+          "route": "/",
+          "animations": []
+        },
+        {
+          "route": "/a-propos/",
+          "animations": []
+        },
+        {
+          "route": "/realisations/",
+          "animations": []
+        },
+        {
+          "route": "/offres/",
+          "animations": []
+        },
+        {
+          "route": "/contact/",
+          "animations": []
+        },
+        {
+          "route": "/demos/lise/",
+          "animations": []
+        },
+        {
+          "route": "/demos/midi-et-compagnie/",
+          "animations": []
+        },
+        {
+          "route": "/demos/atelier-traverse/",
+          "animations": []
+        }
+      ]
+    },
+    {
+      "engine": "webkit",
+      "name": "sans JavaScript — contenu présent et navigation par liens",
+      "result": "passed",
+      "detail": [
+        {
+          "route": "/",
+          "links": 11,
+          "menus": 1
+        },
+        {
+          "route": "/a-propos/",
+          "links": 6,
+          "menus": 1
+        },
+        {
+          "route": "/realisations/",
+          "links": 12,
+          "menus": 1
+        },
+        {
+          "route": "/offres/",
+          "links": 10,
+          "menus": 1
+        },
+        {
+          "route": "/contact/",
+          "links": 5,
+          "menus": 1
+        },
+        {
+          "route": "/demos/lise/",
+          "links": 15,
+          "menus": 0
+        },
+        {
+          "route": "/demos/midi-et-compagnie/",
+          "links": 10,
+          "menus": 0
+        },
+        {
+          "route": "/demos/atelier-traverse/",
+          "links": 8,
+          "menus": 0
+        }
+      ]
+    },
+    {
+      "engine": "firefox",
+      "name": "menu au clavier, Escape, focus et fermeture extérieure — cinq pages",
+      "result": "passed",
+      "detail": [
+        "/",
+        "/a-propos/",
+        "/realisations/",
+        "/offres/",
+        "/contact/"
+      ]
+    },
+    {
+      "engine": "firefox",
+      "name": "lien d’évitement accessible au premier Tab — huit pages",
+      "result": "passed",
+      "detail": [
+        {
+          "route": "/",
+          "focused": {
+            "href": "#contenu",
+            "text": "Aller au contenu",
+            "rect": {
+              "x": 20,
+              "y": 10,
+              "width": 152.4166717529297,
+              "height": 53,
+              "top": 10,
+              "right": 172.4166717529297,
+              "bottom": 63,
+              "left": 20
+            }
+          },
+          "destination": {
+            "id": "contenu",
+            "hash": "#contenu"
+          }
+        },
+        {
+          "route": "/a-propos/",
+          "focused": {
+            "href": "#contenu",
+            "text": "Aller au contenu",
+            "rect": {
+              "x": 20,
+              "y": 10,
+              "width": 152.4166717529297,
+              "height": 53,
+              "top": 10,
+              "right": 172.4166717529297,
+              "bottom": 63,
+              "left": 20
+            }
+          },
+          "destination": {
+            "id": "contenu",
+            "hash": "#contenu"
+          }
+        },
+        {
+          "route": "/realisations/",
+          "focused": {
+            "href": "#contenu",
+            "text": "Aller au contenu",
+            "rect": {
+              "x": 20,
+              "y": 10,
+              "width": 152.4166717529297,
+              "height": 53,
+              "top": 10,
+              "right": 172.4166717529297,
+              "bottom": 63,
+              "left": 20
+            }
+          },
+          "destination": {
+            "id": "contenu",
+            "hash": "#contenu"
+          }
+        },
+        {
+          "route": "/offres/",
+          "focused": {
+            "href": "#contenu",
+            "text": "Aller au contenu",
+            "rect": {
+              "x": 20,
+              "y": 10,
+              "width": 152.4166717529297,
+              "height": 53,
+              "top": 10,
+              "right": 172.4166717529297,
+              "bottom": 63,
+              "left": 20
+            }
+          },
+          "destination": {
+            "id": "contenu",
+            "hash": "#contenu"
+          }
+        },
+        {
+          "route": "/contact/",
+          "focused": {
+            "href": "#contenu",
+            "text": "Aller au contenu",
+            "rect": {
+              "x": 20,
+              "y": 10,
+              "width": 152.4166717529297,
+              "height": 53,
+              "top": 10,
+              "right": 172.4166717529297,
+              "bottom": 63,
+              "left": 20
+            }
+          },
+          "destination": {
+            "id": "contenu",
+            "hash": "#contenu"
+          }
+        },
+        {
+          "route": "/demos/lise/",
+          "focused": {
+            "href": "#contenu",
+            "text": "Aller au contenu",
+            "rect": {
+              "x": 20,
+              "y": 8,
+              "width": 151.9166717529297,
+              "height": 52.05000305175781,
+              "top": 8,
+              "right": 171.9166717529297,
+              "bottom": 60.05000305175781,
+              "left": 20
+            }
+          },
+          "destination": {
+            "id": "contenu",
+            "hash": "#contenu"
+          }
+        },
+        {
+          "route": "/demos/midi-et-compagnie/",
+          "focused": {
+            "href": "#contenu",
+            "text": "Aller au contenu",
+            "rect": {
+              "x": 20,
+              "y": 10,
+              "width": 143.28334045410156,
+              "height": 50.399993896484375,
+              "top": 10,
+              "right": 163.28334045410156,
+              "bottom": 60.399993896484375,
+              "left": 20
+            }
+          },
+          "destination": {
+            "id": "contenu",
+            "hash": "#contenu"
+          }
+        },
+        {
+          "route": "/demos/atelier-traverse/",
+          "focused": {
+            "href": "#contenu",
+            "text": "Aller au contenu",
+            "rect": {
+              "x": 10,
+              "y": 10,
+              "width": 145.64999389648438,
+              "height": 49.51666259765625,
+              "top": 10,
+              "right": 155.64999389648438,
+              "bottom": 59.51666259765625,
+              "left": 10
+            }
+          },
+          "destination": {
+            "id": "contenu",
+            "hash": "#contenu"
+          }
+        }
+      ]
+    },
+    {
+      "engine": "firefox",
+      "name": "fenêtre juridique : piège de focus, fermeture et retour — cinq pages",
+      "result": "passed",
+      "detail": [
+        {
+          "route": "/",
+          "text": "RECHERCHE LOCALE\n\nInformations & confidentialité\n\nCette exploration est un prototype local de Baerg Studio. Les projets présentés sont fictifs et non commandés. Les photographies des concepts servent d’illustrations.\n\nAucune donnée saisie n’est envoyée ni enregistrée. Le bouton de copie place uniquement votre brouillon dans votre presse-papiers. Les coordonnées et mentions légales du studio devront être renseignées avant toute publication."
+        },
+        {
+          "route": "/a-propos/",
+          "text": "RECHERCHE LOCALE\n\nInformations & confidentialité\n\nCette exploration est un prototype local de Baerg Studio. Les projets présentés sont fictifs et non commandés. Les photographies des concepts servent d’illustrations.\n\nAucune donnée saisie n’est envoyée ni enregistrée. Le bouton de copie place uniquement votre brouillon dans votre presse-papiers. Les coordonnées et mentions légales du studio devront être renseignées avant toute publication."
+        },
+        {
+          "route": "/realisations/",
+          "text": "RECHERCHE LOCALE\n\nInformations & confidentialité\n\nCette exploration est un prototype local de Baerg Studio. Les projets présentés sont fictifs et non commandés. Les photographies des concepts servent d’illustrations.\n\nAucune donnée saisie n’est envoyée ni enregistrée. Le bouton de copie place uniquement votre brouillon dans votre presse-papiers. Les coordonnées et mentions légales du studio devront être renseignées avant toute publication."
+        },
+        {
+          "route": "/offres/",
+          "text": "RECHERCHE LOCALE\n\nInformations & confidentialité\n\nCette exploration est un prototype local de Baerg Studio. Les projets présentés sont fictifs et non commandés. Les photographies des concepts servent d’illustrations.\n\nAucune donnée saisie n’est envoyée ni enregistrée. Le bouton de copie place uniquement votre brouillon dans votre presse-papiers. Les coordonnées et mentions légales du studio devront être renseignées avant toute publication."
+        },
+        {
+          "route": "/contact/",
+          "text": "RECHERCHE LOCALE\n\nInformations & confidentialité\n\nCette exploration est un prototype local de Baerg Studio. Les projets présentés sont fictifs et non commandés. Les photographies des concepts servent d’illustrations.\n\nAucune donnée saisie n’est envoyée ni enregistrée. Le bouton de copie place uniquement votre brouillon dans votre presse-papiers. Les coordonnées et mentions légales du studio devront être renseignées avant toute publication."
+        }
+      ]
+    },
+    {
+      "engine": "firefox",
+      "name": "préremplissage refonte, sponsor et photo",
+      "result": "passed",
+      "detail": [
+        {
+          "query": "projet=refonte",
+          "value": "Refonte de site"
+        },
+        {
+          "query": "projet=sponsor",
+          "value": "Sponsor"
+        },
+        {
+          "query": "projet=creation",
+          "value": "Création de site"
+        },
+        {
+          "query": "projet=autre",
+          "value": "Autre projet"
+        }
+      ]
+    },
+    {
+      "engine": "firefox",
+      "name": "formulaire : champs obligatoires et e-mail invalide bloqués",
+      "result": "passed",
+      "detail": {
+        "mutations": []
+      }
+    },
+    {
+      "engine": "firefox",
+      "name": "copie de brouillon — succès simulé, aucun envoi",
+      "result": "passed",
+      "detail": {
+        "feedback": "Brouillon copié. Aucun message envoyé.",
+        "transport": "presse-papiers simulé ; pas de transport e-mail"
+      }
+    },
+    {
+      "engine": "firefox",
+      "name": "copie de brouillon — refus simulé et repli manuel",
+      "result": "passed",
+      "detail": {
+        "feedback": "Copiez le brouillon ci-dessous avec votre clavier. Aucun message envoyé.",
+        "mutations": []
+      }
+    },
+    {
+      "engine": "firefox",
+      "name": "repli natif : glass.css indisponible",
+      "result": "passed",
+      "detail": {
+        "fallback": "original"
+      }
+    },
+    {
+      "engine": "firefox",
+      "name": "repli natif : glass.js indisponible",
+      "result": "passed",
+      "detail": {
+        "fallback": "original"
+      }
+    },
+    {
+      "engine": "firefox",
+      "name": "Lise : erreur, soin, samedi, horaire, récapitulatif, retour et réinitialisation",
+      "result": "passed",
+      "detail": {
+        "summary": "Prestation\nSoin du visage\nJour fictif\nSamedi — semaine type\nHoraire\n12 h 00 – 13 h 00\nDurée totale\n60 minutes\nPrix illustratif\n95 CHF",
+        "mutations": []
+      }
+    },
+    {
+      "engine": "firefox",
+      "name": "Midi : filtres, réservation désactivée et retour portfolio",
+      "result": "passed",
+      "detail": [
+        {
+          "filter": "all",
+          "hidden": 0
+        },
+        {
+          "filter": "entrees",
+          "hidden": 2
+        },
+        {
+          "filter": "plats",
+          "hidden": 2
+        },
+        {
+          "filter": "desserts",
+          "hidden": 2
+        }
+      ]
+    },
+    {
+      "engine": "firefox",
+      "name": "Traverse : galerie au clavier, formulaire simulé, fermeture et effacement",
+      "result": "passed",
+      "detail": {
+        "mutations": []
+      }
+    },
+    {
+      "engine": "firefox",
+      "name": "mouvement réduit — huit pages et cartes studio",
+      "result": "passed",
+      "detail": [
+        {
+          "route": "/",
+          "animations": []
+        },
+        {
+          "route": "/a-propos/",
+          "animations": []
+        },
+        {
+          "route": "/realisations/",
+          "animations": []
+        },
+        {
+          "route": "/offres/",
+          "animations": []
+        },
+        {
+          "route": "/contact/",
+          "animations": []
+        },
+        {
+          "route": "/demos/lise/",
+          "animations": []
+        },
+        {
+          "route": "/demos/midi-et-compagnie/",
+          "animations": []
+        },
+        {
+          "route": "/demos/atelier-traverse/",
+          "animations": []
+        }
+      ]
+    },
+    {
+      "engine": "firefox",
+      "name": "sans JavaScript — contenu présent et navigation par liens",
+      "result": "passed",
+      "detail": [
+        {
+          "route": "/",
+          "links": 11,
+          "menus": 1
+        },
+        {
+          "route": "/a-propos/",
+          "links": 6,
+          "menus": 1
+        },
+        {
+          "route": "/realisations/",
+          "links": 12,
+          "menus": 1
+        },
+        {
+          "route": "/offres/",
+          "links": 10,
+          "menus": 1
+        },
+        {
+          "route": "/contact/",
+          "links": 5,
+          "menus": 1
+        },
+        {
+          "route": "/demos/lise/",
+          "links": 15,
+          "menus": 0
+        },
+        {
+          "route": "/demos/midi-et-compagnie/",
+          "links": 10,
+          "menus": 0
+        },
+        {
+          "route": "/demos/atelier-traverse/",
+          "links": 8,
+          "menus": 0
+        }
+      ]
+    },
+    {
+      "engine": "webkit",
+      "name": "lien d’évitement accessible au premier Tab — huit pages",
+      "result": "passed",
+      "detail": [
+        {
+          "route": "/",
+          "focused": {
+            "href": "#contenu",
+            "text": "Aller au contenu",
+            "rect": {
+              "x": 20,
+              "y": 10,
+              "width": 152.46875,
+              "height": 53,
+              "top": 10,
+              "right": 172.46875,
+              "bottom": 63,
+              "left": 20
+            }
+          },
+          "destination": {
+            "id": "contenu",
+            "hash": "#contenu"
+          }
+        },
+        {
+          "route": "/a-propos/",
+          "focused": {
+            "href": "#contenu",
+            "text": "Aller au contenu",
+            "rect": {
+              "x": 20,
+              "y": 10,
+              "width": 152.46875,
+              "height": 53,
+              "top": 10,
+              "right": 172.46875,
+              "bottom": 63,
+              "left": 20
+            }
+          },
+          "destination": {
+            "id": "contenu",
+            "hash": "#contenu"
+          }
+        },
+        {
+          "route": "/realisations/",
+          "focused": {
+            "href": "#contenu",
+            "text": "Aller au contenu",
+            "rect": {
+              "x": 20,
+              "y": 10,
+              "width": 152.46875,
+              "height": 53,
+              "top": 10,
+              "right": 172.46875,
+              "bottom": 63,
+              "left": 20
+            }
+          },
+          "destination": {
+            "id": "contenu",
+            "hash": "#contenu"
+          }
+        },
+        {
+          "route": "/offres/",
+          "focused": {
+            "href": "#contenu",
+            "text": "Aller au contenu",
+            "rect": {
+              "x": 20,
+              "y": 10,
+              "width": 152.46875,
+              "height": 53,
+              "top": 10,
+              "right": 172.46875,
+              "bottom": 63,
+              "left": 20
+            }
+          },
+          "destination": {
+            "id": "contenu",
+            "hash": "#contenu"
+          }
+        },
+        {
+          "route": "/contact/",
+          "focused": {
+            "href": "#contenu",
+            "text": "Aller au contenu",
+            "rect": {
+              "x": 20,
+              "y": 10,
+              "width": 152.46875,
+              "height": 53,
+              "top": 10,
+              "right": 172.46875,
+              "bottom": 63,
+              "left": 20
+            }
+          },
+          "destination": {
+            "id": "contenu",
+            "hash": "#contenu"
+          }
+        },
+        {
+          "route": "/demos/lise/",
+          "focused": {
+            "href": "#contenu",
+            "text": "Aller au contenu",
+            "rect": {
+              "x": 20,
+              "y": 8,
+              "width": 152,
+              "height": 52.046875,
+              "top": 8,
+              "right": 172,
+              "bottom": 60.046875,
+              "left": 20
+            }
+          },
+          "destination": {
+            "id": "contenu",
+            "hash": "#contenu"
+          }
+        },
+        {
+          "route": "/demos/midi-et-compagnie/",
+          "focused": {
+            "href": "#contenu",
+            "text": "Aller au contenu",
+            "rect": {
+              "x": 20,
+              "y": 10,
+              "width": 143.3125,
+              "height": 50.390625,
+              "top": 10,
+              "right": 163.3125,
+              "bottom": 60.390625,
+              "left": 20
+            }
+          },
+          "destination": {
+            "id": "contenu",
+            "hash": "#contenu"
+          }
+        },
+        {
+          "route": "/demos/atelier-traverse/",
+          "focused": {
+            "href": "#contenu",
+            "text": "Aller au contenu",
+            "rect": {
+              "x": 10,
+              "y": 10,
+              "width": 145.640625,
+              "height": 48,
+              "top": 10,
+              "right": 155.640625,
+              "bottom": 58,
+              "left": 10
+            }
+          },
+          "destination": {
+            "id": "contenu",
+            "hash": "#contenu"
+          }
+        }
+      ]
+    },
+    {
+      "engine": "chromium",
+      "name": "reflow 200 % et 400 % par largeur CSS équivalente — cinq pages",
+      "result": "passed",
+      "detail": {
+        "method": "Reflow à 640 puis 320 pixels CSS, équivalent en largeur à une fenêtre de 1280 pixels zoomée à 200/400 %. Ne remplace pas un vrai zoom navigateur ou système sur appareil physique.",
+        "observations": [
+          {
+            "route": "/",
+            "equivalentZoom": 2,
+            "viewport": 640,
+            "scrollWidth": 640,
+            "zoom": "1",
+            "bodyWidth": 640
+          },
+          {
+            "route": "/a-propos/",
+            "equivalentZoom": 2,
+            "viewport": 640,
+            "scrollWidth": 640,
+            "zoom": "1",
+            "bodyWidth": 640
+          },
+          {
+            "route": "/realisations/",
+            "equivalentZoom": 2,
+            "viewport": 640,
+            "scrollWidth": 640,
+            "zoom": "1",
+            "bodyWidth": 640
+          },
+          {
+            "route": "/offres/",
+            "equivalentZoom": 2,
+            "viewport": 640,
+            "scrollWidth": 640,
+            "zoom": "1",
+            "bodyWidth": 640
+          },
+          {
+            "route": "/contact/",
+            "equivalentZoom": 2,
+            "viewport": 640,
+            "scrollWidth": 640,
+            "zoom": "1",
+            "bodyWidth": 640
+          },
+          {
+            "route": "/",
+            "equivalentZoom": 4,
+            "viewport": 320,
+            "scrollWidth": 320,
+            "zoom": "1",
+            "bodyWidth": 320
+          },
+          {
+            "route": "/a-propos/",
+            "equivalentZoom": 4,
+            "viewport": 320,
+            "scrollWidth": 320,
+            "zoom": "1",
+            "bodyWidth": 320
+          },
+          {
+            "route": "/realisations/",
+            "equivalentZoom": 4,
+            "viewport": 320,
+            "scrollWidth": 320,
+            "zoom": "1",
+            "bodyWidth": 320
+          },
+          {
+            "route": "/offres/",
+            "equivalentZoom": 4,
+            "viewport": 320,
+            "scrollWidth": 320,
+            "zoom": "1",
+            "bodyWidth": 320
+          },
+          {
+            "route": "/contact/",
+            "equivalentZoom": 4,
+            "viewport": 320,
+            "scrollWidth": 320,
+            "zoom": "1",
+            "bodyWidth": 320
+          }
+        ]
+      }
+    },
+    {
+      "engine": "webkit",
+      "name": "reflow 200 % et 400 % par largeur CSS équivalente — cinq pages",
+      "result": "passed",
+      "detail": {
+        "method": "Reflow à 640 puis 320 pixels CSS, équivalent en largeur à une fenêtre de 1280 pixels zoomée à 200/400 %. Ne remplace pas un vrai zoom navigateur ou système sur appareil physique.",
+        "observations": [
+          {
+            "route": "/",
+            "equivalentZoom": 2,
+            "viewport": 640,
+            "scrollWidth": 640,
+            "zoom": "1",
+            "bodyWidth": 640
+          },
+          {
+            "route": "/a-propos/",
+            "equivalentZoom": 2,
+            "viewport": 640,
+            "scrollWidth": 640,
+            "zoom": "1",
+            "bodyWidth": 640
+          },
+          {
+            "route": "/realisations/",
+            "equivalentZoom": 2,
+            "viewport": 640,
+            "scrollWidth": 640,
+            "zoom": "1",
+            "bodyWidth": 640
+          },
+          {
+            "route": "/offres/",
+            "equivalentZoom": 2,
+            "viewport": 640,
+            "scrollWidth": 640,
+            "zoom": "1",
+            "bodyWidth": 640
+          },
+          {
+            "route": "/contact/",
+            "equivalentZoom": 2,
+            "viewport": 640,
+            "scrollWidth": 640,
+            "zoom": "1",
+            "bodyWidth": 640
+          },
+          {
+            "route": "/",
+            "equivalentZoom": 4,
+            "viewport": 320,
+            "scrollWidth": 320,
+            "zoom": "1",
+            "bodyWidth": 320
+          },
+          {
+            "route": "/a-propos/",
+            "equivalentZoom": 4,
+            "viewport": 320,
+            "scrollWidth": 320,
+            "zoom": "1",
+            "bodyWidth": 320
+          },
+          {
+            "route": "/realisations/",
+            "equivalentZoom": 4,
+            "viewport": 320,
+            "scrollWidth": 320,
+            "zoom": "1",
+            "bodyWidth": 320
+          },
+          {
+            "route": "/offres/",
+            "equivalentZoom": 4,
+            "viewport": 320,
+            "scrollWidth": 320,
+            "zoom": "1",
+            "bodyWidth": 320
+          },
+          {
+            "route": "/contact/",
+            "equivalentZoom": 4,
+            "viewport": 320,
+            "scrollWidth": 320,
+            "zoom": "1",
+            "bodyWidth": 320
+          }
+        ]
+      }
+    },
+    {
+      "engine": "firefox",
+      "name": "reflow 200 % et 400 % par largeur CSS équivalente — cinq pages",
+      "result": "passed",
+      "detail": {
+        "method": "Reflow à 640 puis 320 pixels CSS, équivalent en largeur à une fenêtre de 1280 pixels zoomée à 200/400 %. Ne remplace pas un vrai zoom navigateur ou système sur appareil physique.",
+        "observations": [
+          {
+            "route": "/",
+            "equivalentZoom": 2,
+            "viewport": 640,
+            "scrollWidth": 640,
+            "zoom": "1",
+            "bodyWidth": 640
+          },
+          {
+            "route": "/a-propos/",
+            "equivalentZoom": 2,
+            "viewport": 640,
+            "scrollWidth": 640,
+            "zoom": "1",
+            "bodyWidth": 640
+          },
+          {
+            "route": "/realisations/",
+            "equivalentZoom": 2,
+            "viewport": 640,
+            "scrollWidth": 640,
+            "zoom": "1",
+            "bodyWidth": 640
+          },
+          {
+            "route": "/offres/",
+            "equivalentZoom": 2,
+            "viewport": 640,
+            "scrollWidth": 640,
+            "zoom": "1",
+            "bodyWidth": 640
+          },
+          {
+            "route": "/contact/",
+            "equivalentZoom": 2,
+            "viewport": 640,
+            "scrollWidth": 640,
+            "zoom": "1",
+            "bodyWidth": 640
+          },
+          {
+            "route": "/",
+            "equivalentZoom": 4,
+            "viewport": 320,
+            "scrollWidth": 320,
+            "zoom": "1",
+            "bodyWidth": 320
+          },
+          {
+            "route": "/a-propos/",
+            "equivalentZoom": 4,
+            "viewport": 320,
+            "scrollWidth": 320,
+            "zoom": "1",
+            "bodyWidth": 320
+          },
+          {
+            "route": "/realisations/",
+            "equivalentZoom": 4,
+            "viewport": 320,
+            "scrollWidth": 320,
+            "zoom": "1",
+            "bodyWidth": 320
+          },
+          {
+            "route": "/offres/",
+            "equivalentZoom": 4,
+            "viewport": 320,
+            "scrollWidth": 320,
+            "zoom": "1",
+            "bodyWidth": 320
+          },
+          {
+            "route": "/contact/",
+            "equivalentZoom": 4,
+            "viewport": 320,
+            "scrollWidth": 320,
+            "zoom": "1",
+            "bodyWidth": 320
+          }
+        ]
+      }
+    }
+  ],
+  "errors": [],
+  "harnessNotes": [
+    "Trois vérifications reflow et le parcours clavier Safari ont été recontrôlés après adaptation du harnais ; voir les fichiers de recontrôle et les premières sorties conservées.",
+    "Safari/WebKit sur macOS utilise Option+Tab pour inclure les liens dans ce contexte.",
+    "La première tentative utilisait un clic sur un titre recouvert par le menu et une simulation CSS zoom non équivalente au zoom navigateur ; ces diagnostics ne sont pas retenus comme anomalies produit."
+  ]
+}

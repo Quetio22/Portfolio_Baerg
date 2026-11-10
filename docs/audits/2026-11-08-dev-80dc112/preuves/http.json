@@ -1,0 +1,1584 @@
+{
+  "site": "http://127.0.0.1:4739",
+  "checks": [
+    {
+      "path": "/",
+      "method": "GET",
+      "status": 200,
+      "expected": 200,
+      "headers": {
+        "Content-Type": "text/html; charset=utf-8",
+        "Cache-Control": "no-store",
+        "X-Content-Type-Options": "nosniff",
+        "X-Robots-Tag": "noindex, nofollow",
+        "Date": "Sun, 08 Nov 2026 19:33:04 GMT",
+        "Connection": "close",
+        "Transfer-Encoding": "chunked"
+      },
+      "bodyBytes": 5461,
+      "passed": true
+    },
+    {
+      "path": "/",
+      "method": "HEAD",
+      "status": 200,
+      "expected": 200,
+      "headers": {
+        "Content-Type": "text/html; charset=utf-8",
+        "Cache-Control": "no-store",
+        "X-Content-Type-Options": "nosniff",
+        "X-Robots-Tag": "noindex, nofollow",
+        "Date": "Sun, 08 Nov 2026 19:33:04 GMT",
+        "Connection": "close"
+      },
+      "bodyBytes": 0,
+      "passed": true
+    },
+    {
+      "path": "/a-propos/",
+      "method": "GET",
+      "status": 200,
+      "expected": 200,
+      "headers": {
+        "Content-Type": "text/html; charset=utf-8",
+        "Cache-Control": "no-store",
+        "X-Content-Type-Options": "nosniff",
+        "X-Robots-Tag": "noindex, nofollow",
+        "Date": "Sun, 08 Nov 2026 19:33:04 GMT",
+        "Connection": "close",
+        "Transfer-Encoding": "chunked"
+      },
+      "bodyBytes": 6772,
+      "passed": true
+    },
+    {
+      "path": "/a-propos/",
+      "method": "HEAD",
+      "status": 200,
+      "expected": 200,
+      "headers": {
+        "Content-Type": "text/html; charset=utf-8",
+        "Cache-Control": "no-store",
+        "X-Content-Type-Options": "nosniff",
+        "X-Robots-Tag": "noindex, nofollow",
+        "Date": "Sun, 08 Nov 2026 19:33:04 GMT",
+        "Connection": "close"
+      },
+      "bodyBytes": 0,
+      "passed": true
+    },
+    {
+      "path": "/realisations/",
+      "method": "GET",
+      "status": 200,
+      "expected": 200,
+      "headers": {
+        "Content-Type": "text/html; charset=utf-8",
+        "Cache-Control": "no-store",
+        "X-Content-Type-Options": "nosniff",
+        "X-Robots-Tag": "noindex, nofollow",
+        "Date": "Sun, 08 Nov 2026 19:33:04 GMT",
+        "Connection": "close",
+        "Transfer-Encoding": "chunked"
+      },
+      "bodyBytes": 5195,
+      "passed": true
+    },
+    {
+      "path": "/realisations/",
+      "method": "HEAD",
+      "status": 200,
+      "expected": 200,
+      "headers": {
+        "Content-Type": "text/html; charset=utf-8",
+        "Cache-Control": "no-store",
+        "X-Content-Type-Options": "nosniff",
+        "X-Robots-Tag": "noindex, nofollow",
+        "Date": "Sun, 08 Nov 2026 19:33:04 GMT",
+        "Connection": "close"
+      },
+      "bodyBytes": 0,
+      "passed": true
+    },
+    {
+      "path": "/offres/",
+      "method": "GET",
+      "status": 200,
+      "expected": 200,
+      "headers": {
+        "Content-Type": "text/html; charset=utf-8",
+        "Cache-Control": "no-store",
+        "X-Content-Type-Options": "nosniff",
+        "X-Robots-Tag": "noindex, nofollow",
+        "Date": "Sun, 08 Nov 2026 19:33:04 GMT",
+        "Connection": "close",
+        "Transfer-Encoding": "chunked"
+      },
+      "bodyBytes": 9634,
+      "passed": true
+    },
+    {
+      "path": "/offres/",
+      "method": "HEAD",
+      "status": 200,
+      "expected": 200,
+      "headers": {
+        "Content-Type": "text/html; charset=utf-8",
+        "Cache-Control": "no-store",
+        "X-Content-Type-Options": "nosniff",
+        "X-Robots-Tag": "noindex, nofollow",
+        "Date": "Sun, 08 Nov 2026 19:33:04 GMT",
+        "Connection": "close"
+      },
+      "bodyBytes": 0,
+      "passed": true
+    },
+    {
+      "path": "/contact/",
+      "method": "GET",
+      "status": 200,
+      "expected": 200,
+      "headers": {
+        "Content-Type": "text/html; charset=utf-8",
+        "Cache-Control": "no-store",
+        "X-Content-Type-Options": "nosniff",
+        "X-Robots-Tag": "noindex, nofollow",
+        "Date": "Sun, 08 Nov 2026 19:33:04 GMT",
+        "Connection": "close",
+        "Transfer-Encoding": "chunked"
+      },
+      "bodyBytes": 6334,
+      "passed": true
+    },
+    {
+      "path": "/contact/",
+      "method": "HEAD",
+      "status": 200,
+      "expected": 200,
+      "headers": {
+        "Content-Type": "text/html; charset=utf-8",
+        "Cache-Control": "no-store",
+        "X-Content-Type-Options": "nosniff",
+        "X-Robots-Tag": "noindex, nofollow",
+        "Date": "Sun, 08 Nov 2026 19:33:04 GMT",
+        "Connection": "close"
+      },
+      "bodyBytes": 0,
+      "passed": true
+    },
+    {
+      "path": "/demos/lise/",
+      "method": "GET",
+      "status": 200,
+      "expected": 200,
+      "headers": {
+        "Content-Type": "text/html; charset=utf-8",
+        "Cache-Control": "no-store",
+        "X-Content-Type-Options": "nosniff",
+        "X-Robots-Tag": "noindex, nofollow",
+        "Date": "Sun, 08 Nov 2026 19:33:04 GMT",
+        "Connection": "close",
+        "Transfer-Encoding": "chunked"
+      },
+      "bodyBytes": 23783,
+      "passed": true
+    },
+    {
+      "path": "/demos/lise/",
+      "method": "HEAD",
+      "status": 200,
+      "expected": 200,
+      "headers": {
+        "Content-Type": "text/html; charset=utf-8",
+        "Cache-Control": "no-store",
+        "X-Content-Type-Options": "nosniff",
+        "X-Robots-Tag": "noindex, nofollow",
+        "Date": "Sun, 08 Nov 2026 19:33:04 GMT",
+        "Connection": "close"
+      },
+      "bodyBytes": 0,
+      "passed": true
+    },
+    {
+      "path": "/demos/midi-et-compagnie/",
+      "method": "GET",
+      "status": 200,
+      "expected": 200,
+      "headers": {
+        "Content-Type": "text/html; charset=utf-8",
+        "Cache-Control": "no-store",
+        "X-Content-Type-Options": "nosniff",
+        "X-Robots-Tag": "noindex, nofollow",
+        "Date": "Sun, 08 Nov 2026 19:33:04 GMT",
+        "Connection": "close",
+        "Transfer-Encoding": "chunked"
+      },
+      "bodyBytes": 9077,
+      "passed": true
+    },
+    {
+      "path": "/demos/midi-et-compagnie/",
+      "method": "HEAD",
+      "status": 200,
+      "expected": 200,
+      "headers": {
+        "Content-Type": "text/html; charset=utf-8",
+        "Cache-Control": "no-store",
+        "X-Content-Type-Options": "nosniff",
+        "X-Robots-Tag": "noindex, nofollow",
+        "Date": "Sun, 08 Nov 2026 19:33:04 GMT",
+        "Connection": "close"
+      },
+      "bodyBytes": 0,
+      "passed": true
+    },
+    {
+      "path": "/demos/atelier-traverse/",
+      "method": "GET",
+      "status": 200,
+      "expected": 200,
+      "headers": {
+        "Content-Type": "text/html; charset=utf-8",
+        "Cache-Control": "no-store",
+        "X-Content-Type-Options": "nosniff",
+        "X-Robots-Tag": "noindex, nofollow",
+        "Date": "Sun, 08 Nov 2026 19:33:04 GMT",
+        "Connection": "close",
+        "Transfer-Encoding": "chunked"
+      },
+      "bodyBytes": 9000,
+      "passed": true
+    },
+    {
+      "path": "/demos/atelier-traverse/",
+      "method": "HEAD",
+      "status": 200,
+      "expected": 200,
+      "headers": {
+        "Content-Type": "text/html; charset=utf-8",
+        "Cache-Control": "no-store",
+        "X-Content-Type-Options": "nosniff",
+        "X-Robots-Tag": "noindex, nofollow",
+        "Date": "Sun, 08 Nov 2026 19:33:04 GMT",
+        "Connection": "close"
+      },
+      "bodyBytes": 0,
+      "passed": true
+    },
+    {
+      "path": "/audit-page-inconnue",
+      "method": "GET",
+      "status": 404,
+      "expected": 404,
+      "headers": {
+        "Content-Type": "text/html; charset=utf-8",
+        "Cache-Control": "no-store",
+        "X-Content-Type-Options": "nosniff",
+        "X-Robots-Tag": "noindex, nofollow",
+        "Date": "Sun, 08 Nov 2026 19:33:04 GMT",
+        "Connection": "close",
+        "Transfer-Encoding": "chunked"
+      },
+      "bodyBytes": 3879,
+      "passed": true
+    },
+    {
+      "path": "/audit-page-inconnue",
+      "method": "HEAD",
+      "status": 404,
+      "expected": 404,
+      "headers": {
+        "Content-Type": "text/html; charset=utf-8",
+        "Cache-Control": "no-store",
+        "X-Content-Type-Options": "nosniff",
+        "X-Robots-Tag": "noindex, nofollow",
+        "Date": "Sun, 08 Nov 2026 19:33:04 GMT",
+        "Connection": "close"
+      },
+      "bodyBytes": 0,
+      "passed": true
+    },
+    {
+      "path": "/inconnue/profonde/",
+      "method": "GET",
+      "status": 404,
+      "expected": 404,
+      "headers": {
+        "Content-Type": "text/html; charset=utf-8",
+        "Cache-Control": "no-store",
+        "X-Content-Type-Options": "nosniff",
+        "X-Robots-Tag": "noindex, nofollow",
+        "Date": "Sun, 08 Nov 2026 19:33:04 GMT",
+        "Connection": "close",
+        "Transfer-Encoding": "chunked"
+      },
+      "bodyBytes": 3879,
+      "passed": true
+    },
+    {
+      "path": "/inconnue/profonde/",
+      "method": "HEAD",
+      "status": 404,
+      "expected": 404,
+      "headers": {
+        "Content-Type": "text/html; charset=utf-8",
+        "Cache-Control": "no-store",
+        "X-Content-Type-Options": "nosniff",
+        "X-Robots-Tag": "noindex, nofollow",
+        "Date": "Sun, 08 Nov 2026 19:33:04 GMT",
+        "Connection": "close"
+      },
+      "bodyBytes": 0,
+      "passed": true
+    },
+    {
+      "path": "/demos/lise/inconnue",
+      "method": "GET",
+      "status": 404,
+      "expected": 404,
+      "headers": {
+        "Content-Type": "text/html; charset=utf-8",
+        "Cache-Control": "no-store",
+        "X-Content-Type-Options": "nosniff",
+        "X-Robots-Tag": "noindex, nofollow",
+        "Date": "Sun, 08 Nov 2026 19:33:04 GMT",
+        "Connection": "close",
+        "Transfer-Encoding": "chunked"
+      },
+      "bodyBytes": 3879,
+      "passed": true
+    },
+    {
+      "path": "/demos/lise/inconnue",
+      "method": "HEAD",
+      "status": 404,
+      "expected": 404,
+      "headers": {
+        "Content-Type": "text/html; charset=utf-8",
+        "Cache-Control": "no-store",
+        "X-Content-Type-Options": "nosniff",
+        "X-Robots-Tag": "noindex, nofollow",
+        "Date": "Sun, 08 Nov 2026 19:33:04 GMT",
+        "Connection": "close"
+      },
+      "bodyBytes": 0,
+      "passed": true
+    },
+    {
+      "path": "/assets/inconnu.css",
+      "method": "GET",
+      "status": 404,
+      "expected": 404,
+      "headers": {
+        "Content-Type": "text/html; charset=utf-8",
+        "Cache-Control": "no-store",
+        "X-Content-Type-Options": "nosniff",
+        "X-Robots-Tag": "noindex, nofollow",
+        "Date": "Sun, 08 Nov 2026 19:33:04 GMT",
+        "Connection": "close",
+        "Transfer-Encoding": "chunked"
+      },
+      "bodyBytes": 3879,
+      "passed": true
+    },
+    {
+      "path": "/assets/inconnu.css",
+      "method": "HEAD",
+      "status": 404,
+      "expected": 404,
+      "headers": {
+        "Content-Type": "text/html; charset=utf-8",
+        "Cache-Control": "no-store",
+        "X-Content-Type-Options": "nosniff",
+        "X-Robots-Tag": "noindex, nofollow",
+        "Date": "Sun, 08 Nov 2026 19:33:04 GMT",
+        "Connection": "close"
+      },
+      "bodyBytes": 0,
+      "passed": true
+    },
+    {
+      "path": "/concepts/lise?origine=audit&projet=refonte",
+      "method": "GET",
+      "status": 308,
+      "expected": 308,
+      "headers": {
+        "Location": "/demos/lise/?origine=audit&projet=refonte",
+        "Date": "Sun, 08 Nov 2026 19:33:04 GMT",
+        "Connection": "close",
+        "Transfer-Encoding": "chunked"
+      },
+      "bodyBytes": 0,
+      "expectedLocation": "/demos/lise/?origine=audit&projet=refonte",
+      "passed": true
+    },
+    {
+      "path": "/concepts/lise?origine=audit&projet=refonte",
+      "method": "HEAD",
+      "status": 308,
+      "expected": 308,
+      "headers": {
+        "Location": "/demos/lise/?origine=audit&projet=refonte",
+        "Date": "Sun, 08 Nov 2026 19:33:04 GMT",
+        "Connection": "close"
+      },
+      "bodyBytes": 0,
+      "expectedLocation": "/demos/lise/?origine=audit&projet=refonte",
+      "passed": true
+    },
+    {
+      "path": "/concepts/lise/?origine=audit&projet=refonte",
+      "method": "GET",
+      "status": 308,
+      "expected": 308,
+      "headers": {
+        "Location": "/demos/lise/?origine=audit&projet=refonte",
+        "Date": "Sun, 08 Nov 2026 19:33:04 GMT",
+        "Connection": "close",
+        "Transfer-Encoding": "chunked"
+      },
+      "bodyBytes": 0,
+      "expectedLocation": "/demos/lise/?origine=audit&projet=refonte",
+      "passed": true
+    },
+    {
+      "path": "/concepts/lise/?origine=audit&projet=refonte",
+      "method": "HEAD",
+      "status": 308,
+      "expected": 308,
+      "headers": {
+        "Location": "/demos/lise/?origine=audit&projet=refonte",
+        "Date": "Sun, 08 Nov 2026 19:33:04 GMT",
+        "Connection": "close"
+      },
+      "bodyBytes": 0,
+      "expectedLocation": "/demos/lise/?origine=audit&projet=refonte",
+      "passed": true
+    },
+    {
+      "path": "/concepts/lise/index.html?origine=audit&projet=refonte",
+      "method": "GET",
+      "status": 308,
+      "expected": 308,
+      "headers": {
+        "Location": "/demos/lise/?origine=audit&projet=refonte",
+        "Date": "Sun, 08 Nov 2026 19:33:04 GMT",
+        "Connection": "close",
+        "Transfer-Encoding": "chunked"
+      },
+      "bodyBytes": 0,
+      "expectedLocation": "/demos/lise/?origine=audit&projet=refonte",
+      "passed": true
+    },
+    {
+      "path": "/concepts/lise/index.html?origine=audit&projet=refonte",
+      "method": "HEAD",
+      "status": 308,
+      "expected": 308,
+      "headers": {
+        "Location": "/demos/lise/?origine=audit&projet=refonte",
+        "Date": "Sun, 08 Nov 2026 19:33:04 GMT",
+        "Connection": "close"
+      },
+      "bodyBytes": 0,
+      "expectedLocation": "/demos/lise/?origine=audit&projet=refonte",
+      "passed": true
+    },
+    {
+      "path": "/demos/lise/",
+      "method": "GET",
+      "status": 200,
+      "expected": 200,
+      "headers": {
+        "Content-Type": "text/html; charset=utf-8",
+        "Cache-Control": "no-store",
+        "X-Content-Type-Options": "nosniff",
+        "X-Robots-Tag": "noindex, nofollow",
+        "Date": "Sun, 08 Nov 2026 19:33:04 GMT",
+        "Connection": "close",
+        "Transfer-Encoding": "chunked"
+      },
+      "bodyBytes": 23783,
+      "passed": true
+    },
+    {
+      "path": "/concepts/atelier-traverse?origine=audit&projet=refonte",
+      "method": "GET",
+      "status": 308,
+      "expected": 308,
+      "headers": {
+        "Location": "/demos/atelier-traverse/?origine=audit&projet=refonte",
+        "Date": "Sun, 08 Nov 2026 19:33:04 GMT",
+        "Connection": "close",
+        "Transfer-Encoding": "chunked"
+      },
+      "bodyBytes": 0,
+      "expectedLocation": "/demos/atelier-traverse/?origine=audit&projet=refonte",
+      "passed": true
+    },
+    {
+      "path": "/concepts/atelier-traverse?origine=audit&projet=refonte",
+      "method": "HEAD",
+      "status": 308,
+      "expected": 308,
+      "headers": {
+        "Location": "/demos/atelier-traverse/?origine=audit&projet=refonte",
+        "Date": "Sun, 08 Nov 2026 19:33:04 GMT",
+        "Connection": "close"
+      },
+      "bodyBytes": 0,
+      "expectedLocation": "/demos/atelier-traverse/?origine=audit&projet=refonte",
+      "passed": true
+    },
+    {
+      "path": "/concepts/atelier-traverse/?origine=audit&projet=refonte",
+      "method": "GET",
+      "status": 308,
+      "expected": 308,
+      "headers": {
+        "Location": "/demos/atelier-traverse/?origine=audit&projet=refonte",
+        "Date": "Sun, 08 Nov 2026 19:33:04 GMT",
+        "Connection": "close",
+        "Transfer-Encoding": "chunked"
+      },
+      "bodyBytes": 0,
+      "expectedLocation": "/demos/atelier-traverse/?origine=audit&projet=refonte",
+      "passed": true
+    },
+    {
+      "path": "/concepts/atelier-traverse/?origine=audit&projet=refonte",
+      "method": "HEAD",
+      "status": 308,
+      "expected": 308,
+      "headers": {
+        "Location": "/demos/atelier-traverse/?origine=audit&projet=refonte",
+        "Date": "Sun, 08 Nov 2026 19:33:04 GMT",
+        "Connection": "close"
+      },
+      "bodyBytes": 0,
+      "expectedLocation": "/demos/atelier-traverse/?origine=audit&projet=refonte",
+      "passed": true
+    },
+    {
+      "path": "/concepts/atelier-traverse/index.html?origine=audit&projet=refonte",
+      "method": "GET",
+      "status": 308,
+      "expected": 308,
+      "headers": {
+        "Location": "/demos/atelier-traverse/?origine=audit&projet=refonte",
+        "Date": "Sun, 08 Nov 2026 19:33:04 GMT",
+        "Connection": "close",
+        "Transfer-Encoding": "chunked"
+      },
+      "bodyBytes": 0,
+      "expectedLocation": "/demos/atelier-traverse/?origine=audit&projet=refonte",
+      "passed": true
+    },
+    {
+      "path": "/concepts/atelier-traverse/index.html?origine=audit&projet=refonte",
+      "method": "HEAD",
+      "status": 308,
+      "expected": 308,
+      "headers": {
+        "Location": "/demos/atelier-traverse/?origine=audit&projet=refonte",
+        "Date": "Sun, 08 Nov 2026 19:33:04 GMT",
+        "Connection": "close"
+      },
+      "bodyBytes": 0,
+      "expectedLocation": "/demos/atelier-traverse/?origine=audit&projet=refonte",
+      "passed": true
+    },
+    {
+      "path": "/demos/atelier-traverse/",
+      "method": "GET",
+      "status": 200,
+      "expected": 200,
+      "headers": {
+        "Content-Type": "text/html; charset=utf-8",
+        "Cache-Control": "no-store",
+        "X-Content-Type-Options": "nosniff",
+        "X-Robots-Tag": "noindex, nofollow",
+        "Date": "Sun, 08 Nov 2026 19:33:04 GMT",
+        "Connection": "close",
+        "Transfer-Encoding": "chunked"
+      },
+      "bodyBytes": 9000,
+      "passed": true
+    },
+    {
+      "path": "/concepts/midi-et-compagnie?origine=audit&projet=refonte",
+      "method": "GET",
+      "status": 308,
+      "expected": 308,
+      "headers": {
+        "Location": "/demos/midi-et-compagnie/?origine=audit&projet=refonte",
+        "Date": "Sun, 08 Nov 2026 19:33:04 GMT",
+        "Connection": "close",
+        "Transfer-Encoding": "chunked"
+      },
+      "bodyBytes": 0,
+      "expectedLocation": "/demos/midi-et-compagnie/?origine=audit&projet=refonte",
+      "passed": true
+    },
+    {
+      "path": "/concepts/midi-et-compagnie?origine=audit&projet=refonte",
+      "method": "HEAD",
+      "status": 308,
+      "expected": 308,
+      "headers": {
+        "Location": "/demos/midi-et-compagnie/?origine=audit&projet=refonte",
+        "Date": "Sun, 08 Nov 2026 19:33:04 GMT",
+        "Connection": "close"
+      },
+      "bodyBytes": 0,
+      "expectedLocation": "/demos/midi-et-compagnie/?origine=audit&projet=refonte",
+      "passed": true
+    },
+    {
+      "path": "/concepts/midi-et-compagnie/?origine=audit&projet=refonte",
+      "method": "GET",
+      "status": 308,
+      "expected": 308,
+      "headers": {
+        "Location": "/demos/midi-et-compagnie/?origine=audit&projet=refonte",
+        "Date": "Sun, 08 Nov 2026 19:33:04 GMT",
+        "Connection": "close",
+        "Transfer-Encoding": "chunked"
+      },
+      "bodyBytes": 0,
+      "expectedLocation": "/demos/midi-et-compagnie/?origine=audit&projet=refonte",
+      "passed": true
+    },
+    {
+      "path": "/concepts/midi-et-compagnie/?origine=audit&projet=refonte",
+      "method": "HEAD",
+      "status": 308,
+      "expected": 308,
+      "headers": {
+        "Location": "/demos/midi-et-compagnie/?origine=audit&projet=refonte",
+        "Date": "Sun, 08 Nov 2026 19:33:04 GMT",
+        "Connection": "close"
+      },
+      "bodyBytes": 0,
+      "expectedLocation": "/demos/midi-et-compagnie/?origine=audit&projet=refonte",
+      "passed": true
+    },
+    {
+      "path": "/concepts/midi-et-compagnie/index.html?origine=audit&projet=refonte",
+      "method": "GET",
+      "status": 308,
+      "expected": 308,
+      "headers": {
+        "Location": "/demos/midi-et-compagnie/?origine=audit&projet=refonte",
+        "Date": "Sun, 08 Nov 2026 19:33:04 GMT",
+        "Connection": "close",
+        "Transfer-Encoding": "chunked"
+      },
+      "bodyBytes": 0,
+      "expectedLocation": "/demos/midi-et-compagnie/?origine=audit&projet=refonte",
+      "passed": true
+    },
+    {
+      "path": "/concepts/midi-et-compagnie/index.html?origine=audit&projet=refonte",
+      "method": "HEAD",
+      "status": 308,
+      "expected": 308,
+      "headers": {
+        "Location": "/demos/midi-et-compagnie/?origine=audit&projet=refonte",
+        "Date": "Sun, 08 Nov 2026 19:33:04 GMT",
+        "Connection": "close"
+      },
+      "bodyBytes": 0,
+      "expectedLocation": "/demos/midi-et-compagnie/?origine=audit&projet=refonte",
+      "passed": true
+    },
+    {
+      "path": "/demos/midi-et-compagnie/",
+      "method": "GET",
+      "status": 200,
+      "expected": 200,
+      "headers": {
+        "Content-Type": "text/html; charset=utf-8",
+        "Cache-Control": "no-store",
+        "X-Content-Type-Options": "nosniff",
+        "X-Robots-Tag": "noindex, nofollow",
+        "Date": "Sun, 08 Nov 2026 19:33:04 GMT",
+        "Connection": "close",
+        "Transfer-Encoding": "chunked"
+      },
+      "bodyBytes": 9077,
+      "passed": true
+    },
+    {
+      "path": "/a-propos?projet=refonte&origine=audit",
+      "method": "GET",
+      "status": 308,
+      "expected": 308,
+      "headers": {
+        "Location": "/a-propos/",
+        "Date": "Sun, 08 Nov 2026 19:33:04 GMT",
+        "Connection": "close",
+        "Transfer-Encoding": "chunked"
+      },
+      "bodyBytes": 0,
+      "expectedLocation": "/a-propos/?projet=refonte&origine=audit",
+      "passed": false
+    },
+    {
+      "path": "/contact?projet=refonte&origine=audit",
+      "method": "GET",
+      "status": 308,
+      "expected": 308,
+      "headers": {
+        "Location": "/contact/",
+        "Date": "Sun, 08 Nov 2026 19:33:04 GMT",
+        "Connection": "close",
+        "Transfer-Encoding": "chunked"
+      },
+      "bodyBytes": 0,
+      "expectedLocation": "/contact/?projet=refonte&origine=audit",
+      "passed": false
+    },
+    {
+      "path": "/offres?projet=refonte&origine=audit",
+      "method": "GET",
+      "status": 308,
+      "expected": 308,
+      "headers": {
+        "Location": "/offres/",
+        "Date": "Sun, 08 Nov 2026 19:33:04 GMT",
+        "Connection": "close",
+        "Transfer-Encoding": "chunked"
+      },
+      "bodyBytes": 0,
+      "expectedLocation": "/offres/?projet=refonte&origine=audit",
+      "passed": false
+    },
+    {
+      "path": "/demos/lise?projet=refonte&origine=audit",
+      "method": "GET",
+      "status": 308,
+      "expected": 308,
+      "headers": {
+        "Location": "/demos/lise/",
+        "Date": "Sun, 08 Nov 2026 19:33:04 GMT",
+        "Connection": "close",
+        "Transfer-Encoding": "chunked"
+      },
+      "bodyBytes": 0,
+      "expectedLocation": "/demos/lise/?projet=refonte&origine=audit",
+      "passed": false
+    },
+    {
+      "path": "/robots.txt",
+      "method": "GET",
+      "status": 404,
+      "expected": 404,
+      "headers": {
+        "Content-Type": "text/html; charset=utf-8",
+        "Cache-Control": "no-store",
+        "X-Content-Type-Options": "nosniff",
+        "X-Robots-Tag": "noindex, nofollow",
+        "Date": "Sun, 08 Nov 2026 19:33:04 GMT",
+        "Connection": "close",
+        "Transfer-Encoding": "chunked"
+      },
+      "bodyBytes": 3879,
+      "passed": true,
+      "note": "Constat de présence, pas un échec HTTP du parcours ; indexation/identité à préparer avant publication."
+    },
+    {
+      "path": "/sitemap.xml",
+      "method": "GET",
+      "status": 404,
+      "expected": 404,
+      "headers": {
+        "Content-Type": "text/html; charset=utf-8",
+        "Cache-Control": "no-store",
+        "X-Content-Type-Options": "nosniff",
+        "X-Robots-Tag": "noindex, nofollow",
+        "Date": "Sun, 08 Nov 2026 19:33:04 GMT",
+        "Connection": "close",
+        "Transfer-Encoding": "chunked"
+      },
+      "bodyBytes": 3879,
+      "passed": true,
+      "note": "Constat de présence, pas un échec HTTP du parcours ; indexation/identité à préparer avant publication."
+    },
+    {
+      "path": "/favicon.ico",
+      "method": "GET",
+      "status": 404,
+      "expected": 404,
+      "headers": {
+        "Content-Type": "text/html; charset=utf-8",
+        "Cache-Control": "no-store",
+        "X-Content-Type-Options": "nosniff",
+        "X-Robots-Tag": "noindex, nofollow",
+        "Date": "Sun, 08 Nov 2026 19:33:04 GMT",
+        "Connection": "close",
+        "Transfer-Encoding": "chunked"
+      },
+      "bodyBytes": 3879,
+      "passed": true,
+      "note": "Constat de présence, pas un échec HTTP du parcours ; indexation/identité à préparer avant publication."
+    },
+    {
+      "path": "/contact/",
+      "method": "POST",
+      "status": 405,
+      "expected": 405,
+      "headers": {
+        "Date": "Sun, 08 Nov 2026 19:33:04 GMT",
+        "Connection": "close",
+        "Transfer-Encoding": "chunked"
+      },
+      "bodyBytes": 0,
+      "passed": true
+    }
+  ],
+  "resources": [
+    {
+      "path": "/404.html",
+      "status": 200,
+      "bytes": 3879,
+      "expectedBytes": 3879,
+      "mime": "text/html; charset=utf-8",
+      "match": true
+    },
+    {
+      "path": "/a-propos/index.html",
+      "status": 200,
+      "bytes": 6772,
+      "expectedBytes": 6772,
+      "mime": "text/html; charset=utf-8",
+      "match": true
+    },
+    {
+      "path": "/app.js",
+      "status": 200,
+      "bytes": 4862,
+      "expectedBytes": 4862,
+      "mime": "text/javascript; charset=utf-8",
+      "match": true
+    },
+    {
+      "path": "/assets/atelier-traverse-preview.jpg",
+      "status": 200,
+      "bytes": 160479,
+      "expectedBytes": 160479,
+      "mime": "image/jpeg",
+      "match": true
+    },
+    {
+      "path": "/assets/fonts/OFL-DMSans.txt",
+      "status": 200,
+      "bytes": 4482,
+      "expectedBytes": 4482,
+      "mime": "text/plain; charset=utf-8",
+      "match": true
+    },
+    {
+      "path": "/assets/fonts/dm-sans.woff2",
+      "status": 200,
+      "bytes": 36932,
+      "expectedBytes": 36932,
+      "mime": "font/woff2",
+      "match": true
+    },
+    {
+      "path": "/assets/icons/README.md",
+      "status": 200,
+      "bytes": 1432,
+      "expectedBytes": 1432,
+      "mime": "text/plain; charset=utf-8",
+      "match": true
+    },
+    {
+      "path": "/assets/icons/lucide/LICENSE",
+      "status": 200,
+      "bytes": 3208,
+      "expectedBytes": 3208,
+      "mime": "application/octet-stream",
+      "match": true
+    },
+    {
+      "path": "/assets/icons/lucide/arrow-left.svg",
+      "status": 200,
+      "bytes": 343,
+      "expectedBytes": 343,
+      "mime": "image/svg+xml",
+      "match": true
+    },
+    {
+      "path": "/assets/icons/lucide/arrow-right.svg",
+      "status": 200,
+      "bytes": 343,
+      "expectedBytes": 343,
+      "mime": "image/svg+xml",
+      "match": true
+    },
+    {
+      "path": "/assets/icons/lucide/arrow-up-right.svg",
+      "status": 200,
+      "bytes": 345,
+      "expectedBytes": 345,
+      "mime": "image/svg+xml",
+      "match": true
+    },
+    {
+      "path": "/assets/icons/lucide/arrow-up.svg",
+      "status": 200,
+      "bytes": 340,
+      "expectedBytes": 340,
+      "mime": "image/svg+xml",
+      "match": true
+    },
+    {
+      "path": "/assets/icons/lucide/calendar-days.svg",
+      "status": 200,
+      "bytes": 567,
+      "expectedBytes": 567,
+      "mime": "image/svg+xml",
+      "match": true
+    },
+    {
+      "path": "/assets/icons/lucide/chevron-right.svg",
+      "status": 200,
+      "bytes": 321,
+      "expectedBytes": 321,
+      "mime": "image/svg+xml",
+      "match": true
+    },
+    {
+      "path": "/assets/icons/lucide/menu.svg",
+      "status": 200,
+      "bytes": 354,
+      "expectedBytes": 354,
+      "mime": "image/svg+xml",
+      "match": true
+    },
+    {
+      "path": "/assets/icons/lucide/minus.svg",
+      "status": 200,
+      "bytes": 308,
+      "expectedBytes": 308,
+      "mime": "image/svg+xml",
+      "match": true
+    },
+    {
+      "path": "/assets/icons/lucide/plus.svg",
+      "status": 200,
+      "bytes": 331,
+      "expectedBytes": 331,
+      "mime": "image/svg+xml",
+      "match": true
+    },
+    {
+      "path": "/assets/icons/lucide/provenance.json",
+      "status": 200,
+      "bytes": 604,
+      "expectedBytes": 604,
+      "mime": "application/json",
+      "match": true
+    },
+    {
+      "path": "/assets/icons/lucide/rotate-ccw.svg",
+      "status": 200,
+      "bytes": 378,
+      "expectedBytes": 378,
+      "mime": "image/svg+xml",
+      "match": true
+    },
+    {
+      "path": "/assets/icons/lucide/x.svg",
+      "status": 200,
+      "bytes": 332,
+      "expectedBytes": 332,
+      "mime": "image/svg+xml",
+      "match": true
+    },
+    {
+      "path": "/assets/icons/lucide.css",
+      "status": 200,
+      "bytes": 1449,
+      "expectedBytes": 1449,
+      "mime": "text/css; charset=utf-8",
+      "match": true
+    },
+    {
+      "path": "/assets/liquid-glass/glass.css",
+      "status": 200,
+      "bytes": 4260,
+      "expectedBytes": 4260,
+      "mime": "text/css; charset=utf-8",
+      "match": true
+    },
+    {
+      "path": "/assets/liquid-glass/glass.js",
+      "status": 200,
+      "bytes": 273342,
+      "expectedBytes": 273342,
+      "mime": "text/javascript; charset=utf-8",
+      "match": true
+    },
+    {
+      "path": "/assets/liquid-glass-loader.js",
+      "status": 200,
+      "bytes": 1245,
+      "expectedBytes": 1245,
+      "mime": "text/javascript; charset=utf-8",
+      "match": true
+    },
+    {
+      "path": "/assets/lise-preview.jpg",
+      "status": 200,
+      "bytes": 165709,
+      "expectedBytes": 165709,
+      "mime": "image/jpeg",
+      "match": true
+    },
+    {
+      "path": "/assets/midi-et-compagnie-preview.jpg",
+      "status": 200,
+      "bytes": 213205,
+      "expectedBytes": 213205,
+      "mime": "image/jpeg",
+      "match": true
+    },
+    {
+      "path": "/assets/not-found.css",
+      "status": 200,
+      "bytes": 556,
+      "expectedBytes": 556,
+      "mime": "text/css; charset=utf-8",
+      "match": true
+    },
+    {
+      "path": "/assets/responsive/empreinte-altrix-1536.webp",
+      "status": 200,
+      "bytes": 113170,
+      "expectedBytes": 113170,
+      "mime": "image/webp",
+      "match": true
+    },
+    {
+      "path": "/assets/responsive/empreinte-altrix-640.webp",
+      "status": 200,
+      "bytes": 25502,
+      "expectedBytes": 25502,
+      "mime": "image/webp",
+      "match": true
+    },
+    {
+      "path": "/assets/responsive/empreinte-altrix-960.webp",
+      "status": 200,
+      "bytes": 50536,
+      "expectedBytes": 50536,
+      "mime": "image/webp",
+      "match": true
+    },
+    {
+      "path": "/assets/studio-duo.css",
+      "status": 200,
+      "bytes": 5208,
+      "expectedBytes": 5208,
+      "mime": "text/css; charset=utf-8",
+      "match": true
+    },
+    {
+      "path": "/assets/studio-duo.js",
+      "status": 200,
+      "bytes": 1782,
+      "expectedBytes": 1782,
+      "mime": "text/javascript; charset=utf-8",
+      "match": true
+    },
+    {
+      "path": "/common.css",
+      "status": 200,
+      "bytes": 24037,
+      "expectedBytes": 24037,
+      "mime": "text/css; charset=utf-8",
+      "match": true
+    },
+    {
+      "path": "/contact/index.html",
+      "status": 200,
+      "bytes": 6334,
+      "expectedBytes": 6334,
+      "mime": "text/html; charset=utf-8",
+      "match": true
+    },
+    {
+      "path": "/demos/atelier-traverse/README.md",
+      "status": 200,
+      "bytes": 2972,
+      "expectedBytes": 2972,
+      "mime": "text/plain; charset=utf-8",
+      "match": true
+    },
+    {
+      "path": "/demos/atelier-traverse/app.js",
+      "status": 200,
+      "bytes": 3276,
+      "expectedBytes": 3276,
+      "mime": "text/javascript; charset=utf-8",
+      "match": true
+    },
+    {
+      "path": "/demos/atelier-traverse/favicon.svg",
+      "status": 200,
+      "bytes": 205,
+      "expectedBytes": 205,
+      "mime": "image/svg+xml",
+      "match": true
+    },
+    {
+      "path": "/demos/atelier-traverse/fonts/OFL-BarlowCondensed.txt",
+      "status": 200,
+      "bytes": 4377,
+      "expectedBytes": 4377,
+      "mime": "text/plain; charset=utf-8",
+      "match": true
+    },
+    {
+      "path": "/demos/atelier-traverse/fonts/OFL-SourceSans3.txt",
+      "status": 200,
+      "bytes": 4579,
+      "expectedBytes": 4579,
+      "mime": "text/plain; charset=utf-8",
+      "match": true
+    },
+    {
+      "path": "/demos/atelier-traverse/images/responsive/atelier-scene-1254.webp",
+      "status": 200,
+      "bytes": 250316,
+      "expectedBytes": 250316,
+      "mime": "image/webp",
+      "match": true
+    },
+    {
+      "path": "/demos/atelier-traverse/images/responsive/atelier-scene-640.webp",
+      "status": 200,
+      "bytes": 67668,
+      "expectedBytes": 67668,
+      "mime": "image/webp",
+      "match": true
+    },
+    {
+      "path": "/demos/atelier-traverse/images/responsive/atelier-scene-960.webp",
+      "status": 200,
+      "bytes": 152942,
+      "expectedBytes": 152942,
+      "mime": "image/webp",
+      "match": true
+    },
+    {
+      "path": "/demos/atelier-traverse/images/responsive/bench-1536.webp",
+      "status": 200,
+      "bytes": 146120,
+      "expectedBytes": 146120,
+      "mime": "image/webp",
+      "match": true
+    },
+    {
+      "path": "/demos/atelier-traverse/images/responsive/bench-640.webp",
+      "status": 200,
+      "bytes": 30876,
+      "expectedBytes": 30876,
+      "mime": "image/webp",
+      "match": true
+    },
+    {
+      "path": "/demos/atelier-traverse/images/responsive/bench-960.webp",
+      "status": 200,
+      "bytes": 62596,
+      "expectedBytes": 62596,
+      "mime": "image/webp",
+      "match": true
+    },
+    {
+      "path": "/demos/atelier-traverse/images/responsive/joint-1536.webp",
+      "status": 200,
+      "bytes": 171566,
+      "expectedBytes": 171566,
+      "mime": "image/webp",
+      "match": true
+    },
+    {
+      "path": "/demos/atelier-traverse/images/responsive/joint-640.webp",
+      "status": 200,
+      "bytes": 35428,
+      "expectedBytes": 35428,
+      "mime": "image/webp",
+      "match": true
+    },
+    {
+      "path": "/demos/atelier-traverse/images/responsive/joint-960.webp",
+      "status": 200,
+      "bytes": 74808,
+      "expectedBytes": 74808,
+      "mime": "image/webp",
+      "match": true
+    },
+    {
+      "path": "/demos/atelier-traverse/index.html",
+      "status": 200,
+      "bytes": 9000,
+      "expectedBytes": 9000,
+      "mime": "text/html; charset=utf-8",
+      "match": true
+    },
+    {
+      "path": "/demos/atelier-traverse/styles.css",
+      "status": 200,
+      "bytes": 28151,
+      "expectedBytes": 28151,
+      "mime": "text/css; charset=utf-8",
+      "match": true
+    },
+    {
+      "path": "/demos/lise/README.md",
+      "status": 200,
+      "bytes": 8808,
+      "expectedBytes": 8808,
+      "mime": "text/plain; charset=utf-8",
+      "match": true
+    },
+    {
+      "path": "/demos/lise/app.js",
+      "status": 200,
+      "bytes": 4957,
+      "expectedBytes": 4957,
+      "mime": "text/javascript; charset=utf-8",
+      "match": true
+    },
+    {
+      "path": "/demos/lise/favicon.svg",
+      "status": 200,
+      "bytes": 168,
+      "expectedBytes": 168,
+      "mime": "image/svg+xml",
+      "match": true
+    },
+    {
+      "path": "/demos/lise/fonts/OFL-DMSans.txt",
+      "status": 200,
+      "bytes": 4482,
+      "expectedBytes": 4482,
+      "mime": "text/plain; charset=utf-8",
+      "match": true
+    },
+    {
+      "path": "/demos/lise/fonts/dm-sans.woff2",
+      "status": 200,
+      "bytes": 36932,
+      "expectedBytes": 36932,
+      "mime": "font/woff2",
+      "match": true
+    },
+    {
+      "path": "/demos/lise/images/cabine-naturelle-720.webp",
+      "status": 200,
+      "bytes": 51638,
+      "expectedBytes": 51638,
+      "mime": "image/webp",
+      "match": true
+    },
+    {
+      "path": "/demos/lise/images/cabine-naturelle.webp",
+      "status": 200,
+      "bytes": 114946,
+      "expectedBytes": 114946,
+      "mime": "image/webp",
+      "match": true
+    },
+    {
+      "path": "/demos/lise/images/preparation-720.webp",
+      "status": 200,
+      "bytes": 25180,
+      "expectedBytes": 25180,
+      "mime": "image/webp",
+      "match": true
+    },
+    {
+      "path": "/demos/lise/images/preparation.webp",
+      "status": 200,
+      "bytes": 91306,
+      "expectedBytes": 91306,
+      "mime": "image/webp",
+      "match": true
+    },
+    {
+      "path": "/demos/lise/index.html",
+      "status": 200,
+      "bytes": 23783,
+      "expectedBytes": 23783,
+      "mime": "text/html; charset=utf-8",
+      "match": true
+    },
+    {
+      "path": "/demos/lise/styles.css",
+      "status": 200,
+      "bytes": 17330,
+      "expectedBytes": 17330,
+      "mime": "text/css; charset=utf-8",
+      "match": true
+    },
+    {
+      "path": "/demos/midi-et-compagnie/IMAGES.md",
+      "status": 200,
+      "bytes": 4678,
+      "expectedBytes": 4678,
+      "mime": "text/plain; charset=utf-8",
+      "match": true
+    },
+    {
+      "path": "/demos/midi-et-compagnie/README.md",
+      "status": 200,
+      "bytes": 2383,
+      "expectedBytes": 2383,
+      "mime": "text/plain; charset=utf-8",
+      "match": true
+    },
+    {
+      "path": "/demos/midi-et-compagnie/app.js",
+      "status": 200,
+      "bytes": 818,
+      "expectedBytes": 818,
+      "mime": "text/javascript; charset=utf-8",
+      "match": true
+    },
+    {
+      "path": "/demos/midi-et-compagnie/favicon.svg",
+      "status": 200,
+      "bytes": 226,
+      "expectedBytes": 226,
+      "mime": "image/svg+xml",
+      "match": true
+    },
+    {
+      "path": "/demos/midi-et-compagnie/fonts/OFL-Fraunces.txt",
+      "status": 200,
+      "bytes": 4391,
+      "expectedBytes": 4391,
+      "mime": "text/plain; charset=utf-8",
+      "match": true
+    },
+    {
+      "path": "/demos/midi-et-compagnie/fonts/OFL-Manrope.txt",
+      "status": 200,
+      "bytes": 4387,
+      "expectedBytes": 4387,
+      "mime": "text/plain; charset=utf-8",
+      "match": true
+    },
+    {
+      "path": "/demos/midi-et-compagnie/fonts/fraunces-600.ttf",
+      "status": 200,
+      "bytes": 71632,
+      "expectedBytes": 71632,
+      "mime": "font/ttf",
+      "match": true
+    },
+    {
+      "path": "/demos/midi-et-compagnie/fonts/manrope-400.ttf",
+      "status": 200,
+      "bytes": 94972,
+      "expectedBytes": 94972,
+      "mime": "font/ttf",
+      "match": true
+    },
+    {
+      "path": "/demos/midi-et-compagnie/fonts/manrope-600.ttf",
+      "status": 200,
+      "bytes": 95096,
+      "expectedBytes": 95096,
+      "mime": "font/ttf",
+      "match": true
+    },
+    {
+      "path": "/demos/midi-et-compagnie/images/dejeuner-stock-mobile.webp",
+      "status": 200,
+      "bytes": 192904,
+      "expectedBytes": 192904,
+      "mime": "image/webp",
+      "match": true
+    },
+    {
+      "path": "/demos/midi-et-compagnie/images/dejeuner-stock.webp",
+      "status": 200,
+      "bytes": 215802,
+      "expectedBytes": 215802,
+      "mime": "image/webp",
+      "match": true
+    },
+    {
+      "path": "/demos/midi-et-compagnie/images/tarte-stock-mobile.webp",
+      "status": 200,
+      "bytes": 65920,
+      "expectedBytes": 65920,
+      "mime": "image/webp",
+      "match": true
+    },
+    {
+      "path": "/demos/midi-et-compagnie/images/tarte-stock.webp",
+      "status": 200,
+      "bytes": 137734,
+      "expectedBytes": 137734,
+      "mime": "image/webp",
+      "match": true
+    },
+    {
+      "path": "/demos/midi-et-compagnie/index.html",
+      "status": 200,
+      "bytes": 9077,
+      "expectedBytes": 9077,
+      "mime": "text/html; charset=utf-8",
+      "match": true
+    },
+    {
+      "path": "/demos/midi-et-compagnie/styles.css",
+      "status": 200,
+      "bytes": 15525,
+      "expectedBytes": 15525,
+      "mime": "text/css; charset=utf-8",
+      "match": true
+    },
+    {
+      "path": "/demos/navigation.js",
+      "status": 200,
+      "bytes": 1168,
+      "expectedBytes": 1168,
+      "mime": "text/javascript; charset=utf-8",
+      "match": true
+    },
+    {
+      "path": "/fusion.css",
+      "status": 200,
+      "bytes": 2776,
+      "expectedBytes": 2776,
+      "mime": "text/css; charset=utf-8",
+      "match": true
+    },
+    {
+      "path": "/home.css",
+      "status": 200,
+      "bytes": 3977,
+      "expectedBytes": 3977,
+      "mime": "text/css; charset=utf-8",
+      "match": true
+    },
+    {
+      "path": "/index.html",
+      "status": 200,
+      "bytes": 5461,
+      "expectedBytes": 5461,
+      "mime": "text/html; charset=utf-8",
+      "match": true
+    },
+    {
+      "path": "/motion.js",
+      "status": 200,
+      "bytes": 1663,
+      "expectedBytes": 1663,
+      "mime": "text/javascript; charset=utf-8",
+      "match": true
+    },
+    {
+      "path": "/offres/index.html",
+      "status": 200,
+      "bytes": 9634,
+      "expectedBytes": 9634,
+      "mime": "text/html; charset=utf-8",
+      "match": true
+    },
+    {
+      "path": "/pages.css",
+      "status": 200,
+      "bytes": 9290,
+      "expectedBytes": 9290,
+      "mime": "text/css; charset=utf-8",
+      "match": true
+    },
+    {
+      "path": "/realisations/index.html",
+      "status": 200,
+      "bytes": 5195,
+      "expectedBytes": 5195,
+      "mime": "text/html; charset=utf-8",
+      "match": true
+    },
+    {
+      "path": "/theme.css",
+      "status": 200,
+      "bytes": 8844,
+      "expectedBytes": 8844,
+      "mime": "text/css; charset=utf-8",
+      "match": true
+    }
+  ],
+  "failures": [
+    {
+      "path": "/a-propos?projet=refonte&origine=audit",
+      "method": "GET",
+      "status": 308,
+      "expected": 308,
+      "headers": {
+        "Location": "/a-propos/",
+        "Date": "Sun, 08 Nov 2026 19:33:04 GMT",
+        "Connection": "close",
+        "Transfer-Encoding": "chunked"
+      },
+      "bodyBytes": 0,
+      "expectedLocation": "/a-propos/?projet=refonte&origine=audit",
+      "passed": false
+    },
+    {
+      "path": "/contact?projet=refonte&origine=audit",
+      "method": "GET",
+      "status": 308,
+      "expected": 308,
+      "headers": {
+        "Location": "/contact/",
+        "Date": "Sun, 08 Nov 2026 19:33:04 GMT",
+        "Connection": "close",
+        "Transfer-Encoding": "chunked"
+      },
+      "bodyBytes": 0,
+      "expectedLocation": "/contact/?projet=refonte&origine=audit",
+      "passed": false
+    },
+    {
+      "path": "/offres?projet=refonte&origine=audit",
+      "method": "GET",
+      "status": 308,
+      "expected": 308,
+      "headers": {
+        "Location": "/offres/",
+        "Date": "Sun, 08 Nov 2026 19:33:04 GMT",
+        "Connection": "close",
+        "Transfer-Encoding": "chunked"
+      },
+      "bodyBytes": 0,
+      "expectedLocation": "/offres/?projet=refonte&origine=audit",
+      "passed": false
+    },
+    {
+      "path": "/demos/lise?projet=refonte&origine=audit",
+      "method": "GET",
+      "status": 308,
+      "expected": 308,
+      "headers": {
+        "Location": "/demos/lise/",
+        "Date": "Sun, 08 Nov 2026 19:33:04 GMT",
+        "Connection": "close",
+        "Transfer-Encoding": "chunked"
+      },
+      "bodyBytes": 0,
+      "expectedLocation": "/demos/lise/?projet=refonte&origine=audit",
+      "passed": false
+    }
+  ]
+}
