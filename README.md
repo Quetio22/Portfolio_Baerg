@@ -88,3 +88,11 @@ Régénération facultative : Python avec Pillow 13, puis `python scripts/optimi
 ### Nettoyage de l’export
 
 `scripts/export-exclusions.json` liste les 16 anciens médias/polices et originaux remplacés qui restent dans Git comme références mais ne sont plus copiés dans `dist/`. Le build applique cette liste de chemins exacts, sans suppression des sources ni modification du Design Lab. Les variantes responsive, polices actives et licences restent exportées. Si un original est réutilisé plus tard par une page, le retirer de cette liste avant de compiler.
+
+## Métadonnées et partage (BDT-21)
+
+Les cinq pages Baerg ont des titres/descriptions distincts, les métadonnées Open Graph/cartes sociales et les icônes dans `assets/brand/`. Les trois démos gardent leurs propres favicons et leur identité. La 404 utilise le favicon Baerg sans carte sociale.
+
+Le domaine public n’est pas encore confirmé. Par défaut, le build ne renseigne ni canonical ni og:url ; les chemins d’image restent relatifs à la racine pour l’aperçu local. Un partage distant fiable reste donc à finaliser. Après confirmation du domaine : fournir `SITE_URL` (origine HTTPS sans chemin) à `npm run build`. Le build écrit les URL absolues et canoniques uniquement dans les cinq pages exportées, sans modifier les sources ni les démos. Aucun domaine provisoire n’est inscrit dans les fichiers publiables. Ne pas utiliser cette option pour déclarer une préproduction comme domaine canonique.
+
+Cette option **ne lève pas noindex**, ne crée pas de sitemap et ne publie rien. L’indexation est traitée séparément dans BDT-24/26. Vérifier les aperçus de partage sur un hébergement accessible aux robots, avec les URL finales, avant de clôturer BDT-21. Tests du raccordement : `node --test scripts/public-metadata.test.js`.
